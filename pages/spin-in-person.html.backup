@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPIN IN-PERSON DUBAI - SPIN Academics</title>
+    <meta name="description" content="Join us for SPIN IN-PERSON DUBAI, November 7-9, 2025. Our annual meeting featuring the latest in pediatric neuroradiology">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="../images/spin_logo.webp" alt="SPIN Academics Logo" class="logo-img">
+                <span class="logo-text">SPIN Academics</span>
+            </div>
+            <nav class="nav" role="navigation">
+                <button class="nav-toggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="../index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="membership.html" class="nav-link">Membership</a></li>
+                    <li><a href="education.html" class="nav-link">Education</a></li>
+                    <li><a href="research.html" class="nav-link">Research</a></li>
+                    <li><a href="login.html" class="nav-link login-btn">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <!-- Hero Section -->
+        <section class="hero-section dubai-hero">
+            <div class="container">
+                <div class="dubai-hero-content">
+                    <h1 class="hero-title">SPIN IN-PERSON DUBAI</h1>
+                    <p class="hero-date">7–9 November 2025</p>
+                    <p class="hero-subtitle">Annual SPIN Meeting • Dubai, UAE</p>
+                    <div class="hero-buttons">
+                        <a href="#register" class="btn btn-primary">Register Now</a>
+                        <a href="#program" class="btn btn-secondary">View Program</a>
+                    </div>
+                </div>
+                <div class="dubai-hero-image img-placeholder">
+                    <img src="../images/dubai-skyline.jpg" alt="Dubai Skyline" class="dubai-img">
+                </div>
+            </div>
+        </section>
+
+        <!-- About the Meeting -->
+        <section class="section" id="about-meeting">
+            <div class="container">
+                <h2 class="section-title">About the Annual SPIN Meeting</h2>
+                <div class="meeting-overview">
+                    <div class="overview-text">
+                        <p class="lead">Join us for our premier annual gathering where pediatric neuroradiology professionals from around the world come together to share knowledge, explore innovations, and build lasting connections.</p>
+                        
+                        <p>The SPIN IN-PERSON DUBAI meeting represents the culmination of our fellowship program and serves as the premier educational and networking event for our global community. This intensive three-day program features cutting-edge presentations, interactive workshops, case discussions, and unparalleled networking opportunities.</p>
+                        
+                        <p>Set against the stunning backdrop of Dubai, this meeting combines world-class education with cultural experiences, making it an unforgettable professional development opportunity.</p>
+                    </div>
+                    <div class="overview-highlights">
+                        <h3>Meeting Highlights</h3>
+                        <ul class="highlights-list">
+                            <li>Keynote presentations by world-renowned experts</li>
+                            <li>Interactive case-based workshops</li>
+                            <li>Fellowship program presentations</li>
+                            <li>Research poster sessions</li>
+                            <li>Networking receptions and cultural events</li>
+                            <li>Industry exhibitions and technology showcases</li>
+                            <li>Professional development sessions</li>
+                            <li>Global collaboration opportunities</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Program Overview -->
+        <section class="section program-section" id="program">
+            <div class="container">
+                <h2 class="section-title">Program Overview</h2>
+                <div class="program-grid">
+                    <div class="program-day">
+                        <h3 class="day-title">Day 1 - November 7, 2025</h3>
+                        <div class="day-theme">Opening & Foundations</div>
+                        <ul class="day-schedule">
+                            <li>
+                                <span class="time">09:00 - 10:00</span>
+                                <span class="event">Registration & Welcome Reception</span>
+                            </li>
+                            <li>
+                                <span class="time">10:00 - 11:00</span>
+                                <span class="event">Opening Keynote: Latest Advances in Pediatric Neuroimaging</span>
+                            </li>
+                            <li>
+                                <span class="time">11:30 - 12:30</span>
+                                <span class="event">Fellowship Part 1 Presentations</span>
+                            </li>
+                            <li>
+                                <span class="time">14:00 - 15:30</span>
+                                <span class="event">Interactive Case Discussions</span>
+                            </li>
+                            <li>
+                                <span class="time">16:00 - 17:30</span>
+                                <span class="event">Research Poster Session</span>
+                            </li>
+                            <li>
+                                <span class="time">18:00 - 20:00</span>
+                                <span class="event">Welcome Dinner & Cultural Experience</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="program-day">
+                        <h3 class="day-title">Day 2 - November 8, 2025</h3>
+                        <div class="day-theme">Advanced Topics & Innovation</div>
+                        <ul class="day-schedule">
+                            <li>
+                                <span class="time">09:00 - 10:00</span>
+                                <span class="event">Advanced Imaging Techniques Workshop</span>
+                            </li>
+                            <li>
+                                <span class="time">10:30 - 12:00</span>
+                                <span class="event">Fellowship Part 2 Presentations</span>
+                            </li>
+                            <li>
+                                <span class="time">13:30 - 15:00</span>
+                                <span class="event">AI and Machine Learning in Pediatric Neuroradiology</span>
+                            </li>
+                            <li>
+                                <span class="time">15:30 - 17:00</span>
+                                <span class="event">Green Radiology: Sustainable Practices</span>
+                            </li>
+                            <li>
+                                <span class="time">17:00 - 18:00</span>
+                                <span class="event">Industry Exhibition</span>
+                            </li>
+                            <li>
+                                <span class="time">19:00 - 22:00</span>
+                                <span class="event">Gala Dinner & Awards Ceremony</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="program-day">
+                        <h3 class="day-title">Day 3 - November 9, 2025</h3>
+                        <div class="day-theme">Future Directions & Networking</div>
+                        <ul class="day-schedule">
+                            <li>
+                                <span class="time">09:00 - 10:30</span>
+                                <span class="event">Multidisciplinary Case Conference</span>
+                            </li>
+                            <li>
+                                <span class="time">11:00 - 12:00</span>
+                                <span class="event">Young Investigator Awards</span>
+                            </li>
+                            <li>
+                                <span class="time">13:00 - 14:30</span>
+                                <span class="event">Future of Pediatric Neuroradiology Panel</span>
+                            </li>
+                            <li>
+                                <span class="time">15:00 - 16:00</span>
+                                <span class="event">SPIN Business Meeting</span>
+                            </li>
+                            <li>
+                                <span class="time">16:00 - 17:00</span>
+                                <span class="event">Closing Ceremony & Next Steps</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="program-cta">
+                    <div class="qr-section">
+                        <div class="qr-code img-placeholder">
+                            <img src="../images/program-qr.png" alt="Program QR Code" class="qr-img">
+                        </div>
+                        <p>Scan for detailed program</p>
+                    </div>
+                    <div class="program-buttons">
+                        <a href="#" class="btn btn-primary">View Program!</a>
+                        <a href="#register" class="btn btn-secondary">Register Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Registration Section -->
+        <section class="section registration-section" id="register">
+            <div class="container">
+                <h2 class="section-title">Registration Information</h2>
+                <div class="registration-content">
+                    <div class="registration-info">
+                        <h3>Registration Fees</h3>
+                        <div class="pricing-table">
+                            <div class="price-tier">
+                                <h4>SPIN Members</h4>
+                                <div class="price">$450</div>
+                                <p class="price-description">Early bird until September 1, 2025</p>
+                                <p class="regular-price">Regular: $550</p>
+                            </div>
+                            <div class="price-tier">
+                                <h4>Non-Members</h4>
+                                <div class="price">$650</div>
+                                <p class="price-description">Early bird until September 1, 2025</p>
+                                <p class="regular-price">Regular: $750</p>
+                            </div>
+                            <div class="price-tier featured">
+                                <h4>Students/Trainees</h4>
+                                <div class="price">$250</div>
+                                <p class="price-description">With valid student ID</p>
+                                <p class="regular-price">Limited seats available</p>
+                            </div>
+                        </div>
+                        
+                        <div class="included-benefits">
+                            <h4>Registration Includes:</h4>
+                            <ul>
+                                <li>All educational sessions and workshops</li>
+                                <li>Welcome reception and networking events</li>
+                                <li>Coffee breaks and lunch</li>
+                                <li>Gala dinner and awards ceremony</li>
+                                <li>Conference materials and certificate</li>
+                                <li>Access to presentation recordings</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="registration-form-container">
+                        <div class="register-card">
+                            <h3>Register Now</h3>
+                            <p>Secure your spot at SPIN IN-PERSON DUBAI 2025</p>
+                            
+                            <div class="registration-qr">
+                                <div class="qr-code img-placeholder">
+                                    <img src="../images/registration-qr.png" alt="Registration QR Code" class="qr-img">
+                                </div>
+                                <p>Scan to register online</p>
+                            </div>
+
+                            <div class="register-buttons">
+                                <a href="#" class="btn btn-primary btn-full">Register Online</a>
+                                <a href="#" class="btn btn-secondary btn-full">Download Registration Form</a>
+                            </div>
+
+                            <div class="registration-deadlines">
+                                <h4>Important Dates</h4>
+                                <ul>
+                                    <li><strong>Early Bird Deadline:</strong> September 1, 2025</li>
+                                    <li><strong>Regular Registration:</strong> October 15, 2025</li>
+                                    <li><strong>Hotel Booking Deadline:</strong> October 1, 2025</li>
+                                    <li><strong>Abstract Submission:</strong> August 15, 2025</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Venue & Travel -->
+        <section class="section venue-section">
+            <div class="container">
+                <h2 class="section-title">Venue & Travel Information</h2>
+                <div class="venue-grid">
+                    <div class="venue-info">
+                        <h3>Conference Venue</h3>
+                        <div class="venue-details">
+                            <h4>Dubai International Convention Centre</h4>
+                            <p>Sheikh Zayed Road, Dubai, UAE</p>
+                            <p>A world-class venue in the heart of Dubai's business district, featuring state-of-the-art facilities and easy access to hotels, dining, and attractions.</p>
+                        </div>
+
+                        <h3>Recommended Hotels</h3>
+                        <div class="hotels-list">
+                            <div class="hotel-item">
+                                <h4>Grand Hyatt Dubai</h4>
+                                <p>Official conference hotel with special rates</p>
+                                <p class="hotel-rate">$180/night (conference rate)</p>
+                            </div>
+                            <div class="hotel-item">
+                                <h4>Conrad Dubai</h4>
+                                <p>Luxury accommodation near venue</p>
+                                <p class="hotel-rate">$220/night (conference rate)</p>
+                            </div>
+                            <div class="hotel-item">
+                                <h4>Rove Downtown</h4>
+                                <p>Modern hotel with convenient location</p>
+                                <p class="hotel-rate">$150/night (conference rate)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="travel-info">
+                        <h3>Travel Information</h3>
+                        <div class="travel-details">
+                            <h4>Getting to Dubai</h4>
+                            <p>Dubai International Airport (DXB) is the main gateway, with connections to over 240 destinations worldwide. The venue is approximately 15 minutes from the airport.</p>
+
+                            <h4>Visa Requirements</h4>
+                            <p>Many nationalities receive visa-on-arrival or visa-free entry to UAE. Check with UAE embassy or consulate for specific requirements.</p>
+
+                            <h4>Airport Transfers</h4>
+                            <ul>
+                                <li>Complimentary shuttle service from DXB to conference hotels</li>
+                                <li>Dubai Metro Red Line connects airport to city center</li>
+                                <li>Taxi services readily available</li>
+                            </ul>
+
+                            <h4>Local Transportation</h4>
+                            <ul>
+                                <li>Dubai Metro - convenient and affordable</li>
+                                <li>RTA buses with extensive network</li>
+                                <li>Uber and Careem ride-sharing services</li>
+                                <li>Traditional Dubai taxis</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SPIN Feedback Section -->
+        <section class="feedback-section section">
+            <div class="container">
+                <h2 class="section-title">Previous Meeting Feedback</h2>
+                <div class="feedback-carousel">
+                    <div class="feedback-quote">
+                        <blockquote>
+                            "The SPIN annual meeting exceeded all expectations. The content was outstanding and the networking invaluable."
+                        </blockquote>
+                        <cite>- Dr. Sarah Johnson, Previous Attendee</cite>
+                    </div>
+                    <div class="feedback-quote">
+                        <blockquote>
+                            "Dubai provided the perfect setting for our meeting. The venue was world-class and the hospitality exceptional."
+                        </blockquote>
+                        <cite>- Dr. Ahmed Al-Mansouri, Local Host</cite>
+                    </div>
+                    <div class="feedback-quote">
+                        <blockquote>
+                            "The fellowship presentations were inspiring, and I made connections that will benefit my career for years to come."
+                        </blockquote>
+                        <cite>- Dr. Maria Rodriguez, Fellowship Graduate</cite>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="../images/spin_logo.webp" alt="SPIN Academics" class="footer-logo-img">
+                        <span>SPIN Academics</span>
+                    </div>
+                    <p>Society for Pediatric and Investigative Neuroradiology</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="membership.html">Membership</a></li>
+                        <li><a href="education.html">Education</a></li>
+                        <li><a href="research.html">Research</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Education</h4>
+                    <ul>
+                        <li><a href="society-fellowship.html">Fellowship Program</a></li>
+                        <li><a href="cortex-club.html">Cortex Club</a></li>
+                        <li><a href="spin-yarn-newsletter.html">SPIN A Yarn</a></li>
+                        <li><a href="spin-wfpi.html">SPIN WFPI</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn">📧</a>
+                        <a href="#" aria-label="Twitter">🐦</a>
+                        <a href="#" aria-label="YouTube">📺</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 SPIN Academics. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

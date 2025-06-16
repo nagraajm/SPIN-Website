@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - SPIN Academics</title>
+    <meta name="description" content="Create your SPIN Academics account and join our global community">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="../images/spin_logo.webp" alt="SPIN Academics Logo" class="logo-img">
+                <span class="logo-text">SPIN Academics</span>
+            </div>
+            <nav class="nav" role="navigation">
+                <button class="nav-toggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="../index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="membership.html" class="nav-link">Membership</a></li>
+                    <li><a href="education.html" class="nav-link">Education</a></li>
+                    <li><a href="research.html" class="nav-link">Research</a></li>
+                    <li><a href="login.html" class="nav-link login-btn">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="auth-section section">
+            <div class="container">
+                <div class="auth-container">
+                    <div class="auth-card">
+                        <div class="auth-header">
+                            <h1>Join SPIN Academics</h1>
+                            <p>Create your account to access our global community</p>
+                        </div>
+
+                        <form id="signup-form" class="auth-form" novalidate>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="first-name" class="form-label">First Name</label>
+                                    <input type="text" id="first-name" name="first-name" class="form-input" required 
+                                           placeholder="Enter your first name" autocomplete="given-name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="last-name" class="form-label">Last Name</label>
+                                    <input type="text" id="last-name" name="last-name" class="form-input" required 
+                                           placeholder="Enter your last name" autocomplete="family-name">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email Address</label>
+                                <input type="email" id="email" name="email" class="form-input" required 
+                                       placeholder="Enter your email address" autocomplete="email">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="institution" class="form-label">Institution (Optional)</label>
+                                <input type="text" id="institution" name="institution" class="form-input" 
+                                       placeholder="Enter your institution or hospital" autocomplete="organization">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="password" class="form-label">Password</label>
+                                <input type="password" id="password" name="password" class="form-input" required 
+                                       placeholder="Create a password (minimum 6 characters)" autocomplete="new-password">
+                                <div class="password-requirements">
+                                    <small>Password must be at least 6 characters long</small>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="confirm-password" class="form-label">Re-type Password</label>
+                                <input type="password" id="confirm-password" name="confirm-password" class="form-input" required 
+                                       placeholder="Confirm your password" autocomplete="new-password">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="membership-type" class="form-label">Membership Type</label>
+                                <select id="membership-type" name="membership-type" class="form-input" required>
+                                    <option value="">Select membership type</option>
+                                    <option value="full">Full Membership ($50/year)</option>
+                                    <option value="student">Student/Trainee Membership ($25/year)</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="terms" class="checkbox-input" required>
+                                    <span class="checkbox-text">I agree to the <a href="#" class="terms-link">Terms of Service</a> and <a href="#" class="privacy-link">Privacy Policy</a></span>
+                                </label>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="newsletter" class="checkbox-input">
+                                    <span class="checkbox-text">Subscribe to SPIN A Yarn newsletter for updates and educational content</span>
+                                </label>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-full">Create Account</button>
+                        </form>
+
+                        <div class="auth-footer">
+                            <p>Already have an account? <a href="login.html" class="login-link">Sign in</a></p>
+                        </div>
+
+                        <div class="auth-divider">
+                            <span>or</span>
+                        </div>
+
+                        <div class="social-auth">
+                            <button class="btn btn-social btn-google" type="button">
+                                <span class="social-icon">🔍</span>
+                                Continue with Google
+                            </button>
+                            <button class="btn btn-social btn-microsoft" type="button">
+                                <span class="social-icon">🏢</span>
+                                Continue with Microsoft
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="auth-info">
+                        <h2>Why Join SPIN?</h2>
+                        <div class="membership-benefits">
+                            <div class="benefit-item">
+                                <div class="benefit-icon">🎓</div>
+                                <div class="benefit-text">
+                                    <h3>World-Class Education</h3>
+                                    <p>Access our comprehensive fellowship programs, virtual clinics, and expert-led educational content</p>
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">🌐</div>
+                                <div class="benefit-text">
+                                    <h3>Global Community</h3>
+                                    <p>Connect with pediatric neuroradiology professionals from around the world</p>
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">🔬</div>
+                                <div class="benefit-text">
+                                    <h3>Research Opportunities</h3>
+                                    <p>Participate in cutting-edge research and contribute to advancing the field</p>
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">🏆</div>
+                                <div class="benefit-text">
+                                    <h3>Professional Growth</h3>
+                                    <p>Enhance your skills, expand your network, and advance your career</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pricing-summary">
+                            <h3>Membership Options</h3>
+                            <div class="price-options">
+                                <div class="price-option">
+                                    <h4>Full Membership</h4>
+                                    <p class="price">$50/year</p>
+                                    <p class="price-description">Complete access to all SPIN resources and programs</p>
+                                </div>
+                                <div class="price-option">
+                                    <h4>Student/Trainee</h4>
+                                    <p class="price">$25/year</p>
+                                    <p class="price-description">Discounted rate for students and trainees with proof of enrollment</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SPIN Feedback Section -->
+        <section class="feedback-section section">
+            <div class="container">
+                <h2 class="section-title">New Member Experiences</h2>
+                <div class="feedback-carousel">
+                    <div class="feedback-quote">
+                        <blockquote>
+                            "Joining SPIN was one of the best decisions for my professional development. The resources are incredible!"
+                        </blockquote>
+                        <cite>- Dr. Maria Santos, New Member</cite>
+                    </div>
+                    <div class="feedback-quote">
+                        <blockquote>
+                            "The sign-up process was smooth, and I immediately gained access to valuable educational content."
+                        </blockquote>
+                        <cite>- Dr. James Wright, Student Member</cite>
+                    </div>
+                    <div class="feedback-quote">
+                        <blockquote>
+                            "SPIN's community welcomed me from day one. The networking opportunities are exceptional."
+                        </blockquote>
+                        <cite>- Dr. Yuki Nakamura, Recent Graduate</cite>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="../images/spin_logo.webp" alt="SPIN Academics" class="footer-logo-img">
+                        <span>SPIN Academics</span>
+                    </div>
+                    <p>Society for Pediatric and Investigative Neuroradiology</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="membership.html">Membership</a></li>
+                        <li><a href="education.html">Education</a></li>
+                        <li><a href="research.html">Research</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Education</h4>
+                    <ul>
+                        <li><a href="society-fellowship.html">Fellowship Program</a></li>
+                        <li><a href="cortex-club.html">Cortex Club</a></li>
+                        <li><a href="spin-yarn-newsletter.html">SPIN A Yarn</a></li>
+                        <li><a href="spin-wfpi.html">SPIN WFPI</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn">📧</a>
+                        <a href="#" aria-label="Twitter">🐦</a>
+                        <a href="#" aria-label="YouTube">📺</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 SPIN Academics. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

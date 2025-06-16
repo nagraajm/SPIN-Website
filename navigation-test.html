@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Test - SPIN Academics</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .test-section {
+            padding: 2rem;
+            margin: 2rem;
+            background: var(--color-bg-light);
+            border-radius: 8px;
+        }
+        .test-info {
+            color: var(--color-text);
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        .feature-list {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        .feature-list li {
+            margin: 0.5rem 0;
+            color: var(--color-text-light);
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="images/spin_logo.webp" alt="SPIN Academics Logo" class="logo-img">
+                <span class="logo-text">SPIN Academics</span>
+            </div>
+            <nav class="nav" role="navigation">
+                <button class="nav-toggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link active">Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a href="pages/about.html" class="nav-link dropdown-toggle">About <i class="dropdown-arrow">▼</i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="pages/about.html#presidents-welcome" class="dropdown-link">President's Welcome</a></li>
+                            <li><a href="pages/about.html#founding-members" class="dropdown-link">Founding Members</a></li>
+                            <li><a href="pages/about.html#executive-committee" class="dropdown-link">Executive Committee</a></li>
+                            <li><a href="pages/about.html#scientific-committee" class="dropdown-link">Scientific Committee</a></li>
+                            <li><a href="pages/about.html#research-admin-team" class="dropdown-link">Research and Admin Team</a></li>
+                            <li><a href="pages/about.html#rising-stars" class="dropdown-link">Rising Stars</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="pages/membership.html" class="nav-link">Membership</a></li>
+                    <li class="nav-item dropdown">
+                        <a href="pages/education.html" class="nav-link dropdown-toggle">Education <i class="dropdown-arrow">▼</i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="pages/society-fellowship.html" class="dropdown-link">Society Fellowship</a></li>
+                            <li><a href="pages/education.html" class="dropdown-link">Education Offerings</a></li>
+                            <li><a href="pages/cortex-club.html" class="dropdown-link">Cortex Club</a></li>
+                            <li><a href="pages/spin-yarn-newsletter.html" class="dropdown-link">SPIN Yarn Newsletter</a></li>
+                            <li><a href="pages/spin-wfpi.html" class="dropdown-link">SPIN-WFPI</a></li>
+                            <li><a href="pages/spin-reporting-room.html" class="dropdown-link">SPIN Reporting Room</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="pages/research.html" class="nav-link dropdown-toggle">Research <i class="dropdown-arrow">▼</i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="pages/case-of-the-month.html" class="dropdown-link">Case of the Month Submission</a></li>
+                            <li><a href="pages/submit-proposal.html" class="dropdown-link">Submit a Proposal</a></li>
+                            <li><a href="pages/green-radiology.html" class="dropdown-link">Green Radiology</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="pages/login.html" class="nav-link login-btn">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <div class="test-section">
+                <h1 style="color: var(--color-primary); margin-bottom: 1rem;">🎉 Navigation Test Page</h1>
+                <div class="test-info">
+                    <h2 style="color: var(--color-secondary); margin-bottom: 1rem;">Navigation Features Implemented:</h2>
+                    <ul class="feature-list">
+                        <li><strong>Dropdown Menus:</strong> Hover over "About", "Education", or "Research" to see dropdown menus</li>
+                        <li><strong>Professional Theme:</strong> Enhanced gradient background with medical colors</li>
+                        <li><strong>Mobile Responsive:</strong> Navigation collapses to hamburger menu on mobile devices</li>
+                        <li><strong>Active States:</strong> Current page highlighted with active styling</li>
+                        <li><strong>Smooth Animations:</strong> Dropdown menus with smooth transitions</li>
+                        <li><strong>Accessible:</strong> ARIA labels and keyboard navigation support</li>
+                    </ul>
+                    
+                    <h2 style="color: var(--color-secondary); margin: 2rem 0 1rem 0;">Dropdown Structure:</h2>
+                    <div style="background: var(--color-white); padding: 1rem; border-radius: 8px; margin: 1rem 0;">
+                        <h3 style="color: var(--color-primary);">About</h3>
+                        <ul>
+                            <li>President's Welcome</li>
+                            <li>Founding Members</li>
+                            <li>Executive Committee</li>
+                            <li>Scientific Committee</li>
+                            <li>Research and Admin Team</li>
+                            <li>Rising Stars</li>
+                        </ul>
+                        
+                        <h3 style="color: var(--color-primary);">Education</h3>
+                        <ul>
+                            <li>Society Fellowship</li>
+                            <li>Education Offerings</li>
+                            <li>Cortex Club</li>
+                            <li>SPIN Yarn Newsletter</li>
+                            <li>SPIN-WFPI</li>
+                            <li>SPIN Reporting Room</li>
+                        </ul>
+                        
+                        <h3 style="color: var(--color-primary);">Research</h3>
+                        <ul>
+                            <li>Case of the Month Submission</li>
+                            <li>Submit a Proposal</li>
+                            <li>Green Radiology</li>
+                        </ul>
+                    </div>
+                    
+                    <h2 style="color: var(--color-secondary); margin: 2rem 0 1rem 0;">Test Instructions:</h2>
+                    <ol class="feature-list">
+                        <li>Hover over dropdown menu items to see smooth animations</li>
+                        <li>Resize the browser window to test mobile responsiveness</li>
+                        <li>On mobile, click the hamburger menu to open/close navigation</li>
+                        <li>Click dropdown arrows on mobile to expand/collapse submenus</li>
+                        <li>Test navigation links to ensure they work properly</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education - SPIN Academics</title>
+    <meta name="description" content="Explore SPIN's comprehensive educational programs including fellowships, virtual clinics, and professional development">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="../images/spin_logo.webp" alt="SPIN Academics Logo" class="logo-img">
+                <span class="logo-text">SPIN Academics</span>
+            </div>
+            <nav class="nav" role="navigation">
+                <button class="nav-toggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="../index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a href="about.html" class="nav-link dropdown-toggle">About <i class="dropdown-arrow">▼</i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="about.html#presidents-welcome" class="dropdown-link">President's Welcome</a></li>
+                            <li><a href="about.html#founding-members" class="dropdown-link">Founding Members</a></li>
+                            <li><a href="about.html#executive-committee" class="dropdown-link">Executive Committee</a></li>
+                            <li><a href="about.html#scientific-committee" class="dropdown-link">Scientific Committee</a></li>
+                            <li><a href="about.html#research-admin-team" class="dropdown-link">Research and Admin Team</a></li>
+                            <li><a href="about.html#rising-stars" class="dropdown-link">Rising Stars</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="membership.html" class="nav-link">Membership</a></li>
+                    <li class="nav-item dropdown">
+                        <a href="education.html" class="nav-link dropdown-toggle active">Education <i class="dropdown-arrow">▼</i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="society-fellowship.html" class="dropdown-link">Society Fellowship</a></li>
+                            <li><a href="education.html" class="dropdown-link">Education Offerings</a></li>
+                            <li><a href="cortex-club.html" class="dropdown-link">Cortex Club</a></li>
+                            <li><a href="spin-yarn-newsletter.html" class="dropdown-link">SPIN Yarn Newsletter</a></li>
+                            <li><a href="spin-wfpi.html" class="dropdown-link">SPIN-WFPI</a></li>
+                            <li><a href="spin-reporting-room.html" class="dropdown-link">SPIN Reporting Room</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="research.html" class="nav-link dropdown-toggle">Research <i class="dropdown-arrow">▼</i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="case-of-the-month.html" class="dropdown-link">Case of the Month Submission</a></li>
+                            <li><a href="submit-proposal.html" class="dropdown-link">Submit a Proposal</a></li>
+                            <li><a href="green-radiology.html" class="dropdown-link">Green Radiology</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="login.html" class="nav-link login-btn">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <!-- Hero Section -->
+        <section class="hero-section education-hero">
+            <div class="container">
+                <h1 class="hero-title">Educational Excellence</h1>
+                <p class="hero-subtitle">Advancing pediatric neuroradiology through innovative education and professional development</p>
+            </div>
+        </section>
+
+        <!-- Education Overview -->
+        <section class="section" id="education-overview">
+            <div class="container">
+                <div class="education-intro">
+                    <h2 class="section-title">Comprehensive Educational Programs</h2>
+                    <p>SPIN Academics is committed to providing world-class educational opportunities for pediatric neuroradiology professionals at every stage of their career. Our comprehensive programs combine cutting-edge content with innovative delivery methods to ensure optimal learning outcomes.</p>
+                    <div class="cta-buttons">
+                        <a href="membership.html" class="btn btn-primary">Join SPIN</a>
+                        <a href="society-fellowship.html" class="btn btn-secondary">Explore Fellowship</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Educational Offerings Grid -->
+        <section class="section offerings-section">
+            <div class="container">
+                <h2 class="section-title">Educational Offerings</h2>
+                <div class="offerings-grid">
+                    <div class="offering-card featured">
+                        <div class="card-image img-placeholder">
+                            <img src="../images/virtual-clinics.jpg" alt="Virtual Neuroradiology Clinics" class="offering-img">
+                        </div>
+                        <div class="card-content">
+                            <h3>Virtual Neuroradiology Clinics</h3>
+                            <p class="card-subtitle">Cortex Club</p>
+                            <p>Interactive virtual sessions featuring real cases, expert discussions, and collaborative learning. Join our global community for weekly case reviews and educational presentations.</p>
+                            <div class="card-features">
+                                <span class="feature-tag">Weekly Sessions</span>
+                                <span class="feature-tag">Expert Led</span>
+                                <span class="feature-tag">Interactive</span>
+                            </div>
+                            <a href="cortex-club.html" class="btn btn-primary">Learn More</a>
+                        </div>
+                    </div>
+
+                    <div class="offering-card">
+                        <div class="card-image img-placeholder">
+                            <img src="../images/spin-essentials.jpg" alt="SPIN Essentials" class="offering-img">
+                        </div>
+                        <div class="card-content">
+                            <h3>SPIN Essentials</h3>
+                            <p class="card-subtitle">YouTube Video Library</p>
+                            <p>Comprehensive collection of educational videos covering fundamental concepts in pediatric neuroradiology. Access our curated playlist of expert presentations and tutorials.</p>
+                            <div class="card-features">
+                                <span class="feature-tag">On-Demand</span>
+                                <span class="feature-tag">Free Access</span>
+                                <span class="feature-tag">Expert Content</span>
+                            </div>
+                            <a href="https://youtube.com/@SPINEssentials" class="btn btn-secondary" target="_blank">Watch Videos</a>
+                        </div>
+                    </div>
+
+                    <div class="offering-card">
+                        <div class="card-image img-placeholder">
+                            <img src="../images/newsletter.jpg" alt="SPIN A Yarn Newsletter" class="offering-img">
+                        </div>
+                        <div class="card-content">
+                            <h3>SPIN A Yarn Newsletter</h3>
+                            <p class="card-subtitle">Monthly Publication</p>
+                            <p>Stay updated with the latest developments in pediatric neuroradiology, member highlights, research updates, and educational opportunities delivered monthly to your inbox.</p>
+                            <div class="card-features">
+                                <span class="feature-tag">Monthly</span>
+                                <span class="feature-tag">Member Exclusive</span>
+                                <span class="feature-tag">Research Updates</span>
+                            </div>
+                            <a href="spin-yarn-newsletter.html" class="btn btn-secondary">Subscribe</a>
+                        </div>
+                    </div>
+
+                    <div class="offering-card">
+                        <div class="card-image img-placeholder">
+                            <img src="../images/spinner-month.jpg" alt="Spinner of the Month" class="offering-img">
+                        </div>
+                        <div class="card-content">
+                            <h3>Spinner of the Month</h3>
+                            <p class="card-subtitle">Member Spotlight</p>
+                            <p>Monthly feature highlighting outstanding contributions from SPIN members, showcasing innovative research, clinical excellence, and educational achievements.</p>
+                            <div class="card-features">
+                                <span class="feature-tag">Monthly Feature</span>
+                                <span class="feature-tag">Member Recognition</span>
+                                <span class="feature-tag">Inspiration</span>
+                            </div>
+                            <a href="membership.html" class="btn btn-secondary">Join SPIN</a>
+                        </div>
+                    </div>
+
+                    <div class="offering-card">
+                        <div class="card-image img-placeholder">
+                            <img src="../images/wfpi-program.jpg" alt="SPIN WFPI" class="offering-img">
+                        </div>
+                        <div class="card-content">
+                            <h3>SPIN WFPI</h3>
+                            <p class="card-subtitle">Global Education Initiative</p>
+                            <p>Collaborative educational program with international partners, providing specialized training and mentorship opportunities in pediatric neuroradiology worldwide.</p>
+                            <div class="card-features">
+                                <span class="feature-tag">Global Reach</span>
+                                <span class="feature-tag">Mentorship</span>
+                                <span class="feature-tag">Partnership</span>
+                            </div>
+                            <a href="spin-wfpi.html" class="btn btn-secondary">Explore Program</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Fellowship Program Highlight -->
+        <section class="section fellowship-highlight">
+            <div class="container">
+                <div class="fellowship-content">
+                    <div class="fellowship-text">
+                        <h2>SPIN Fellowship Program</h2>
+                        <p class="lead">Our comprehensive three-part fellowship program is designed to advance your expertise in pediatric neuroradiology through structured learning, expert mentorship, and hands-on experience.</p>
+                        
+                        <div class="fellowship-parts">
+                            <div class="part-item">
+                                <h3>Part 1: Foundations</h3>
+                                <p>Build essential knowledge with comprehensive curriculum covering pediatric neuroanatomy, pathology, and imaging techniques.</p>
+                                <a href="fellowship-part1.html" class="card-link">Learn More →</a>
+                            </div>
+                            <div class="part-item">
+                                <h3>Part 2: Levelling Up</h3>
+                                <p>Advanced training in complex cases, differential diagnosis, and cutting-edge imaging technologies.</p>
+                                <a href="fellowship-part2.html" class="card-link">Learn More →</a>
+                            </div>
+                            <div class="part-item">
+                                <h3>The Finale: In-Person Dubai</h3>
+                                <p>Culminate your fellowship experience with our intensive in-person meeting in Dubai, featuring workshops, case presentations, and networking.</p>
+                                <a href="spin-in-person.html" class="card-link">Learn More →</a>
+                            </div>
+                        </div>
+
+                        <div class="fellowship-cta">
+                            <a href="society-fellowship.html" class="btn btn-primary">View Fellowship Program</a>
+                            <a href="membership.html" class="btn btn-secondary">Join SPIN</a>
+                        </div>
+                    </div>
+                    <div class="fellowship-image img-placeholder">
+                        <img src="../images/fellowship-overview.jpg" alt="SPIN Fellowship Program" class="fellowship-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Additional Educational Resources -->
+        <section class="section resources-section">
+            <div class="container">
+                <h2 class="section-title">Additional Educational Resources</h2>
+                <div class="resources-grid">
+                    <div class="resource-item">
+                        <div class="resource-icon">📚</div>
+                        <h3>Case Libraries</h3>
+                        <p>Extensive collection of pediatric neuroradiology cases with detailed explanations and teaching points.</p>
+                    </div>
+                    <div class="resource-item">
+                        <div class="resource-icon">🎥</div>
+                        <h3>Webinar Series</h3>
+                        <p>Regular webinars featuring expert presentations on current topics and emerging technologies.</p>
+                    </div>
+                    <div class="resource-item">
+                        <div class="resource-icon">📖</div>
+                        <h3>Reading Lists</h3>
+                        <p>Curated reading recommendations for different levels of training and areas of specialization.</p>
+                    </div>
+                    <div class="resource-item">
+                        <div class="resource-icon">🏆</div>
+                        <h3>Certification Programs</h3>
+                        <p>Structured certification pathways to validate your expertise and professional development.</p>
+                    </div>
+                    <div class="resource-item">
+                        <div class="resource-icon">👥</div>
+                        <h3>Study Groups</h3>
+                        <p>Collaborative learning opportunities with peers through organized study groups and discussion forums.</p>
+                    </div>
+                    <div class="resource-item">
+                        <div class="resource-icon">🔬</div>
+                        <h3>Research Training</h3>
+                        <p>Guidance and resources for conducting research in pediatric neuroradiology, including methodology and publication support.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reporting Room -->
+        <section class="section reporting-room-section">
+            <div class="container">
+                <div class="reporting-room-content">
+                    <div class="reporting-room-text">
+                        <h2>SPIN Reporting Room</h2>
+                        <p class="lead">Enhance your reporting skills with our specialized training program designed to improve diagnostic accuracy and communication effectiveness in pediatric neuroradiology.</p>
+                        
+                        <div class="reporting-features">
+                            <div class="feature-list">
+                                <h3>Program Features:</h3>
+                                <ul>
+                                    <li>Structured reporting templates</li>
+                                    <li>Case-based learning modules</li>
+                                    <li>Expert feedback and mentorship</li>
+                                    <li>Quality improvement metrics</li>
+                                    <li>Communication skills training</li>
+                                </ul>
+                            </div>
+                            <div class="pricing-info">
+                                <h3>Investment:</h3>
+                                <p class="price-tag">$199 per participant</p>
+                                <p class="price-note">Includes access to all materials, expert feedback, and completion certificate</p>
+                            </div>
+                        </div>
+
+                        <a href="spin-reporting-room.html" class="btn btn-primary">Learn More</a>
+                    </div>
+                    <div class="reporting-room-image img-placeholder">
+                        <img src="../images/reporting-room.jpg" alt="SPIN Reporting Room" class="reporting-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SPIN Feedback Section -->
+        <section class="feedback-section section">
+            <div class="container">
+                <h2 class="section-title">Educational Excellence Testimonials</h2>
+                <div class="feedback-carousel">
+                    <div class="feedback-quote">
+                        <blockquote>
+                            "The SPIN fellowship program provided me with comprehensive knowledge and practical skills that have been invaluable in my practice."
+                        </blockquote>
+                        <cite>- Dr. Amanda Thompson, Fellowship Graduate</cite>
+                    </div>
+                    <div class="feedback-quote">
+                        <blockquote>
+                            "The Cortex Club virtual sessions are incredibly valuable. The case discussions and expert insights have significantly improved my diagnostic confidence."
+                        </blockquote>
+                        <cite>- Dr. Carlos Rodriguez, Member</cite>
+                    </div>
+                    <div class="feedback-quote">
+                        <blockquote>
+                            "SPIN's educational resources are top-notch. The variety of learning formats caters to different learning styles and professional needs."
+                        </blockquote>
+                        <cite>- Dr. Priya Patel, Resident</cite>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="../images/spin_logo.webp" alt="SPIN Academics" class="footer-logo-img">
+                        <span>SPIN Academics</span>
+                    </div>
+                    <p>Society for Pediatric and Investigative Neuroradiology</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="membership.html">Membership</a></li>
+                        <li><a href="education.html">Education</a></li>
+                        <li><a href="research.html">Research</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Education</h4>
+                    <ul>
+                        <li><a href="society-fellowship.html">Fellowship Program</a></li>
+                        <li><a href="cortex-club.html">Cortex Club</a></li>
+                        <li><a href="spin-yarn-newsletter.html">SPIN A Yarn</a></li>
+                        <li><a href="spin-wfpi.html">SPIN WFPI</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn">📧</a>
+                        <a href="#" aria-label="Twitter">🐦</a>
+                        <a href="#" aria-label="YouTube">📺</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 SPIN Academics. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

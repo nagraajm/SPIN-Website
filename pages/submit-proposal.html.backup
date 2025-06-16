@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Research Proposal - SPIN Academics</title>
+    <meta name="description" content="Submit your research proposal for collaborative multi-center studies in pediatric neuroradiology">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="../images/spin_logo.webp" alt="SPIN Academics Logo" class="logo-img">
+                <span class="logo-text">SPIN Academics</span>
+            </div>
+            <nav class="nav" role="navigation">
+                <button class="nav-toggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="../index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="membership.html" class="nav-link">Membership</a></li>
+                    <li><a href="education.html" class="nav-link">Education</a></li>
+                    <li><a href="research.html" class="nav-link">Research</a></li>
+                    <li><a href="login.html" class="nav-link login-btn">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <!-- Hero Section -->
+        <section class="hero-section proposal-hero">
+            <div class="container">
+                <h1 class="hero-title">Submit Research Proposal</h1>
+                <p class="hero-subtitle">Collaborate with our global network on pediatric neuroradiology research</p>
+            </div>
+        </section>
+
+        <!-- Proposal Overview -->
+        <section class="section" id="proposal-overview">
+            <div class="container">
+                <h2 class="section-title">Research Collaboration Opportunities</h2>
+                <div class="proposal-intro">
+                    <p class="lead">SPIN Academics supports collaborative research initiatives that advance the field of pediatric neuroradiology. We welcome research proposals from members worldwide for multi-center studies, innovative projects, and evidence-based investigations.</p>
+                    <p>Our research committee evaluates proposals based on scientific merit, feasibility, and potential impact on pediatric neuroradiology practice and patient care.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Research Support -->
+        <section class="section support-section">
+            <div class="container">
+                <h2 class="section-title">What SPIN Offers</h2>
+                <div class="support-grid">
+                    <div class="support-item">
+                        <div class="support-icon">🌐</div>
+                        <h3>Global Network</h3>
+                        <p>Access to 25+ member institutions worldwide for multi-center recruitment and data collection</p>
+                    </div>
+                    <div class="support-item">
+                        <div class="support-icon">👥</div>
+                        <h3>Expert Collaboration</h3>
+                        <p>Partnership with leading pediatric neuroradiologists and researchers globally</p>
+                    </div>
+                    <div class="support-item">
+                        <div class="support-icon">💰</div>
+                        <h3>Funding Support</h3>
+                        <p>Assistance with grant applications and access to research funding opportunities</p>
+                    </div>
+                    <div class="support-item">
+                        <div class="support-icon">📊</div>
+                        <h3>Statistical Support</h3>
+                        <p>Expert biostatistical consultation and analysis support</p>
+                    </div>
+                    <div class="support-item">
+                        <div class="support-icon">🔧</div>
+                        <h3>Technical Infrastructure</h3>
+                        <p>Data management platforms, secure data sharing, and technical resources</p>
+                    </div>
+                    <div class="support-item">
+                        <div class="support-icon">📝</div>
+                        <h3>Publication Support</h3>
+                        <p>Guidance for manuscript preparation and journal submission</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Proposal Categories -->
+        <section class="section categories-section">
+            <div class="container">
+                <h2 class="section-title">Research Categories</h2>
+                <div class="categories-grid">
+                    <div class="category-card">
+                        <h3>Clinical Studies</h3>
+                        <p>Patient-centered research focusing on diagnostic accuracy, treatment outcomes, and clinical decision-making in pediatric neuroradiology.</p>
+                        <ul>
+                            <li>Diagnostic performance studies</li>
+                            <li>Clinical outcome research</li>
+                            <li>Treatment response evaluation</li>
+                        </ul>
+                    </div>
+                    <div class="category-card">
+                        <h3>Technical Innovation</h3>
+                        <p>Research on new imaging techniques, protocol optimization, and technological advances in pediatric neuroimaging.</p>
+                        <ul>
+                            <li>Imaging protocol optimization</li>
+                            <li>New sequence development</li>
+                            <li>AI and machine learning applications</li>
+                        </ul>
+                    </div>
+                    <div class="category-card">
+                        <h3>Quality Improvement</h3>
+                        <p>Studies aimed at improving quality of care, patient safety, and healthcare delivery in pediatric neuroradiology.</p>
+                        <ul>
+                            <li>Quality metrics development</li>
+                            <li>Safety improvement initiatives</li>
+                            <li>Workflow optimization</li>
+                        </ul>
+                    </div>
+                    <div class="category-card">
+                        <h3>Educational Research</h3>
+                        <p>Research on training methods, competency assessment, and educational outcomes in pediatric neuroradiology.</p>
+                        <ul>
+                            <li>Training effectiveness studies</li>
+                            <li>Competency assessment tools</li>
+                            <li>Educational intervention research</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Proposal Form -->
+        <section class="section proposal-form-section">
+            <div class="container">
+                <h2 class="section-title">Research Proposal Submission</h2>
+                <div class="proposal-container">
+                    <div class="proposal-guidelines">
+                        <h3>Submission Guidelines</h3>
+                        <div class="guidelines-content">
+                            <h4>Proposal Requirements</h4>
+                            <ul>
+                                <li>Clear research question and objectives</li>
+                                <li>Detailed methodology and study design</li>
+                                <li>Timeline and milestones</li>
+                                <li>Budget and resource requirements</li>
+                                <li>Expected outcomes and impact</li>
+                            </ul>
+
+                            <h4>Review Process</h4>
+                            <ol>
+                                <li><strong>Initial Review (2 weeks):</strong> Administrative review for completeness</li>
+                                <li><strong>Scientific Review (4 weeks):</strong> Expert panel evaluation</li>
+                                <li><strong>Committee Decision (2 weeks):</strong> Final approval and feedback</li>
+                                <li><strong>Project Initiation:</strong> Support and resources provided</li>
+                            </ol>
+
+                            <h4>Evaluation Criteria</h4>
+                            <ul>
+                                <li>Scientific merit and innovation</li>
+                                <li>Feasibility and methodology</li>
+                                <li>Clinical relevance and impact</li>
+                                <li>Multi-center potential</li>
+                                <li>Investigator qualifications</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="proposal-form-container">
+                        <form class="research-proposal-form contact-form" id="proposal-form">
+                            <h3>Research Proposal Form</h3>
+                            
+                            <!-- Principal Investigator Information -->
+                            <div class="form-section">
+                                <h4>Principal Investigator Information</h4>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="pi-name" class="form-label">Name *</label>
+                                        <input type="text" id="pi-name" name="pi-name" class="form-input" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="pi-email" class="form-label">Email *</label>
+                                        <input type="email" id="pi-email" name="pi-email" class="form-input" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="pi-institution" class="form-label">Institution *</label>
+                                    <input type="text" id="pi-institution" name="pi-institution" class="form-input" required>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="pi-position" class="form-label">Position/Title *</label>
+                                        <input type="text" id="pi-position" name="pi-position" class="form-input" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="pi-experience" class="form-label">Years of Experience *</label>
+                                        <select id="pi-experience" name="pi-experience" class="form-input" required>
+                                            <option value="">Select</option>
+                                            <option value="0-2">0-2 years</option>
+                                            <option value="3-5">3-5 years</option>
+                                            <option value="6-10">6-10 years</option>
+                                            <option value="11-15">11-15 years</option>
+                                            <option value="15+">15+ years</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Project Information -->
+                            <div class="form-section">
+                                <h4>Project Information</h4>
+                                <div class="form-group">
+                                    <label for="project-title" class="form-label">Project Title *</label>
+                                    <input type="text" id="project-title" name="project-title" class="form-input" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="research-category" class="form-label">Research Category *</label>
+                                    <select id="research-category" name="research-category" class="form-input" required>
+                                        <option value="">Select category</option>
+                                        <option value="clinical">Clinical Studies</option>
+                                        <option value="technical">Technical Innovation</option>
+                                        <option value="quality">Quality Improvement</option>
+                                        <option value="educational">Educational Research</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="research-question" class="form-label">Research Question/Hypothesis *</label>
+                                    <textarea id="research-question" name="research-question" class="form-input form-textarea" required placeholder="Clearly state your research question or hypothesis"></textarea>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="objectives" class="form-label">Study Objectives *</label>
+                                    <textarea id="objectives" name="objectives" class="form-input form-textarea" required placeholder="List primary and secondary objectives"></textarea>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="background" class="form-label">Background/Rationale *</label>
+                                    <textarea id="background" name="background" class="form-input form-textarea" required placeholder="Provide background information and study rationale"></textarea>
+                                </div>
+                            </div>
+
+                            <!-- Methodology -->
+                            <div class="form-section">
+                                <h4>Methodology</h4>
+                                <div class="form-group">
+                                    <label for="study-design" class="form-label">Study Design *</label>
+                                    <select id="study-design" name="study-design" class="form-input" required>
+                                        <option value="">Select design</option>
+                                        <option value="prospective">Prospective Cohort</option>
+                                        <option value="retrospective">Retrospective Cohort</option>
+                                        <option value="case-control">Case-Control</option>
+                                        <option value="cross-sectional">Cross-Sectional</option>
+                                        <option value="rct">Randomized Controlled Trial</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="sample-size" class="form-label">Estimated Sample Size *</label>
+                                        <input type="number" id="sample-size" name="sample-size" class="form-input" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="study-duration" class="form-label">Study Duration (months) *</label>
+                                        <input type="number" id="study-duration" name="study-duration" class="form-input" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="methodology" class="form-label">Detailed Methodology *</label>
+                                    <textarea id="methodology" name="methodology" class="form-input form-textarea" required placeholder="Describe your methodology in detail including inclusion/exclusion criteria, data collection methods, and analysis plan"></textarea>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="multicenter" class="form-label">Multi-center Study *</label>
+                                    <select id="multicenter" name="multicenter" class="form-input" required>
+                                        <option value="">Select</option>
+                                        <option value="yes">Yes - Seeking collaborating centers</option>
+                                        <option value="no">No - Single center study</option>
+                                        <option value="existing">Yes - Already have collaborating centers</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Resources and Support -->
+                            <div class="form-section">
+                                <h4>Resources and Support Needed</h4>
+                                <div class="form-group">
+                                    <label class="form-label">What support do you need from SPIN? (Check all that apply)</label>
+                                    <div class="checkbox-group">
+                                        <label class="checkbox-label">
+                                            <input type="checkbox" name="support[]" value="network" class="checkbox-input">
+                                            <span class="checkbox-text">Access to collaborating centers</span>
+                                        </label>
+                                        <label class="checkbox-label">
+                                            <input type="checkbox" name="support[]" value="funding" class="checkbox-input">
+                                            <span class="checkbox-text">Funding assistance</span>
+                                        </label>
+                                        <label class="checkbox-label">
+                                            <input type="checkbox" name="support[]" value="statistical" class="checkbox-input">
+                                            <span class="checkbox-text">Statistical consultation</span>
+                                        </label>
+                                        <label class="checkbox-label">
+                                            <input type="checkbox" name="support[]" value="technical" class="checkbox-input">
+                                            <span class="checkbox-text">Technical infrastructure</span>
+                                        </label>
+                                        <label class="checkbox-label">
+                                            <input type="checkbox" name="support[]" value="regulatory" class="checkbox-input">
+                                            <span class="checkbox-text">Regulatory/IRB guidance</span>
+                                        </label>
+                                        <label class="checkbox-label">
+                                            <input type="checkbox" name="support[]" value="publication" class="checkbox-input">
+                                            <span class="checkbox-text">Publication support</span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="budget" class="form-label">Estimated Budget (USD)</label>
+                                    <input type="text" id="budget" name="budget" class="form-input" placeholder="e.g., $50,000">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="funding-sources" class="form-label">Existing/Planned Funding Sources</label>
+                                    <textarea id="funding-sources" name="funding-sources" class="form-input form-textarea" placeholder="List any existing funding or planned applications"></textarea>
+                                </div>
+                            </div>
+
+                            <!-- Expected Outcomes -->
+                            <div class="form-section">
+                                <h4>Expected Outcomes and Impact</h4>
+                                <div class="form-group">
+                                    <label for="expected-outcomes" class="form-label">Expected Outcomes *</label>
+                                    <textarea id="expected-outcomes" name="expected-outcomes" class="form-input form-textarea" required placeholder="Describe expected findings and their significance"></textarea>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="clinical-impact" class="form-label">Clinical Impact *</label>
+                                    <textarea id="clinical-impact" name="clinical-impact" class="form-input form-textarea" required placeholder="How will this research impact clinical practice?"></textarea>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="publications" class="form-label">Planned Publications/Presentations</label>
+                                    <textarea id="publications" name="publications" class="form-input form-textarea" placeholder="Target journals, conferences, or other dissemination plans"></textarea>
+                                </div>
+                            </div>
+
+                            <!-- Additional Information -->
+                            <div class="form-section">
+                                <h4>Additional Information</h4>
+                                <div class="form-group">
+                                    <label for="previous-research" class="form-label">Previous Related Research</label>
+                                    <textarea id="previous-research" name="previous-research" class="form-input form-textarea" placeholder="Describe any previous research by you or your team related to this project"></textarea>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="additional-info" class="form-label">Additional Comments</label>
+                                    <textarea id="additional-info" name="additional-info" class="form-input form-textarea" placeholder="Any additional information you'd like to provide"></textarea>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="attachments" class="form-label">Supporting Documents (Optional)</label>
+                                    <input type="file" id="attachments" name="attachments" class="form-input" multiple accept=".pdf,.doc,.docx">
+                                    <small class="file-note">Upload detailed protocol, budget, or other supporting documents (PDF, DOC, DOCX - max 5MB each)</small>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="agreement" class="checkbox-input" required>
+                                    <span class="checkbox-text">I agree to collaborate with SPIN and acknowledge SPIN support in any resulting publications</span>
+                                </label>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-full">Submit Proposal</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SPIN Feedback Section -->
+        <section class="feedback-section section">
+            <div class="container">
+                <h2 class="section-title">Research Collaboration Success Stories</h2>
+                <div class="feedback-carousel">
+                    <div class="feedback-quote">
+                        <blockquote>
+                            "SPIN's research support transformed our single-center idea into a successful multi-center study with global impact."
+                        </blockquote>
+                        <cite>- Dr. Amanda Foster, Research Investigator</cite>
+                    </div>
+                    <div class="feedback-quote">
+                        <blockquote>
+                            "The statistical consultation and methodology support from SPIN were invaluable for our study design."
+                        </blockquote>
+                        <cite>- Dr. Carlos Rodriguez, Principal Investigator</cite>
+                    </div>
+                    <div class="feedback-quote">
+                        <blockquote>
+                            "SPIN's global network enabled us to recruit patients from 15 countries for our rare disease study."
+                        </blockquote>
+                        <cite>- Dr. Emma Thompson, Lead Researcher</cite>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="../images/spin_logo.webp" alt="SPIN Academics" class="footer-logo-img">
+                        <span>SPIN Academics</span>
+                    </div>
+                    <p>Society for Pediatric and Investigative Neuroradiology</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="membership.html">Membership</a></li>
+                        <li><a href="education.html">Education</a></li>
+                        <li><a href="research.html">Research</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Education</h4>
+                    <ul>
+                        <li><a href="society-fellowship.html">Fellowship Program</a></li>
+                        <li><a href="cortex-club.html">Cortex Club</a></li>
+                        <li><a href="spin-yarn-newsletter.html">SPIN A Yarn</a></li>
+                        <li><a href="spin-wfpi.html">SPIN WFPI</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn">📧</a>
+                        <a href="#" aria-label="Twitter">🐦</a>
+                        <a href="#" aria-label="YouTube">📺</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 SPIN Academics. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

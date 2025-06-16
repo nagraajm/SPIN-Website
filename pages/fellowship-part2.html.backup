@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fellowship Part 2 - SPIN Academics</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <div class="nav-brand">
+                <a href="../index.html" class="nav-logo">
+                    <img src="../images/spin_logo.webp" alt="SPIN Academics Logo" class="logo-img">
+                    <span class="logo-text">SPIN Academics</span>
+                </a>
+            </div>
+            
+            <div class="nav-menu" id="navMenu">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="../index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="about.html" class="nav-link">About</a>
+                        <div class="dropdown-content">
+                            <a href="about.html#leadership">Leadership</a>
+                            <a href="about.html#committees">Committees</a>
+                            <a href="about.html#history">History</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="membership.html" class="nav-link">Membership</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="education.html" class="nav-link">Education</a>
+                        <div class="dropdown-content">
+                            <a href="cortex-club.html">Cortex Club</a>
+                            <a href="spin-yarn-newsletter.html">SPIN Yarn Newsletter</a>
+                            <a href="spin-wfpi.html">SPIN & WFPI</a>
+                            <a href="spin-reporting-room.html">SPIN Reporting Room</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="research.html" class="nav-link">Research</a>
+                        <div class="dropdown-content">
+                            <a href="submit-proposal.html">Submit Proposal</a>
+                            <a href="green-radiology.html">Green Radiology</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link active">Fellowship</a>
+                        <div class="dropdown-content">
+                            <a href="society-fellowship.html">Fellowship Program</a>
+                            <a href="fellowship-part1.html">Part 1</a>
+                            <a href="fellowship-part2.html">Part 2</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="spin-in-person.html" class="nav-link">Events</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="nav-actions">
+                <a href="login.html" class="btn btn-outline">Login</a>
+                <a href="signup.html" class="btn btn-primary">Join SPIN</a>
+            </div>
+            
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <main class="main">
+        <!-- Hero Section -->
+        <section class="hero-section gradient-bg-3">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1 class="hero-title">Fellowship Part 2</h1>
+                        <p class="hero-subtitle">Advanced Pediatric Neuroradiology & Interventional Training</p>
+                        <p class="hero-description">
+                            The advanced level of SPIN's fellowship program, focusing on complex case management, 
+                            interventional neuroradiology, research methodology, and leadership development 
+                            for specialized pediatric neuroradiologists.
+                        </p>
+                        <div class="hero-actions">
+                            <a href="#apply" class="btn btn-primary btn-lg">Apply Now</a>
+                            <a href="#curriculum" class="btn btn-outline btn-lg">View Curriculum</a>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <div class="image-placeholder">
+                            <span>Fellowship Part 2</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Program Overview Section -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Advanced Fellowship Program</h2>
+                    <p class="section-subtitle">
+                        Developing expertise in complex pediatric neuroradiology and interventional procedures
+                    </p>
+                </div>
+
+                <div class="overview-content">
+                    <div class="overview-stats">
+                        <div class="stat-card">
+                            <div class="stat-number">12</div>
+                            <div class="stat-label">Months Duration</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">500+</div>
+                            <div class="stat-label">Clinical Hours</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">100+</div>
+                            <div class="stat-label">Complex Cases</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">25+</div>
+                            <div class="stat-label">Procedures</div>
+                        </div>
+                    </div>
+
+                    <div class="overview-description">
+                        <p>
+                            Fellowship Part 2 represents the pinnacle of pediatric neuroradiology training, 
+                            designed for fellows who have completed Part 1 or have equivalent experience. 
+                            This comprehensive 12-month program combines advanced diagnostic interpretation, 
+                            interventional neuroradiology training, research methodology, and leadership development.
+                        </p>
+                        <p>
+                            Fellows will work independently on complex cases, perform interventional procedures 
+                            under expert supervision, conduct original research, and prepare for leadership roles 
+                            in academic or clinical practice. The program emphasizes both technical excellence 
+                            and the development of critical thinking skills necessary for complex decision-making.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="prerequisites-section">
+                    <h3 class="prerequisites-title">Prerequisites</h3>
+                    <div class="prerequisites-grid">
+                        <div class="prerequisite-card">
+                            <div class="prerequisite-icon">
+                                <div class="icon-placeholder">🎓</div>
+                            </div>
+                            <h4 class="prerequisite-title">Educational Requirements</h4>
+                            <ul class="prerequisite-list">
+                                <li>Successful completion of Fellowship Part 1 OR</li>
+                                <li>Equivalent pediatric neuroradiology experience (12+ months)</li>
+                                <li>Board certification in diagnostic radiology</li>
+                                <li>Strong academic record and references</li>
+                            </ul>
+                        </div>
+
+                        <div class="prerequisite-card">
+                            <div class="prerequisite-icon">
+                                <div class="icon-placeholder">💼</div>
+                            </div>
+                            <h4 class="prerequisite-title">Professional Experience</h4>
+                            <ul class="prerequisite-list">
+                                <li>Demonstrated competency in basic neuroimaging interpretation</li>
+                                <li>Experience with pediatric patient care</li>
+                                <li>Previous exposure to interventional procedures (preferred)</li>
+                                <li>Research experience or publications (preferred)</li>
+                            </ul>
+                        </div>
+
+                        <div class="prerequisite-card">
+                            <div class="prerequisite-icon">
+                                <div class="icon-placeholder">🔬</div>
+                            </div>
+                            <h4 class="prerequisite-title">Technical Skills</h4>
+                            <ul class="prerequisite-list">
+                                <li>Proficiency in advanced imaging software</li>
+                                <li>Understanding of interventional radiology principles</li>
+                                <li>Basic research methodology knowledge</li>
+                                <li>Strong communication and presentation skills</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Curriculum Section -->
+        <section class="section section-alt" id="curriculum">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Advanced Curriculum</h2>
+                    <p class="section-subtitle">
+                        Comprehensive 12-month program structured in specialized focus areas
+                    </p>
+                </div>
+
+                <div class="curriculum-tracks">
+                    <div class="track-overview">
+                        <h3 class="track-title">Program Structure</h3>
+                        <p class="track-description">
+                            The Fellowship Part 2 curriculum is organized into four main tracks, 
+                            with fellows rotating through each area while maintaining continuity 
+                            in research and clinical responsibilities.
+                        </p>
+                    </div>
+
+                    <div class="tracks-grid">
+                        <div class="track-card">
+                            <div class="track-header">
+                                <div class="track-icon">
+                                    <div class="icon-placeholder">🧠</div>
+                                </div>
+                                <h3 class="track-title">Advanced Diagnostic Imaging</h3>
+                                <span class="track-duration">Months 1-3</span>
+                            </div>
+                            <div class="track-content">
+                                <p class="track-description">
+                                    Master complex diagnostic challenges in pediatric neuroradiology, 
+                                    including rare conditions, advanced imaging techniques, and 
+                                    multidisciplinary case management.
+                                </p>
+                                <div class="track-components">
+                                    <h4>Core Components:</h4>
+                                    <ul class="components-list">
+                                        <li>Complex congenital malformations</li>
+                                        <li>Rare metabolic disorders</li>
+                                        <li>Advanced tumor characterization</li>
+                                        <li>Multimodal imaging integration</li>
+                                        <li>Artificial intelligence applications</li>
+                                        <li>Quality assurance and safety</li>
+                                    </ul>
+                                </div>
+                                <div class="track-objectives">
+                                    <h4>Learning Objectives:</h4>
+                                    <ul class="objectives-list">
+                                        <li>Independently manage complex cases</li>
+                                        <li>Integrate multimodal imaging findings</li>
+                                        <li>Apply advanced post-processing techniques</li>
+                                        <li>Lead multidisciplinary conferences</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="track-card">
+                            <div class="track-header">
+                                <div class="track-icon">
+                                    <div class="icon-placeholder">🔧</div>
+                                </div>
+                                <h3 class="track-title">Interventional Neuroradiology</h3>
+                                <span class="track-duration">Months 4-6</span>
+                            </div>
+                            <div class="track-content">
+                                <p class="track-description">
+                                    Comprehensive training in pediatric interventional neuroradiology 
+                                    procedures, from basic techniques to complex therapeutic interventions.
+                                </p>
+                                <div class="track-components">
+                                    <h4>Core Components:</h4>
+                                    <ul class="components-list">
+                                        <li>Vascular malformation treatment</li>
+                                        <li>Stroke intervention procedures</li>
+                                        <li>Tumor embolization techniques</li>
+                                        <li>CSF diversion procedures</li>
+                                        <li>Spinal interventions</li>
+                                        <li>Emergency procedures</li>
+                                    </ul>
+                                </div>
+                                <div class="track-objectives">
+                                    <h4>Learning Objectives:</h4>
+                                    <ul class="objectives-list">
+                                        <li>Perform interventional procedures independently</li>
+                                        <li>Manage procedural complications</li>
+                                        <li>Develop treatment planning skills</li>
+                                        <li>Understand pediatric anesthesia considerations</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="track-card">
+                            <div class="track-header">
+                                <div class="track-icon">
+                                    <div class="icon-placeholder">🔬</div>
+                                </div>
+                                <h3 class="track-title">Research & Innovation</h3>
+                                <span class="track-duration">Months 7-9</span>
+                            </div>
+                            <div class="track-content">
+                                <p class="track-description">
+                                    Intensive research training focusing on study design, data analysis, 
+                                    grant writing, and publication in pediatric neuroradiology.
+                                </p>
+                                <div class="track-components">
+                                    <h4>Core Components:</h4>
+                                    <ul class="components-list">
+                                        <li>Research methodology and design</li>
+                                        <li>Statistical analysis techniques</li>
+                                        <li>Grant writing and funding</li>
+                                        <li>Manuscript preparation</li>
+                                        <li>Innovation and technology development</li>
+                                        <li>Collaborative research networks</li>
+                                    </ul>
+                                </div>
+                                <div class="track-objectives">
+                                    <h4>Learning Objectives:</h4>
+                                    <ul class="objectives-list">
+                                        <li>Design and conduct original research</li>
+                                        <li>Analyze and interpret research data</li>
+                                        <li>Write and submit grant proposals</li>
+                                        <li>Prepare manuscripts for publication</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="track-card">
+                            <div class="track-header">
+                                <div class="track-icon">
+                                    <div class="icon-placeholder">👨‍🏫</div>
+                                </div>
+                                <h3 class="track-title">Leadership & Education</h3>
+                                <span class="track-duration">Months 10-12</span>
+                            </div>
+                            <div class="track-content">
+                                <p class="track-description">
+                                    Development of leadership skills, teaching abilities, and 
+                                    preparation for academic or clinical leadership roles.
+                                </p>
+                                <div class="track-components">
+                                    <h4>Core Components:</h4>
+                                    <ul class="components-list">
+                                        <li>Teaching methodology and skills</li>
+                                        <li>Leadership and management principles</li>
+                                        <li>Curriculum development</li>
+                                        <li>Quality improvement projects</li>
+                                        <li>Professional development</li>
+                                        <li>Career planning and networking</li>
+                                    </ul>
+                                </div>
+                                <div class="track-objectives">
+                                    <h4>Learning Objectives:</h4>
+                                    <ul class="objectives-list">
+                                        <li>Develop effective teaching skills</li>
+                                        <li>Lead quality improvement initiatives</li>
+                                        <li>Understand healthcare management</li>
+                                        <li>Build professional networks</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="research-project-section">
+                    <h3 class="project-title">Required Research Project</h3>
+                    <div class="project-content">
+                        <p class="project-description">
+                            All Fellowship Part 2 participants must complete an original research project 
+                            that contributes new knowledge to pediatric neuroradiology. Projects are 
+                            selected based on fellow interests and institutional research priorities.
+                        </p>
+                        
+                        <div class="project-types">
+                            <div class="project-type">
+                                <h4 class="type-title">Clinical Research</h4>
+                                <p class="type-description">
+                                    Retrospective or prospective studies examining clinical outcomes, 
+                                    diagnostic accuracy, or treatment effectiveness.
+                                </p>
+                            </div>
+                            <div class="project-type">
+                                <h4 class="type-title">Technical Innovation</h4>
+                                <p class="type-description">
+                                    Development or validation of new imaging techniques, 
+                                    protocols, or post-processing methods.
+                                </p>
+                            </div>
+                            <div class="project-type">
+                                <h4 class="type-title">Educational Research</h4>
+                                <p class="type-description">
+                                    Studies examining educational methods, curriculum effectiveness, 
+                                    or training outcomes in neuroradiology.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="project-timeline">
+                            <h4 class="timeline-title">Research Timeline</h4>
+                            <div class="timeline-item">
+                                <div class="timeline-marker">Month 1</div>
+                                <div class="timeline-content">Project selection and proposal development</div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-marker">Month 3</div>
+                                <div class="timeline-content">IRB approval and study initiation</div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-marker">Month 6</div>
+                                <div class="timeline-content">Mid-program progress review</div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-marker">Month 9</div>
+                                <div class="timeline-content">Data analysis and manuscript preparation</div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-marker">Month 12</div>
+                                <div class="timeline-content">Final presentation and manuscript submission</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Clinical Rotations Section -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Clinical Rotations & Electives</h2>
+                    <p class="section-subtitle">
+                        Diverse clinical experiences across multiple specialized areas
+                    </p>
+                </div>
+
+                <div class="rotations-content">
+                    <div class="core-rotations">
+                        <h3 class="rotations-title">Core Rotations</h3>
+                        <div class="rotations-grid">
+                            <div class="rotation-card">
+                                <div class="rotation-icon">
+                                    <div class="icon-placeholder">🏥</div>
+                                </div>
+                                <h4 class="rotation-title">Emergency Neuroradiology</h4>
+                                <p class="rotation-duration">2 months</p>
+                                <p class="rotation-description">
+                                    24/7 emergency coverage with focus on acute pediatric 
+                                    neurological conditions and rapid decision-making.
+                                </p>
+                            </div>
+
+                            <div class="rotation-card">
+                                <div class="rotation-icon">
+                                    <div class="icon-placeholder">👶</div>
+                                </div>
+                                <h4 class="rotation-title">Fetal & Neonatal Imaging</h4>
+                                <p class="rotation-duration">2 months</p>
+                                <p class="rotation-description">
+                                    Specialized training in fetal MRI and neonatal 
+                                    neuroimaging with emphasis on congenital anomalies.
+                                </p>
+                            </div>
+
+                            <div class="rotation-card">
+                                <div class="rotation-icon">
+                                    <div class="icon-placeholder">🔬</div>
+                                </div>
+                                <h4 class="rotation-title">Advanced Imaging Research</h4>
+                                <p class="rotation-duration">2 months</p>
+                                <p class="rotation-description">
+                                    Hands-on experience with cutting-edge imaging 
+                                    techniques and research methodologies.
+                                </p>
+                            </div>
+
+                            <div class="rotation-card">
+                                <div class="rotation-icon">
+                                    <div class="icon-placeholder">⚡</div>
+                                </div>
+                                <h4 class="rotation-title">Interventional Procedures</h4>
+                                <p class="rotation-duration">3 months</p>
+                                <p class="rotation-description">
+                                    Intensive interventional training with graduated 
+                                    responsibility and independent procedure performance.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="elective-rotations">
+                        <h3 class="rotations-title">Elective Options</h3>
+                        <div class="electives-grid">
+                            <div class="elective-option">
+                                <h4 class="elective-title">Pediatric Neurosurgery Collaboration</h4>
+                                <p class="elective-description">Work closely with neurosurgical teams on complex cases</p>
+                            </div>
+                            <div class="elective-option">
+                                <h4 class="elective-title">International Exchange</h4>
+                                <p class="elective-description">Rotation at partner international institutions</p>
+                            </div>
+                            <div class="elective-option">
+                                <h4 class="elective-title">Industry Collaboration</h4>
+                                <p class="elective-description">Work with imaging equipment manufacturers on innovation</p>
+                            </div>
+                            <div class="elective-option">
+                                <h4 class="elective-title">Quality Improvement</h4>
+                                <p class="elective-description">Lead institutional quality improvement projects</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Assessment & Certification Section -->
+        <section class="section section-alt">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Assessment & Expert Certification</h2>
+                    <p class="section-subtitle">
+                        Comprehensive evaluation ensuring mastery of advanced pediatric neuroradiology
+                    </p>
+                </div>
+
+                <div class="assessment-framework">
+                    <div class="framework-overview">
+                        <h3 class="framework-title">Multi-Modal Assessment Approach</h3>
+                        <p class="framework-description">
+                            Our assessment methodology evaluates technical competency, clinical judgment, 
+                            research capabilities, and leadership potential through diverse evaluation methods.
+                        </p>
+                    </div>
+
+                    <div class="assessment-components">
+                        <div class="component-card">
+                            <div class="component-icon">
+                                <div class="icon-placeholder">📊</div>
+                            </div>
+                            <h4 class="component-title">Continuous Performance Evaluation</h4>
+                            <div class="component-details">
+                                <p><strong>Frequency:</strong> Monthly comprehensive reviews</p>
+                                <p><strong>Evaluators:</strong> Faculty, peers, healthcare team members</p>
+                                <p><strong>Components:</strong> Clinical skills, professionalism, communication</p>
+                                <p><strong>Format:</strong> 360-degree feedback system</p>
+                            </div>
+                        </div>
+
+                        <div class="component-card">
+                            <div class="component-icon">
+                                <div class="icon-placeholder">🖼️</div>
+                            </div>
+                            <h4 class="component-title">Advanced Case Presentations</h4>
+                            <div class="component-details">
+                                <p><strong>Frequency:</strong> Bi-weekly presentations</p>
+                                <p><strong>Format:</strong> Complex case analysis and management</p>
+                                <p><strong>Audience:</strong> Expert panel and peers</p>
+                                <p><strong>Assessment:</strong> Diagnostic accuracy, clinical reasoning</p>
+                            </div>
+                        </div>
+
+                        <div class="component-card">
+                            <div class="component-icon">
+                                <div class="icon-placeholder">🔧</div>
+                            </div>
+                            <h4 class="component-title">Procedural Competency Assessment</h4>
+                            <div class="component-details">
+                                <p><strong>Method:</strong> Direct observation and simulation</p>
+                                <p><strong>Standards:</strong> International competency frameworks</p>
+                                <p><strong>Progression:</strong> Graduated autonomy levels</p>
+                                <p><strong>Documentation:</strong> Procedure logs and evaluations</p>
+                            </div>
+                        </div>
+
+                        <div class="component-card">
+                            <div class="component-icon">
+                                <div class="icon-placeholder">📝</div>
+                            </div>
+                            <h4 class="component-title">Research Project Evaluation</h4>
+                            <div class="component-details">
+                                <p><strong>Components:</strong> Proposal, execution, analysis, presentation</p>
+                                <p><strong>Standards:</strong> Peer-reviewed publication quality</p>
+                                <p><strong>Defense:</strong> Formal thesis defense presentation</p>
+                                <p><strong>Impact:</strong> Contribution to field knowledge</p>
+                            </div>
+                        </div>
+
+                        <div class="component-card">
+                            <div class="component-icon">
+                                <div class="icon-placeholder">👨‍🏫</div>
+                            </div>
+                            <h4 class="component-title">Teaching & Leadership Assessment</h4>
+                            <div class="component-details">
+                                <p><strong>Teaching:</strong> Resident and medical student instruction</p>
+                                <p><strong>Leadership:</strong> Project management and team coordination</p>
+                                <p><strong>Communication:</strong> Presentation and interpersonal skills</p>
+                                <p><strong>Innovation:</strong> Quality improvement contributions</p>
+                            </div>
+                        </div>
+
+                        <div class="component-card">
+                            <div class="component-icon">
+                                <div class="icon-placeholder">🏆</div>
+                            </div>
+                            <h4 class="component-title">Comprehensive Final Examination</h4>
+                            <div class="component-details">
+                                <p><strong>Duration:</strong> 2-day comprehensive examination</p>
+                                <p><strong>Format:</strong> Written, oral, practical components</p>
+                                <p><strong>Panel:</strong> Internal and external expert examiners</p>
+                                <p><strong>Standards:</strong> International subspecialty certification level</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="certification-details">
+                    <h3 class="certification-title">Expert Certification Requirements</h3>
+                    <div class="certification-grid">
+                        <div class="cert-category">
+                            <h4 class="category-title">Clinical Competency</h4>
+                            <ul class="category-requirements">
+                                <li>Independent management of 100+ complex cases</li>
+                                <li>Demonstration of expert-level diagnostic accuracy</li>
+                                <li>Successful completion of all clinical rotations</li>
+                                <li>Satisfactory evaluations from all faculty</li>
+                            </ul>
+                        </div>
+
+                        <div class="cert-category">
+                            <h4 class="category-title">Procedural Skills</h4>
+                            <ul class="category-requirements">
+                                <li>Independent performance of 25+ interventional procedures</li>
+                                <li>Demonstration of technical proficiency</li>
+                                <li>Zero major procedural complications</li>
+                                <li>Board certification in interventional neuroradiology (if pursuing)</li>
+                            </ul>
+                        </div>
+
+                        <div class="cert-category">
+                            <h4 class="category-title">Research & Scholarship</h4>
+                            <ul class="category-requirements">
+                                <li>Completion of original research project</li>
+                                <li>Manuscript accepted for peer-reviewed publication</li>
+                                <li>Presentation at national/international conference</li>
+                                <li>Contribution to departmental research initiatives</li>
+                            </ul>
+                        </div>
+
+                        <div class="cert-category">
+                            <h4 class="category-title">Professional Development</h4>
+                            <ul class="category-requirements">
+                                <li>Demonstrated teaching effectiveness</li>
+                                <li>Leadership role in quality improvement project</li>
+                                <li>Active participation in professional organizations</li>
+                                <li>Commitment to lifelong learning and professional growth</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Application Section -->
+        <section class="section section-cta gradient-bg-1" id="apply">
+            <div class="container">
+                <div class="application-content">
+                    <div class="application-info">
+                        <h2 class="application-title">Apply for Fellowship Part 2</h2>
+                        <p class="application-description">
+                            Take the next step in your subspecialty training. Fellowship Part 2 
+                            represents the highest level of pediatric neuroradiology education, 
+                            preparing you for leadership roles in academics and clinical practice.
+                        </p>
+                        
+                        <div class="application-highlights">
+                            <div class="highlight-item">
+                                <div class="highlight-icon">⭐</div>
+                                <div class="highlight-content">
+                                    <h4>Elite Training</h4>
+                                    <p>Limited to 8 fellows per year for personalized attention</p>
+                                </div>
+                            </div>
+                            <div class="highlight-item">
+                                <div class="highlight-icon">🌟</div>
+                                <div class="highlight-content">
+                                    <h4>Expert Faculty</h4>
+                                    <p>Learn from world-renowned pediatric neuroradiologists</p>
+                                </div>
+                            </div>
+                            <div class="highlight-item">
+                                <div class="highlight-icon">🎯</div>
+                                <div class="highlight-content">
+                                    <h4>Career Placement</h4>
+                                    <p>100% job placement rate in desired positions</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="application-timeline">
+                            <h3>Application Timeline 2024-2025</h3>
+                            <div class="timeline-item">
+                                <div class="timeline-date">January 15</div>
+                                <div class="timeline-event">Applications Open</div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-date">May 31</div>
+                                <div class="timeline-event">Application Deadline</div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-date">June 30</div>
+                                <div class="timeline-event">Interview Invitations</div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-date">August 15</div>
+                                <div class="timeline-event">Final Decisions</div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-date">July 1, 2025</div>
+                                <div class="timeline-event">Program Begins</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form class="application-form advanced" id="fellowshipPart2Form">
+                        <h3 class="form-title">Fellowship Part 2 Application</h3>
+                        
+                        <div class="form-section">
+                            <h4 class="section-title">Personal Information</h4>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstName" class="form-label">First Name</label>
+                                    <input type="text" id="firstName" name="firstName" class="form-input" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName" class="form-label">Last Name</label>
+                                    <input type="text" id="lastName" name="lastName" class="form-input" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email Address</label>
+                                <input type="email" id="email" name="email" class="form-input" required>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="phone" class="form-label">Phone Number</label>
+                                    <input type="tel" id="phone" name="phone" class="form-input" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="dateOfBirth" class="form-label">Date of Birth</label>
+                                    <input type="date" id="dateOfBirth" name="dateOfBirth" class="form-input" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h4 class="section-title">Educational & Professional Background</h4>
+                            
+                            <div class="form-group">
+                                <label for="currentPosition" class="form-label">Current Position</label>
+                                <input type="text" id="currentPosition" name="currentPosition" class="form-input" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="currentInstitution" class="form-label">Current Institution</label>
+                                <input type="text" id="currentInstitution" name="currentInstitution" class="form-input" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="fellowshipPart1Status" class="form-label">Fellowship Part 1 Status</label>
+                                <select id="fellowshipPart1Status" name="fellowshipPart1Status" class="form-select" required>
+                                    <option value="">Select status</option>
+                                    <option value="completed-spin">Completed SPIN Fellowship Part 1</option>
+                                    <option value="equivalent-training">Equivalent pediatric neuroradiology training</option>
+                                    <option value="currently-enrolled">Currently enrolled in Fellowship Part 1</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="boardCertifications" class="form-label">Board Certifications</label>
+                                <div class="checkbox-group">
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="boardCerts" value="diagnostic-radiology">
+                                        <span class="checkbox-label">Diagnostic Radiology</span>
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="boardCerts" value="neuroradiology">
+                                        <span class="checkbox-label">Neuroradiology</span>
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="boardCerts" value="pediatric-radiology">
+                                        <span class="checkbox-label">Pediatric Radiology</span>
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="boardCerts" value="interventional-neuroradiology">
+                                        <span class="checkbox-label">Interventional Neuroradiology</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h4 class="section-title">Research & Publications</h4>
+                            
+                            <div class="form-group">
+                                <label for="researchExperience" class="form-label">Research Experience</label>
+                                <textarea id="researchExperience" name="researchExperience" class="form-textarea" rows="4" required placeholder="Describe your research experience, including any ongoing projects, completed studies, and areas of interest"></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="publications" class="form-label">Publications</label>
+                                <textarea id="publications" name="publications" class="form-textarea" rows="4" placeholder="List your publications, presentations, and other scholarly activities (if none, please state 'None')"></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="proposedResearch" class="form-label">Proposed Research Project</label>
+                                <textarea id="proposedResearch" name="proposedResearch" class="form-textarea" rows="5" required placeholder="Describe your proposed research project for Fellowship Part 2, including objectives, methodology, and expected outcomes"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h4 class="section-title">Career Goals & Interests</h4>
+                            
+                            <div class="form-group">
+                                <label for="careerGoals" class="form-label">Career Objectives</label>
+                                <select id="careerGoals" name="careerGoals" class="form-select" required>
+                                    <option value="">Select primary career goal</option>
+                                    <option value="academic-faculty">Academic Faculty Position</option>
+                                    <option value="clinical-practice">Clinical Practice Leadership</option>
+                                    <option value="research-scientist">Research Scientist</option>
+                                    <option value="industry-role">Industry Position</option>
+                                    <option value="mixed-role">Mixed Academic-Clinical Role</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="specialInterests" class="form-label">Special Interests</label>
+                                <div class="checkbox-group">
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="interests" value="interventional-procedures">
+                                        <span class="checkbox-label">Interventional Procedures</span>
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="interests" value="fetal-neonatal">
+                                        <span class="checkbox-label">Fetal & Neonatal Imaging</span>
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="interests" value="tumor-imaging">
+                                        <span class="checkbox-label">Tumor Imaging</span>
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="interests" value="advanced-techniques">
+                                        <span class="checkbox-label">Advanced Imaging Techniques</span>
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="interests" value="ai-machine-learning">
+                                        <span class="checkbox-label">AI & Machine Learning</span>
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="interests" value="quality-improvement">
+                                        <span class="checkbox-label">Quality Improvement</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="personalStatement" class="form-label">Personal Statement</label>
+                                <textarea id="personalStatement" name="personalStatement" class="form-textarea" rows="8" required placeholder="Please provide a comprehensive personal statement describing your motivation for advanced fellowship training, career aspirations, and how this program aligns with your goals (maximum 1500 words)"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h4 class="section-title">References</h4>
+                            
+                            <div class="form-group">
+                                <label class="form-label">Professional References (4 required)</label>
+                                <div class="reference-inputs advanced">
+                                    <input type="text" name="reference1" class="form-input" placeholder="Reference 1: Name, Title, Institution, Email, Phone" required>
+                                    <input type="text" name="reference2" class="form-input" placeholder="Reference 2: Name, Title, Institution, Email, Phone" required>
+                                    <input type="text" name="reference3" class="form-input" placeholder="Reference 3: Name, Title, Institution, Email, Phone" required>
+                                    <input type="text" name="reference4" class="form-input" placeholder="Reference 4: Name, Title, Institution, Email, Phone" required>
+                                </div>
+                                <p class="form-note">
+                                    References should include your current program director, a senior faculty member, 
+                                    and two additional professional references familiar with your clinical and research work.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="agreement" required>
+                                <span class="checkbox-label">
+                                    I certify that all information provided is accurate and complete. 
+                                    I understand that false information will result in immediate disqualification.
+                                </span>
+                            </label>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="commitment" required>
+                                <span class="checkbox-label">
+                                    I understand the demanding nature of this program and commit to full participation 
+                                    in all required activities for the 12-month duration.
+                                </span>
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-full">Submit Application</button>
+                        
+                        <div class="form-footer">
+                            <p class="form-note">
+                                <strong>Next Steps:</strong> After submission, you will receive a confirmation email 
+                                with instructions for uploading required documents (CV, transcripts, portfolio). 
+                                Complete applications will be reviewed by our selection committee.
+                            </p>
+                            <p class="form-note">
+                                <strong>Application Fee:</strong> A non-refundable $200 application fee is required 
+                                and will be collected separately after initial application review.
+                            </p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Fellowship Part 2 Contact Information</h2>
+                    <p class="section-subtitle">
+                        Connect with our advanced fellowship program team
+                    </p>
+                </div>
+
+                <div class="contact-info-grid">
+                    <div class="contact-card">
+                        <h3 class="contact-title">Fellowship Part 2 Director</h3>
+                        <p class="contact-name">Dr. Robert Chen, MD, PhD</p>
+                        <p class="contact-role">Professor of Radiology & Pediatrics</p>
+                        <p class="contact-email">
+                            <a href="mailto:fellowship2.director@spinacademics.org">fellowship2.director@spinacademics.org</a>
+                        </p>
+                        <p class="contact-phone">+1 (555) 123-4570</p>
+                    </div>
+
+                    <div class="contact-card">
+                        <h3 class="contact-title">Research Coordinator</h3>
+                        <p class="contact-name">Dr. Maria Rodriguez, PhD</p>
+                        <p class="contact-role">Director of Research Training</p>
+                        <p class="contact-email">
+                            <a href="mailto:research.coordinator@spinacademics.org">research.coordinator@spinacademics.org</a>
+                        </p>
+                        <p class="contact-phone">+1 (555) 123-4571</p>
+                    </div>
+
+                    <div class="contact-card">
+                        <h3 class="contact-title">Program Administrator</h3>
+                        <p class="contact-name">Ms. Lisa Thompson</p>
+                        <p class="contact-role">Advanced Fellowship Coordinator</p>
+                        <p class="contact-email">
+                            <a href="mailto:fellowship2.admin@spinacademics.org">fellowship2.admin@spinacademics.org</a>
+                        </p>
+                        <p class="contact-phone">+1 (555) 123-4572</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">SPIN Academics</h3>
+                    <p class="footer-description">
+                        Advancing neuroimaging education and research through innovative programs and collaborative learning.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <span class="social-icon">in</span>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <span class="social-icon">tw</span>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <span class="social-icon">fb</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Fellowship</h4>
+                    <ul class="footer-links">
+                        <li><a href="society-fellowship.html" class="footer-link">Fellowship Program</a></li>
+                        <li><a href="fellowship-part1.html" class="footer-link">Part 1</a></li>
+                        <li><a href="fellowship-part2.html" class="footer-link">Part 2</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Education</h4>
+                    <ul class="footer-links">
+                        <li><a href="cortex-club.html" class="footer-link">Cortex Club</a></li>
+                        <li><a href="spin-yarn-newsletter.html" class="footer-link">SPIN Yarn Newsletter</a></li>
+                        <li><a href="spin-wfpi.html" class="footer-link">SPIN & WFPI</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Contact</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:info@spinacademics.org" class="footer-link">info@spinacademics.org</a></li>
+                        <li><a href="tel:+1234567890" class="footer-link">+1 (234) 567-890</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="footer-copyright">
+                    &copy; 2024 SPIN Academics. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

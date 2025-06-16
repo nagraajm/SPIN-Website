@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPIN Fellowship Program - SPIN Academics</title>
+    <meta name="description" content="Comprehensive three-part fellowship program in pediatric neuroradiology">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="../images/spin_logo.webp" alt="SPIN Academics Logo" class="logo-img">
+                <span class="logo-text">SPIN Academics</span>
+            </div>
+            <nav class="nav" role="navigation">
+                <button class="nav-toggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="../index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="membership.html" class="nav-link">Membership</a></li>
+                    <li><a href="education.html" class="nav-link">Education</a></li>
+                    <li><a href="research.html" class="nav-link">Research</a></li>
+                    <li><a href="login.html" class="nav-link login-btn">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <!-- Hero Section -->
+        <section class="hero-section fellowship-hero">
+            <div class="container">
+                <h1 class="hero-title">SPIN Fellowship Program</h1>
+                <p class="hero-subtitle">Comprehensive three-part education in pediatric neuroradiology</p>
+                <p class="hero-cycles">2025-2026 Cycle Now Open</p>
+            </div>
+        </section>
+
+        <!-- Program Overview -->
+        <section class="section" id="program-overview">
+            <div class="container">
+                <h2 class="section-title">Fellowship Program Overview</h2>
+                <div class="fellowship-intro">
+                    <p class="lead">The SPIN Fellowship Program is a comprehensive educational journey designed to advance your expertise in pediatric neuroradiology through structured learning, expert mentorship, and hands-on experience.</p>
+                    <p>Our unique three-part program combines virtual learning with culminating in-person experience, providing participants with a well-rounded foundation in pediatric neuroradiology while building a global professional network.</p>
+                </div>
+
+                <!-- Three Parts Overview -->
+                <div class="fellowship-parts-grid">
+                    <div class="part-card">
+                        <div class="part-number">1</div>
+                        <h3>Part 1: Foundations</h3>
+                        <p class="part-duration">Duration: 6 months</p>
+                        <p class="part-format">Format: Virtual Learning</p>
+                        <p>Build essential knowledge with comprehensive curriculum covering pediatric neuroanatomy, pathology, and imaging techniques.</p>
+                        <ul class="part-features">
+                            <li>Core curriculum modules</li>
+                            <li>Interactive case studies</li>
+                            <li>Expert-led webinars</li>
+                            <li>Assessment and feedback</li>
+                        </ul>
+                        <a href="fellowship-part1.html" class="btn btn-secondary">Learn More</a>
+                    </div>
+
+                    <div class="part-card">
+                        <div class="part-number">2</div>
+                        <h3>Part 2: Levelling Up</h3>
+                        <p class="part-duration">Duration: 6 months</p>
+                        <p class="part-format">Format: Advanced Virtual Training</p>
+                        <p>Advanced training in complex cases, differential diagnosis, and cutting-edge imaging technologies.</p>
+                        <ul class="part-features">
+                            <li>Advanced case discussions</li>
+                            <li>Research methodology</li>
+                            <li>Technology innovations</li>
+                            <li>Peer collaboration</li>
+                        </ul>
+                        <a href="fellowship-part2.html" class="btn btn-secondary">Learn More</a>
+                    </div>
+
+                    <div class="part-card featured">
+                        <div class="part-number">3</div>
+                        <h3>The Finale: In-Person Dubai</h3>
+                        <p class="part-duration">Duration: 3 days</p>
+                        <p class="part-format">Format: In-Person Meeting</p>
+                        <p>Culminate your fellowship experience with our intensive in-person meeting in Dubai.</p>
+                        <ul class="part-features">
+                            <li>Hands-on workshops</li>
+                            <li>Fellowship presentations</li>
+                            <li>Networking opportunities</li>
+                            <li>Certificate ceremony</li>
+                        </ul>
+                        <a href="spin-in-person.html" class="btn btn-primary">Dubai Meeting</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Registration Cycles -->
+        <section class="section registration-cycles">
+            <div class="container">
+                <h2 class="section-title">Registration Cycles</h2>
+                <div class="cycles-grid">
+                    <div class="cycle-card current">
+                        <div class="cycle-header">
+                            <h3>2025-2026 Cycle</h3>
+                            <div class="status-badge open">Now Open</div>
+                        </div>
+                        <div class="cycle-timeline">
+                            <div class="timeline-item">
+                                <span class="date">Part 1:</span>
+                                <span class="event">January - June 2025</span>
+                            </div>
+                            <div class="timeline-item">
+                                <span class="date">Part 2:</span>
+                                <span class="event">July - December 2025</span>
+                            </div>
+                            <div class="timeline-item">
+                                <span class="date">The Finale:</span>
+                                <span class="event">November 7-9, 2025 (Dubai)</span>
+                            </div>
+                        </div>
+                        <div class="cycle-pricing">
+                            <div class="price-item">
+                                <span class="price-label">SPIN Members:</span>
+                                <span class="price-value">$299</span>
+                            </div>
+                            <div class="price-item">
+                                <span class="price-label">Non-Members:</span>
+                                <span class="price-value">$399</span>
+                            </div>
+                            <div class="price-item">
+                                <span class="price-label">Students:</span>
+                                <span class="price-value">$199</span>
+                            </div>
+                        </div>
+                        <a href="#register-2025" class="btn btn-primary">Register Now</a>
+                    </div>
+
+                    <div class="cycle-card">
+                        <div class="cycle-header">
+                            <h3>2026-2027 Cycle</h3>
+                            <div class="status-badge upcoming">Upcoming</div>
+                        </div>
+                        <div class="cycle-timeline">
+                            <div class="timeline-item">
+                                <span class="date">Part 1:</span>
+                                <span class="event">January - June 2026</span>
+                            </div>
+                            <div class="timeline-item">
+                                <span class="date">Part 2:</span>
+                                <span class="event">July - December 2026</span>
+                            </div>
+                            <div class="timeline-item">
+                                <span class="date">The Finale:</span>
+                                <span class="event">TBD 2027</span>
+                            </div>
+                        </div>
+                        <div class="cycle-info">
+                            <p>Registration opens September 2025</p>
+                            <p>Early bird pricing available</p>
+                        </div>
+                        <form class="notify-form" id="notify-2026">
+                            <h4>Get Notified</h4>
+                            <div class="form-group">
+                                <input type="email" name="email" class="form-input" placeholder="Enter your email" required>
+                            </div>
+                            <button type="submit" class="btn btn-secondary">Notify Me</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Program Benefits -->
+        <section class="section benefits-section">
+            <div class="container">
+                <h2 class="section-title">Fellowship Benefits</h2>
+                <div class="benefits-grid">
+                    <div class="benefit-item">
+                        <div class="benefit-icon">🎓</div>
+                        <h3>Comprehensive Curriculum</h3>
+                        <p>Structured learning path covering all essential aspects of pediatric neuroradiology from basics to advanced techniques.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">👨‍⚕️</div>
+                        <h3>Expert Mentorship</h3>
+                        <p>Direct access to leading pediatric neuroradiologists who provide guidance and personalized feedback throughout the program.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">🌐</div>
+                        <h3>Global Network</h3>
+                        <p>Connect with fellow participants from around the world, building professional relationships that last beyond the program.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">🏆</div>
+                        <h3>Professional Certification</h3>
+                        <p>Receive official SPIN Fellowship certification upon successful completion of all three parts of the program.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">🔬</div>
+                        <h3>Research Opportunities</h3>
+                        <p>Participate in collaborative research projects and contribute to advancing pediatric neuroradiology knowledge.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">📚</div>
+                        <h3>Lifetime Access</h3>
+                        <p>Continued access to fellowship materials and alumni network for ongoing professional development.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Registration Form -->
+        <section class="section registration-form-section" id="register-2025">
+            <div class="container">
+                <h2 class="section-title">Register for 2025-2026 Cycle</h2>
+                <div class="registration-container">
+                    <div class="registration-info">
+                        <h3>What's Included</h3>
+                        <ul class="included-list">
+                            <li>Complete Part 1 & Part 2 curriculum</li>
+                            <li>Expert mentorship and feedback</li>
+                            <li>Interactive learning platform access</li>
+                            <li>Case study library</li>
+                            <li>Fellowship community access</li>
+                            <li>Dubai meeting registration (separate fee)</li>
+                            <li>Professional certification</li>
+                            <li>Alumni network membership</li>
+                        </ul>
+
+                        <div class="early-bird-notice">
+                            <h4>🎯 Early Bird Special</h4>
+                            <p>Register by December 31, 2024 and save $50!</p>
+                        </div>
+                    </div>
+
+                    <div class="registration-form-card">
+                        <form class="fellowship-registration-form contact-form" id="fellowship-registration">
+                            <h3>Fellowship Application</h3>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="first-name" class="form-label">First Name *</label>
+                                    <input type="text" id="first-name" name="first-name" class="form-input" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="last-name" class="form-label">Last Name *</label>
+                                    <input type="text" id="last-name" name="last-name" class="form-input" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email Address *</label>
+                                <input type="email" id="email" name="email" class="form-input" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="institution" class="form-label">Institution/Hospital *</label>
+                                <input type="text" id="institution" name="institution" class="form-input" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="position" class="form-label">Current Position *</label>
+                                <select id="position" name="position" class="form-input" required>
+                                    <option value="">Select your position</option>
+                                    <option value="resident">Resident</option>
+                                    <option value="fellow">Fellow</option>
+                                    <option value="attending">Attending Physician</option>
+                                    <option value="consultant">Consultant</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="membership-status" class="form-label">SPIN Membership Status *</label>
+                                <select id="membership-status" name="membership-status" class="form-input" required>
+                                    <option value="">Select membership status</option>
+                                    <option value="full-member">Full Member</option>
+                                    <option value="student-member">Student/Trainee Member</option>
+                                    <option value="non-member">Non-Member</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="motivation" class="form-label">Why do you want to join the SPIN Fellowship? *</label>
+                                <textarea id="motivation" name="motivation" class="form-input form-textarea" required placeholder="Please describe your motivation and goals (minimum 100 words)"></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="commitment" class="checkbox-input" required>
+                                    <span class="checkbox-text">I commit to completing all three parts of the fellowship program</span>
+                                </label>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="terms" class="checkbox-input" required>
+                                    <span class="checkbox-text">I agree to the fellowship terms and conditions</span>
+                                </label>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-full">Submit Application</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Alumni Success Stories -->
+        <section class="feedback-section section">
+            <div class="container">
+                <h2 class="section-title">Fellowship Alumni Success Stories</h2>
+                <div class="feedback-carousel">
+                    <div class="feedback-quote">
+                        <blockquote>
+                            "The SPIN Fellowship transformed my approach to pediatric neuroradiology. The structured curriculum and expert mentorship were invaluable."
+                        </blockquote>
+                        <cite>- Dr. Maria Santos, 2023 Fellowship Graduate</cite>
+                    </div>
+                    <div class="feedback-quote">
+                        <blockquote>
+                            "Beyond the excellent education, the fellowship connected me with a global network of colleagues who continue to support my professional growth."
+                        </blockquote>
+                        <cite>- Dr. James Wright, 2022 Fellowship Graduate</cite>
+                    </div>
+                    <div class="feedback-quote">
+                        <blockquote>
+                            "The Dubai finale was the perfect culmination of an incredible learning journey. The hands-on workshops were outstanding."
+                        </blockquote>
+                        <cite>- Dr. Yuki Nakamura, 2024 Fellowship Graduate</cite>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="../images/spin_logo.webp" alt="SPIN Academics" class="footer-logo-img">
+                        <span>SPIN Academics</span>
+                    </div>
+                    <p>Society for Pediatric and Investigative Neuroradiology</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="membership.html">Membership</a></li>
+                        <li><a href="education.html">Education</a></li>
+                        <li><a href="research.html">Research</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Education</h4>
+                    <ul>
+                        <li><a href="society-fellowship.html">Fellowship Program</a></li>
+                        <li><a href="cortex-club.html">Cortex Club</a></li>
+                        <li><a href="spin-yarn-newsletter.html">SPIN A Yarn</a></li>
+                        <li><a href="spin-wfpi.html">SPIN WFPI</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn">📧</a>
+                        <a href="#" aria-label="Twitter">🐦</a>
+                        <a href="#" aria-label="YouTube">📺</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 SPIN Academics. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

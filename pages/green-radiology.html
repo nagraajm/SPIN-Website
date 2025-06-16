@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Radiology - SPIN Academics</title>
+    <meta name="description" content="Sustainable radiology practices and environmental initiatives">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#e6f3ff',
+                            100: '#b3d9ff',
+                            200: '#80bfff',
+                            300: '#4da6ff',
+                            400: '#1a8cff',
+                            500: '#0087ff',
+                            600: '#0070d9',
+                            700: '#0059b3',
+                            800: '#00428c',
+                            900: '#002b66'
+                        },
+                        secondary: {
+                            50: '#e6fffe',
+                            100: '#b3fffc',
+                            200: '#80fff9',
+                            300: '#4dfff7',
+                            400: '#1afff4',
+                            500: '#00bfaf',
+                            600: '#00a699',
+                            700: '#008c82',
+                            800: '#00736c',
+                            900: '#005955'
+                        }
+                    },
+                    fontFamily: {
+                        'sans': ['Poppins', 'ui-sans-serif', 'system-ui']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans">
+    <!-- Navigation with modern design -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="../index.html" class="flex items-center space-x-3">
+                        <img src="../images/logo.png" alt="SPIN Logo" class="h-10 w-auto">
+                        <span class="text-xl font-bold bg-gradient-to-r from-primary-500 to-secondary-500 bg-clip-text text-transparent">SPIN Academics</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="../index.html" class="text-gray-700 hover:text-primary-600 font-medium transition-colors">Home</a>
+                    <div class="relative group">
+                        <button class="text-gray-700 hover:text-primary-600 font-medium transition-colors flex items-center">
+                            About
+                            <svg class="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="absolute left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                            <div class="py-2">
+                                <a href="about.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">About Overview</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="membership.html" class="text-gray-700 hover:text-primary-600 font-medium transition-colors">Membership</a>
+                    <div class="relative group">
+                        <button class="text-gray-700 hover:text-primary-600 font-medium transition-colors flex items-center">
+                            Education
+                            <svg class="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="absolute left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                            <div class="py-2">
+                                <a href="education.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Education Overview</a>
+                                <a href="cortex-club.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Cortex Club</a>
+                                <a href="spin-yarn-newsletter.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">SPIN Yarn Newsletter</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <button class="text-gray-700 hover:text-primary-600 font-medium transition-colors flex items-center">
+                            Research
+                            <svg class="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="absolute left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                            <div class="py-2">
+                                <a href="research.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Research Overview</a>
+                                <a href="submit-proposal.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Submit a Proposal</a>
+                                <a href="green-radiology.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Green Radiology</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="login.html" class="bg-gradient-to-r from-primary-500 to-secondary-500 text-white px-4 py-2 rounded-full font-medium hover:from-primary-600 hover:to-secondary-600 transition-all duration-200">Login</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="pt-20 bg-gray-50">
+        <section class="relative bg-gradient-to-br from-primary-600 via-primary-700 to-secondary-600 py-20">
+            <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">Green Radiology</h1>
+                <p class="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">Sustainable radiology practices and environmental initiatives</p>
+            </div>
+        </section>
+
+        <section class="py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="bg-white rounded-2xl shadow-lg p-8 text-center">
+                    <h2 class="text-3xl font-bold bg-gradient-to-r from-primary-500 to-secondary-500 bg-clip-text text-transparent mb-6">Coming Soon</h2>
+                    <p class="text-gray-600 text-lg mb-8">We're working hard to bring you the best content for this section. Please check back soon for updates.</p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="../index.html" class="px-8 py-3 bg-gradient-to-r from-primary-500 to-secondary-500 text-white rounded-full font-medium hover:from-primary-600 hover:to-secondary-600 transition-all duration-200">Back to Home</a>
+                        <a href="membership.html" class="px-8 py-3 border-2 border-primary-500 text-primary-600 rounded-full font-medium hover:bg-primary-50 transition-all duration-200">Join SPIN</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-gray-400">&copy; 2024 SPIN Academics. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu functionality would go here
+    </script>
+</body>
+</html>

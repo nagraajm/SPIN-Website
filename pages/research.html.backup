@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research - SPIN Academics</title>
+    <meta name="description" content="Explore SPIN's research initiatives, case studies, and collaborative projects in pediatric neuroradiology">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="../images/spin_logo.webp" alt="SPIN Academics Logo" class="logo-img">
+                <span class="logo-text">SPIN Academics</span>
+            </div>
+            <nav class="nav" role="navigation">
+                <button class="nav-toggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="../index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a href="about.html" class="nav-link dropdown-toggle">About <i class="dropdown-arrow">▼</i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="about.html#presidents-welcome" class="dropdown-link">President's Welcome</a></li>
+                            <li><a href="about.html#founding-members" class="dropdown-link">Founding Members</a></li>
+                            <li><a href="about.html#executive-committee" class="dropdown-link">Executive Committee</a></li>
+                            <li><a href="about.html#scientific-committee" class="dropdown-link">Scientific Committee</a></li>
+                            <li><a href="about.html#research-admin-team" class="dropdown-link">Research and Admin Team</a></li>
+                            <li><a href="about.html#rising-stars" class="dropdown-link">Rising Stars</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="membership.html" class="nav-link">Membership</a></li>
+                    <li class="nav-item dropdown">
+                        <a href="education.html" class="nav-link dropdown-toggle">Education <i class="dropdown-arrow">▼</i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="society-fellowship.html" class="dropdown-link">Society Fellowship</a></li>
+                            <li><a href="education.html" class="dropdown-link">Education Offerings</a></li>
+                            <li><a href="cortex-club.html" class="dropdown-link">Cortex Club</a></li>
+                            <li><a href="spin-yarn-newsletter.html" class="dropdown-link">SPIN Yarn Newsletter</a></li>
+                            <li><a href="spin-wfpi.html" class="dropdown-link">SPIN-WFPI</a></li>
+                            <li><a href="spin-reporting-room.html" class="dropdown-link">SPIN Reporting Room</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="research.html" class="nav-link dropdown-toggle active">Research <i class="dropdown-arrow">▼</i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="case-of-the-month.html" class="dropdown-link">Case of the Month Submission</a></li>
+                            <li><a href="submit-proposal.html" class="dropdown-link">Submit a Proposal</a></li>
+                            <li><a href="green-radiology.html" class="dropdown-link">Green Radiology</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="login.html" class="nav-link login-btn">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <!-- Hero Section -->
+        <section class="hero-section research-hero">
+            <div class="container">
+                <h1 class="hero-title">Research Excellence</h1>
+                <p class="hero-subtitle">Advancing pediatric neuroradiology through collaborative research and innovation</p>
+            </div>
+        </section>
+
+        <!-- Research Overview -->
+        <section class="section" id="research-overview">
+            <div class="container">
+                <h2 class="section-title">Research at SPIN</h2>
+                <div class="research-intro">
+                    <p class="lead">SPIN Academics is committed to advancing the field of pediatric neuroradiology through innovative research, collaborative studies, and evidence-based practice improvements.</p>
+                    <p>Our research initiatives span from fundamental imaging studies to clinical outcomes research, quality improvement projects, and sustainable healthcare practices. We foster a collaborative environment where members can contribute to and benefit from cutting-edge research.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Research Initiatives -->
+        <section class="section research-initiatives">
+            <div class="container">
+                <h2 class="section-title">Research Initiatives</h2>
+                <div class="initiatives-grid">
+                    <div class="initiative-card featured">
+                        <div class="card-image img-placeholder">
+                            <img src="../images/case-of-month.jpg" alt="Case of the Month" class="initiative-img">
+                        </div>
+                        <div class="card-content">
+                            <h3>Case of the Month</h3>
+                            <p class="card-subtitle">Educational Case Studies</p>
+                            <p>Monthly case presentations featuring challenging pediatric neuroradiology cases with detailed analysis, differential diagnosis, and learning points.</p>
+                            <div class="card-features">
+                                <span class="feature-tag">Monthly</span>
+                                <span class="feature-tag">Peer-Reviewed</span>
+                                <span class="feature-tag">Educational</span>
+                            </div>
+                            <a href="case-of-the-month.html" class="btn btn-primary">Submit Case</a>
+                        </div>
+                    </div>
+
+                    <div class="initiative-card">
+                        <div class="card-image img-placeholder">
+                            <img src="../images/research-proposals.jpg" alt="Research Proposals" class="initiative-img">
+                        </div>
+                        <div class="card-content">
+                            <h3>Research Proposals</h3>
+                            <p class="card-subtitle">Collaborative Studies</p>
+                            <p>Submit research proposals for collaborative multi-center studies and receive support from our research committee and global network.</p>
+                            <div class="card-features">
+                                <span class="feature-tag">Multi-Center</span>
+                                <span class="feature-tag">Funded</span>
+                                <span class="feature-tag">Collaborative</span>
+                            </div>
+                            <a href="submit-proposal.html" class="btn btn-secondary">Submit Proposal</a>
+                        </div>
+                    </div>
+
+                    <div class="initiative-card">
+                        <div class="card-image img-placeholder">
+                            <img src="../images/green-radiology.jpg" alt="Green Radiology" class="initiative-img">
+                        </div>
+                        <div class="card-content">
+                            <h3>Green Radiology Initiative</h3>
+                            <p class="card-subtitle">Sustainable Healthcare</p>
+                            <p>Leading research in sustainable radiology practices, environmental impact reduction, and eco-friendly imaging protocols.</p>
+                            <div class="card-features">
+                                <span class="feature-tag">Sustainability</span>
+                                <span class="feature-tag">Innovation</span>
+                                <span class="feature-tag">Impact</span>
+                            </div>
+                            <a href="green-radiology.html" class="btn btn-secondary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Current Research Projects -->
+        <section class="section current-projects">
+            <div class="container">
+                <h2 class="section-title">Current Research Projects</h2>
+                <div class="projects-list">
+                    <div class="project-item">
+                        <div class="project-header">
+                            <h3>AI-Assisted Diagnosis in Pediatric Brain Tumors</h3>
+                            <span class="project-status active">Active</span>
+                        </div>
+                        <p class="project-description">Multi-center study evaluating machine learning algorithms for automated detection and classification of pediatric brain tumors using MRI.</p>
+                        <div class="project-details">
+                            <span class="detail-item"><strong>Lead:</strong> Dr. Sarah Johnson, CHOP</span>
+                            <span class="detail-item"><strong>Centers:</strong> 15 institutions</span>
+                            <span class="detail-item"><strong>Timeline:</strong> 2024-2026</span>
+                        </div>
+                    </div>
+
+                    <div class="project-item">
+                        <div class="project-header">
+                            <h3>Optimization of Imaging Protocols for Infants</h3>
+                            <span class="project-status active">Active</span>
+                        </div>
+                        <p class="project-description">Prospective study to develop and validate optimized MRI protocols that reduce scan time while maintaining diagnostic quality in infants.</p>
+                        <div class="project-details">
+                            <span class="detail-item"><strong>Lead:</strong> Dr. Michael Chen, BCH</span>
+                            <span class="detail-item"><strong>Centers:</strong> 8 institutions</span>
+                            <span class="detail-item"><strong>Timeline:</strong> 2023-2025</span>
+                        </div>
+                    </div>
+
+                    <div class="project-item">
+                        <div class="project-header">
+                            <h3>Global Pediatric Neuroradiology Database</h3>
+                            <span class="project-status recruiting">Recruiting</span>
+                        </div>
+                        <p class="project-description">International collaborative effort to create a comprehensive database of pediatric neuroradiology cases for research and education.</p>
+                        <div class="project-details">
+                            <span class="detail-item"><strong>Lead:</strong> SPIN Research Committee</span>
+                            <span class="detail-item"><strong>Centers:</strong> 25+ institutions</span>
+                            <span class="detail-item"><strong>Timeline:</strong> 2025-2028</span>
+                        </div>
+                    </div>
+
+                    <div class="project-item">
+                        <div class="project-header">
+                            <h3>Carbon Footprint of Pediatric Neuroimaging</h3>
+                            <span class="project-status planning">Planning</span>
+                        </div>
+                        <p class="project-description">Assessment of environmental impact of pediatric neuroimaging practices and development of sustainable protocols.</p>
+                        <div class="project-details">
+                            <span class="detail-item"><strong>Lead:</strong> Green Radiology Committee</span>
+                            <span class="detail-item"><strong>Centers:</strong> 12 institutions</span>
+                            <span class="detail-item"><strong>Timeline:</strong> 2025-2027</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Research Support -->
+        <section class="section research-support">
+            <div class="container">
+                <h2 class="section-title">Research Support & Resources</h2>
+                <div class="support-grid">
+                    <div class="support-card">
+                        <div class="support-icon">💰</div>
+                        <h3>Funding Opportunities</h3>
+                        <p>Access to research grants, fellowship funding, and collaborative study support through SPIN and partner organizations.</p>
+                        <ul>
+                            <li>Young Investigator Awards</li>
+                            <li>Collaborative Study Grants</li>
+                            <li>Conference Presentation Support</li>
+                            <li>Publication Fee Assistance</li>
+                        </ul>
+                    </div>
+
+                    <div class="support-card">
+                        <div class="support-icon">📊</div>
+                        <h3>Methodology Support</h3>
+                        <p>Expert guidance in research design, statistical analysis, and methodology from our research committee.</p>
+                        <ul>
+                            <li>Study Design Consultation</li>
+                            <li>Statistical Analysis Support</li>
+                            <li>IRB/Ethics Guidance</li>
+                            <li>Data Management Tools</li>
+                        </ul>
+                    </div>
+
+                    <div class="support-card">
+                        <div class="support-icon">🌐</div>
+                        <h3>Collaboration Network</h3>
+                        <p>Connect with researchers worldwide through our extensive network of pediatric neuroradiology professionals.</p>
+                        <ul>
+                            <li>Multi-Center Study Coordination</li>
+                            <li>Researcher Matching</li>
+                            <li>International Partnerships</li>
+                            <li>Data Sharing Platforms</li>
+                        </ul>
+                    </div>
+
+                    <div class="support-card">
+                        <div class="support-icon">📝</div>
+                        <h3>Publication Support</h3>
+                        <p>Guidance and resources for preparing, submitting, and publishing research findings in peer-reviewed journals.</p>
+                        <ul>
+                            <li>Writing Workshops</li>
+                            <li>Peer Review Process</li>
+                            <li>Journal Selection Guidance</li>
+                            <li>Publication Fee Support</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Research Committee -->
+        <section class="section research-committee">
+            <div class="container">
+                <h2 class="section-title">Research Committee</h2>
+                <div class="committee-grid">
+                    <div class="committee-member">
+                        <div class="member-image img-placeholder">
+                            <img src="../images/research-chair.jpg" alt="Research Committee Chair" class="member-photo">
+                        </div>
+                        <h3>Dr. Amanda Foster</h3>
+                        <p class="role">Research Committee Chair</p>
+                        <p class="institution">Cincinnati Children's Hospital</p>
+                        <p class="expertise">AI in Medical Imaging, Pediatric Brain Tumors</p>
+                    </div>
+
+                    <div class="committee-member">
+                        <div class="member-image img-placeholder">
+                            <img src="../images/research-vice-chair.jpg" alt="Research Vice Chair" class="member-photo">
+                        </div>
+                        <h3>Dr. Carlos Rodriguez</h3>
+                        <p class="role">Research Vice Chair</p>
+                        <p class="institution">Children's Hospital of Philadelphia</p>
+                        <p class="expertise">Imaging Protocols, Quality Improvement</p>
+                    </div>
+
+                    <div class="committee-member">
+                        <div class="member-image img-placeholder">
+                            <img src="../images/biostatistician.jpg" alt="Biostatistician" class="member-photo">
+                        </div>
+                        <h3>Dr. Lisa Park</h3>
+                        <p class="role">Biostatistician</p>
+                        <p class="institution">Harvard T.H. Chan School</p>
+                        <p class="expertise">Clinical Trials, Statistical Analysis</p>
+                    </div>
+
+                    <div class="committee-member">
+                        <div class="member-image img-placeholder">
+                            <img src="../images/green-lead.jpg" alt="Green Radiology Lead" class="member-photo">
+                        </div>
+                        <h3>Dr. Emma Thompson</h3>
+                        <p class="role">Green Radiology Lead</p>
+                        <p class="institution">Great Ormond Street Hospital</p>
+                        <p class="expertise">Sustainable Healthcare, Environmental Impact</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Publications & Achievements -->
+        <section class="section publications">
+            <div class="container">
+                <h2 class="section-title">Recent Publications & Achievements</h2>
+                <div class="publications-list">
+                    <div class="publication-item">
+                        <h3>Machine Learning in Pediatric Neuroradiology: A Multi-Center Validation Study</h3>
+                        <p class="publication-authors">Johnson S, Chen M, Rodriguez C, et al. (SPIN Research Consortium)</p>
+                        <p class="publication-journal">Pediatric Radiology, 2024; 54(8): 1234-1245</p>
+                        <div class="publication-metrics">
+                            <span class="metric">Impact Factor: 2.8</span>
+                            <span class="metric">Citations: 45</span>
+                        </div>
+                    </div>
+
+                    <div class="publication-item">
+                        <h3>Optimized MRI Protocols for Pediatric Brain Imaging: Reducing Scan Time While Maintaining Quality</h3>
+                        <p class="publication-authors">Chen M, Anderson L, Wilson J, et al. (SPIN Protocol Committee)</p>
+                        <p class="publication-journal">Journal of Neuroimaging, 2024; 34(3): 456-467</p>
+                        <div class="publication-metrics">
+                            <span class="metric">Impact Factor: 3.2</span>
+                            <span class="metric">Citations: 32</span>
+                        </div>
+                    </div>
+
+                    <div class="publication-item">
+                        <h3>Environmental Impact of Pediatric Neuroimaging: A Global Perspective</h3>
+                        <p class="publication-authors">Thompson E, Kim R, Martinez S, et al. (SPIN Green Radiology Initiative)</p>
+                        <p class="publication-journal">Radiology: Sustainability and Environment, 2024; 2(1): 12-25</p>
+                        <div class="publication-metrics">
+                            <span class="metric">Impact Factor: 4.1</span>
+                            <span class="metric">Citations: 28</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="publications-cta">
+                    <a href="#" class="btn btn-secondary">View All Publications</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Get Involved -->
+        <section class="cta-section section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Get Involved in Research</h2>
+                    <p>Join our research community and contribute to advancing pediatric neuroradiology through collaborative studies and innovative projects.</p>
+                    <div class="cta-buttons">
+                        <a href="submit-proposal.html" class="btn btn-primary">Submit Research Proposal</a>
+                        <a href="membership.html" class="btn btn-secondary">Join SPIN</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SPIN Feedback Section -->
+        <section class="feedback-section section">
+            <div class="container">
+                <h2 class="section-title">Research Collaboration Success Stories</h2>
+                <div class="feedback-carousel">
+                    <div class="feedback-quote">
+                        <blockquote>
+                            "The SPIN research network enabled us to conduct a multi-center study that would have been impossible otherwise. The collaborative spirit is incredible."
+                        </blockquote>
+                        <cite>- Dr. Amanda Foster, Research Committee Chair</cite>
+                    </div>
+                    <div class="feedback-quote">
+                        <blockquote>
+                            "SPIN's research support helped me secure funding for my first independent study. The mentorship was invaluable."
+                        </blockquote>
+                        <cite>- Dr. Kevin Park, Young Investigator Award Recipient</cite>
+                    </div>
+                    <div class="feedback-quote">
+                        <blockquote>
+                            "The Green Radiology initiative has transformed how we think about sustainable practice in our department."
+                        </blockquote>
+                        <cite>- Dr. Emma Thompson, Green Radiology Lead</cite>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="../images/spin_logo.webp" alt="SPIN Academics" class="footer-logo-img">
+                        <span>SPIN Academics</span>
+                    </div>
+                    <p>Society for Pediatric and Investigative Neuroradiology</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="membership.html">Membership</a></li>
+                        <li><a href="education.html">Education</a></li>
+                        <li><a href="research.html">Research</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Education</h4>
+                    <ul>
+                        <li><a href="society-fellowship.html">Fellowship Program</a></li>
+                        <li><a href="cortex-club.html">Cortex Club</a></li>
+                        <li><a href="spin-yarn-newsletter.html">SPIN A Yarn</a></li>
+                        <li><a href="spin-wfpi.html">SPIN WFPI</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn">📧</a>
+                        <a href="#" aria-label="Twitter">🐦</a>
+                        <a href="#" aria-label="YouTube">📺</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 SPIN Academics. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

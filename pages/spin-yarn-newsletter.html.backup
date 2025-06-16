@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPIN Yarn Newsletter - SPIN Academics</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <div class="nav-brand">
+                <a href="../index.html" class="nav-logo">
+                    <img src="../images/spin_logo.webp" alt="SPIN Academics Logo" class="logo-img">
+                    <span class="logo-text">SPIN Academics</span>
+                </a>
+            </div>
+            
+            <div class="nav-menu" id="navMenu">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="../index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="about.html" class="nav-link">About</a>
+                        <div class="dropdown-content">
+                            <a href="about.html#leadership">Leadership</a>
+                            <a href="about.html#committees">Committees</a>
+                            <a href="about.html#history">History</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="membership.html" class="nav-link">Membership</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="education.html" class="nav-link active">Education</a>
+                        <div class="dropdown-content">
+                            <a href="cortex-club.html">Cortex Club</a>
+                            <a href="spin-yarn-newsletter.html">SPIN Yarn Newsletter</a>
+                            <a href="spin-wfpi.html">SPIN & WFPI</a>
+                            <a href="spin-reporting-room.html">SPIN Reporting Room</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="research.html" class="nav-link">Research</a>
+                        <div class="dropdown-content">
+                            <a href="submit-proposal.html">Submit Proposal</a>
+                            <a href="green-radiology.html">Green Radiology</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link">Fellowship</a>
+                        <div class="dropdown-content">
+                            <a href="society-fellowship.html">Fellowship Program</a>
+                            <a href="fellowship-part1.html">Part 1</a>
+                            <a href="fellowship-part2.html">Part 2</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="spin-in-person.html" class="nav-link">Events</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="nav-actions">
+                <a href="login.html" class="btn btn-outline">Login</a>
+                <a href="signup.html" class="btn btn-primary">Join SPIN</a>
+            </div>
+            
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <main class="main">
+        <!-- Hero Section -->
+        <section class="hero-section gradient-bg-2">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1 class="hero-title">SPIN Yarn Newsletter</h1>
+                        <p class="hero-subtitle">Your Source for Neuroimaging Updates</p>
+                        <p class="hero-description">
+                            Stay informed with the latest developments in neuroimaging science, 
+                            research breakthroughs, and community updates through our monthly newsletter.
+                        </p>
+                        <div class="hero-actions">
+                            <a href="#subscribe" class="btn btn-primary btn-lg">Subscribe Now</a>
+                            <a href="#archive" class="btn btn-outline btn-lg">View Archive</a>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <div class="image-placeholder">
+                            <span>SPIN Yarn Newsletter</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Overview Section -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">About SPIN Yarn</h2>
+                    <p class="section-subtitle">
+                        SPIN Yarn is our monthly newsletter delivering curated content from the world of neuroimaging, 
+                        featuring research highlights, expert opinions, and community news.
+                    </p>
+                </div>
+
+                <div class="grid grid-3">
+                    <div class="card">
+                        <div class="card-icon">
+                            <div class="icon-placeholder">🔬</div>
+                        </div>
+                        <h3 class="card-title">Research Highlights</h3>
+                        <p class="card-description">
+                            Discover the latest breakthrough studies and research findings 
+                            in neuroimaging, carefully selected and summarized by our editorial team.
+                        </p>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-icon">
+                            <div class="icon-placeholder">👨‍⚕️</div>
+                        </div>
+                        <h3 class="card-title">Expert Insights</h3>
+                        <p class="card-description">
+                            Read expert opinions and commentary from leading neuroimaging 
+                            professionals on current trends and future directions in the field.
+                        </p>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-icon">
+                            <div class="icon-placeholder">🌐</div>
+                        </div>
+                        <h3 class="card-title">Community Updates</h3>
+                        <p class="card-description">
+                            Stay connected with SPIN community news, member achievements, 
+                            upcoming events, and educational opportunities.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Latest Issue Section -->
+        <section class="section section-alt">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Latest Issue</h2>
+                    <p class="section-subtitle">SPIN Yarn - January 2024 Edition</p>
+                </div>
+
+                <div class="newsletter-preview">
+                    <div class="newsletter-cover">
+                        <div class="image-placeholder">
+                            <span>January 2024 Issue</span>
+                        </div>
+                    </div>
+                    <div class="newsletter-content">
+                        <h3 class="newsletter-title">Featured Content This Month</h3>
+                        
+                        <div class="content-highlights">
+                            <div class="highlight-item">
+                                <h4 class="highlight-title">🎯 Featured Research</h4>
+                                <p class="highlight-description">
+                                    "Advanced DTI Techniques in Pediatric Neuroimaging: 
+                                    A Comprehensive Review of Current Applications and Future Directions"
+                                </p>
+                            </div>
+
+                            <div class="highlight-item">
+                                <h4 class="highlight-title">💡 Expert Interview</h4>
+                                <p class="highlight-description">
+                                    Dr. Sarah Chen discusses the integration of AI in clinical neuroimaging 
+                                    workflows and its impact on diagnostic accuracy.
+                                </p>
+                            </div>
+
+                            <div class="highlight-item">
+                                <h4 class="highlight-title">📚 Case Study</h4>
+                                <p class="highlight-description">
+                                    "Rare Presentation of Multiple Sclerosis: 
+                                    A Challenging Diagnostic Journey" - Interactive case with imaging findings.
+                                </p>
+                            </div>
+
+                            <div class="highlight-item">
+                                <h4 class="highlight-title">🏆 Member Spotlight</h4>
+                                <p class="highlight-description">
+                                    Celebrating Dr. Michael Rodriguez's groundbreaking work in 
+                                    functional connectivity mapping and recent publication achievements.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="newsletter-actions">
+                            <a href="#" class="btn btn-primary">Read Full Issue</a>
+                            <a href="#" class="btn btn-outline">Download PDF</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Archive Section -->
+        <section class="section" id="archive">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Newsletter Archive</h2>
+                    <p class="section-subtitle">
+                        Browse our complete collection of past issues and educational content
+                    </p>
+                </div>
+
+                <div class="archive-grid">
+                    <div class="archive-item">
+                        <div class="archive-cover">
+                            <div class="image-placeholder">
+                                <span>Dec 2023</span>
+                            </div>
+                        </div>
+                        <div class="archive-content">
+                            <h3 class="archive-title">December 2023</h3>
+                            <p class="archive-description">
+                                Year-end review of neuroimaging advances, 2024 predictions, 
+                                and highlights from SPIN's annual conference.
+                            </p>
+                            <div class="archive-meta">
+                                <span class="archive-date">Published: Dec 15, 2023</span>
+                                <span class="archive-views">2,456 views</span>
+                            </div>
+                            <div class="archive-actions">
+                                <a href="#" class="btn btn-sm btn-outline">Read Online</a>
+                                <a href="#" class="btn btn-sm btn-primary">Download</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="archive-item">
+                        <div class="archive-cover">
+                            <div class="image-placeholder">
+                                <span>Nov 2023</span>
+                            </div>
+                        </div>
+                        <div class="archive-content">
+                            <h3 class="archive-title">November 2023</h3>
+                            <p class="archive-description">
+                                Special issue on pediatric neuroimaging protocols, 
+                                featuring best practices and safety considerations.
+                            </p>
+                            <div class="archive-meta">
+                                <span class="archive-date">Published: Nov 15, 2023</span>
+                                <span class="archive-views">1,890 views</span>
+                            </div>
+                            <div class="archive-actions">
+                                <a href="#" class="btn btn-sm btn-outline">Read Online</a>
+                                <a href="#" class="btn btn-sm btn-primary">Download</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="archive-item">
+                        <div class="archive-cover">
+                            <div class="image-placeholder">
+                                <span>Oct 2023</span>
+                            </div>
+                        </div>
+                        <div class="archive-content">
+                            <h3 class="archive-title">October 2023</h3>
+                            <p class="archive-description">
+                                Comprehensive guide to 7T MRI applications, 
+                                research updates, and technical considerations.
+                            </p>
+                            <div class="archive-meta">
+                                <span class="archive-date">Published: Oct 15, 2023</span>
+                                <span class="archive-views">2,234 views</span>
+                            </div>
+                            <div class="archive-actions">
+                                <a href="#" class="btn btn-sm btn-outline">Read Online</a>
+                                <a href="#" class="btn btn-sm btn-primary">Download</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="archive-item">
+                        <div class="archive-cover">
+                            <div class="image-placeholder">
+                                <span>Sep 2023</span>
+                            </div>
+                        </div>
+                        <div class="archive-content">
+                            <h3 class="archive-title">September 2023</h3>
+                            <p class="archive-description">
+                                AI in neuroimaging: Current applications, 
+                                challenges, and future opportunities in clinical practice.
+                            </p>
+                            <div class="archive-meta">
+                                <span class="archive-date">Published: Sep 15, 2023</span>
+                                <span class="archive-views">3,102 views</span>
+                            </div>
+                            <div class="archive-actions">
+                                <a href="#" class="btn btn-sm btn-outline">Read Online</a>
+                                <a href="#" class="btn btn-sm btn-primary">Download</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <a href="#" class="btn btn-outline">View All Issues</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Subscription Section -->
+        <section class="section section-cta gradient-bg-3" id="subscribe">
+            <div class="container">
+                <div class="subscription-content">
+                    <div class="subscription-info">
+                        <h2 class="subscription-title">Subscribe to SPIN Yarn</h2>
+                        <p class="subscription-description">
+                            Join thousands of neuroimaging professionals who rely on SPIN Yarn 
+                            for the latest industry insights and research updates.
+                        </p>
+                        
+                        <div class="subscription-benefits">
+                            <div class="benefit-item">
+                                <div class="benefit-icon">✓</div>
+                                <span class="benefit-text">Monthly newsletter delivered to your inbox</span>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">✓</div>
+                                <span class="benefit-text">Exclusive member-only content</span>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">✓</div>
+                                <span class="benefit-text">Early access to research findings</span>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">✓</div>
+                                <span class="benefit-text">Interactive educational materials</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form class="subscription-form" id="newsletterForm">
+                        <h3 class="form-title">Get SPIN Yarn Newsletter</h3>
+                        
+                        <div class="form-group">
+                            <label for="firstName" class="form-label">First Name</label>
+                            <input type="text" id="firstName" name="firstName" class="form-input" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="lastName" class="form-label">Last Name</label>
+                            <input type="text" id="lastName" name="lastName" class="form-input" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" id="email" name="email" class="form-input" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="profession" class="form-label">Profession</label>
+                            <select id="profession" name="profession" class="form-select" required>
+                                <option value="">Select your profession</option>
+                                <option value="radiologist">Radiologist</option>
+                                <option value="neuroradiologist">Neuroradiologist</option>
+                                <option value="neurologist">Neurologist</option>
+                                <option value="researcher">Researcher</option>
+                                <option value="technologist">Medical Imaging Technologist</option>
+                                <option value="student">Student</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="interests" class="form-label">Areas of Interest (Optional)</label>
+                            <div class="checkbox-group">
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="interests" value="pediatric">
+                                    <span class="checkbox-label">Pediatric Neuroimaging</span>
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="interests" value="functional">
+                                    <span class="checkbox-label">Functional MRI</span>
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="interests" value="ai">
+                                    <span class="checkbox-label">AI in Neuroimaging</span>
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="interests" value="research">
+                                    <span class="checkbox-label">Research Methods</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="terms" required>
+                                <span class="checkbox-label">
+                                    I agree to receive newsletter emails and understand I can unsubscribe at any time
+                                </span>
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-full">Subscribe to Newsletter</button>
+                        
+                        <p class="form-note">
+                            By subscribing, you'll receive monthly issues of SPIN Yarn newsletter. 
+                            We respect your privacy and never share your information.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Editorial Team Section -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Editorial Team</h2>
+                    <p class="section-subtitle">
+                        Meet the experts behind SPIN Yarn Newsletter
+                    </p>
+                </div>
+
+                <div class="team-grid">
+                    <div class="team-member">
+                        <div class="member-image">
+                            <div class="image-placeholder">
+                                <span>Editor-in-Chief</span>
+                            </div>
+                        </div>
+                        <div class="member-info">
+                            <h3 class="member-name">Dr. Elena Rodriguez</h3>
+                            <p class="member-role">Editor-in-Chief</p>
+                            <p class="member-description">
+                                Leading neuroradiologist with 15+ years of experience in 
+                                neuroimaging research and clinical practice.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="member-image">
+                            <div class="image-placeholder">
+                                <span>Senior Editor</span>
+                            </div>
+                        </div>
+                        <div class="member-info">
+                            <h3 class="member-name">Dr. James Parker</h3>
+                            <p class="member-role">Senior Editor</p>
+                            <p class="member-description">
+                                Pediatric neuroimaging specialist focusing on developmental 
+                                brain disorders and advanced imaging techniques.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="member-image">
+                            <div class="image-placeholder">
+                                <span>Research Editor</span>
+                            </div>
+                        </div>
+                        <div class="member-info">
+                            <h3 class="member-name">Dr. Aisha Patel</h3>
+                            <p class="member-role">Research Editor</p>
+                            <p class="member-description">
+                                Computational neuroimaging researcher specializing in 
+                                machine learning applications in medical imaging.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">SPIN Academics</h3>
+                    <p class="footer-description">
+                        Advancing neuroimaging education and research through innovative programs and collaborative learning.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <span class="social-icon">in</span>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <span class="social-icon">tw</span>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <span class="social-icon">fb</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Education</h4>
+                    <ul class="footer-links">
+                        <li><a href="cortex-club.html" class="footer-link">Cortex Club</a></li>
+                        <li><a href="spin-yarn-newsletter.html" class="footer-link">SPIN Yarn Newsletter</a></li>
+                        <li><a href="spin-wfpi.html" class="footer-link">SPIN & WFPI</a></li>
+                        <li><a href="spin-reporting-room.html" class="footer-link">SPIN Reporting Room</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Research</h4>
+                    <ul class="footer-links">
+                        <li><a href="research.html" class="footer-link">Research Programs</a></li>
+                        <li><a href="submit-proposal.html" class="footer-link">Submit Proposal</a></li>
+                        <li><a href="green-radiology.html" class="footer-link">Green Radiology</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Contact</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:info@spinacademics.org" class="footer-link">info@spinacademics.org</a></li>
+                        <li><a href="tel:+1234567890" class="footer-link">+1 (234) 567-890</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="footer-copyright">
+                    &copy; 2024 SPIN Academics. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - SPIN Academics</title>
+    <meta name="description" content="Learn about SPIN Academics leadership, founding members, and mission">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#e6f3ff',
+                            100: '#cce7ff',
+                            200: '#99cfff',
+                            300: '#66b7ff',
+                            400: '#339fff',
+                            500: '#0087ff',
+                            600: '#006bcc',
+                            700: '#004f99',
+                            800: '#003366',
+                            900: '#001733',
+                            950: '#000d1a'
+                        },
+                        secondary: {
+                            50: '#e6f9f7',
+                            100: '#ccf2ef',
+                            200: '#99e6df',
+                            300: '#66d9cf',
+                            400: '#33ccbf',
+                            500: '#00bfaf',
+                            600: '#00998c',
+                            700: '#007369',
+                            800: '#004d46',
+                            900: '#002623',
+                            950: '#001311'
+                        },
+                        accent: {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            200: '#e2e8f0',
+                            300: '#cbd5e1',
+                            400: '#94a3b8',
+                            500: '#64748b',
+                            600: '#475569',
+                            700: '#334155',
+                            800: '#1e293b',
+                            900: '#0f172a',
+                            950: '#020617'
+                        }
+                    },
+                    fontFamily: {
+                        'sans': ['Poppins', 'system-ui', 'sans-serif'],
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.5s ease-in-out',
+                        'slide-in': 'slideIn 0.6s ease-out',
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 3s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0', transform: 'translateY(10px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        slideIn: {
+                            '0%': { opacity: '0', transform: 'translateX(-10px)' },
+                            '100%': { opacity: '1', transform: 'translateX(0)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #0087ff 0%, #00bfaf 100%);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #0087ff, #00bfaf);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .glass-effect {
+            background: rgba(0, 135, 255, 0.1);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(0, 135, 255, 0.2);
+        }
+        .nav-active {
+            position: relative;
+        }
+        .nav-active::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #0087ff, #00bfaf);
+            border-radius: 2px;
+        }
+        .nav-item {
+            position: relative;
+        }
+        .nav-item::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #0087ff, #00bfaf);
+            border-radius: 2px;
+            transition: width 0.3s ease;
+        }
+        .nav-item:hover::after {
+            width: 80%;
+        }
+        .join-btn {
+            background: linear-gradient(135deg, #0087ff 0%, #00bfaf 100%);
+            box-shadow: 0 4px 15px rgba(0, 135, 255, 0.3);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        .join-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 135, 255, 0.4);
+            background: linear-gradient(135deg, #006bcc 0%, #00998c 100%);
+        }
+        .dropdown-item {
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .dropdown-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 135, 255, 0.1), transparent);
+            transition: left 0.6s ease;
+        }
+        .dropdown-item:hover::before {
+            left: 100%;
+        }
+        .dropdown-item:hover {
+            background: linear-gradient(135deg, rgba(0, 135, 255, 0.08), rgba(0, 191, 175, 0.08));
+            transform: translateX(8px);
+            border-left: 3px solid;
+            border-image: linear-gradient(135deg, #0087ff, #00bfaf) 1;
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-gray-200/50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3">
+                    <img src="../images/spin_logo.webp" alt="SPIN Academics Logo" class="h-10 w-10 rounded-full shadow-sm">
+                    <div class="hidden sm:block">
+                        <h1 class="text-xl font-bold gradient-text">SPIN Academics</h1>
+                        <p class="text-xs text-gray-600">Pediatric Neuroradiology Society</p>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden lg:flex items-center space-x-1">
+                    <a href="../index.html" class="px-4 py-2 text-sm font-medium text-gray-700 hover:text-primary-600 rounded-lg nav-item">Home</a>
+                    
+                    <!-- About Dropdown -->
+                    <div class="relative group">
+                        <button class="px-4 py-2 text-sm font-medium text-primary-700 nav-active rounded-lg flex items-center space-x-1">
+                            <span>About</span>
+                            <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="absolute top-full left-0 mt-1 w-64 bg-white rounded-xl shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform group-hover:translate-y-0 translate-y-2">
+                            <div class="p-2">
+                                <a href="about.html#presidents-welcome" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 rounded-lg">President's Welcome</a>
+                                <a href="about.html#founding-members" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 rounded-lg">Founding Members</a>
+                                <a href="about.html#executive-committee" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 rounded-lg">Executive Committee</a>
+                                <a href="about.html#scientific-committee" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 rounded-lg">Scientific Committee</a>
+                                <a href="about.html#research-admin-team" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 rounded-lg">Research & Admin Team</a>
+                                <a href="about.html#rising-stars" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 rounded-lg">Rising Stars</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="membership.html" class="px-4 py-2 text-sm font-medium text-gray-700 hover:text-primary-600 rounded-lg nav-item">Membership</a>
+                    
+                    <!-- Education Dropdown -->
+                    <div class="relative group">
+                        <button class="px-4 py-2 text-sm font-medium text-gray-700 hover:text-primary-600 rounded-lg nav-item flex items-center space-x-1">
+                            <span>Education</span>
+                            <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="absolute top-full left-0 mt-1 w-64 bg-white rounded-xl shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform group-hover:translate-y-0 translate-y-2">
+                            <div class="p-2">
+                                <a href="society-fellowship.html" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 rounded-lg">Society Fellowship</a>
+                                <a href="education.html" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 rounded-lg">Education Offerings</a>
+                                <a href="cortex-club.html" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 rounded-lg">Cortex Club</a>
+                                <a href="spin-yarn-newsletter.html" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 rounded-lg">SPIN Yarn Newsletter</a>
+                                <a href="spin-wfpi.html" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 rounded-lg">SPIN-WFPI</a>
+                                <a href="spin-reporting-room.html" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 rounded-lg">SPIN Reporting Room</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Research Dropdown -->
+                    <div class="relative group">
+                        <button class="px-4 py-2 text-sm font-medium text-gray-700 hover:text-primary-600 rounded-lg nav-item flex items-center space-x-1">
+                            <span>Research</span>
+                            <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="absolute top-full left-0 mt-1 w-64 bg-white rounded-xl shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform group-hover:translate-y-0 translate-y-2">
+                            <div class="p-2">
+                                <a href="case-of-the-month.html" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 rounded-lg">Case of the Month</a>
+                                <a href="submit-proposal.html" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 rounded-lg">Submit a Proposal</a>
+                                <a href="green-radiology.html" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 rounded-lg">Green Radiology</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTA Button -->
+                <div class="hidden lg:flex items-center space-x-3">
+                    <a href="login.html" class="text-sm font-medium text-gray-700 hover:text-primary-600">Login</a>
+                    <a href="membership.html" class="join-btn text-white px-6 py-3 rounded-xl text-sm font-semibold transition-all">Join SPIN</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-lg hover:bg-gray-100">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="lg:hidden hidden border-t border-gray-200 bg-white">
+            <div class="px-4 py-3 space-y-2">
+                <a href="../index.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded-lg">Home</a>
+                <a href="about.html" class="block px-4 py-2 text-sm font-medium text-primary-700 bg-primary-50 rounded-lg">About</a>
+                <a href="membership.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded-lg">Membership</a>
+                <a href="education.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded-lg">Education</a>
+                <a href="research.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded-lg">Research</a>
+                <div class="pt-2 border-t border-gray-200">
+                    <a href="login.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded-lg">Login</a>
+                    <a href="membership.html" class="block px-4 py-2 text-sm font-medium text-white join-btn rounded-lg">Join SPIN</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Main Content -->
+    <main class="pt-20 bg-gray-50">
+        <!-- Hero Section -->
+        <section class="relative bg-gradient-to-br from-primary-600 via-primary-700 to-secondary-600 py-20 overflow-hidden">
+            <div class="absolute inset-0 bg-black/20"></div>
+            <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 animate-fade-in">
+                    About SPIN Academics
+                </h1>
+                <p class="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto animate-slide-in">
+                    Society for Pediatric and Investigative Neuroradiology
+                </p>
+            </div>
+        </section>
+
+        <!-- President's Welcome -->
+        <section class="py-20" id="presidents-welcome">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl md:text-4xl font-bold gradient-text text-center mb-16">President's Welcome</h2>
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="space-y-6 text-gray-700 leading-relaxed">
+                        <h3 class="text-2xl font-semibold text-gray-900">Welcome to SPIN Academics</h3>
+                        <p><strong>Dear Colleagues and Friends,</strong></p>
+                        <p>It is my great pleasure to welcome you to the Society for Pediatric and Investigative Neuroradiology (SPIN). Our organization stands at the forefront of pediatric neuroradiology education, research, and professional development.</p>
+                        <p>SPIN was founded with a vision to create a global community of pediatric neuroradiology professionals dedicated to advancing the field through innovative education, collaborative research, and evidence-based practice.</p>
+                        <p>Whether you are a seasoned professional, a fellow in training, or someone interested in pediatric neuroradiology, SPIN offers valuable resources and connections to support your professional journey.</p>
+                        <p>Together, we can continue to advance pediatric neuroradiology and improve patient care worldwide.</p>
+                        <div class="pt-4">
+                            <p class="font-medium">Warm regards,</p>
+                            <p class="font-bold text-primary-700">Dr. [President Name]</p>
+                            <p class="text-sm text-gray-600">President, SPIN Academics</p>
+                        </div>
+                    </div>
+                    <div class="flex justify-center">
+                        <div class="w-80 h-80 bg-gradient-to-br from-primary-100 to-secondary-100 rounded-2xl flex items-center justify-center card-hover">
+                            <div class="text-center">
+                                <div class="w-32 h-32 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+                                    <span class="text-4xl text-white">👨‍⚕️</span>
+                                </div>
+                                <p class="text-gray-600">President Photo</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Founding Members -->
+        <section class="py-20 bg-white" id="founding-members">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl md:text-4xl font-bold gradient-text text-center mb-16">Founding Members</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-gray-50 rounded-2xl p-6 text-center card-hover">
+                        <div class="w-24 h-24 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+                            <span class="text-2xl text-white">👩‍⚕️</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Dr. Sarah Johnson</h3>
+                        <p class="text-primary-600 font-medium mb-1">Founding President</p>
+                        <p class="text-gray-600 text-sm mb-4">Children's Hospital of Philadelphia</p>
+                        <button class="px-4 py-2 bg-secondary-500 text-white rounded-lg text-sm hover:bg-secondary-600 transition-colors">Read Bio</button>
+                    </div>
+                    <div class="bg-gray-50 rounded-2xl p-6 text-center card-hover">
+                        <div class="w-24 h-24 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+                            <span class="text-2xl text-white">👨‍⚕️</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Dr. Michael Chen</h3>
+                        <p class="text-primary-600 font-medium mb-1">Co-Founder</p>
+                        <p class="text-gray-600 text-sm mb-4">Boston Children's Hospital</p>
+                        <button class="px-4 py-2 bg-secondary-500 text-white rounded-lg text-sm hover:bg-secondary-600 transition-colors">Read Bio</button>
+                    </div>
+                    <div class="bg-gray-50 rounded-2xl p-6 text-center card-hover">
+                        <div class="w-24 h-24 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+                            <span class="text-2xl text-white">👩‍⚕️</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Dr. Emma Rodriguez</h3>
+                        <p class="text-primary-600 font-medium mb-1">Co-Founder</p>
+                        <p class="text-gray-600 text-sm mb-4">Great Ormond Street Hospital</p>
+                        <button class="px-4 py-2 bg-secondary-500 text-white rounded-lg text-sm hover:bg-secondary-600 transition-colors">Read Bio</button>
+                    </div>
+                    <div class="bg-gray-50 rounded-2xl p-6 text-center card-hover">
+                        <div class="w-24 h-24 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+                            <span class="text-2xl text-white">👨‍⚕️</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Dr. James Wilson</h3>
+                        <p class="text-primary-600 font-medium mb-1">Co-Founder</p>
+                        <p class="text-gray-600 text-sm mb-4">Hospital for Sick Children</p>
+                        <button class="px-4 py-2 bg-secondary-500 text-white rounded-lg text-sm hover:bg-secondary-600 transition-colors">Read Bio</button>
+                    </div>
+                    <div class="bg-gray-50 rounded-2xl p-6 text-center card-hover">
+                        <div class="w-24 h-24 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+                            <span class="text-2xl text-white">👩‍⚕️</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Dr. Lisa Anderson</h3>
+                        <p class="text-primary-600 font-medium mb-1">Co-Founder</p>
+                        <p class="text-gray-600 text-sm mb-4">Royal Children's Hospital Melbourne</p>
+                        <button class="px-4 py-2 bg-secondary-500 text-white rounded-lg text-sm hover:bg-secondary-600 transition-colors">Read Bio</button>
+                    </div>
+                    <div class="bg-gray-50 rounded-2xl p-6 text-center card-hover">
+                        <div class="w-24 h-24 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+                            <span class="text-2xl text-white">👨‍⚕️</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Dr. Robert Kim</h3>
+                        <p class="text-primary-600 font-medium mb-1">Co-Founder</p>
+                        <p class="text-gray-600 text-sm mb-4">Seoul National University Children's Hospital</p>
+                        <button class="px-4 py-2 bg-secondary-500 text-white rounded-lg text-sm hover:bg-secondary-600 transition-colors">Read Bio</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Executive Committee -->
+        <section class="py-20" id="executive-committee">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl md:text-4xl font-bold gradient-text text-center mb-16">Executive Committee</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-2xl p-6 text-center shadow-lg card-hover">
+                        <div class="w-24 h-24 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+                            <span class="text-2xl text-white">👩‍⚕️</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Dr. Sarah Johnson</h3>
+                        <p class="text-primary-600 font-medium mb-1">President</p>
+                        <p class="text-gray-600 text-sm">Children's Hospital of Philadelphia</p>
+                    </div>
+                    <div class="bg-white rounded-2xl p-6 text-center shadow-lg card-hover">
+                        <div class="w-24 h-24 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+                            <span class="text-2xl text-white">👨‍⚕️</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Dr. Michael Chen</h3>
+                        <p class="text-primary-600 font-medium mb-1">Vice President</p>
+                        <p class="text-gray-600 text-sm">Boston Children's Hospital</p>
+                    </div>
+                    <div class="bg-white rounded-2xl p-6 text-center shadow-lg card-hover">
+                        <div class="w-24 h-24 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+                            <span class="text-2xl text-white">👩‍⚕️</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Dr. Emma Rodriguez</h3>
+                        <p class="text-primary-600 font-medium mb-1">Secretary</p>
+                        <p class="text-gray-600 text-sm">Great Ormond Street Hospital</p>
+                    </div>
+                    <div class="bg-white rounded-2xl p-6 text-center shadow-lg card-hover">
+                        <div class="w-24 h-24 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+                            <span class="text-2xl text-white">👨‍⚕️</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Dr. James Wilson</h3>
+                        <p class="text-primary-600 font-medium mb-1">Treasurer</p>
+                        <p class="text-gray-600 text-sm">Hospital for Sick Children</p>
+                    </div>
+                    <div class="bg-white rounded-2xl p-6 text-center shadow-lg card-hover">
+                        <div class="w-24 h-24 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+                            <span class="text-2xl text-white">👩‍⚕️</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Dr. Lisa Anderson</h3>
+                        <p class="text-primary-600 font-medium mb-1">Education Director</p>
+                        <p class="text-gray-600 text-sm">Royal Children's Hospital Melbourne</p>
+                    </div>
+                    <div class="bg-white rounded-2xl p-6 text-center shadow-lg card-hover">
+                        <div class="w-24 h-24 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+                            <span class="text-2xl text-white">👨‍⚕️</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Dr. Robert Kim</h3>
+                        <p class="text-primary-600 font-medium mb-1">Research Director</p>
+                        <p class="text-gray-600 text-sm">Seoul National University Children's Hospital</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Scientific Committee -->
+        <section class="py-20 bg-white" id="scientific-committee">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl md:text-4xl font-bold gradient-text text-center mb-16">Scientific Committee</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-gray-50 rounded-xl p-6 card-hover">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Dr. Maria Gonzalez</h3>
+                        <p class="text-gray-600">University of Barcelona Children's Hospital</p>
+                    </div>
+                    <div class="bg-gray-50 rounded-xl p-6 card-hover">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Dr. Alessandro Rossi</h3>
+                        <p class="text-gray-600">Istituto Giannina Gaslini, Genoa</p>
+                    </div>
+                    <div class="bg-gray-50 rounded-xl p-6 card-hover">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Dr. Johan van der Berg</h3>
+                        <p class="text-gray-600">Erasmus MC-Sophia Children's Hospital</p>
+                    </div>
+                    <div class="bg-gray-50 rounded-xl p-6 card-hover">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Dr. Pradeep Kumar</h3>
+                        <p class="text-gray-600">All India Institute of Medical Sciences</p>
+                    </div>
+                    <div class="bg-gray-50 rounded-xl p-6 card-hover">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Dr. Catherine Dubois</h3>
+                        <p class="text-gray-600">Hôpital Necker-Enfants Malades</p>
+                    </div>
+                    <div class="bg-gray-50 rounded-xl p-6 card-hover">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Dr. Takeshi Yamamoto</h3>
+                        <p class="text-gray-600">Tokyo Children's Medical Center</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Research & Admin Team -->
+        <section class="py-20" id="research-admin-team">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl md:text-4xl font-bold gradient-text text-center mb-16">Research & Admin Team</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="bg-white rounded-2xl p-6 text-center shadow-lg card-hover">
+                        <div class="w-20 h-20 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+                            <span class="text-xl text-white">👩‍⚕️</span>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Dr. Amanda Foster</h3>
+                        <p class="text-primary-600 font-medium mb-1">Research Director</p>
+                        <p class="text-gray-600 text-sm">Cincinnati Children's Hospital</p>
+                    </div>
+                    <div class="bg-white rounded-2xl p-6 text-center shadow-lg card-hover">
+                        <div class="w-20 h-20 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+                            <span class="text-xl text-white">👨‍⚕️</span>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Dr. Kevin Park</h3>
+                        <p class="text-primary-600 font-medium mb-1">Data Manager</p>
+                        <p class="text-gray-600 text-sm">Stanford University</p>
+                    </div>
+                    <div class="bg-white rounded-2xl p-6 text-center shadow-lg card-hover">
+                        <div class="w-20 h-20 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+                            <span class="text-xl text-white">👩‍💼</span>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Ms. Jennifer Clark</h3>
+                        <p class="text-primary-600 font-medium mb-1">Administrative Coordinator</p>
+                        <p class="text-gray-600 text-sm">SPIN Headquarters</p>
+                    </div>
+                    <div class="bg-white rounded-2xl p-6 text-center shadow-lg card-hover">
+                        <div class="w-20 h-20 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+                            <span class="text-xl text-white">👨‍💻</span>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Mr. David Lee</h3>
+                        <p class="text-primary-600 font-medium mb-1">Technology Director</p>
+                        <p class="text-gray-600 text-sm">SPIN IT Services</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Rising Stars -->
+        <section class="py-20 bg-white" id="rising-stars">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl md:text-4xl font-bold gradient-text text-center mb-16">Rising Stars</h2>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                    <div class="bg-gradient-to-br from-primary-50 to-secondary-50 rounded-lg p-4 text-center card-hover">
+                        <p class="font-medium text-gray-800">Dr. Alex Thompson</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-primary-50 to-secondary-50 rounded-lg p-4 text-center card-hover">
+                        <p class="font-medium text-gray-800">Dr. Sophia Martinez</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-primary-50 to-secondary-50 rounded-lg p-4 text-center card-hover">
+                        <p class="font-medium text-gray-800">Dr. Ryan O'Connor</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-primary-50 to-secondary-50 rounded-lg p-4 text-center card-hover">
+                        <p class="font-medium text-gray-800">Dr. Mei Zhang</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-primary-50 to-secondary-50 rounded-lg p-4 text-center card-hover">
+                        <p class="font-medium text-gray-800">Dr. Hassan Ali</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-primary-50 to-secondary-50 rounded-lg p-4 text-center card-hover">
+                        <p class="font-medium text-gray-800">Dr. Isabella Romano</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-primary-50 to-secondary-50 rounded-lg p-4 text-center card-hover">
+                        <p class="font-medium text-gray-800">Dr. Lucas Silva</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-primary-50 to-secondary-50 rounded-lg p-4 text-center card-hover">
+                        <p class="font-medium text-gray-800">Dr. Aisha Patel</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-primary-50 to-secondary-50 rounded-lg p-4 text-center card-hover">
+                        <p class="font-medium text-gray-800">Dr. Nikolai Petrov</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-primary-50 to-secondary-50 rounded-lg p-4 text-center card-hover">
+                        <p class="font-medium text-gray-800">Dr. Camila Restrepo</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-primary-50 to-secondary-50 rounded-lg p-4 text-center card-hover">
+                        <p class="font-medium text-gray-800">Dr. Benjamin Taylor</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-primary-50 to-secondary-50 rounded-lg p-4 text-center card-hover">
+                        <p class="font-medium text-gray-800">Dr. Yuki Tanaka</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Member Testimonials -->
+        <section class="py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl md:text-4xl font-bold gradient-text text-center mb-16">What Our Members Say</h2>
+                <div class="grid lg:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-2xl p-8 shadow-lg card-hover">
+                        <div class="mb-6">
+                            <svg class="w-8 h-8 text-primary-500" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                            </svg>
+                        </div>
+                        <blockquote class="text-gray-700 text-lg mb-6">
+                            "SPIN has been instrumental in shaping my career in pediatric neuroradiology. The mentorship and resources provided are unparalleled."
+                        </blockquote>
+                        <cite class="text-primary-600 font-medium">- Dr. Jennifer Adams, Fellowship Graduate</cite>
+                    </div>
+                    <div class="bg-white rounded-2xl p-8 shadow-lg card-hover">
+                        <div class="mb-6">
+                            <svg class="w-8 h-8 text-primary-500" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                            </svg>
+                        </div>
+                        <blockquote class="text-gray-700 text-lg mb-6">
+                            "The collaborative environment at SPIN fosters innovation and excellence in pediatric neuroimaging research."
+                        </blockquote>
+                        <cite class="text-primary-600 font-medium">- Dr. Mark Thompson, Research Member</cite>
+                    </div>
+                    <div class="bg-white rounded-2xl p-8 shadow-lg card-hover">
+                        <div class="mb-6">
+                            <svg class="w-8 h-8 text-primary-500" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                            </svg>
+                        </div>
+                        <blockquote class="text-gray-700 text-lg mb-6">
+                            "SPIN's educational programs have significantly enhanced my diagnostic skills and clinical confidence."
+                        </blockquote>
+                        <cite class="text-primary-600 font-medium">- Dr. Rachel Kim, Associate Member</cite>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-3">
+                        <img src="../images/spin_logo.webp" alt="SPIN Academics" class="h-10 w-10 rounded-full">
+                        <div>
+                            <h3 class="text-xl font-bold">SPIN Academics</h3>
+                            <p class="text-sm text-gray-400">Pediatric Neuroradiology Society</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300">Society for Pediatric and Investigative Neuroradiology</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-300 hover:text-white transition-colors">About</a></li>
+                        <li><a href="membership.html" class="text-gray-300 hover:text-white transition-colors">Membership</a></li>
+                        <li><a href="education.html" class="text-gray-300 hover:text-white transition-colors">Education</a></li>
+                        <li><a href="research.html" class="text-gray-300 hover:text-white transition-colors">Research</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Education</h4>
+                    <ul class="space-y-2">
+                        <li><a href="society-fellowship.html" class="text-gray-300 hover:text-white transition-colors">Fellowship Program</a></li>
+                        <li><a href="cortex-club.html" class="text-gray-300 hover:text-white transition-colors">Cortex Club</a></li>
+                        <li><a href="spin-yarn-newsletter.html" class="text-gray-300 hover:text-white transition-colors">SPIN A Yarn</a></li>
+                        <li><a href="spin-wfpi.html" class="text-gray-300 hover:text-white transition-colors">SPIN WFPI</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                            <span class="sr-only">Email</span>
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                            <span class="sr-only">Twitter</span>
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                            <span class="sr-only">YouTube</span>
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8">
+                <p class="text-center text-gray-400">&copy; 2025 SPIN Academics. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Script -->
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

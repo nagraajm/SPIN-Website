@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fellowship Part 1 - SPIN Academics</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <div class="nav-brand">
+                <a href="../index.html" class="nav-logo">
+                    <img src="../images/spin_logo.webp" alt="SPIN Academics Logo" class="logo-img">
+                    <span class="logo-text">SPIN Academics</span>
+                </a>
+            </div>
+            
+            <div class="nav-menu" id="navMenu">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="../index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="about.html" class="nav-link">About</a>
+                        <div class="dropdown-content">
+                            <a href="about.html#leadership">Leadership</a>
+                            <a href="about.html#committees">Committees</a>
+                            <a href="about.html#history">History</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="membership.html" class="nav-link">Membership</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="education.html" class="nav-link">Education</a>
+                        <div class="dropdown-content">
+                            <a href="cortex-club.html">Cortex Club</a>
+                            <a href="spin-yarn-newsletter.html">SPIN Yarn Newsletter</a>
+                            <a href="spin-wfpi.html">SPIN & WFPI</a>
+                            <a href="spin-reporting-room.html">SPIN Reporting Room</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="research.html" class="nav-link">Research</a>
+                        <div class="dropdown-content">
+                            <a href="submit-proposal.html">Submit Proposal</a>
+                            <a href="green-radiology.html">Green Radiology</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link active">Fellowship</a>
+                        <div class="dropdown-content">
+                            <a href="society-fellowship.html">Fellowship Program</a>
+                            <a href="fellowship-part1.html">Part 1</a>
+                            <a href="fellowship-part2.html">Part 2</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="spin-in-person.html" class="nav-link">Events</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="nav-actions">
+                <a href="login.html" class="btn btn-outline">Login</a>
+                <a href="signup.html" class="btn btn-primary">Join SPIN</a>
+            </div>
+            
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <main class="main">
+        <!-- Hero Section -->
+        <section class="hero-section gradient-bg-2">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1 class="hero-title">Fellowship Part 1</h1>
+                        <p class="hero-subtitle">Foundation Level Pediatric Neuroradiology</p>
+                        <p class="hero-description">
+                            The first level of SPIN's comprehensive fellowship program, designed to establish 
+                            fundamental knowledge and skills in pediatric neuroradiology for early-career 
+                            radiologists and residents.
+                        </p>
+                        <div class="hero-actions">
+                            <a href="#apply" class="btn btn-primary btn-lg">Apply Now</a>
+                            <a href="#curriculum" class="btn btn-outline btn-lg">View Curriculum</a>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <div class="image-placeholder">
+                            <span>Fellowship Part 1</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Program Overview Section -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Program Overview</h2>
+                    <p class="section-subtitle">
+                        Building the foundation for excellence in pediatric neuroradiology
+                    </p>
+                </div>
+
+                <div class="overview-content">
+                    <div class="overview-stats">
+                        <div class="stat-card">
+                            <div class="stat-number">6</div>
+                            <div class="stat-label">Months Duration</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">200+</div>
+                            <div class="stat-label">Clinical Hours</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">50+</div>
+                            <div class="stat-label">Supervised Cases</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">15</div>
+                            <div class="stat-label">Expert Faculty</div>
+                        </div>
+                    </div>
+
+                    <div class="overview-description">
+                        <p>
+                            Fellowship Part 1 provides a comprehensive introduction to pediatric neuroradiology, 
+                            covering essential imaging techniques, normal anatomy, common pathologies, and 
+                            fundamental clinical skills. This program is designed for residents completing 
+                            diagnostic radiology training or early-career radiologists seeking specialization 
+                            in pediatric neuroradiology.
+                        </p>
+                        <p>
+                            The curriculum combines theoretical knowledge with hands-on clinical experience, 
+                            mentored by leading experts in the field. Fellows will develop competency in 
+                            interpreting pediatric neuroimaging studies and gain exposure to interventional 
+                            neuroradiology techniques.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Curriculum Section -->
+        <section class="section section-alt" id="curriculum">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Curriculum Structure</h2>
+                    <p class="section-subtitle">
+                        Comprehensive 6-month program divided into focused learning modules
+                    </p>
+                </div>
+
+                <div class="curriculum-modules">
+                    <div class="module-card">
+                        <div class="module-header">
+                            <div class="module-number">01</div>
+                            <h3 class="module-title">Foundations & Normal Anatomy</h3>
+                            <span class="module-duration">Month 1</span>
+                        </div>
+                        <div class="module-content">
+                            <p class="module-description">
+                                Essential foundation in pediatric brain development, normal anatomy variations 
+                                across age groups, and imaging technique optimization for pediatric patients.
+                            </p>
+                            <div class="module-topics">
+                                <h4>Key Topics:</h4>
+                                <ul class="topics-list">
+                                    <li>Pediatric brain development milestones</li>
+                                    <li>Age-related anatomical variations</li>
+                                    <li>Imaging protocol optimization</li>
+                                    <li>Radiation safety and dose reduction</li>
+                                    <li>Sedation and anesthesia considerations</li>
+                                </ul>
+                            </div>
+                            <div class="module-objectives">
+                                <h4>Learning Objectives:</h4>
+                                <ul class="objectives-list">
+                                    <li>Recognize normal developmental anatomy</li>
+                                    <li>Optimize imaging protocols for pediatric patients</li>
+                                    <li>Apply radiation safety principles</li>
+                                    <li>Understand sedation requirements</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="module-card">
+                        <div class="module-header">
+                            <div class="module-number">02</div>
+                            <h3 class="module-title">Common Pathologies</h3>
+                            <span class="module-duration">Month 2</span>
+                        </div>
+                        <div class="module-content">
+                            <p class="module-description">
+                                Comprehensive coverage of the most frequently encountered pediatric 
+                                neurological conditions and their imaging manifestations.
+                            </p>
+                            <div class="module-topics">
+                                <h4>Key Topics:</h4>
+                                <ul class="topics-list">
+                                    <li>Congenital brain malformations</li>
+                                    <li>Hypoxic-ischemic injury</li>
+                                    <li>Inflammatory conditions</li>
+                                    <li>Metabolic disorders</li>
+                                    <li>Traumatic brain injury</li>
+                                </ul>
+                            </div>
+                            <div class="module-objectives">
+                                <h4>Learning Objectives:</h4>
+                                <ul class="objectives-list">
+                                    <li>Identify common pediatric pathologies</li>
+                                    <li>Understand pathophysiology and imaging patterns</li>
+                                    <li>Develop differential diagnosis skills</li>
+                                    <li>Correlate imaging with clinical presentation</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="module-card">
+                        <div class="module-header">
+                            <div class="module-number">03</div>
+                            <h3 class="module-title">Advanced Imaging Techniques</h3>
+                            <span class="module-duration">Month 3</span>
+                        </div>
+                        <div class="module-content">
+                            <p class="module-description">
+                                Introduction to advanced neuroimaging techniques including functional MRI, 
+                                DTI, MR spectroscopy, and perfusion imaging in pediatric applications.
+                            </p>
+                            <div class="module-topics">
+                                <h4>Key Topics:</h4>
+                                <ul class="topics-list">
+                                    <li>Functional MRI principles and applications</li>
+                                    <li>Diffusion tensor imaging (DTI)</li>
+                                    <li>MR spectroscopy interpretation</li>
+                                    <li>Perfusion imaging techniques</li>
+                                    <li>Advanced post-processing methods</li>
+                                </ul>
+                            </div>
+                            <div class="module-objectives">
+                                <h4>Learning Objectives:</h4>
+                                <ul class="objectives-list">
+                                    <li>Understand advanced imaging principles</li>
+                                    <li>Apply appropriate techniques for clinical questions</li>
+                                    <li>Interpret advanced imaging findings</li>
+                                    <li>Recognize technical limitations and artifacts</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="module-card">
+                        <div class="module-header">
+                            <div class="module-number">04</div>
+                            <h3 class="module-title">Tumor Imaging</h3>
+                            <span class="module-duration">Month 4</span>
+                        </div>
+                        <div class="module-content">
+                            <p class="module-description">
+                                Comprehensive study of pediatric brain tumors, including imaging characteristics, 
+                                staging, treatment planning, and follow-up imaging strategies.
+                            </p>
+                            <div class="module-topics">
+                                <h4>Key Topics:</h4>
+                                <ul class="topics-list">
+                                    <li>Pediatric brain tumor classification</li>
+                                    <li>Imaging characteristics by tumor type</li>
+                                    <li>Pre-surgical planning</li>
+                                    <li>Post-treatment changes and complications</li>
+                                    <li>Surveillance imaging protocols</li>
+                                </ul>
+                            </div>
+                            <div class="module-objectives">
+                                <h4>Learning Objectives:</h4>
+                                <ul class="objectives-list">
+                                    <li>Characterize pediatric brain tumors</li>
+                                    <li>Assist in surgical planning</li>
+                                    <li>Recognize treatment-related changes</li>
+                                    <li>Develop appropriate follow-up strategies</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="module-card">
+                        <div class="module-header">
+                            <div class="module-number">05</div>
+                            <h3 class="module-title">Spinal Imaging</h3>
+                            <span class="module-duration">Month 5</span>
+                        </div>
+                        <div class="module-content">
+                            <p class="module-description">
+                                Focused study of pediatric spinal imaging, including congenital anomalies, 
+                                trauma, infections, and tumors affecting the pediatric spine.
+                            </p>
+                            <div class="module-topics">
+                                <h4>Key Topics:</h4>
+                                <ul class="topics-list">
+                                    <li>Spinal dysraphism and malformations</li>
+                                    <li>Pediatric spinal trauma</li>
+                                    <li>Spinal infections and inflammatory conditions</li>
+                                    <li>Spinal tumors in children</li>
+                                    <li>Tethered cord syndrome</li>
+                                </ul>
+                            </div>
+                            <div class="module-objectives">
+                                <h4>Learning Objectives:</h4>
+                                <ul class="objectives-list">
+                                    <li>Evaluate pediatric spinal pathology</li>
+                                    <li>Understand developmental spinal anatomy</li>
+                                    <li>Recognize emergency spinal conditions</li>
+                                    <li>Plan appropriate imaging protocols</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="module-card">
+                        <div class="module-header">
+                            <div class="module-number">06</div>
+                            <h3 class="module-title">Clinical Integration & Assessment</h3>
+                            <span class="module-duration">Month 6</span>
+                        </div>
+                        <div class="module-content">
+                            <p class="module-description">
+                                Integration of learned concepts through comprehensive case reviews, 
+                                multidisciplinary conferences, and final assessment activities.
+                            </p>
+                            <div class="module-topics">
+                                <h4>Key Topics:</h4>
+                                <ul class="topics-list">
+                                    <li>Complex case presentations</li>
+                                    <li>Multidisciplinary team interactions</li>
+                                    <li>Quality improvement projects</li>
+                                    <li>Research methodology introduction</li>
+                                    <li>Professional development</li>
+                                </ul>
+                            </div>
+                            <div class="module-objectives">
+                                <h4>Learning Objectives:</h4>
+                                <ul class="objectives-list">
+                                    <li>Integrate knowledge across all areas</li>
+                                    <li>Demonstrate independent interpretation skills</li>
+                                    <li>Participate effectively in clinical teams</li>
+                                    <li>Complete comprehensive assessment</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Assessment & Certification Section -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Assessment & Certification</h2>
+                    <p class="section-subtitle">
+                        Comprehensive evaluation ensuring competency in pediatric neuroradiology fundamentals
+                    </p>
+                </div>
+
+                <div class="assessment-content">
+                    <div class="assessment-methods">
+                        <div class="method-card">
+                            <div class="method-icon">
+                                <div class="icon-placeholder">📝</div>
+                            </div>
+                            <h3 class="method-title">Written Examinations</h3>
+                            <p class="method-description">
+                                Monthly written assessments covering theoretical knowledge, 
+                                imaging interpretation, and clinical decision-making.
+                            </p>
+                            <div class="method-details">
+                                <div class="detail-item">
+                                    <strong>Frequency:</strong> Monthly assessments
+                                </div>
+                                <div class="detail-item">
+                                    <strong>Format:</strong> Multiple choice and case-based
+                                </div>
+                                <div class="detail-item">
+                                    <strong>Passing Score:</strong> 80% minimum
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="method-card">
+                            <div class="method-icon">
+                                <div class="icon-placeholder">🖥️</div>
+                            </div>
+                            <h3 class="method-title">Image Interpretation</h3>
+                            <p class="method-description">
+                                Practical image interpretation sessions with real cases, 
+                                focusing on accuracy, efficiency, and clinical correlation.
+                            </p>
+                            <div class="method-details">
+                                <div class="detail-item">
+                                    <strong>Cases:</strong> 10+ cases per session
+                                </div>
+                                <div class="detail-item">
+                                    <strong>Evaluation:</strong> Expert faculty review
+                                </div>
+                                <div class="detail-item">
+                                    <strong>Feedback:</strong> Immediate detailed feedback
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="method-card">
+                            <div class="method-icon">
+                                <div class="icon-placeholder">👥</div>
+                            </div>
+                            <h3 class="method-title">Clinical Performance</h3>
+                            <p class="method-description">
+                                Ongoing evaluation of clinical skills, professional behavior, 
+                                and interaction with patients, families, and healthcare teams.
+                            </p>
+                            <div class="method-details">
+                                <div class="detail-item">
+                                    <strong>Evaluation:</strong> 360-degree feedback
+                                </div>
+                                <div class="detail-item">
+                                    <strong>Assessors:</strong> Faculty, staff, peers
+                                </div>
+                                <div class="detail-item">
+                                    <strong>Focus:</strong> Professionalism and teamwork
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="method-card">
+                            <div class="method-icon">
+                                <div class="icon-placeholder">🎯</div>
+                            </div>
+                            <h3 class="method-title">Final Comprehensive Exam</h3>
+                            <p class="method-description">
+                                Capstone assessment covering all curriculum areas, 
+                                including case presentations and oral examinations.
+                            </p>
+                            <div class="method-details">
+                                <div class="detail-item">
+                                    <strong>Duration:</strong> Full day examination
+                                </div>
+                                <div class="detail-item">
+                                    <strong>Components:</strong> Written, oral, practical
+                                </div>
+                                <div class="detail-item">
+                                    <strong>Panel:</strong> 3 expert examiners
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="certification-info">
+                        <h3 class="certification-title">Certification Requirements</h3>
+                        <div class="requirements-list">
+                            <div class="requirement-item">
+                                <div class="requirement-icon">✓</div>
+                                <div class="requirement-text">Complete all 6 curriculum modules</div>
+                            </div>
+                            <div class="requirement-item">
+                                <div class="requirement-icon">✓</div>
+                                <div class="requirement-text">Maintain 90% attendance record</div>
+                            </div>
+                            <div class="requirement-item">
+                                <div class="requirement-icon">✓</div>
+                                <div class="requirement-text">Pass all monthly assessments (≥80%)</div>
+                            </div>
+                            <div class="requirement-item">
+                                <div class="requirement-icon">✓</div>
+                                <div class="requirement-text">Complete minimum 50 supervised cases</div>
+                            </div>
+                            <div class="requirement-item">
+                                <div class="requirement-icon">✓</div>
+                                <div class="requirement-text">Pass final comprehensive examination</div>
+                            </div>
+                            <div class="requirement-item">
+                                <div class="requirement-icon">✓</div>
+                                <div class="requirement-text">Receive satisfactory clinical evaluations</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Application Section -->
+        <section class="section section-cta gradient-bg-3" id="apply">
+            <div class="container">
+                <div class="application-content">
+                    <div class="application-info">
+                        <h2 class="application-title">Apply for Fellowship Part 1</h2>
+                        <p class="application-description">
+                            Take the first step in your pediatric neuroradiology career. 
+                            Our Fellowship Part 1 program provides the foundation for 
+                            advanced specialization and career excellence.
+                        </p>
+                        
+                        <div class="application-timeline">
+                            <h3>Application Timeline 2024</h3>
+                            <div class="timeline-item">
+                                <div class="timeline-date">March 1</div>
+                                <div class="timeline-event">Applications Open</div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-date">June 30</div>
+                                <div class="timeline-event">Application Deadline</div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-date">July 15</div>
+                                <div class="timeline-event">Interview Invitations</div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-date">August 31</div>
+                                <div class="timeline-event">Final Decisions</div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-date">January 1, 2025</div>
+                                <div class="timeline-event">Program Starts</div>
+                            </div>
+                        </div>
+
+                        <div class="application-requirements">
+                            <h3>Eligibility Requirements</h3>
+                            <ul class="requirements-list">
+                                <li>Completed diagnostic radiology residency or equivalent</li>
+                                <li>Board eligible/certified in diagnostic radiology</li>
+                                <li>Valid medical license</li>
+                                <li>Strong academic record</li>
+                                <li>Letters of recommendation (3 required)</li>
+                                <li>Personal statement</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <form class="application-form" id="fellowshipPart1Form">
+                        <h3 class="form-title">Fellowship Part 1 Application</h3>
+                        
+                        <div class="form-section">
+                            <h4 class="section-title">Personal Information</h4>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstName" class="form-label">First Name</label>
+                                    <input type="text" id="firstName" name="firstName" class="form-input" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName" class="form-label">Last Name</label>
+                                    <input type="text" id="lastName" name="lastName" class="form-input" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email Address</label>
+                                <input type="email" id="email" name="email" class="form-input" required>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="phone" class="form-label">Phone Number</label>
+                                    <input type="tel" id="phone" name="phone" class="form-input" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="dateOfBirth" class="form-label">Date of Birth</label>
+                                    <input type="date" id="dateOfBirth" name="dateOfBirth" class="form-input" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h4 class="section-title">Educational Background</h4>
+                            
+                            <div class="form-group">
+                                <label for="medicalSchool" class="form-label">Medical School</label>
+                                <input type="text" id="medicalSchool" name="medicalSchool" class="form-input" required>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="graduationYear" class="form-label">Graduation Year</label>
+                                    <input type="number" id="graduationYear" name="graduationYear" class="form-input" min="1990" max="2024" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="residencyProgram" class="form-label">Residency Program</label>
+                                    <input type="text" id="residencyProgram" name="residencyProgram" class="form-input" required>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="residencyYear" class="form-label">Residency Completion Year</label>
+                                    <input type="number" id="residencyYear" name="residencyYear" class="form-input" min="2020" max="2025" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="boardStatus" class="form-label">Board Certification Status</label>
+                                    <select id="boardStatus" name="boardStatus" class="form-select" required>
+                                        <option value="">Select status</option>
+                                        <option value="certified">Board Certified</option>
+                                        <option value="eligible">Board Eligible</option>
+                                        <option value="pending">Exam Pending</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h4 class="section-title">Professional Experience</h4>
+                            
+                            <div class="form-group">
+                                <label for="currentPosition" class="form-label">Current Position</label>
+                                <input type="text" id="currentPosition" name="currentPosition" class="form-input">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="currentInstitution" class="form-label">Current Institution</label>
+                                <input type="text" id="currentInstitution" name="currentInstitution" class="form-input">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="neuroradiologyExperience" class="form-label">Prior Neuroradiology Experience</label>
+                                <textarea id="neuroradiologyExperience" name="neuroradiologyExperience" class="form-textarea" rows="3" placeholder="Describe any previous neuroradiology rotations, research, or experience"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h4 class="section-title">Application Materials</h4>
+                            
+                            <div class="form-group">
+                                <label for="personalStatement" class="form-label">Personal Statement</label>
+                                <textarea id="personalStatement" name="personalStatement" class="form-textarea" rows="6" required placeholder="Please describe your interest in pediatric neuroradiology, career goals, and why you want to join this fellowship program (max 1000 words)"></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="references" class="form-label">References</label>
+                                <div class="reference-inputs">
+                                    <input type="text" name="reference1" class="form-input" placeholder="Reference 1: Name, Title, Institution, Email" required>
+                                    <input type="text" name="reference2" class="form-input" placeholder="Reference 2: Name, Title, Institution, Email" required>
+                                    <input type="text" name="reference3" class="form-input" placeholder="Reference 3: Name, Title, Institution, Email" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="researchInterests" class="form-label">Research Interests (Optional)</label>
+                                <textarea id="researchInterests" name="researchInterests" class="form-textarea" rows="3" placeholder="Describe any specific research interests or projects you would like to pursue"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="agreement" required>
+                                <span class="checkbox-label">
+                                    I certify that all information provided is accurate and complete. 
+                                    I understand that false information may result in application rejection.
+                                </span>
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-full">Submit Application</button>
+                        
+                        <p class="form-note">
+                            After submitting your application, you will receive a confirmation email 
+                            with instructions for uploading supporting documents (CV, transcripts, etc.).
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Contact Fellowship Coordinator</h2>
+                    <p class="section-subtitle">
+                        Have questions about the Fellowship Part 1 program? We're here to help.
+                    </p>
+                </div>
+
+                <div class="contact-info-grid">
+                    <div class="contact-card">
+                        <h3 class="contact-title">Program Director</h3>
+                        <p class="contact-name">Dr. Sarah Mitchell</p>
+                        <p class="contact-email">
+                            <a href="mailto:fellowship.director@spinacademics.org">fellowship.director@spinacademics.org</a>
+                        </p>
+                        <p class="contact-phone">+1 (555) 123-4567</p>
+                    </div>
+
+                    <div class="contact-card">
+                        <h3 class="contact-title">Fellowship Coordinator</h3>
+                        <p class="contact-name">Ms. Jennifer Adams</p>
+                        <p class="contact-email">
+                            <a href="mailto:fellowship.coordinator@spinacademics.org">fellowship.coordinator@spinacademics.org</a>
+                        </p>
+                        <p class="contact-phone">+1 (555) 123-4568</p>
+                    </div>
+
+                    <div class="contact-card">
+                        <h3 class="contact-title">Application Support</h3>
+                        <p class="contact-name">Admissions Office</p>
+                        <p class="contact-email">
+                            <a href="mailto:admissions@spinacademics.org">admissions@spinacademics.org</a>
+                        </p>
+                        <p class="contact-hours">Monday-Friday, 9 AM - 5 PM EST</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">SPIN Academics</h3>
+                    <p class="footer-description">
+                        Advancing neuroimaging education and research through innovative programs and collaborative learning.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <span class="social-icon">in</span>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <span class="social-icon">tw</span>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <span class="social-icon">fb</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Fellowship</h4>
+                    <ul class="footer-links">
+                        <li><a href="society-fellowship.html" class="footer-link">Fellowship Program</a></li>
+                        <li><a href="fellowship-part1.html" class="footer-link">Part 1</a></li>
+                        <li><a href="fellowship-part2.html" class="footer-link">Part 2</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Education</h4>
+                    <ul class="footer-links">
+                        <li><a href="cortex-club.html" class="footer-link">Cortex Club</a></li>
+                        <li><a href="spin-yarn-newsletter.html" class="footer-link">SPIN Yarn Newsletter</a></li>
+                        <li><a href="spin-wfpi.html" class="footer-link">SPIN & WFPI</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Contact</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:info@spinacademics.org" class="footer-link">info@spinacademics.org</a></li>
+                        <li><a href="tel:+1234567890" class="footer-link">+1 (234) 567-890</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="footer-copyright">
+                    &copy; 2024 SPIN Academics. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

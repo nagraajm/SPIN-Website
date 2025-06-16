@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPIN & WFPI - SPIN Academics</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <div class="nav-brand">
+                <a href="../index.html" class="nav-logo">
+                    <img src="../images/spin_logo.webp" alt="SPIN Academics Logo" class="logo-img">
+                    <span class="logo-text">SPIN Academics</span>
+                </a>
+            </div>
+            
+            <div class="nav-menu" id="navMenu">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="../index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="about.html" class="nav-link">About</a>
+                        <div class="dropdown-content">
+                            <a href="about.html#leadership">Leadership</a>
+                            <a href="about.html#committees">Committees</a>
+                            <a href="about.html#history">History</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="membership.html" class="nav-link">Membership</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="education.html" class="nav-link active">Education</a>
+                        <div class="dropdown-content">
+                            <a href="cortex-club.html">Cortex Club</a>
+                            <a href="spin-yarn-newsletter.html">SPIN Yarn Newsletter</a>
+                            <a href="spin-wfpi.html">SPIN & WFPI</a>
+                            <a href="spin-reporting-room.html">SPIN Reporting Room</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="research.html" class="nav-link">Research</a>
+                        <div class="dropdown-content">
+                            <a href="submit-proposal.html">Submit Proposal</a>
+                            <a href="green-radiology.html">Green Radiology</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link">Fellowship</a>
+                        <div class="dropdown-content">
+                            <a href="society-fellowship.html">Fellowship Program</a>
+                            <a href="fellowship-part1.html">Part 1</a>
+                            <a href="fellowship-part2.html">Part 2</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="spin-in-person.html" class="nav-link">Events</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="nav-actions">
+                <a href="login.html" class="btn btn-outline">Login</a>
+                <a href="signup.html" class="btn btn-primary">Join SPIN</a>
+            </div>
+            
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <main class="main">
+        <!-- Hero Section -->
+        <section class="hero-section gradient-bg-3">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1 class="hero-title">SPIN & WFPI Partnership</h1>
+                        <p class="hero-subtitle">Global Collaboration for Pediatric Imaging Excellence</p>
+                        <p class="hero-description">
+                            The strategic partnership between SPIN Academics and the World Federation 
+                            for Pediatric Imaging (WFPI) creates unprecedented opportunities for 
+                            advancing pediatric neuroimaging education and research worldwide.
+                        </p>
+                    </div>
+                    <div class="hero-image">
+                        <div class="image-placeholder">
+                            <span>SPIN & WFPI Partnership</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Partnership Overview Section -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Partnership Overview</h2>
+                    <p class="section-subtitle">
+                        Uniting global expertise to advance pediatric neuroimaging standards and education
+                    </p>
+                </div>
+
+                <div class="partnership-content">
+                    <div class="partnership-logos">
+                        <div class="logo-item">
+                            <div class="image-placeholder">
+                                <span>SPIN Logo</span>
+                            </div>
+                            <h3>SPIN Academics</h3>
+                            <p>Society for Pediatric & Interventional Neuroradiology</p>
+                        </div>
+                        <div class="partnership-connector">
+                            <div class="connector-line"></div>
+                            <div class="connector-icon">🤝</div>
+                        </div>
+                        <div class="logo-item">
+                            <div class="image-placeholder">
+                                <span>WFPI Logo</span>
+                            </div>
+                            <h3>WFPI</h3>
+                            <p>World Federation for Pediatric Imaging</p>
+                        </div>
+                    </div>
+
+                    <div class="partnership-description">
+                        <p>
+                            This collaboration brings together SPIN's specialized expertise in pediatric neuroradiology 
+                            with WFPI's global network of pediatric imaging professionals. Together, we're creating 
+                            comprehensive educational programs, research initiatives, and clinical guidelines that 
+                            benefit healthcare providers and patients worldwide.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Joint Initiatives Section -->
+        <section class="section section-alt">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Joint Initiatives</h2>
+                    <p class="section-subtitle">
+                        Collaborative programs advancing pediatric neuroimaging globally
+                    </p>
+                </div>
+
+                <div class="initiatives-grid">
+                    <div class="initiative-card">
+                        <div class="initiative-icon">
+                            <div class="icon-placeholder">📚</div>
+                        </div>
+                        <h3 class="initiative-title">Global Education Program</h3>
+                        <p class="initiative-description">
+                            Comprehensive educational curriculum combining SPIN's neuroimaging expertise 
+                            with WFPI's global pediatric imaging knowledge base.
+                        </p>
+                        <ul class="initiative-features">
+                            <li>International webinar series</li>
+                            <li>Multilingual educational materials</li>
+                            <li>Cross-cultural case studies</li>
+                            <li>Certification programs</li>
+                        </ul>
+                        <div class="initiative-status">
+                            <span class="status-badge status-active">Active</span>
+                        </div>
+                    </div>
+
+                    <div class="initiative-card">
+                        <div class="initiative-icon">
+                            <div class="icon-placeholder">🔬</div>
+                        </div>
+                        <h3 class="initiative-title">Research Collaboration</h3>
+                        <p class="initiative-description">
+                            Multi-center research studies focusing on pediatric neuroimaging 
+                            protocols, safety guidelines, and diagnostic improvements.
+                        </p>
+                        <ul class="initiative-features">
+                            <li>International research networks</li>
+                            <li>Data sharing protocols</li>
+                            <li>Joint publications</li>
+                            <li>Grant opportunities</li>
+                        </ul>
+                        <div class="initiative-status">
+                            <span class="status-badge status-active">Active</span>
+                        </div>
+                    </div>
+
+                    <div class="initiative-card">
+                        <div class="initiative-icon">
+                            <div class="icon-placeholder">📋</div>
+                        </div>
+                        <h3 class="initiative-title">Clinical Guidelines</h3>
+                        <p class="initiative-description">
+                            Development of evidence-based clinical guidelines for pediatric 
+                            neuroimaging procedures and protocols.
+                        </p>
+                        <ul class="initiative-features">
+                            <li>International consensus statements</li>
+                            <li>Best practice recommendations</li>
+                            <li>Safety protocols</li>
+                            <li>Quality assurance standards</li>
+                        </ul>
+                        <div class="initiative-status">
+                            <span class="status-badge status-development">In Development</span>
+                        </div>
+                    </div>
+
+                    <div class="initiative-card">
+                        <div class="initiative-icon">
+                            <div class="icon-placeholder">🌍</div>
+                        </div>
+                        <h3 class="initiative-title">Global Outreach</h3>
+                        <p class="initiative-description">
+                            Expanding access to pediatric neuroimaging expertise in 
+                            underserved regions through telemedicine and education.
+                        </p>
+                        <ul class="initiative-features">
+                            <li>Remote consultation programs</li>
+                            <li>Training exchanges</li>
+                            <li>Equipment sharing initiatives</li>
+                            <li>Capacity building programs</li>
+                        </ul>
+                        <div class="initiative-status">
+                            <span class="status-badge status-planning">Planning Phase</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Educational Programs Section -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Educational Programs</h2>
+                    <p class="section-subtitle">
+                        Joint educational initiatives combining expertise from both organizations
+                    </p>
+                </div>
+
+                <div class="programs-content">
+                    <div class="program-feature">
+                        <div class="feature-content">
+                            <h3 class="feature-title">International Webinar Series</h3>
+                            <p class="feature-description">
+                                Monthly webinars featuring experts from both organizations, 
+                                covering advanced topics in pediatric neuroimaging, case presentations, 
+                                and interactive discussions.
+                            </p>
+                            <div class="feature-schedule">
+                                <h4>Upcoming Sessions:</h4>
+                                <ul class="schedule-list">
+                                    <li>
+                                        <strong>March 15, 2024:</strong> 
+                                        "Advanced Fetal Brain MRI Techniques" - Dr. Sarah Chen (SPIN) & Dr. Maria Silva (WFPI)
+                                    </li>
+                                    <li>
+                                        <strong>April 20, 2024:</strong> 
+                                        "Pediatric Stroke Imaging: Multi-modal Approach" - International Expert Panel
+                                    </li>
+                                    <li>
+                                        <strong>May 18, 2024:</strong> 
+                                        "Emerging Technologies in Pediatric Neuroradiology" - Technology Showcase
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="feature-image">
+                            <div class="image-placeholder">
+                                <span>Webinar Series</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="program-feature reverse">
+                        <div class="feature-content">
+                            <h3 class="feature-title">Fellowship Exchange Program</h3>
+                            <p class="feature-description">
+                                Unique opportunity for fellows to experience pediatric neuroimaging 
+                                in different cultural and clinical settings through international exchanges.
+                            </p>
+                            <div class="feature-benefits">
+                                <h4>Program Benefits:</h4>
+                                <ul class="benefits-list">
+                                    <li>International clinical exposure</li>
+                                    <li>Cultural competency development</li>
+                                    <li>Global networking opportunities</li>
+                                    <li>Diverse case experience</li>
+                                    <li>Language immersion options</li>
+                                </ul>
+                            </div>
+                            <a href="#apply" class="btn btn-primary">Apply for Exchange</a>
+                        </div>
+                        <div class="feature-image">
+                            <div class="image-placeholder">
+                                <span>Fellowship Exchange</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="program-feature">
+                        <div class="feature-content">
+                            <h3 class="feature-title">Certification Program</h3>
+                            <p class="feature-description">
+                                Joint certification program recognizing expertise in pediatric 
+                                neuroimaging, validated by both SPIN and WFPI standards.
+                            </p>
+                            <div class="certification-levels">
+                                <h4>Certification Levels:</h4>
+                                <div class="cert-level">
+                                    <strong>Foundation Level:</strong> Basic pediatric neuroimaging principles
+                                </div>
+                                <div class="cert-level">
+                                    <strong>Advanced Level:</strong> Complex case management and research
+                                </div>
+                                <div class="cert-level">
+                                    <strong>Expert Level:</strong> Teaching and leadership certification
+                                </div>
+                            </div>
+                        </div>
+                        <div class="feature-image">
+                            <div class="image-placeholder">
+                                <span>Certification Program</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Research Collaboration Section -->
+        <section class="section section-alt">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Research Collaboration</h2>
+                    <p class="section-subtitle">
+                        Joint research initiatives advancing pediatric neuroimaging science
+                    </p>
+                </div>
+
+                <div class="research-projects">
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3 class="project-title">Global Pediatric Brain Atlas</h3>
+                            <span class="project-status status-active">Active</span>
+                        </div>
+                        <p class="project-description">
+                            Creating the world's most comprehensive pediatric brain atlas 
+                            incorporating diverse populations and developmental stages.
+                        </p>
+                        <div class="project-details">
+                            <div class="detail-item">
+                                <strong>Participating Centers:</strong> 25 international sites
+                            </div>
+                            <div class="detail-item">
+                                <strong>Target Sample Size:</strong> 10,000 subjects
+                            </div>
+                            <div class="detail-item">
+                                <strong>Age Range:</strong> Birth to 18 years
+                            </div>
+                            <div class="detail-item">
+                                <strong>Expected Completion:</strong> December 2025
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3 class="project-title">AI in Pediatric Neuroimaging</h3>
+                            <span class="project-status status-development">Development</span>
+                        </div>
+                        <p class="project-description">
+                            Multi-center study developing and validating AI tools for 
+                            automated pediatric brain analysis and anomaly detection.
+                        </p>
+                        <div class="project-details">
+                            <div class="detail-item">
+                                <strong>Focus Areas:</strong> Automated segmentation, anomaly detection
+                            </div>
+                            <div class="detail-item">
+                                <strong>Collaboration:</strong> 15 leading AI research centers
+                            </div>
+                            <div class="detail-item">
+                                <strong>Funding:</strong> $2.5M joint grant secured
+                            </div>
+                            <div class="detail-item">
+                                <strong>Timeline:</strong> 3-year study period
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3 class="project-title">Radiation Safety Initiative</h3>
+                            <span class="project-status status-planning">Planning</span>
+                        </div>
+                        <p class="project-description">
+                            Comprehensive study of radiation exposure optimization in 
+                            pediatric neuroimaging procedures across different protocols.
+                        </p>
+                        <div class="project-details">
+                            <div class="detail-item">
+                                <strong>Objective:</strong> Minimize radiation while maintaining quality
+                            </div>
+                            <div class="detail-item">
+                                <strong>Scope:</strong> CT and interventional procedures
+                            </div>
+                            <div class="detail-item">
+                                <strong>Expected Impact:</strong> New safety guidelines
+                            </div>
+                            <div class="detail-item">
+                                <strong>Launch Date:</strong> Q2 2024
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Membership Benefits Section -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Partnership Benefits</h2>
+                    <p class="section-subtitle">
+                        Advantages of the SPIN-WFPI collaboration for members
+                    </p>
+                </div>
+
+                <div class="benefits-comparison">
+                    <div class="benefit-column">
+                        <h3 class="column-title">For SPIN Members</h3>
+                        <ul class="benefit-list">
+                            <li>Access to WFPI's global pediatric imaging network</li>
+                            <li>International case consultation opportunities</li>
+                            <li>Cross-specialty learning experiences</li>
+                            <li>Global research collaboration access</li>
+                            <li>International conference discounts</li>
+                            <li>Multilingual educational resources</li>
+                        </ul>
+                    </div>
+
+                    <div class="benefit-column">
+                        <h3 class="column-title">For WFPI Members</h3>
+                        <ul class="benefit-list">
+                            <li>Advanced neuroimaging expertise access</li>
+                            <li>Specialized neuroradiology training</li>
+                            <li>Cutting-edge research participation</li>
+                            <li>SPIN fellowship program opportunities</li>
+                            <li>Interventional neuroradiology insights</li>
+                            <li>Technology and innovation updates</li>
+                        </ul>
+                    </div>
+
+                    <div class="benefit-column joint">
+                        <h3 class="column-title">Joint Benefits</h3>
+                        <ul class="benefit-list">
+                            <li>Enhanced global networking</li>
+                            <li>Comprehensive educational pathways</li>
+                            <li>International research opportunities</li>
+                            <li>Joint certification programs</li>
+                            <li>Global standard development</li>
+                            <li>Cross-cultural competency building</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Join the Partnership Section -->
+        <section class="section section-cta gradient-bg-1">
+            <div class="container">
+                <div class="cta-content text-center">
+                    <h2 class="cta-title">Join the Global Community</h2>
+                    <p class="cta-description">
+                        Become part of the world's largest collaborative network of 
+                        pediatric neuroimaging and imaging professionals.
+                    </p>
+                    
+                    <div class="membership-options">
+                        <div class="membership-card">
+                            <h3 class="membership-title">SPIN Membership</h3>
+                            <p class="membership-description">
+                                Join SPIN Academics for specialized neuroimaging expertise 
+                                and access to WFPI collaboration benefits.
+                            </p>
+                            <a href="membership.html" class="btn btn-primary">Join SPIN</a>
+                        </div>
+
+                        <div class="membership-card">
+                            <h3 class="membership-title">WFPI Membership</h3>
+                            <p class="membership-description">
+                                Join WFPI for global pediatric imaging network access 
+                                and SPIN partnership advantages.
+                            </p>
+                            <a href="#" class="btn btn-outline">Join WFPI</a>
+                        </div>
+
+                        <div class="membership-card featured">
+                            <h3 class="membership-title">Dual Membership</h3>
+                            <p class="membership-description">
+                                Maximum benefits with membership in both organizations 
+                                and full access to all collaborative programs.
+                            </p>
+                            <a href="#contact" class="btn btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="section" id="contact">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Contact Partnership Team</h2>
+                    <p class="section-subtitle">
+                        Get in touch with our partnership coordination team
+                    </p>
+                </div>
+
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h3 class="contact-title">Partnership Coordinators</h3>
+                        
+                        <div class="coordinator-item">
+                            <h4>SPIN Partnership Lead</h4>
+                            <p><strong>Dr. Michael Chen</strong></p>
+                            <p>Email: <a href="mailto:partnership@spinacademics.org">partnership@spinacademics.org</a></p>
+                            <p>Phone: +1 (555) 123-4567</p>
+                        </div>
+
+                        <div class="coordinator-item">
+                            <h4>WFPI Collaboration Lead</h4>
+                            <p><strong>Dr. Elena Martinez</strong></p>
+                            <p>Email: <a href="mailto:collaboration@wfpi.org">collaboration@wfpi.org</a></p>
+                            <p>Phone: +44 20 1234 5678</p>
+                        </div>
+
+                        <div class="coordinator-item">
+                            <h4>Joint Program Office</h4>
+                            <p>Email: <a href="mailto:joint-programs@spin-wfpi.org">joint-programs@spin-wfpi.org</a></p>
+                            <p>Available: Monday-Friday, 9 AM - 5 PM GMT</p>
+                        </div>
+                    </div>
+
+                    <form class="contact-form" id="partnershipContactForm">
+                        <h3 class="form-title">Partnership Inquiry</h3>
+                        
+                        <div class="form-group">
+                            <label for="name" class="form-label">Full Name</label>
+                            <input type="text" id="name" name="name" class="form-input" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" id="email" name="email" class="form-input" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="organization" class="form-label">Organization</label>
+                            <input type="text" id="organization" name="organization" class="form-input" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="inquiryType" class="form-label">Inquiry Type</label>
+                            <select id="inquiryType" name="inquiryType" class="form-select" required>
+                                <option value="">Select inquiry type</option>
+                                <option value="membership">Dual Membership Information</option>
+                                <option value="education">Educational Programs</option>
+                                <option value="research">Research Collaboration</option>
+                                <option value="fellowship">Fellowship Exchange</option>
+                                <option value="other">Other Partnership Question</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea id="message" name="message" class="form-textarea" rows="5" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-full">Send Inquiry</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">SPIN Academics</h3>
+                    <p class="footer-description">
+                        Advancing neuroimaging education and research through innovative programs and collaborative learning.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <span class="social-icon">in</span>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <span class="social-icon">tw</span>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <span class="social-icon">fb</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Education</h4>
+                    <ul class="footer-links">
+                        <li><a href="cortex-club.html" class="footer-link">Cortex Club</a></li>
+                        <li><a href="spin-yarn-newsletter.html" class="footer-link">SPIN Yarn Newsletter</a></li>
+                        <li><a href="spin-wfpi.html" class="footer-link">SPIN & WFPI</a></li>
+                        <li><a href="spin-reporting-room.html" class="footer-link">SPIN Reporting Room</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Research</h4>
+                    <ul class="footer-links">
+                        <li><a href="research.html" class="footer-link">Research Programs</a></li>
+                        <li><a href="submit-proposal.html" class="footer-link">Submit Proposal</a></li>
+                        <li><a href="green-radiology.html" class="footer-link">Green Radiology</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Contact</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:info@spinacademics.org" class="footer-link">info@spinacademics.org</a></li>
+                        <li><a href="tel:+1234567890" class="footer-link">+1 (234) 567-890</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="footer-copyright">
+                    &copy; 2024 SPIN Academics. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

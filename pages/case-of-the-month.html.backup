@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case of the Month - SPIN Academics</title>
+    <meta name="description" content="Submit and view challenging pediatric neuroradiology cases with expert analysis and learning points">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="../images/spin_logo.webp" alt="SPIN Academics Logo" class="logo-img">
+                <span class="logo-text">SPIN Academics</span>
+            </div>
+            <nav class="nav" role="navigation">
+                <button class="nav-toggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="../index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="membership.html" class="nav-link">Membership</a></li>
+                    <li><a href="education.html" class="nav-link">Education</a></li>
+                    <li><a href="research.html" class="nav-link">Research</a></li>
+                    <li><a href="login.html" class="nav-link login-btn">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <!-- Hero Section -->
+        <section class="hero-section case-hero">
+            <div class="container">
+                <h1 class="hero-title">Case of the Month</h1>
+                <p class="hero-subtitle">Educational case studies in pediatric neuroradiology</p>
+            </div>
+        </section>
+
+        <!-- Program Overview -->
+        <section class="section" id="case-overview">
+            <div class="container">
+                <h2 class="section-title">About Case of the Month</h2>
+                <div class="case-intro">
+                    <p class="lead">The Case of the Month program features challenging and educational pediatric neuroradiology cases submitted by SPIN members worldwide. Each case includes detailed analysis, differential diagnosis, and key learning points.</p>
+                    <p>This collaborative educational initiative promotes knowledge sharing and continuous learning within our global community of pediatric neuroradiology professionals.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Download Template -->
+        <section class="section template-section">
+            <div class="container">
+                <div class="template-card">
+                    <div class="template-content">
+                        <h2>Case Submission Template</h2>
+                        <p>Download our standardized PowerPoint template to submit your case for consideration. The template includes sections for case history, imaging findings, differential diagnosis, and learning points.</p>
+                        
+                        <div class="template-features">
+                            <h3>Template Includes:</h3>
+                            <ul>
+                                <li>Standardized case presentation format</li>
+                                <li>Image annotation guidelines</li>
+                                <li>Differential diagnosis framework</li>
+                                <li>Key learning points structure</li>
+                                <li>References and further reading section</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="template-download">
+                        <div class="download-icon">📄</div>
+                        <h3>PowerPoint Template</h3>
+                        <p class="file-info">SPIN_Case_Template.pptx</p>
+                        <p class="file-size">2.5 MB</p>
+                        <a href="#" class="btn btn-primary" onclick="downloadTemplate()">Download Template</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Submission Form -->
+        <section class="section submission-section">
+            <div class="container">
+                <h2 class="section-title">Submit Your Case</h2>
+                <div class="submission-container">
+                    <div class="submission-info">
+                        <h3>Submission Guidelines</h3>
+                        <div class="guidelines-list">
+                            <div class="guideline-item">
+                                <h4>Case Selection</h4>
+                                <ul>
+                                    <li>Interesting or challenging pediatric neuroradiology cases</li>
+                                    <li>Educational value for the community</li>
+                                    <li>Clear imaging findings and diagnosis</li>
+                                    <li>Appropriate patient consent obtained</li>
+                                </ul>
+                            </div>
+                            <div class="guideline-item">
+                                <h4>Image Requirements</h4>
+                                <ul>
+                                    <li>High-quality DICOM or JPEG images</li>
+                                    <li>All patient identifiers removed</li>
+                                    <li>Key findings clearly annotated</li>
+                                    <li>Multiple imaging planes when relevant</li>
+                                </ul>
+                            </div>
+                            <div class="guideline-item">
+                                <h4>Review Process</h4>
+                                <ul>
+                                    <li>Expert panel review within 4 weeks</li>
+                                    <li>Feedback provided to all submitters</li>
+                                    <li>Selected cases featured monthly</li>
+                                    <li>Contributors receive recognition</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="submission-form-container">
+                        <form class="case-submission-form contact-form" id="case-submission">
+                            <h3>Case Submission Form</h3>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="submitter-name" class="form-label">Your Name *</label>
+                                    <input type="text" id="submitter-name" name="submitter-name" class="form-input" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="submitter-email" class="form-label">Email Address *</label>
+                                    <input type="email" id="submitter-email" name="submitter-email" class="form-input" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="institution" class="form-label">Institution *</label>
+                                <input type="text" id="institution" name="institution" class="form-input" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="case-title" class="form-label">Case Title *</label>
+                                <input type="text" id="case-title" name="case-title" class="form-input" required placeholder="Brief descriptive title for the case">
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="patient-age" class="form-label">Patient Age *</label>
+                                    <input type="text" id="patient-age" name="patient-age" class="form-input" required placeholder="e.g., 8 years">
+                                </div>
+                                <div class="form-group">
+                                    <label for="patient-sex" class="form-label">Patient Sex *</label>
+                                    <select id="patient-sex" name="patient-sex" class="form-input" required>
+                                        <option value="">Select</option>
+                                        <option value="male">Male</option>
+                                        <option value="female">Female</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="clinical-history" class="form-label">Clinical History *</label>
+                                <textarea id="clinical-history" name="clinical-history" class="form-input form-textarea" required placeholder="Brief clinical presentation and relevant history"></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="imaging-modality" class="form-label">Primary Imaging Modality *</label>
+                                <select id="imaging-modality" name="imaging-modality" class="form-input" required>
+                                    <option value="">Select modality</option>
+                                    <option value="MRI">MRI</option>
+                                    <option value="CT">CT</option>
+                                    <option value="Ultrasound">Ultrasound</option>
+                                    <option value="X-ray">X-ray</option>
+                                    <option value="Nuclear Medicine">Nuclear Medicine</option>
+                                    <option value="Multiple">Multiple Modalities</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="key-findings" class="form-label">Key Imaging Findings *</label>
+                                <textarea id="key-findings" name="key-findings" class="form-input form-textarea" required placeholder="Describe the main imaging findings"></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="final-diagnosis" class="form-label">Final Diagnosis *</label>
+                                <input type="text" id="final-diagnosis" name="final-diagnosis" class="form-input" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="learning-points" class="form-label">Key Learning Points *</label>
+                                <textarea id="learning-points" name="learning-points" class="form-input form-textarea" required placeholder="What should readers learn from this case?"></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="case-file" class="form-label">Case Presentation File *</label>
+                                <input type="file" id="case-file" name="case-file" class="form-input" accept=".pptx,.ppt,.pdf" required>
+                                <small class="file-note">Upload PowerPoint or PDF file (max 10MB)</small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="additional-images" class="form-label">Additional Images (Optional)</label>
+                                <input type="file" id="additional-images" name="additional-images" class="form-input" multiple accept=".jpg,.jpeg,.png,.dcm">
+                                <small class="file-note">Upload additional DICOM or image files (max 5 files, 5MB each)</small>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="consent" class="checkbox-input" required>
+                                    <span class="checkbox-text">I confirm that appropriate patient consent has been obtained and all patient identifiers have been removed</span>
+                                </label>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="publication-consent" class="checkbox-input" required>
+                                    <span class="checkbox-text">I consent to publication of this case by SPIN for educational purposes</span>
+                                </label>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-full">Submit Case</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sample Cases Gallery -->
+        <section class="section gallery-section">
+            <div class="container">
+                <h2 class="section-title">Featured Cases</h2>
+                <div class="cases-gallery">
+                    <div class="case-card">
+                        <div class="case-image img-placeholder">
+                            <img src="../images/case-sample1.jpg" alt="Pediatric Brain Tumor Case" class="case-img">
+                        </div>
+                        <div class="case-content">
+                            <h3>Rare Pediatric Brain Tumor</h3>
+                            <p class="case-meta">June 2024 • Dr. Sarah Johnson, CHOP</p>
+                            <p class="case-summary">8-year-old with headaches and visual disturbances. MRI revealed an unusual mass in the posterior fossa with characteristic imaging features.</p>
+                            <div class="case-tags">
+                                <span class="tag">MRI</span>
+                                <span class="tag">Brain Tumor</span>
+                                <span class="tag">Posterior Fossa</span>
+                            </div>
+                            <a href="#" class="btn btn-secondary btn-sm">View Case</a>
+                        </div>
+                    </div>
+
+                    <div class="case-card">
+                        <div class="case-image img-placeholder">
+                            <img src="../images/case-sample2.jpg" alt="Neonatal Imaging Case" class="case-img">
+                        </div>
+                        <div class="case-content">
+                            <h3>Neonatal Hypoxic-Ischemic Injury</h3>
+                            <p class="case-meta">May 2024 • Dr. Michael Chen, BCH</p>
+                            <p class="case-summary">Term neonate with birth asphyxia. Serial MRI studies demonstrating evolution of hypoxic-ischemic injury patterns.</p>
+                            <div class="case-tags">
+                                <span class="tag">MRI</span>
+                                <span class="tag">Neonatal</span>
+                                <span class="tag">HIE</span>
+                            </div>
+                            <a href="#" class="btn btn-secondary btn-sm">View Case</a>
+                        </div>
+                    </div>
+
+                    <div class="case-card">
+                        <div class="case-image img-placeholder">
+                            <img src="../images/case-sample3.jpg" alt="Spinal Abnormality Case" class="case-img">
+                        </div>
+                        <div class="case-content">
+                            <h3>Congenital Spinal Abnormality</h3>
+                            <p class="case-meta">April 2024 • Dr. Emma Rodriguez, GOSH</p>
+                            <p class="case-summary">Infant with neurological symptoms. MRI and CT revealed complex spinal dysraphism with associated anomalies.</p>
+                            <div class="case-tags">
+                                <span class="tag">MRI</span>
+                                <span class="tag">CT</span>
+                                <span class="tag">Spinal</span>
+                            </div>
+                            <a href="#" class="btn btn-secondary btn-sm">View Case</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-cta">
+                    <a href="#" class="btn btn-secondary">View All Cases</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Review Process -->
+        <section class="section review-process">
+            <div class="container">
+                <h2 class="section-title">Review Process</h2>
+                <div class="process-timeline">
+                    <div class="timeline-step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Submission</h3>
+                            <p>Submit your case using our standardized template and online form</p>
+                        </div>
+                    </div>
+                    <div class="timeline-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Initial Review</h3>
+                            <p>Cases reviewed for completeness and educational value within 1 week</p>
+                        </div>
+                    </div>
+                    <div class="timeline-step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Expert Panel</h3>
+                            <p>Selected cases reviewed by expert panel for accuracy and teaching points</p>
+                        </div>
+                    </div>
+                    <div class="timeline-step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>Publication</h3>
+                            <p>Approved cases featured as Case of the Month with author recognition</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SPIN Feedback Section -->
+        <section class="feedback-section section">
+            <div class="container">
+                <h2 class="section-title">Case Contributor Feedback</h2>
+                <div class="feedback-carousel">
+                    <div class="feedback-quote">
+                        <blockquote>
+                            "Submitting cases to SPIN's Case of the Month program has been incredibly rewarding. The feedback from experts is invaluable."
+                        </blockquote>
+                        <cite>- Dr. Sarah Johnson, Case Contributor</cite>
+                    </div>
+                    <div class="feedback-quote">
+                        <blockquote>
+                            "The standardized template makes case submission straightforward, and the review process is thorough and educational."
+                        </blockquote>
+                        <cite>- Dr. Michael Chen, Regular Contributor</cite>
+                    </div>
+                    <div class="feedback-quote">
+                        <blockquote>
+                            "Having my case featured as Case of the Month was a great honor and helped share important learning points with the community."
+                        </blockquote>
+                        <cite>- Dr. Emma Rodriguez, Featured Author</cite>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="../images/spin_logo.webp" alt="SPIN Academics" class="footer-logo-img">
+                        <span>SPIN Academics</span>
+                    </div>
+                    <p>Society for Pediatric and Investigative Neuroradiology</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="membership.html">Membership</a></li>
+                        <li><a href="education.html">Education</a></li>
+                        <li><a href="research.html">Research</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Education</h4>
+                    <ul>
+                        <li><a href="society-fellowship.html">Fellowship Program</a></li>
+                        <li><a href="cortex-club.html">Cortex Club</a></li>
+                        <li><a href="spin-yarn-newsletter.html">SPIN A Yarn</a></li>
+                        <li><a href="spin-wfpi.html">SPIN WFPI</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn">📧</a>
+                        <a href="#" aria-label="Twitter">🐦</a>
+                        <a href="#" aria-label="YouTube">📺</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 SPIN Academics. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+    <script>
+        function downloadTemplate() {
+            // In a real implementation, this would trigger an actual file download
+            alert('Template download started! In a real implementation, this would download the PowerPoint template file.');
+        }
+    </script>
+</body>
+</html>

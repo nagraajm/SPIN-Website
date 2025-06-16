@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - SPIN Academics</title>
+    <meta name="description" content="Login to your SPIN Academics account to access member resources">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#e6f3ff',
+                            100: '#cce7ff',
+                            200: '#99cfff',
+                            300: '#66b7ff',
+                            400: '#339fff',
+                            500: '#0087ff',
+                            600: '#006bcc',
+                            700: '#004f99',
+                            800: '#003366',
+                            900: '#001733',
+                            950: '#000d1a'
+                        },
+                        secondary: {
+                            50: '#e6f9f7',
+                            100: '#ccf2ef',
+                            200: '#99e6df',
+                            300: '#66d9cf',
+                            400: '#33ccbf',
+                            500: '#00bfaf',
+                            600: '#00998c',
+                            700: '#007369',
+                            800: '#004d46',
+                            900: '#002623',
+                            950: '#001311'
+                        },
+                        accent: {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            200: '#e2e8f0',
+                            300: '#cbd5e1',
+                            400: '#94a3b8',
+                            500: '#64748b',
+                            600: '#475569',
+                            700: '#334155',
+                            800: '#1e293b',
+                            900: '#0f172a',
+                            950: '#020617'
+                        }
+                    },
+                    fontFamily: {
+                        'sans': ['Poppins', 'system-ui', 'sans-serif'],
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.5s ease-in-out',
+                        'slide-in': 'slideIn 0.6s ease-out',
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 3s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0', transform: 'translateY(10px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        slideIn: {
+                            '0%': { opacity: '0', transform: 'translateX(-10px)' },
+                            '100%': { opacity: '1', transform: 'translateX(0)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #0087ff 0%, #00bfaf 100%);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #0087ff, #00bfaf);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .glass-effect {
+            background: rgba(0, 135, 255, 0.1);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(0, 135, 255, 0.2);
+        }
+        .hero-glass {
+            background: rgba(0, 135, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(0, 135, 255, 0.1);
+        }
+        .hero-pattern {
+            background-image: radial-gradient(circle at 1px 1px, rgba(0, 135, 255, 0.1) 1px, transparent 0);
+            background-size: 30px 30px;
+        }
+        .nav-active {
+            position: relative;
+        }
+        .nav-active::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 80%;
+            height: 2px;
+            background: linear-gradient(90deg, #0087ff, #00bfaf);
+            border-radius: 2px;
+            transition: width 0.3s ease;
+        }
+        .nav-item {
+            position: relative;
+        }
+        .nav-item:hover::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 80%;
+            height: 2px;
+            background: linear-gradient(90deg, #0087ff, #00bfaf);
+            border-radius: 2px;
+        }
+        .dropdown-item {
+            position: relative;
+            overflow: hidden;
+        }
+        .dropdown-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 135, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+        .dropdown-item:hover::before {
+            left: 100%;
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 135, 255, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Header -->
+    <header class="bg-white/95 backdrop-blur-md shadow-sm fixed w-full top-0 z-50 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3">
+                    <img src="../images/spin_logo.webp" alt="SPIN Academics" class="h-12 w-12 rounded-full ring-2 ring-primary-200">
+                    <div>
+                        <h1 class="text-xl font-bold gradient-text">SPIN Academics</h1>
+                        <p class="text-xs text-gray-500">Pediatric Neuroradiology</p>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden lg:flex items-center space-x-8">
+                    <a href="../index.html" class="nav-item text-gray-700 hover:text-primary-600 font-medium transition-colors duration-200">Home</a>
+                    
+                    <!-- About Dropdown -->
+                    <div class="nav-item group relative">
+                        <button class="text-gray-700 hover:text-primary-600 font-medium transition-colors duration-200 flex items-center space-x-1">
+                            <span>About</span>
+                            <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="absolute left-0 mt-2 w-64 bg-white/95 backdrop-blur-md rounded-2xl shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                            <div class="py-3">
+                                <a href="about.html#presidents-welcome" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 hover:bg-primary-50 transition-all duration-200">President's Welcome</a>
+                                <a href="about.html#founding-members" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 hover:bg-primary-50 transition-all duration-200">Founding Members</a>
+                                <a href="about.html#executive-committee" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 hover:bg-primary-50 transition-all duration-200">Executive Committee</a>
+                                <a href="about.html#scientific-committee" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 hover:bg-primary-50 transition-all duration-200">Scientific Committee</a>
+                                <a href="about.html#research-admin-team" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 hover:bg-primary-50 transition-all duration-200">Research & Admin Team</a>
+                                <a href="about.html#rising-stars" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 hover:bg-primary-50 transition-all duration-200">Rising Stars</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="membership.html" class="nav-item text-gray-700 hover:text-primary-600 font-medium transition-colors duration-200">Membership</a>
+                    
+                    <!-- Education Dropdown -->
+                    <div class="nav-item group relative">
+                        <button class="text-gray-700 hover:text-primary-600 font-medium transition-colors duration-200 flex items-center space-x-1">
+                            <span>Education</span>
+                            <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="absolute left-0 mt-2 w-64 bg-white/95 backdrop-blur-md rounded-2xl shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                            <div class="py-3">
+                                <a href="society-fellowship.html" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 hover:bg-primary-50 transition-all duration-200">Society Fellowship</a>
+                                <a href="education.html" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 hover:bg-primary-50 transition-all duration-200">Education Offerings</a>
+                                <a href="cortex-club.html" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 hover:bg-primary-50 transition-all duration-200">Cortex Club</a>
+                                <a href="spin-yarn-newsletter.html" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 hover:bg-primary-50 transition-all duration-200">SPIN Yarn Newsletter</a>
+                                <a href="spin-wfpi.html" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 hover:bg-primary-50 transition-all duration-200">SPIN-WFPI</a>
+                                <a href="spin-reporting-room.html" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 hover:bg-primary-50 transition-all duration-200">SPIN Reporting Room</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Research Dropdown -->
+                    <div class="nav-item group relative">
+                        <button class="text-gray-700 hover:text-primary-600 font-medium transition-colors duration-200 flex items-center space-x-1">
+                            <span>Research</span>
+                            <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="absolute left-0 mt-2 w-64 bg-white/95 backdrop-blur-md rounded-2xl shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                            <div class="py-3">
+                                <a href="case-of-the-month.html" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 hover:bg-primary-50 transition-all duration-200">Case of the Month</a>
+                                <a href="submit-proposal.html" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 hover:bg-primary-50 transition-all duration-200">Submit a Proposal</a>
+                                <a href="green-radiology.html" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 hover:bg-primary-50 transition-all duration-200">Green Radiology</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="login.html" class="nav-active px-6 py-2 bg-gradient-to-r from-primary-500 to-secondary-500 text-white rounded-full font-medium hover:from-primary-600 hover:to-secondary-600 transition-all duration-200 shadow-lg hover:shadow-xl">Login</a>
+                </nav>
+
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-btn" class="lg:hidden flex items-center justify-center w-10 h-10 rounded-lg bg-gray-100 hover:bg-gray-200 transition-colors duration-200">
+                    <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation Menu -->
+            <div id="mobile-menu" class="lg:hidden hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-md border-t border-gray-100 shadow-lg">
+                <div class="py-4 px-4 space-y-2">
+                    <a href="../index.html" class="block py-3 px-4 text-gray-700 hover:text-primary-600 hover:bg-primary-50 rounded-lg transition-colors duration-200">Home</a>
+                    <a href="about.html" class="block py-3 px-4 text-gray-700 hover:text-primary-600 hover:bg-primary-50 rounded-lg transition-colors duration-200">About</a>
+                    <a href="membership.html" class="block py-3 px-4 text-gray-700 hover:text-primary-600 hover:bg-primary-50 rounded-lg transition-colors duration-200">Membership</a>
+                    <a href="education.html" class="block py-3 px-4 text-gray-700 hover:text-primary-600 hover:bg-primary-50 rounded-lg transition-colors duration-200">Education</a>
+                    <a href="research.html" class="block py-3 px-4 text-gray-700 hover:text-primary-600 hover:bg-primary-50 rounded-lg transition-colors duration-200">Research</a>
+                    <a href="login.html" class="block py-3 px-4 bg-gradient-to-r from-primary-500 to-secondary-500 text-white rounded-lg font-medium text-center">Login</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-20 min-h-screen bg-gradient-to-br from-gray-50 via-white to-primary-50">
+        <!-- Auth Section -->
+        <section class="py-20">
+            <div class="max-w-md mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden">
+                    <!-- Header -->
+                    <div class="px-8 pt-8 pb-6 text-center bg-gradient-to-br from-primary-500 to-secondary-500">
+                        <div class="w-20 h-20 bg-white rounded-full mx-auto mb-4 flex items-center justify-center">
+                            <img src="../images/spin_logo.webp" alt="SPIN Logo" class="w-12 h-12 rounded-full">
+                        </div>
+                        <h1 class="text-2xl font-bold text-white mb-2">Welcome Back</h1>
+                        <p class="text-blue-100">Sign in to your SPIN Academics account</p>
+                    </div>
+
+                    <!-- Form -->
+                    <div class="px-8 py-8">
+                        <form id="login-form" class="space-y-6" novalidate>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+                                <input type="email" id="email" name="email" required 
+                                       placeholder="Enter your email address" autocomplete="email"
+                                       class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors duration-200 bg-gray-50 focus:bg-white">
+                            </div>
+
+                            <div>
+                                <label for="password" class="block text-sm font-medium text-gray-700 mb-2">Password</label>
+                                <div class="relative">
+                                    <input type="password" id="password" name="password" required 
+                                           placeholder="Enter your password" autocomplete="current-password"
+                                           class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors duration-200 bg-gray-50 focus:bg-white pr-12">
+                                    <button type="button" class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-gray-700">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center">
+                                    <input type="checkbox" id="remember" name="remember" 
+                                           class="h-4 w-4 text-primary-600 focus:ring-primary-500 border-gray-300 rounded">
+                                    <label for="remember" class="ml-2 block text-sm text-gray-700">Remember me</label>
+                                </div>
+                                <a href="#" class="text-sm text-primary-600 hover:text-primary-700 font-medium">Forgot password?</a>
+                            </div>
+
+                            <button type="submit" 
+                                    class="w-full bg-gradient-to-r from-primary-500 to-secondary-500 text-white py-3 px-4 rounded-xl font-medium hover:from-primary-600 hover:to-secondary-600 focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 transition-all duration-200 shadow-lg hover:shadow-xl">
+                                Sign In
+                            </button>
+                        </form>
+
+                        <!-- Divider -->
+                        <div class="mt-8 mb-6">
+                            <div class="relative">
+                                <div class="absolute inset-0 flex items-center">
+                                    <div class="w-full border-t border-gray-300"></div>
+                                </div>
+                                <div class="relative flex justify-center text-sm">
+                                    <span class="px-2 bg-white text-gray-500">Don't have an account?</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sign Up Link -->
+                        <div class="text-center">
+                            <a href="signup.html" class="text-primary-600 hover:text-primary-700 font-medium">Create your account</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional Links -->
+                <div class="mt-8 text-center space-y-4">
+                    <div class="text-sm text-gray-600">
+                        <a href="membership.html" class="text-primary-600 hover:text-primary-700">Learn about membership</a>
+                        <span class="mx-2">•</span>
+                        <a href="../index.html" class="text-primary-600 hover:text-primary-700">Back to home</a>
+                    </div>
+                    <p class="text-xs text-gray-500">
+                        By signing in, you agree to our Terms of Service and Privacy Policy
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-3">
+                        <img src="../images/spin_logo.webp" alt="SPIN Academics" class="h-10 w-10 rounded-full">
+                        <div>
+                            <h3 class="text-xl font-bold">SPIN Academics</h3>
+                            <p class="text-sm text-gray-400">Pediatric Neuroradiology Society</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300">Society for Pediatric and Investigative Neuroradiology</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-300 hover:text-white transition-colors">About</a></li>
+                        <li><a href="membership.html" class="text-gray-300 hover:text-white transition-colors">Membership</a></li>
+                        <li><a href="education.html" class="text-gray-300 hover:text-white transition-colors">Education</a></li>
+                        <li><a href="research.html" class="text-gray-300 hover:text-white transition-colors">Research</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Education</h4>
+                    <ul class="space-y-2">
+                        <li><a href="society-fellowship.html" class="text-gray-300 hover:text-white transition-colors">Fellowship Program</a></li>
+                        <li><a href="cortex-club.html" class="text-gray-300 hover:text-white transition-colors">Cortex Club</a></li>
+                        <li><a href="spin-yarn-newsletter.html" class="text-gray-300 hover:text-white transition-colors">SPIN A Yarn</a></li>
+                        <li><a href="spin-wfpi.html" class="text-gray-300 hover:text-white transition-colors">SPIN WFPI</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                            <span class="sr-only">Email</span>
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                            <span class="sr-only">Twitter</span>
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                            <span class="sr-only">YouTube</span>
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8">
+                <p class="text-center text-gray-400">&copy; 2025 SPIN Academics. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Script -->
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

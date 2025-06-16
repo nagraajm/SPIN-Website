@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Radiology Initiative - SPIN Academics</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <div class="nav-brand">
+                <a href="../index.html" class="nav-logo">
+                    <img src="../images/spin_logo.webp" alt="SPIN Academics Logo" class="logo-img">
+                    <span class="logo-text">SPIN Academics</span>
+                </a>
+            </div>
+            
+            <div class="nav-menu" id="navMenu">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="../index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="about.html" class="nav-link">About</a>
+                        <div class="dropdown-content">
+                            <a href="about.html#leadership">Leadership</a>
+                            <a href="about.html#committees">Committees</a>
+                            <a href="about.html#history">History</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="membership.html" class="nav-link">Membership</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="education.html" class="nav-link">Education</a>
+                        <div class="dropdown-content">
+                            <a href="cortex-club.html">Cortex Club</a>
+                            <a href="spin-yarn-newsletter.html">SPIN Yarn Newsletter</a>
+                            <a href="spin-wfpi.html">SPIN & WFPI</a>
+                            <a href="spin-reporting-room.html">SPIN Reporting Room</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="research.html" class="nav-link active">Research</a>
+                        <div class="dropdown-content">
+                            <a href="submit-proposal.html">Submit Proposal</a>
+                            <a href="green-radiology.html">Green Radiology</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link">Fellowship</a>
+                        <div class="dropdown-content">
+                            <a href="society-fellowship.html">Fellowship Program</a>
+                            <a href="fellowship-part1.html">Part 1</a>
+                            <a href="fellowship-part2.html">Part 2</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="spin-in-person.html" class="nav-link">Events</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="nav-actions">
+                <a href="login.html" class="btn btn-outline">Login</a>
+                <a href="signup.html" class="btn btn-primary">Join SPIN</a>
+            </div>
+            
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <main class="main">
+        <!-- Hero Section -->
+        <section class="hero-section gradient-bg-green">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1 class="hero-title">Green Radiology Initiative</h1>
+                        <p class="hero-subtitle">Sustainable Practices in Pediatric Neuroimaging</p>
+                        <p class="hero-description">
+                            Leading the transformation toward environmentally sustainable radiology practices 
+                            while maintaining the highest standards of pediatric neuroimaging care. 
+                            Our initiative focuses on reducing environmental impact through innovation and education.
+                        </p>
+                        <div class="hero-actions">
+                            <a href="#join" class="btn btn-primary btn-lg">Join the Initiative</a>
+                            <a href="#research" class="btn btn-outline btn-lg">Current Research</a>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <div class="image-placeholder">
+                            <span>Green Radiology</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Initiative Overview Section -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Why Green Radiology Matters</h2>
+                    <p class="section-subtitle">
+                        The environmental impact of medical imaging and our responsibility for sustainable healthcare
+                    </p>
+                </div>
+
+                <div class="impact-stats">
+                    <div class="stat-card green">
+                        <div class="stat-icon">🌍</div>
+                        <div class="stat-number">4.4%</div>
+                        <div class="stat-label">of global greenhouse gas emissions from healthcare</div>
+                    </div>
+                    <div class="stat-card green">
+                        <div class="stat-icon">⚡</div>
+                        <div class="stat-number">30%</div>
+                        <div class="stat-label">of hospital energy consumed by imaging equipment</div>
+                    </div>
+                    <div class="stat-card green">
+                        <div class="stat-icon">💧</div>
+                        <div class="stat-number">50M</div>
+                        <div class="stat-label">gallons of water used annually by MRI systems</div>
+                    </div>
+                    <div class="stat-card green">
+                        <div class="stat-icon">🗑️</div>
+                        <div class="stat-number">6.5M</div>
+                        <div class="stat-label">tons of medical waste generated annually</div>
+                    </div>
+                </div>
+
+                <div class="initiative-content">
+                    <div class="content-grid">
+                        <div class="content-item">
+                            <h3 class="content-title">Our Mission</h3>
+                            <p class="content-description">
+                                To reduce the environmental footprint of pediatric neuroimaging while 
+                                maintaining or improving patient care quality through research, education, 
+                                and implementation of sustainable practices.
+                            </p>
+                        </div>
+                        <div class="content-item">
+                            <h3 class="content-title">Our Vision</h3>
+                            <p class="content-description">
+                                A future where pediatric neuroradiology practices are carbon-neutral, 
+                                waste-minimized, and resource-efficient, serving as a model for 
+                                sustainable healthcare delivery worldwide.
+                            </p>
+                        </div>
+                        <div class="content-item">
+                            <h3 class="content-title">Our Approach</h3>
+                            <p class="content-description">
+                                Evidence-based strategies combining technological innovation, 
+                                workflow optimization, and behavioral change to create measurable 
+                                environmental improvements without compromising patient outcomes.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Research Areas Section -->
+        <section class="section section-alt" id="research">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Current Research Areas</h2>
+                    <p class="section-subtitle">
+                        Multi-faceted research program addressing sustainability across all aspects of neuroimaging
+                    </p>
+                </div>
+
+                <div class="research-areas">
+                    <div class="research-card">
+                        <div class="research-icon">
+                            <div class="icon-placeholder">⚡</div>
+                        </div>
+                        <h3 class="research-title">Energy Efficiency Optimization</h3>
+                        <p class="research-description">
+                            Investigating methods to reduce energy consumption in MRI and CT systems 
+                            through optimized protocols, scheduling algorithms, and equipment upgrades.
+                        </p>
+                        <div class="research-details">
+                            <h4>Current Projects:</h4>
+                            <ul class="project-list">
+                                <li>Smart scheduling algorithms for MRI systems</li>
+                                <li>Protocol optimization for reduced scan times</li>
+                                <li>Energy monitoring and benchmarking systems</li>
+                                <li>AI-driven power management for imaging equipment</li>
+                            </ul>
+                        </div>
+                        <div class="research-status">
+                            <span class="status-badge status-active">Active Studies: 4</span>
+                        </div>
+                    </div>
+
+                    <div class="research-card">
+                        <div class="research-icon">
+                            <div class="icon-placeholder">🗑️</div>
+                        </div>
+                        <h3 class="research-title">Medical Waste Reduction</h3>
+                        <p class="research-description">
+                            Developing strategies to minimize medical waste generation in neuroimaging 
+                            departments through improved inventory management and reusable alternatives.
+                        </p>
+                        <div class="research-details">
+                            <h4>Current Projects:</h4>
+                            <ul class="project-list">
+                                <li>Contrast media waste reduction strategies</li>
+                                <li>Sustainable packaging for medical supplies</li>
+                                <li>Digital workflow implementation</li>
+                                <li>Reusable positioning device development</li>
+                            </ul>
+                        </div>
+                        <div class="research-status">
+                            <span class="status-badge status-active">Active Studies: 3</span>
+                        </div>
+                    </div>
+
+                    <div class="research-card">
+                        <div class="research-icon">
+                            <div class="icon-placeholder">💧</div>
+                        </div>
+                        <h3 class="research-title">Water Conservation</h3>
+                        <p class="research-description">
+                            Researching water-efficient cooling systems and closed-loop water recycling 
+                            for MRI systems to reduce freshwater consumption.
+                        </p>
+                        <div class="research-details">
+                            <h4>Current Projects:</h4>
+                            <ul class="project-list">
+                                <li>Closed-loop cooling system implementation</li>
+                                <li>Helium recovery and recycling systems</li>
+                                <li>Water quality monitoring and optimization</li>
+                                <li>Alternative cooling technologies evaluation</li>
+                            </ul>
+                        </div>
+                        <div class="research-status">
+                            <span class="status-badge status-development">Active Studies: 2</span>
+                        </div>
+                    </div>
+
+                    <div class="research-card">
+                        <div class="research-icon">
+                            <div class="icon-placeholder">🚗</div>
+                        </div>
+                        <h3 class="research-title">Transportation & Logistics</h3>
+                        <p class="research-description">
+                            Optimizing patient transportation and supply chain logistics to reduce 
+                            carbon emissions associated with neuroimaging services.
+                        </p>
+                        <div class="research-details">
+                            <h4>Current Projects:</h4>
+                            <ul class="project-list">
+                                <li>Telemedicine integration for follow-up consultations</li>
+                                <li>Centralized imaging service optimization</li>
+                                <li>Sustainable supply chain management</li>
+                                <li>Carbon footprint assessment tools</li>
+                            </ul>
+                        </div>
+                        <div class="research-status">
+                            <span class="status-badge status-planning">Active Studies: 2</span>
+                        </div>
+                    </div>
+
+                    <div class="research-card">
+                        <div class="research-icon">
+                            <div class="icon-placeholder">🤖</div>
+                        </div>
+                        <h3 class="research-title">AI for Sustainability</h3>
+                        <p class="research-description">
+                            Leveraging artificial intelligence to optimize imaging protocols, 
+                            reduce unnecessary scans, and improve resource utilization efficiency.
+                        </p>
+                        <div class="research-details">
+                            <h4>Current Projects:</h4>
+                            <ul class="project-list">
+                                <li>AI-driven appropriateness criteria</li>
+                                <li>Automated protocol optimization</li>
+                                <li>Predictive maintenance for equipment efficiency</li>
+                                <li>Resource allocation optimization algorithms</li>
+                            </ul>
+                        </div>
+                        <div class="research-status">
+                            <span class="status-badge status-active">Active Studies: 5</span>
+                        </div>
+                    </div>
+
+                    <div class="research-card">
+                        <div class="research-icon">
+                            <div class="icon-placeholder">📊</div>
+                        </div>
+                        <h3 class="research-title">Sustainability Metrics</h3>
+                        <p class="research-description">
+                            Developing standardized metrics and assessment tools to measure and 
+                            benchmark environmental impact of pediatric neuroimaging practices.
+                        </p>
+                        <div class="research-details">
+                            <h4>Current Projects:</h4>
+                            <ul class="project-list">
+                                <li>Carbon footprint calculation frameworks</li>
+                                <li>Sustainability dashboard development</li>
+                                <li>Benchmarking tool creation</li>
+                                <li>Life cycle assessment methodologies</li>
+                            </ul>
+                        </div>
+                        <div class="research-status">
+                            <span class="status-badge status-development">Active Studies: 3</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Implementation Guidelines Section -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Implementation Guidelines</h2>
+                    <p class="section-subtitle">
+                        Practical strategies for implementing sustainable practices in your department
+                    </p>
+                </div>
+
+                <div class="guidelines-content">
+                    <div class="guidelines-categories">
+                        <div class="category-nav">
+                            <button class="category-btn active" data-category="immediate">Immediate Actions</button>
+                            <button class="category-btn" data-category="short-term">Short-term (1-6 months)</button>
+                            <button class="category-btn" data-category="long-term">Long-term (6+ months)</button>
+                        </div>
+
+                        <div class="category-content active" id="immediate">
+                            <h3 class="category-title">Immediate Implementation (0-1 month)</h3>
+                            <div class="guidelines-grid">
+                                <div class="guideline-card">
+                                    <div class="guideline-icon">💡</div>
+                                    <h4 class="guideline-title">Energy Conservation</h4>
+                                    <ul class="guideline-list">
+                                        <li>Turn off equipment when not in use</li>
+                                        <li>Optimize room lighting and temperature</li>
+                                        <li>Implement power-saving modes</li>
+                                        <li>Use LED lighting throughout department</li>
+                                    </ul>
+                                    <div class="impact-indicator">
+                                        <span class="impact-level high">High Impact</span>
+                                        <span class="effort-level low">Low Effort</span>
+                                    </div>
+                                </div>
+
+                                <div class="guideline-card">
+                                    <div class="guideline-icon">📄</div>
+                                    <h4 class="guideline-title">Digital Transition</h4>
+                                    <ul class="guideline-list">
+                                        <li>Eliminate unnecessary printing</li>
+                                        <li>Use digital reports and records</li>
+                                        <li>Implement electronic consent forms</li>
+                                        <li>Digital patient education materials</li>
+                                    </ul>
+                                    <div class="impact-indicator">
+                                        <span class="impact-level medium">Medium Impact</span>
+                                        <span class="effort-level low">Low Effort</span>
+                                    </div>
+                                </div>
+
+                                <div class="guideline-card">
+                                    <div class="guideline-icon">♻️</div>
+                                    <h4 class="guideline-title">Waste Reduction</h4>
+                                    <ul class="guideline-list">
+                                        <li>Implement proper recycling programs</li>
+                                        <li>Reduce single-use items where safe</li>
+                                        <li>Optimize supply ordering</li>
+                                        <li>Educate staff on waste segregation</li>
+                                    </ul>
+                                    <div class="impact-indicator">
+                                        <span class="impact-level medium">Medium Impact</span>
+                                        <span class="effort-level low">Low Effort</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="category-content" id="short-term">
+                            <h3 class="category-title">Short-term Implementation (1-6 months)</h3>
+                            <div class="guidelines-grid">
+                                <div class="guideline-card">
+                                    <div class="guideline-icon">⚙️</div>
+                                    <h4 class="guideline-title">Protocol Optimization</h4>
+                                    <ul class="guideline-list">
+                                        <li>Review and optimize imaging protocols</li>
+                                        <li>Implement AI-assisted protocol selection</li>
+                                        <li>Reduce repeat scans through quality control</li>
+                                        <li>Standardize pediatric-specific protocols</li>
+                                    </ul>
+                                    <div class="impact-indicator">
+                                        <span class="impact-level high">High Impact</span>
+                                        <span class="effort-level medium">Medium Effort</span>
+                                    </div>
+                                </div>
+
+                                <div class="guideline-card">
+                                    <div class="guideline-icon">📊</div>
+                                    <h4 class="guideline-title">Monitoring Systems</h4>
+                                    <ul class="guideline-list">
+                                        <li>Install energy monitoring systems</li>
+                                        <li>Track waste generation metrics</li>
+                                        <li>Implement sustainability dashboards</li>
+                                        <li>Regular environmental impact assessments</li>
+                                    </ul>
+                                    <div class="impact-indicator">
+                                        <span class="impact-level medium">Medium Impact</span>
+                                        <span class="effort-level medium">Medium Effort</span>
+                                    </div>
+                                </div>
+
+                                <div class="guideline-card">
+                                    <div class="guideline-icon">👥</div>
+                                    <h4 class="guideline-title">Staff Training</h4>
+                                    <ul class="guideline-list">
+                                        <li>Sustainability awareness programs</li>
+                                        <li>Green radiology best practices training</li>
+                                        <li>Energy conservation workshops</li>
+                                        <li>Waste reduction education</li>
+                                    </ul>
+                                    <div class="impact-indicator">
+                                        <span class="impact-level high">High Impact</span>
+                                        <span class="effort-level medium">Medium Effort</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="category-content" id="long-term">
+                            <h3 class="category-title">Long-term Implementation (6+ months)</h3>
+                            <div class="guidelines-grid">
+                                <div class="guideline-card">
+                                    <div class="guideline-icon">🏗️</div>
+                                    <h4 class="guideline-title">Infrastructure Upgrades</h4>
+                                    <ul class="guideline-list">
+                                        <li>Energy-efficient equipment procurement</li>
+                                        <li>Renewable energy system installation</li>
+                                        <li>Advanced cooling system implementation</li>
+                                        <li>Building automation systems</li>
+                                    </ul>
+                                    <div class="impact-indicator">
+                                        <span class="impact-level very-high">Very High Impact</span>
+                                        <span class="effort-level high">High Effort</span>
+                                    </div>
+                                </div>
+
+                                <div class="guideline-card">
+                                    <div class="guideline-icon">🔄</div>
+                                    <h4 class="guideline-title">Circular Economy</h4>
+                                    <ul class="guideline-list">
+                                        <li>Equipment refurbishment programs</li>
+                                        <li>Contrast media recycling systems</li>
+                                        <li>Helium recovery implementations</li>
+                                        <li>Sustainable procurement policies</li>
+                                    </ul>
+                                    <div class="impact-indicator">
+                                        <span class="impact-level high">High Impact</span>
+                                        <span class="effort-level high">High Effort</span>
+                                    </div>
+                                </div>
+
+                                <div class="guideline-card">
+                                    <div class="guideline-icon">🏆</div>
+                                    <h4 class="guideline-title">Certification Programs</h4>
+                                    <ul class="guideline-list">
+                                        <li>Green healthcare facility certification</li>
+                                        <li>ISO 14001 environmental management</li>
+                                        <li>Carbon neutrality achievement</li>
+                                        <li>Sustainability reporting systems</li>
+                                    </ul>
+                                    <div class="impact-indicator">
+                                        <span class="impact-level medium">Medium Impact</span>
+                                        <span class="effort-level high">High Effort</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Success Stories Section -->
+        <section class="section section-alt">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Success Stories</h2>
+                    <p class="section-subtitle">
+                        Real-world implementations demonstrating the impact of green radiology practices
+                    </p>
+                </div>
+
+                <div class="success-stories">
+                    <div class="story-card">
+                        <div class="story-header">
+                            <h3 class="story-title">Children's Hospital of Philadelphia</h3>
+                            <span class="story-location">Philadelphia, PA, USA</span>
+                        </div>
+                        <div class="story-content">
+                            <div class="story-metrics">
+                                <div class="metric">
+                                    <div class="metric-value">35%</div>
+                                    <div class="metric-label">Energy Reduction</div>
+                                </div>
+                                <div class="metric">
+                                    <div class="metric-value">$180K</div>
+                                    <div class="metric-label">Annual Savings</div>
+                                </div>
+                                <div class="metric">
+                                    <div class="metric-value">250 tons</div>
+                                    <div class="metric-label">CO₂ Reduction</div>
+                                </div>
+                            </div>
+                            <p class="story-description">
+                                Implementation of AI-optimized MRI scheduling and protocol selection 
+                                resulted in significant energy savings while reducing patient wait times 
+                                and improving scan efficiency. The hospital achieved carbon neutrality 
+                                in their neuroimaging department within 18 months.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="story-card">
+                        <div class="story-header">
+                            <h3 class="story-title">Great Ormond Street Hospital</h3>
+                            <span class="story-location">London, UK</span>
+                        </div>
+                        <div class="story-content">
+                            <div class="story-metrics">
+                                <div class="metric">
+                                    <div class="metric-value">50%</div>
+                                    <div class="metric-label">Waste Reduction</div>
+                                </div>
+                                <div class="metric">
+                                    <div class="metric-value">90%</div>
+                                    <div class="metric-label">Digital Conversion</div>
+                                </div>
+                                <div class="metric">
+                                    <div class="metric-value">£120K</div>
+                                    <div class="metric-label">Cost Savings</div>
+                                </div>
+                            </div>
+                            <p class="story-description">
+                                Complete digital transformation of the radiology department eliminated 
+                                film processing, reduced medical waste by half, and improved workflow 
+                                efficiency. The hospital now serves as a model for sustainable 
+                                pediatric imaging across Europe.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="story-card">
+                        <div class="story-header">
+                            <h3 class="story-title">Tokyo Children's Medical Center</h3>
+                            <span class="story-location">Tokyo, Japan</span>
+                        </div>
+                        <div class="story-content">
+                            <div class="story-metrics">
+                                <div class="metric">
+                                    <div class="metric-value">60%</div>
+                                    <div class="metric-label">Water Conservation</div>
+                                </div>
+                                <div class="metric">
+                                    <div class="metric-value">25%</div>
+                                    <div class="metric-label">Energy Efficiency</div>
+                                </div>
+                                <div class="metric">
+                                    <div class="metric-value">¥15M</div>
+                                    <div class="metric-label">Investment Recovery</div>
+                                </div>
+                            </div>
+                            <p class="story-description">
+                                Installation of closed-loop cooling systems and helium recovery 
+                                technology dramatically reduced water consumption and operational costs. 
+                                The investment was recovered within 2 years through utility savings.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Collaboration Opportunities Section -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Collaboration Opportunities</h2>
+                    <p class="section-subtitle">
+                        Join our global network of institutions working toward sustainable neuroimaging
+                    </p>
+                </div>
+
+                <div class="collaboration-types">
+                    <div class="collab-card">
+                        <div class="collab-icon">
+                            <div class="icon-placeholder">🏥</div>
+                        </div>
+                        <h3 class="collab-title">Institutional Partnerships</h3>
+                        <p class="collab-description">
+                            Partner with SPIN to implement green radiology practices at your institution. 
+                            We provide consultation, training, and ongoing support for sustainability initiatives.
+                        </p>
+                        <div class="collab-benefits">
+                            <h4>Partnership Benefits:</h4>
+                            <ul class="benefits-list">
+                                <li>Customized sustainability assessment</li>
+                                <li>Implementation roadmap development</li>
+                                <li>Staff training and education programs</li>
+                                <li>Ongoing monitoring and support</li>
+                                <li>Access to research data and resources</li>
+                            </ul>
+                        </div>
+                        <a href="#join" class="btn btn-outline">Learn More</a>
+                    </div>
+
+                    <div class="collab-card">
+                        <div class="collab-icon">
+                            <div class="icon-placeholder">🔬</div>
+                        </div>
+                        <h3 class="collab-title">Research Collaborations</h3>
+                        <p class="collab-description">
+                            Participate in multi-center research studies investigating sustainable 
+                            practices in pediatric neuroimaging and their impact on patient outcomes.
+                        </p>
+                        <div class="collab-benefits">
+                            <h4>Research Opportunities:</h4>
+                            <ul class="benefits-list">
+                                <li>Multi-center clinical trials</li>
+                                <li>Technology validation studies</li>
+                                <li>Health economics research</li>
+                                <li>Environmental impact assessments</li>
+                                <li>Policy development initiatives</li>
+                            </ul>
+                        </div>
+                        <a href="submit-proposal.html" class="btn btn-outline">Submit Proposal</a>
+                    </div>
+
+                    <div class="collab-card">
+                        <div class="collab-icon">
+                            <div class="icon-placeholder">🏭</div>
+                        </div>
+                        <h3 class="collab-title">Industry Partnerships</h3>
+                        <p class="collab-description">
+                            Collaborate with equipment manufacturers and technology companies to 
+                            develop sustainable imaging solutions and innovative green technologies.
+                        </p>
+                        <div class="collab-benefits">
+                            <h4>Industry Engagement:</h4>
+                            <ul class="benefits-list">
+                                <li>Technology development partnerships</li>
+                                <li>Product sustainability assessment</li>
+                                <li>Innovation pilot programs</li>
+                                <li>Joint research and development</li>
+                                <li>Market validation studies</li>
+                            </ul>
+                        </div>
+                        <a href="#contact" class="btn btn-outline">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Join the Initiative Section -->
+        <section class="section section-cta gradient-bg-green" id="join">
+            <div class="container">
+                <div class="join-content">
+                    <div class="join-info">
+                        <h2 class="join-title">Join the Green Radiology Initiative</h2>
+                        <p class="join-description">
+                            Be part of the movement transforming pediatric neuroimaging into a 
+                            sustainable practice. Together, we can reduce environmental impact 
+                            while improving patient care.
+                        </p>
+                        
+                        <div class="membership-tiers">
+                            <div class="tier-card">
+                                <h3 class="tier-title">Observer Member</h3>
+                                <p class="tier-price">Free</p>
+                                <ul class="tier-features">
+                                    <li>Newsletter and updates</li>
+                                    <li>Access to educational resources</li>
+                                    <li>Webinar participation</li>
+                                    <li>Implementation guidelines</li>
+                                </ul>
+                            </div>
+
+                            <div class="tier-card featured">
+                                <h3 class="tier-title">Active Participant</h3>
+                                <p class="tier-price">$500/year</p>
+                                <ul class="tier-features">
+                                    <li>All Observer benefits</li>
+                                    <li>Research collaboration opportunities</li>
+                                    <li>Data sharing access</li>
+                                    <li>Implementation consultation</li>
+                                    <li>Certification programs</li>
+                                </ul>
+                            </div>
+
+                            <div class="tier-card">
+                                <h3 class="tier-title">Research Partner</h3>
+                                <p class="tier-price">$2,000/year</p>
+                                <ul class="tier-features">
+                                    <li>All Active Participant benefits</li>
+                                    <li>Lead research studies</li>
+                                    <li>Co-investigator opportunities</li>
+                                    <li>Grant application support</li>
+                                    <li>Priority access to new initiatives</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form class="join-form" id="greenRadiologyForm">
+                        <h3 class="form-title">Join Green Radiology Initiative</h3>
+                        
+                        <div class="form-group">
+                            <label for="fullName" class="form-label">Full Name</label>
+                            <input type="text" id="fullName" name="fullName" class="form-input" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" id="email" name="email" class="form-input" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="position" class="form-label">Position/Title</label>
+                            <input type="text" id="position" name="position" class="form-input" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="institution" class="form-label">Institution</label>
+                            <input type="text" id="institution" name="institution" class="form-input" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="membershipTier" class="form-label">Membership Level</label>
+                            <select id="membershipTier" name="membershipTier" class="form-select" required>
+                                <option value="">Select membership level</option>
+                                <option value="observer">Observer Member (Free)</option>
+                                <option value="active">Active Participant ($500/year)</option>
+                                <option value="research">Research Partner ($2,000/year)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="currentInitiatives" class="form-label">Current Sustainability Initiatives</label>
+                            <textarea id="currentInitiatives" name="currentInitiatives" class="form-textarea" rows="3" placeholder="Describe any current or planned sustainability initiatives at your institution"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="interests" class="form-label">Areas of Interest</label>
+                            <div class="checkbox-group">
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="interests" value="energy-efficiency">
+                                    <span class="checkbox-label">Energy Efficiency</span>
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="interests" value="waste-reduction">
+                                    <span class="checkbox-label">Waste Reduction</span>
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="interests" value="water-conservation">
+                                    <span class="checkbox-label">Water Conservation</span>
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="interests" value="ai-sustainability">
+                                    <span class="checkbox-label">AI for Sustainability</span>
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="interests" value="research">
+                                    <span class="checkbox-label">Research Collaboration</span>
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="interests" value="education">
+                                    <span class="checkbox-label">Education & Training</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="goals" class="form-label">Goals and Expectations</label>
+                            <textarea id="goals" name="goals" class="form-textarea" rows="4" required placeholder="What do you hope to achieve through participation in the Green Radiology Initiative?"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="commitment" required>
+                                <span class="checkbox-label">
+                                    I commit to actively participating in the initiative and sharing 
+                                    relevant data and experiences to advance sustainable radiology practices.
+                                </span>
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-full">Join Initiative</button>
+                        
+                        <p class="form-note">
+                            After submitting your application, you will receive a welcome email 
+                            with access credentials and next steps. Paid memberships require 
+                            separate payment processing.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="section" id="contact">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Contact Green Radiology Team</h2>
+                    <p class="section-subtitle">
+                        Get in touch with our sustainability experts and research coordinators
+                    </p>
+                </div>
+
+                <div class="contact-info-grid">
+                    <div class="contact-card">
+                        <h3 class="contact-title">Initiative Director</h3>
+                        <p class="contact-name">Dr. Elena Green, MD, PhD</p>
+                        <p class="contact-role">Director of Sustainable Radiology</p>
+                        <p class="contact-email">
+                            <a href="mailto:green.director@spinacademics.org">green.director@spinacademics.org</a>
+                        </p>
+                        <p class="contact-phone">+1 (555) 123-4580</p>
+                    </div>
+
+                    <div class="contact-card">
+                        <h3 class="contact-title">Research Coordinator</h3>
+                        <p class="contact-name">Dr. Michael Sustainability, PhD</p>
+                        <p class="contact-role">Research Program Manager</p>
+                        <p class="contact-email">
+                            <a href="mailto:research.green@spinacademics.org">research.green@spinacademics.org</a>
+                        </p>
+                        <p class="contact-phone">+1 (555) 123-4581</p>
+                    </div>
+
+                    <div class="contact-card">
+                        <h3 class="contact-title">Implementation Support</h3>
+                        <p class="contact-name">Ms. Sarah Eco-Consultant</p>
+                        <p class="contact-role">Implementation Specialist</p>
+                        <p class="contact-email">
+                            <a href="mailto:implementation@spinacademics.org">implementation@spinacademics.org</a>
+                        </p>
+                        <p class="contact-phone">+1 (555) 123-4582</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">SPIN Academics</h3>
+                    <p class="footer-description">
+                        Advancing neuroimaging education and research through innovative programs and collaborative learning.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <span class="social-icon">in</span>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <span class="social-icon">tw</span>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <span class="social-icon">fb</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Research</h4>
+                    <ul class="footer-links">
+                        <li><a href="research.html" class="footer-link">Research Programs</a></li>
+                        <li><a href="submit-proposal.html" class="footer-link">Submit Proposal</a></li>
+                        <li><a href="green-radiology.html" class="footer-link">Green Radiology</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Education</h4>
+                    <ul class="footer-links">
+                        <li><a href="cortex-club.html" class="footer-link">Cortex Club</a></li>
+                        <li><a href="spin-yarn-newsletter.html" class="footer-link">SPIN Yarn Newsletter</a></li>
+                        <li><a href="spin-wfpi.html" class="footer-link">SPIN & WFPI</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Contact</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:info@spinacademics.org" class="footer-link">info@spinacademics.org</a></li>
+                        <li><a href="tel:+1234567890" class="footer-link">+1 (234) 567-890</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="footer-copyright">
+                    &copy; 2024 SPIN Academics. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+    <script>
+        // Category navigation for implementation guidelines
+        document.addEventListener('DOMContentLoaded', function() {
+            const categoryBtns = document.querySelectorAll('.category-btn');
+            const categoryContents = document.querySelectorAll('.category-content');
+
+            categoryBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const category = this.dataset.category;
+                    
+                    // Remove active class from all buttons and contents
+                    categoryBtns.forEach(b => b.classList.remove('active'));
+                    categoryContents.forEach(c => c.classList.remove('active'));
+                    
+                    // Add active class to clicked button and corresponding content
+                    this.classList.add('active');
+                    document.getElementById(category).classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
