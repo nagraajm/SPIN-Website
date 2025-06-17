@@ -37,7 +37,7 @@
                     <li class="nav-item dropdown">
                         <a href="education.html" class="nav-link dropdown-toggle active">Education <i class="dropdown-arrow">▼</i></a>
                         <ul class="dropdown-menu">
-                            <li><a href="society-fellowship.html" class="dropdown-link">Society Fellowship</a></li>
+                            <li><a href="society-fellowship-fixed.html" class="dropdown-link">Society Fellowship</a></li>
                             <li><a href="education.html" class="dropdown-link">Education Offerings</a></li>
                             <li><a href="cortex-club.html" class="dropdown-link">Cortex Club</a></li>
                             <li><a href="spin-yarn-newsletter.html" class="dropdown-link">SPIN Yarn Newsletter</a></li>
@@ -76,7 +76,7 @@
                     <p>SPIN Academics is committed to providing world-class educational opportunities for pediatric neuroradiology professionals at every stage of their career. Our comprehensive programs combine cutting-edge content with innovative delivery methods to ensure optimal learning outcomes.</p>
                     <div class="cta-buttons">
                         <a href="membership.html" class="btn btn-primary">Join SPIN</a>
-                        <a href="society-fellowship.html" class="btn btn-secondary">Explore Fellowship</a>
+                        <a href="society-fellowship-fixed.html" class="btn btn-secondary">Explore Fellowship</a>
                     </div>
                 </div>
             </div>
@@ -202,7 +202,7 @@
                         </div>
 
                         <div class="fellowship-cta">
-                            <a href="society-fellowship.html" class="btn btn-primary">View Fellowship Program</a>
+                            <a href="society-fellowship-fixed.html" class="btn btn-primary">View Fellowship Program</a>
                             <a href="membership.html" class="btn btn-secondary">Join SPIN</a>
                         </div>
                     </div>
@@ -337,7 +337,7 @@
                 <div class="footer-section">
                     <h4>Education</h4>
                     <ul>
-                        <li><a href="society-fellowship.html">Fellowship Program</a></li>
+                        <li><a href="society-fellowship-fixed.html">Fellowship Program</a></li>
                         <li><a href="cortex-club.html">Cortex Club</a></li>
                         <li><a href="spin-yarn-newsletter.html">SPIN A Yarn</a></li>
                         <li><a href="spin-wfpi.html">SPIN WFPI</a></li>

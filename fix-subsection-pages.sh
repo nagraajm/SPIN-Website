@@ -221,7 +221,7 @@ create_education_page() {
                         </button>
                         <div class="absolute left-0 mt-2 w-64 bg-white/95 backdrop-blur-md rounded-2xl shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
                             <div class="py-3">
-                                <a href="society-fellowship.html" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 hover:bg-primary-50 transition-all duration-200">Society Fellowship</a>
+                                <a href="society-fellowship-fixed.html" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 hover:bg-primary-50 transition-all duration-200">Society Fellowship</a>
                                 <a href="education.html" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 hover:bg-primary-50 transition-all duration-200">Education Offerings</a>
                                 <a href="cortex-club.html" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 hover:bg-primary-50 transition-all duration-200 CORTEX_ACTIVE">Cortex Club</a>
                                 <a href="spin-yarn-newsletter.html" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 hover:bg-primary-50 transition-all duration-200 NEWSLETTER_ACTIVE">SPIN Yarn Newsletter</a>
@@ -413,7 +413,7 @@ done
 
 echo "🎉 All subsection pages have been fixed with modern navigation and consistent design!"
 echo "📋 Fixed pages:"
-echo "   • society-fellowship.html (already fixed)"
+echo "   • society-fellowship-fixed.html (already fixed)"
 echo "   • case-of-the-month.html (already fixed)"
 for page in "${education_pages[@]}"; do
     echo "   • ${page}.html"

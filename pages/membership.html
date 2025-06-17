@@ -153,7 +153,32 @@
         .pricing-card:hover::before {
             left: 100%;
         }
+.nav-active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 3px;
+  background: linear-gradient(90deg, #0087ff, #00bfaf);
+  border-radius: 2px;
+}
+
+
+.nav-item {
+  position: relative;
+}
+
     </style>
+    <script>
+  document.querySelectorAll('.nav-item').forEach(link => {
+    if (window.location.pathname.includes(link.getAttribute('href'))) {
+      link.classList.add('nav-active');
+    }
+  });
+</script>
+
 </head>
 <body class="bg-gray-50">
     <!-- Navigation -->
@@ -193,7 +218,7 @@
                         </div>
                     </div>
 
-                    <a href="membership.html" class="px-4 py-2 text-sm font-medium text-primary-700 rounded-lg border-b-2 border-primary-600">Membership</a>
+<a href="membership.html" class="px-4 py-2 text-sm font-medium text-gray-700 hover:text-primary-600 nav-item nav-active">Membership</a>
                     
                     <!-- Education Dropdown -->
                     <div class="relative group">
@@ -205,7 +230,7 @@
                         </button>
                         <div class="absolute top-full left-0 mt-1 w-64 bg-white rounded-xl shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform group-hover:translate-y-0 translate-y-2">
                             <div class="p-2">
-                                <a href="society-fellowship.html" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 rounded-lg">Society Fellowship</a>
+                                <a href="society-fellowship-fixed.html" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 rounded-lg">Society Fellowship</a>
                                 <a href="education.html" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 rounded-lg">Education Offerings</a>
                                 <a href="cortex-club.html" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 rounded-lg">Cortex Club</a>
                                 <a href="spin-yarn-newsletter.html" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 rounded-lg">SPIN Yarn Newsletter</a>
@@ -474,9 +499,11 @@
                     <p class="text-xl text-gray-600 max-w-3xl mx-auto">
                         Choose the perfect membership plan to advance your career in spinal pain management
                     </p>
+                   
                 </div>
 
                 <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                      
                     <!-- Basic Plan -->
                     <div class="glass-card rounded-3xl p-8 pricing-card">
                         <div class="text-center mb-8">
@@ -518,10 +545,10 @@
 
                     <!-- Professional Plan -->
                     <div class="glass-card rounded-3xl p-8 pricing-card relative border-2 border-blue-500">
-                        <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                       <div class="absolute -top-4 left-1/2 transform -translate-x-1/2" style="margin-top: 30px;">
                             <span class="bg-gradient-to-r from-blue-500 to-teal-500 text-white px-4 py-2 rounded-full text-sm font-medium">Most Popular</span>
                         </div>
-                        <div class="text-center mb-8">
+                        <div class="text-center mb-8" style="margin-top: 20px;">
                             <h3 class="text-2xl font-bold text-gray-900 mb-2">Professional</h3>
                             <p class="text-gray-600 mb-6">Ideal for practicing physicians and researchers</p>
                             <div class="text-4xl font-bold gradient-text mb-2">$299</div>
@@ -619,7 +646,7 @@
             <div class="grid md:grid-cols-4 gap-8">
                 <div class="md:col-span-2">
                     <div class="flex items-center space-x-3 mb-4">
-                        <img src="../assets/logo.png" alt="SPIN Academics" class="h-10 w-auto">
+                        <img src="../images/spin_logo.webp" alt="SPIN Academics" class="h-10 w-auto">
                         <span class="text-2xl font-bold gradient-text">SPIN Academics</span>
                     </div>
                     <p class="text-gray-300 mb-6 max-w-md">
@@ -669,325 +696,5 @@
         </div>
     </footer>
 </body>
-                            <li><a href="submit-proposal.html" class="dropdown-link">Submit a Proposal</a></li>
-                            <li><a href="green-radiology.html" class="dropdown-link">Green Radiology</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="login.html" class="nav-link login-btn">Login</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
 
-    <main class="main">
-        <!-- Hero Section -->
-        <section class="hero-section membership-hero">
-            <div class="container">
-                <h1 class="hero-title">SPIN Membership</h1>
-                <p class="hero-subtitle">Join our global community of pediatric neuroradiology professionals</p>
-            </div>
-        </section>
-
-        <!-- Membership Overview -->
-        <section class="section" id="membership-overview">
-            <div class="container">
-                <h2 class="section-title">Why Join SPIN?</h2>
-                <div class="membership-intro">
-                    <p>SPIN Academics offers a comprehensive membership program designed to support pediatric neuroradiology professionals at every stage of their career. Our members gain access to world-class educational resources, networking opportunities, and professional development programs.</p>
-                </div>
-
-                <!-- Membership Tiers -->
-                <div class="membership-tiers">
-                    <div class="tier-card featured">
-                        <div class="tier-header">
-                            <h3>Full Membership</h3>
-                            <div class="price">
-                                <span class="amount">$50</span>
-                                <span class="period">/ year</span>
-                            </div>
-                        </div>
-                        <div class="tier-features">
-                            <ul>
-                                <li>✓ Access to all educational content</li>
-                                <li>✓ Annual meeting registration</li>
-                                <li>✓ Fellowship program eligibility</li>
-                                <li>✓ Research collaboration opportunities</li>
-                                <li>✓ Member directory access</li>
-                                <li>✓ SPIN A Yarn newsletter</li>
-                                <li>✓ Cortex Club participation</li>
-                                <li>✓ Priority event registration</li>
-                            </ul>
-                        </div>
-                        <a href="signup.html" class="btn btn-primary">Join SPIN</a>
-                    </div>
-
-                    <div class="tier-card">
-                        <div class="tier-header">
-                            <h3>Student/Trainee Membership</h3>
-                            <div class="price">
-                                <span class="amount">$25</span>
-                                <span class="period">/ year</span>
-                            </div>
-                        </div>
-                        <div class="tier-features">
-                            <ul>
-                                <li>✓ Access to educational content</li>
-                                <li>✓ Discounted meeting registration</li>
-                                <li>✓ Fellowship program information</li>
-                                <li>✓ Mentorship opportunities</li>
-                                <li>✓ SPIN A Yarn newsletter</li>
-                                <li>✓ Cortex Club participation</li>
-                                <li>✓ Career development resources</li>
-                            </ul>
-                        </div>
-                        <a href="signup.html" class="btn btn-secondary">Join as Student</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Member Benefits -->
-        <section class="section benefits-section">
-            <div class="container">
-                <h2 class="section-title">Member Benefits</h2>
-                <div class="benefits-grid">
-                    <div class="benefit-card">
-                        <div class="benefit-icon">🎓</div>
-                        <h3>Educational Excellence</h3>
-                        <ul>
-                            <li>Comprehensive fellowship programs</li>
-                            <li>Virtual neuroradiology clinics</li>
-                            <li>SPIN Essentials video library</li>
-                            <li>Continuing education credits</li>
-                            <li>Expert-led webinars and workshops</li>
-                        </ul>
-                    </div>
-                    <div class="benefit-card">
-                        <h3>Professional Networking</h3>
-                        <div class="benefit-icon">🤝</div>
-                        <ul>
-                            <li>Global community of experts</li>
-                            <li>Annual in-person meetings</li>
-                            <li>Regional networking events</li>
-                            <li>Member directory access</li>
-                            <li>Mentorship program</li>
-                        </ul>
-                    </div>
-                    <div class="benefit-card">
-                        <div class="benefit-icon">🔬</div>
-                        <h3>Research Opportunities</h3>
-                        <ul>
-                            <li>Collaborative research projects</li>
-                            <li>Case of the Month submissions</li>
-                            <li>Green Radiology initiatives</li>
-                            <li>Publication opportunities</li>
-                            <li>Research grants and funding</li>
-                        </ul>
-                    </div>
-                    <div class="benefit-card">
-                        <div class="benefit-icon">📰</div>
-                        <h3>Exclusive Content</h3>
-                        <ul>
-                            <li>SPIN A Yarn newsletter</li>
-                            <li>Member-only resources</li>
-                            <li>Early access to announcements</li>
-                            <li>Exclusive meeting recordings</li>
-                            <li>Priority customer support</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- FAQ Accordion -->
-        <section class="section faq-section">
-            <div class="container">
-                <h2 class="section-title">Frequently Asked Questions</h2>
-                <div class="accordion">
-                    <div class="accordion-item">
-                        <div class="accordion-header">
-                            <span>What is included in SPIN membership?</span>
-                            <span class="accordion-icon">▼</span>
-                        </div>
-                        <div class="accordion-content">
-                            <div class="accordion-body">
-                                SPIN membership includes access to all educational resources, fellowship programs, research opportunities, networking events, and exclusive member content. Full members receive complete access to all programs, while student/trainee members receive discounted rates and specialized resources for career development.
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="accordion-item">
-                        <div class="accordion-header">
-                            <span>How do I qualify for student/trainee membership?</span>
-                            <span class="accordion-icon">▼</span>
-                        </div>
-                        <div class="accordion-content">
-                            <div class="accordion-body">
-                                Student/trainee membership is available to medical students, residents, fellows, and other trainees in radiology or related fields. You will need to provide proof of enrollment or training status during the registration process. This membership tier offers significant discounts and specialized resources for career development.
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="accordion-item">
-                        <div class="accordion-header">
-                            <span>Can I upgrade from student to full membership?</span>
-                            <span class="accordion-icon">▼</span>
-                        </div>
-                        <div class="accordion-content">
-                            <div class="accordion-body">
-                                Yes, you can upgrade from student/trainee membership to full membership at any time. Contact our membership team to process your upgrade. The price difference will be prorated based on your remaining membership period.
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="accordion-item">
-                        <div class="accordion-header">
-                            <span>What are the fellowship program requirements?</span>
-                            <span class="accordion-icon">▼</span>
-                        </div>
-                        <div class="accordion-content">
-                            <div class="accordion-body">
-                                The SPIN Fellowship Program requires active SPIN membership and completion of our three-part curriculum: Part 1 (Foundations), Part 2 (Levelling Up), and The Finale (in-person meeting). Each part has specific prerequisites and learning objectives designed to advance your expertise in pediatric neuroradiology.
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="accordion-item">
-                        <div class="accordion-header">
-                            <span>How do I access member-only content?</span>
-                            <span class="accordion-icon">▼</span>
-                        </div>
-                        <div class="accordion-content">
-                            <div class="accordion-body">
-                                After completing your membership registration and payment, you will receive login credentials to access the member portal. From there, you can access all educational content, research resources, member directory, and exclusive materials. If you experience any issues, contact our support team.
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="accordion-item">
-                        <div class="accordion-header">
-                            <span>Is membership tax-deductible?</span>
-                            <span class="accordion-icon">▼</span>
-                        </div>
-                        <div class="accordion-content">
-                            <div class="accordion-body">
-                                SPIN membership fees may be tax-deductible as professional development expenses. We recommend consulting with your tax advisor or accounting department to determine eligibility based on your specific circumstances. We can provide membership receipts for your records.
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="accordion-item">
-                        <div class="accordion-header">
-                            <span>Can my institution pay for multiple memberships?</span>
-                            <span class="accordion-icon">▼</span>
-                        </div>
-                        <div class="accordion-content">
-                            <div class="accordion-body">
-                                Yes, we offer institutional membership options for hospitals, universities, and other organizations. Contact our membership team to discuss bulk pricing and institutional billing arrangements. We can also provide purchase orders and institutional invoicing.
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="accordion-item">
-                        <div class="accordion-header">
-                            <span>What is the refund policy?</span>
-                            <span class="accordion-icon">▼</span>
-                        </div>
-                        <div class="accordion-content">
-                            <div class="accordion-body">
-                                SPIN offers a 30-day money-back guarantee for new memberships. If you are not satisfied with your membership within the first 30 days, contact us for a full refund. Refunds are not available after the 30-day period, but you can choose not to renew for the following year.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Call to Action -->
-        <section class="cta-section section">
-            <div class="container">
-                <div class="cta-content">
-                    <h2>Ready to Join SPIN?</h2>
-                    <p>Become part of our global community and take your pediatric neuroradiology career to the next level.</p>
-                    <div class="cta-buttons">
-                        <a href="signup.html" class="btn btn-primary">Become a Member</a>
-                        <a href="about.html" class="btn btn-secondary">Learn More About SPIN</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- SPIN Feedback Section -->
-        <section class="feedback-section section">
-            <div class="container">
-                <h2 class="section-title">Member Testimonials</h2>
-                <div class="feedback-carousel">
-                    <div class="feedback-quote">
-                        <blockquote>
-                            "SPIN membership has been one of the best investments in my professional development. The educational resources are outstanding."
-                        </blockquote>
-                        <cite>- Dr. Sarah Mitchell, Pediatric Radiologist</cite>
-                    </div>
-                    <div class="feedback-quote">
-                        <blockquote>
-                            "The networking opportunities through SPIN have led to collaborations that have significantly advanced my research."
-                        </blockquote>
-                        <cite>- Dr. Ahmed Hassan, Research Fellow</cite>
-                    </div>
-                    <div class="feedback-quote">
-                        <blockquote>
-                            "As a student member, I appreciate the mentorship program and career guidance that SPIN provides."
-                        </blockquote>
-                        <cite>- Dr. Jessica Wong, Medical Student</cite>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <div class="footer-logo">
-                        <img src="../images/spin_logo.webp" alt="SPIN Academics" class="footer-logo-img">
-                        <span>SPIN Academics</span>
-                    </div>
-                    <p>Society for Pediatric and Investigative Neuroradiology</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="membership.html">Membership</a></li>
-                        <li><a href="education.html">Education</a></li>
-                        <li><a href="research.html">Research</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Education</h4>
-                    <ul>
-                        <li><a href="society-fellowship.html">Fellowship Program</a></li>
-                        <li><a href="cortex-club.html">Cortex Club</a></li>
-                        <li><a href="spin-yarn-newsletter.html">SPIN A Yarn</a></li>
-                        <li><a href="spin-wfpi.html">SPIN WFPI</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Connect</h4>
-                    <div class="social-links">
-                        <a href="#" aria-label="LinkedIn">📧</a>
-                        <a href="#" aria-label="Twitter">🐦</a>
-                        <a href="#" aria-label="YouTube">📺</a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 SPIN Academics. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="../js/script.js"></script>
-</body>
 </html>

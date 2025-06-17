@@ -54,7 +54,7 @@
                     <li class="nav-item dropdown">
                         <a href="#" class="nav-link active">Fellowship</a>
                         <div class="dropdown-content">
-                            <a href="society-fellowship.html">Fellowship Program</a>
+                            <a href="society-fellowship-fixed.html">Fellowship Program</a>
                             <a href="fellowship-part1.html">Part 1</a>
                             <a href="fellowship-part2.html">Part 2</a>
                         </div>
@@ -748,7 +748,7 @@
                 <div class="footer-section">
                     <h4 class="footer-subtitle">Fellowship</h4>
                     <ul class="footer-links">
-                        <li><a href="society-fellowship.html" class="footer-link">Fellowship Program</a></li>
+                        <li><a href="society-fellowship-fixed.html" class="footer-link">Fellowship Program</a></li>
                         <li><a href="fellowship-part1.html" class="footer-link">Part 1</a></li>
                         <li><a href="fellowship-part2.html" class="footer-link">Part 2</a></li>
                     </ul>

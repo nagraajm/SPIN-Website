@@ -60,7 +60,7 @@ echo "   ✅ Professional layout and design"
 
 echo ""
 echo "🎓 EDUCATION SUBSECTIONS:"
-echo "   ✅ Society Fellowship (society-fellowship.html) - Complete modern page"
+echo "   ✅ Society Fellowship (society-fellowship-fixed.html) - Complete modern page"
 echo "   ✅ Education Offerings (education.html) - Already modernized"
 echo "   ✅ Cortex Club (cortex-club.html) - Fixed with modern navigation*"
 echo "   ✅ SPIN Yarn Newsletter (spin-yarn-newsletter.html) - Fixed*" 
