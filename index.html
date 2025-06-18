@@ -9,6 +9,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700;800&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
@@ -315,182 +317,104 @@
   }
 }
 /* ===== SPIN SECTION ===== */
-.spin-section {
+.spinner-grid-section {
   background: linear-gradient(120deg, #d0f7fa 0%, #e2edfb 100%);
-  padding: 5rem 0;
-  overflow: hidden;
+  padding: 5rem 2rem;
+  font-family: 'Poppins', sans-serif;
 }
 
-.spin-maxwidth {
+.spinner-grid-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 2rem;
+  text-align: center;
 }
 
-/* ===== HEADER ===== */
-.spin-header {
-  font-family: 'Poppins', 'Inter', Arial, sans-serif;
-  font-size: 3rem;
+.spinner-title {
+  font-size: 2.8rem;
   font-weight: 800;
   color: #114366;
-  text-align: center;
-  letter-spacing: -1.5px;
-  position: relative;
+  margin-bottom: 0.5rem;
 }
 
-.spin-underline {
+.spinner-underline {
   display: block;
-  margin: 0.75rem auto 0;
   width: 70px;
   height: 6px;
-  border-radius: 2.5px;
+  margin: 0.75rem auto 2.5rem;
+  border-radius: 3px;
   background: linear-gradient(90deg, #25aae1, #40e495, #30dd8a, #2bb673);
 }
 
-/* ===== MOTION CONTAINER ===== */
-.spin-motion-container {
-  overflow-x: hidden;
-  margin-top: 2rem;
-  padding-bottom: 2rem;
-  height: 560px;
-  position: relative;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-  cursor: grab;
-  user-select: none;
-  touch-action: pan-y;
-}
-
-.spin-motion-container::-webkit-scrollbar {
-  display: none;
-}
-
-/* ===== MOTION TRACK ===== */
-.spin-motion-track {
+.spinner-card-grid {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 2rem;
-  will-change: transform;
-  transition: transform 0.3s ease;
-  margin-top: 30px;
 }
 
-/* ===== CARD ===== */
-.spin-card {
-  min-width: 300px;
-  max-width: 340px;
-  background: rgba(255, 255, 255, 0.65);
-  border-radius: 2rem;
-  box-shadow: 0 8px 32px 0 rgba(13, 48, 74, 0.17),
-              0 1.5px 6px 0 rgba(0, 135, 255, 0.05);
-  border: 1.5px solid rgba(255, 255, 255, 0.35);
-  backdrop-filter: blur(6px);
+.spinner-card {
+  background: white;
+  border-radius: 1.5rem;
+  box-shadow: 0 6px 18px rgba(0, 135, 255, 0.1);
   overflow: hidden;
-  margin-bottom: 0.75rem;
-  transition:
-    transform 0.28s cubic-bezier(.45, 1.3, .62, 1),
-    box-shadow 0.18s;
+  width: 320px;
+  transition: transform 0.3s ease;
   display: flex;
   flex-direction: column;
-  position: relative;
 }
 
-.spin-card:hover {
-  transform: translateY(-9px) scale(1.032);
-  box-shadow: 0 12px 40px 0 rgba(30, 96, 161, 0.22),
-              0 2.5px 10px 0 #25aae1;
+.spinner-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 135, 255, 0.2);
 }
 
-/* ===== IMAGE ===== */
-.spin-img {
+.spinner-img {
   width: 100%;
   height: 190px;
   object-fit: cover;
-  display: block;
-  border-radius: 2rem 2rem 1rem 1rem;
-  box-shadow: 0 2px 8px 0 rgba(30, 96, 161, 0.06);
-  background: linear-gradient(120deg, #e3ebf5 40%, #cbeeff 100%);
+  border-radius: 1.5rem 1.5rem 0 0;
 }
 
-/* ===== CARD CONTENT ===== */
-.spin-card-content {
-  padding: 1.3rem 1.45rem 1.7rem 1.45rem;
+.spinner-card-content {
+  padding: 1.5rem;
   display: flex;
   flex-direction: column;
-  flex: 1 1 auto;
-  gap: 10px;
+  gap: 12px;
+  flex: 1;
 }
 
-.spin-card-content h3 {
-  font-size: 1.22rem;
+.spinner-card-content h3 {
+  font-size: 1.2rem;
   font-weight: 700;
   color: #1d3557;
-  margin-bottom: 6px;
 }
 
-.spin-card-content p {
-  font-size: 0.98rem;
-  color: #273b4c;
-  margin-bottom: 18px;
-  opacity: 0.86;
+.spinner-card-content p {
+  font-size: 0.95rem;
+  color: #44515e;
+  opacity: 0.9;
+  flex: 1;
 }
 
-/* ===== BUTTON ===== */
-.spin-btn {
-  display: inline-block;
-  align-self: flex-start;
-  padding: 0.72rem 2rem;
-  background: linear-gradient(90deg, #0087ff, #14aaee 95%);
-  color: #fff;
-  font-size: 1.01rem;
-  font-weight: 700;
+.spinner-btn {
+  margin-top: auto;
+  align-self: center; /* Center horizontally */
+  padding: 0.6rem 1.6rem;
+  background: linear-gradient(to right, #0087ff, #00bfaf);
+  color: white;
+  font-weight: 600;
   border-radius: 999px;
-  box-shadow: 0 3px 20px #8ecafc5d;
-  transition: background 0.18s, box-shadow 0.16s, transform 0.18s;
   text-decoration: none;
-  letter-spacing: 0.05em;
-  border: none;
-  outline: none;
-  margin-top: -3px;
+  box-shadow: 0 3px 10px rgba(0, 135, 255, 0.2);
+  transition: transform 0.2s, background 0.2s;
 }
 
-.spin-btn:hover,
-.spin-btn:focus {
-  background: linear-gradient(90deg, #14aaee, #0087ff 95%);
-  box-shadow: 0 6px 28px #0087ff33;
-  color: #fff;
-  transform: scale(1.06);
+
+.spinner-btn:hover {
+  background: linear-gradient(to right, #00bfaf, #0087ff);
+  transform: scale(1.05);
 }
 
-/* ===== RESPONSIVE ===== */
-@media (max-width: 1000px) {
-  .spin-section {
-    padding: 2rem 0;
-  }
-
-  .spin-maxwidth {
-    padding: 0 0.8rem;
-  }
-
-  .spin-header {
-    font-size: 2.1rem;
-  }
-
-  .spin-card {
-    min-width: 240px;
-  }
-
-  .spin-img {
-    height: 135px;
-  }
-
-  .spin-btn {
-    font-size: 0.97rem;
-    padding: 0.61rem 1.4rem;
-  }
-}
-.spin-section {
-  padding: 6rem 0;          /* was 5rem 0 */
-}
 
 /* middle section */
 .mission-section {
@@ -585,7 +509,7 @@
 .spin-motion-track,
 .spin-card {
   position: relative;
-  z-index: 2;
+  z-index: 90;
 }
 .spin-section {
   position: relative;
@@ -612,6 +536,251 @@
   position: relative;
   z-index: 2;
 }
+/* 🌍 Partnerships Section */
+.partnerships-carousel h2 {
+  background: linear-gradient(to right, #0087ff, #00bfaf);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.partner-card-carousel {
+  background: #fff;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 12px 24px rgba(0, 135, 255, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.partner-card-carousel:hover {
+  transform: scale(1.03);
+  box-shadow: 0 16px 30px rgba(0, 135, 255, 0.2);
+}
+
+.partner-card-carousel img {
+  height: 80px;
+  margin: 0 auto 1rem;
+  object-fit: contain;
+}
+
+.partner-card-carousel h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 0.5rem;
+}
+
+.partner-card-carousel p {
+  font-size: 0.95rem;
+  color: #4a5568;
+  margin-bottom: 1rem;
+  min-height: 60px;
+}
+
+.learn-btn {
+  display: inline-block;
+  padding: 0.6rem 1.5rem;
+  background: linear-gradient(to right, #0087ff, #14aaee);
+  color: white;
+  font-weight: 600;
+  border-radius: 999px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.learn-btn:hover {
+  background: linear-gradient(to right, #006bcc, #00998c);
+}
+
+.swiper {
+  padding-bottom: 4rem;
+}
+
+.swiper-slide {
+  width: 300px;
+}
+/* memberhsip/sub */
+.membership-toggle-section {
+  padding: 4rem 1rem;
+  background: #f5fafd;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.membership-heading {
+  font-size: 2.4rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
+  background: linear-gradient(to right, #0087ff, #00bfaf);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.membership-toggle-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.toggle-btn {
+  background: #e5f4ff;
+  color: #0087ff;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  font-weight: 600;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.toggle-btn.active {
+  background: linear-gradient(to right, #0087ff, #00bfaf);
+  color: white;
+  box-shadow: 0 4px 14px rgba(0, 135, 255, 0.3);
+}
+
+.form-container {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.membership-form {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(0, 135, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: all 0.3s ease;
+}
+
+.membership-form input {
+  padding: 0.75rem 1rem;
+  border: 1px solid #cbd5e0;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
+
+.submit-btn {
+  background: #0087ff;
+  color: white;
+  border: none;
+  padding: 0.85rem;
+  border-radius: 0.5rem;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: #006bcc;
+}
+
+.footnote {
+  font-size: 0.85rem;
+  color: #4a5568;
+}
+
+.footnote a {
+  color: #0087ff;
+  text-decoration: underline;
+}
+
+.hidden {
+  display: none;
+}
+
+/* past events */
+.past-events-section {
+  padding: 5rem 2rem;
+  background: #f8fdff;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.events-heading {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #114366;
+  margin-bottom: 0.5rem;
+}
+
+.events-subtext {
+  font-size: 1.1rem;
+  color: #4a5a6a;
+  margin-bottom: 3rem;
+}
+
+.event-cards-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.event-card {
+  background: #ffffff;
+  border-radius: 1.5rem;
+  box-shadow: 0 6px 18px rgba(0, 135, 255, 0.1);
+  overflow: hidden;
+  width: 340px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.event-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 24px rgba(0, 135, 255, 0.2);
+}
+
+.event-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.event-info {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.event-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #1d3557;
+  margin-bottom: 0.5rem;
+}
+
+.event-description {
+  font-size: 0.96rem;
+  color: #475569;
+  margin-bottom: 1.2rem;
+  flex: 1;
+}
+
+.event-btn {
+  display: inline-block;
+  padding: 0.75rem 1.8rem;
+  background: linear-gradient(to right, #0087ff, #00bfaf);
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 999px;
+  box-shadow: 0 4px 16px rgba(0, 135, 255, 0.3);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.event-btn:hover {
+  background: linear-gradient(to right, #00bfaf, #0087ff);
+  transform: scale(1.05);
+}
+
 
 </style>
 
@@ -638,7 +807,9 @@
                 <!-- Desktop Navigation -->
                 <div class="hidden lg:flex items-center space-x-1">
                     <a href="index.html" class="px-4 py-2 text-sm font-medium text-primary-700 nav-active rounded-lg">Home</a>
-                    
+   <a href="events.html" class="px-4 py-2 text-sm font-medium text-primary-700  rounded-lg">Events</a>
+
+
                     <!-- About Dropdown -->
                     <div class="relative group">
                         <button class="px-4 py-2 text-sm font-medium text-gray-700 hover:text-primary-600 rounded-lg nav-item flex items-center space-x-1">
@@ -718,6 +889,7 @@
         <div id="mobile-menu" class="lg:hidden hidden border-t border-gray-200 bg-white">
             <div class="px-4 py-3 space-y-2">
                 <a href="index.html" class="block px-4 py-2 text-sm font-medium text-primary-600 bg-primary-50 rounded-lg">Home</a>
+                <a href="pages/events.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded-lg">Events</a>
                 <a href="pages/about.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded-lg">About</a>
                 <a href="pages/membership.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded-lg">Membership</a>
                 <a href="pages/education.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded-lg">Education</a>
@@ -872,17 +1044,7 @@
             </div>
           </div>
         </div>
-   <!-- Slide 7-->
-        <div class="swiper-slide">
-          <div class="card-slide">
-            <img src="images/2025+Part+1+Foundatiyty.jpg" alt="Part 7">
-            <div class="card-overlay">
-              <h3 class="card-title">Part 1: Ftyndation</h3>
-              <p class="card-text">Register now tyr Part 1: Foundations</p>
-              <a href="#" class="card-btn">Regitytytyty</a>
-            </div>
-          </div>
-        </div>
+
       </div>
     </div>
 
@@ -895,7 +1057,6 @@
         <div class="swiper-slide"><img src="images/DSC_9026.jpeg" alt="Fellowship"></div>
         <div class="swiper-slide"><img src="images/Screenshot+2023-02-21+at+10.06.58.png" alt="Research"></div>
         <div class="swiper-slide"><img src="images/Attendee+Map.png" alt="Outreach"></div>
-         <div class="swiper-slide"><img src="images/Attendee+Map.png" alt="Outreach"></div>
       </div>
     </div>
   </div>
@@ -1042,8 +1203,9 @@
 
 
 
-<section class="mission-section">
-  <div class="mission-container">
+
+
+<section class="mission-section">  <div class="mission-container">
     <!-- LEFT: Mission Text -->
     <div class="mission-left">
       <p class="mission-text">
@@ -1065,77 +1227,98 @@
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 
+<!-- past events section -->
+<section class="past-events-section">
+  <h2 class="events-heading">Past Events</h2>
+  <p class="events-subtext">Explore highlights, speakers, and gala moments from our flagship SPIN events around the globe.</p>
+
+  <div class="event-cards-wrapper">
+    
+    <!-- SPIN Sydney -->
+    <div class="event-card">
+      <img src="images/sydney-thumbnail.webp" alt="SPIN Sydney" class="event-image">
+      <div class="event-info">
+        <h3 class="event-title">SPIN Sydney</h3>
+        <p class="event-description">AI-driven diagnostics and collaborative imaging innovations presented in Sydney.</p>
+        <a href="pages/spin-sydney.html" target="_blank" class="learn-btn">Explore Sydney Event</a>
+      </div>
+    </div>
+
+    <!-- SPIN Goa -->
+    <div class="event-card">
+      <img src="images/goa-thumbnail.webp" alt="SPIN Goa" class="event-image">
+      <div class="event-info">
+        <h3 class="event-title">SPIN Goa</h3>
+        <p class="event-description">Tropical imaging focus with gala highlights and expert speaker sessions.</p>
+        <a href="pages/spin-goa.html" target="_blank" class="learn-btn">Explore Goa Event</a>
+      </div>
+    </div>
+
+  </div>
+</section>
 
 
 
     <!-- spin inmotion  -->
+<section class="spinner-grid-section">
+  <div class="spinner-grid-container">
+    <h2 class="spinner-title">Spinner of the Year<span class="spinner-underline"></span></h2>
 
-<section class="spin-section">
-   <div class="spin-gif-bg" id="mouseTracker"></div>
-
-  <!-- Main content -->
-  <div class="spin-maxwidth">
-    <h2 class="spin-header">Spin-In-Motion<span class="spin-underline"></span></h2>
-    <div class="spin-motion-container" id="spinContainer" tabindex="0">
-      <div class="spin-motion-track" id="spinTrack">
-        <!-- CARD 1 -->
-        <div class="spin-card">
-          <img src="images/spin-motion/virtual-clinic.webp" alt="Virtual Clinics" class="spin-img">
-          <div class="spin-card-content">
-            <h3>Virtual Neuroradiology Clinics</h3>
-            <p>Collaborate on complex neuroradiology cases through expert-led, interactive virtual clinics.</p>
-            <a href="#" class="spin-btn">Learn More</a>
-          </div>
+    <div class="spinner-card-grid">
+      <!-- CARD 1 -->
+      <div class="spinner-card">
+        <img src="images/spin-motion/virtual-clinic.webp" alt="Virtual Clinics" class="spinner-img">
+        <div class="spinner-card-content">
+          <h3>Virtual Neuroradiology Clinics</h3>
+          <p>Collaborate on complex neuroradiology cases through expert-led, interactive virtual clinics.</p>
+          <a href="#" class="learn-btn">Learn More</a>
         </div>
+      </div>
 
-        <!-- CARD 2 -->
-        <div class="spin-card">
-          <img src="images/spin-motion/spin-essentials.webp" alt="SPIN Essentials" class="spin-img">
-          <div class="spin-card-content">
-            <h3>SPIN Essentials</h3>
-            <p>Explore free, accessible, and engaging videos that simplify pediatric neuroimaging for learners worldwide.</p>
-            <a href="#" class="spin-btn">Learn More</a>
-          </div>
+      <!-- CARD 2 -->
+      <div class="spinner-card">
+        <img src="images/spin-motion/spin-essentials.webp" alt="SPIN Essentials" class="spinner-img">
+        <div class="spinner-card-content">
+          <h3>SPIN Essentials</h3>
+          <p>Explore free, accessible, and engaging videos that simplify pediatric neuroimaging for learners worldwide.</p>
+          <a href="#" class="learn-btn">Learn More</a>
         </div>
+      </div>
 
-        <!-- CARD 3 -->
-        <div class="spin-card">
-          <img src="images/spin-motion/spin-a-yarn.webp" alt="Spin A Yarn" class="spin-img">
-          <div class="spin-card-content">
-            <h3>Spin A Yarn</h3>
-            <p>Delve into tales of inspiration and the many facets of pediatric neuroradiology shared by SPIN members.</p>
-            <a href="#" class="spin-btn">Learn More</a>
-          </div>
+      <!-- CARD 3 -->
+      <div class="spinner-card">
+        <img src="images/spin-motion/spin-a-yarn.webp" alt="Spin A Yarn" class="spinner-img">
+        <div class="spinner-card-content">
+          <h3>Spin A Yarn</h3>
+          <p>Delve into tales of inspiration and the many facets of pediatric neuroradiology shared by SPIN members.</p>
+          <a href="#" class="learn-btn">Learn More</a>
         </div>
+      </div>
 
-        <!-- CARD 4 -->
-        <div class="spin-card">
-          <img src="images/spin-motion/spinner-of-month.webp" alt="Spinner of the Month" class="spin-img">
-          <div class="spin-card-content">
-            <h3>Spinner of The Month</h3>
-            <p>An expert Clinician, Technologist or Radiologist presents every month on a wide array of informative topics.</p>
-            <a href="#" class="spin-btn">Learn More</a>
-          </div>
+      <!-- CARD 4 -->
+      <div class="spinner-card">
+        <img src="images/spin-motion/spinner-of-month.webp" alt="Spinner of the Month" class="spinner-img">
+        <div class="spinner-card-content">
+          <h3>Spinner of the Month</h3>
+          <p>An expert Clinician, Technologist or Radiologist presents every month on a wide array of informative topics.</p>
+          <a href="#" class="learn-btn">Learn More</a>
         </div>
+      </div>
 
-        <!-- CARD 5 -->
-        <div class="spin-card">
-          <img src="images/spin-motion/spin-wfpi.webp" alt="SPIN WFPI" class="spin-img">
-          <div class="spin-card-content">
-            <h3>Spin WFPI</h3>
-            <p>Access joint sessions with WFPI on pediatric imaging covering high-level head & neck topics.</p>
-            <a href="#" class="spin-btn">Learn More</a>
-          </div>
+      <!-- CARD 5 -->
+      <div class="spinner-card">
+        <img src="images/spin-motion/spin-wfpi.webp" alt="SPIN WFPI" class="spinner-img">
+        <div class="spinner-card-content">
+          <h3>Spin WFPI</h3>
+          <p>Access joint sessions with WFPI on pediatric imaging covering high-level head & neck topics.</p>
+          <a href="#" class="learn-btn">Learn More</a>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-
-
-
-    <!-- Upcoming Events -->
+   <!-- Upcoming Events -->
     <section class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
@@ -1169,6 +1352,117 @@
         </div>
     </section>
 
+
+<!-- partnerships -->
+<section class="partnerships-carousel py-20 bg-white">
+  <h2 class="text-4xl font-bold text-center mb-6 text-gray-900">Partnerships</h2>
+  <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+    SPIN collaborates with world-class partners to bring impactful pediatric neuroradiology programs globally.
+  </p>
+
+  <!-- Swiper Container -->
+  <div class="swiper mySwiper px-4">
+    <div class="swiper-wrapper">
+
+      <!-- Card 1 -->
+      <div class="swiper-slide">
+        <div class="partner-card-carousel">
+          <img src="images/wfpi-logo.webp" alt="WFPI" />
+          <h3>WFPI</h3>
+          <p>Empowering pediatric imaging through global education and outreach.</p>
+          <a href="#" class="learn-btn">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="swiper-slide">
+        <div class="partner-card-carousel">
+          <img src="images/ucl-logo.webp" alt="UCL" />
+          <h3>UCL</h3>
+          <p>Academic collaboration with a global neuroscience powerhouse.</p>
+          <a href="#" class="learn-btn">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="swiper-slide">
+        <div class="partner-card-carousel">
+          <img src="images/collective-minds-logo.webp" alt="Collective Minds" />
+          <h3>Collective Minds</h3>
+          <p>A collaborative medical imaging platform for learning and discussion.</p>
+          <a href="#" class="learn-btn">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="swiper-slide">
+        <div class="partner-card-carousel">
+          <img src="images/cortex-club-logo.webp" alt="Cortex Club" />
+          <h3>Cortex Club</h3>
+          <p>Engaging learners with neuroscience events and talks.</p>
+          <a href="#" class="learn-btn">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="swiper-slide">
+        <div class="partner-card-carousel">
+          <img src="images/pediatric-neuro-network.webp" alt="Neuro Network" />
+          <h3>Teaching Network</h3>
+          <p>Webinars, case reviews, and teaching from pediatric imaging experts.</p>
+          <a href="#" class="learn-btn">Learn More</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Navigation -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+
+    <!-- Pagination -->
+    <div class="swiper-pagination mt-6"></div>
+  </div>
+</section>
+<!-- membership/ subscription  -->
+<section class="membership-toggle-section">
+  <h2 class="membership-heading">Join SPIN Membership</h2>
+  <div class="membership-toggle-buttons">
+    <button id="standardBtn" class="toggle-btn active">Standard - US$50/year</button>
+    <button id="lowIncomeBtn" class="toggle-btn">Low/Lower-Middle Income - US$25/year</button>
+  </div>
+
+  <div class="form-container">
+    <!-- Standard Form -->
+    <form id="standardForm" class="membership-form">
+      <h3>Join Standard SPIN Membership</h3>
+      <p>Create an account to unlock exclusive content.</p>
+      <input type="text" placeholder="First Name" required>
+      <input type="text" placeholder="Last Name" required>
+      <input type="email" placeholder="Email" required>
+      <input type="password" placeholder="Create Password" required>
+      <input type="password" placeholder="Re-type Password" required>
+      <button type="submit" class="submit-btn">Create Account</button>
+      <p class="footnote">Already have an account? <a href="#">Sign in</a></p>
+    </form>
+
+    <!-- Low-Income Form -->
+    <form id="lowIncomeForm" class="membership-form hidden">
+      <h3>Join Low/Lower-Middle Income SPIN Membership</h3>
+      <p>Create an account to unlock exclusive content.</p>
+      <input type="text" placeholder="First Name" required>
+      <input type="text" placeholder="Last Name" required>
+      <input type="email" placeholder="Email" required>
+      <input type="password" placeholder="Create Password" required>
+      <input type="password" placeholder="Re-type Password" required>
+      <button type="submit" class="submit-btn">Create Account</button>
+      <p class="footnote">Already have an account? <a href="#">Sign in</a></p>
+    </form>
+  </div>
+</section>
+
+
+ 
     <!-- Footer -->
     <footer class="bg-gray-900 text-white py-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1259,113 +1553,40 @@
 
 
 
-    <!-- spin inmotion  -->
+
+
+<!-- partnerships -->
 <script>
- 
-// Mouse Tracker functionality
-const tracker = document.getElementById('mouseTracker');
-
-document.addEventListener('mousemove', (e) => {
-  const x = e.clientX / window.innerWidth * 100;
-  const y = e.clientY / window.innerHeight * 100;
-
-  tracker.style.setProperty('--mouse-x', `${x}%`);
-  tracker.style.setProperty('--mouse-y', `${y}%`);
-
-  tracker.style.background = `
-    url('images/spin-bg.gif') center center / cover no-repeat,
-    radial-gradient(circle at ${x}% ${y}%, rgba(255,255,255,0.12), transparent 70%)
-  `;
-});
-
-
-// Spin-in-Motion functionality
-const track = document.getElementById('spinTrack');
-const container = document.getElementById('spinContainer');
-
-// Clone enough cards for infinite scrolling
-let cards = Array.from(track.children);
-const visibleWidth = container.offsetWidth;
-const cardWidth = cards[0].offsetWidth + 32;
-const neededClones = Math.ceil((visibleWidth * 2) / cardWidth);
-
-for (let i = 0; i < neededClones; i++) {
-  cards.forEach(card => {
-    const clone = card.cloneNode(true);
-    clone.setAttribute('aria-hidden', 'true');
-    track.appendChild(clone);
+  var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    centeredSlides: true,
+    grabCursor: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 3,
+      },
+    },
   });
-}
-
-cards = Array.from(track.children);
-let totalCards = cards.length;
-let totalWidth = cardWidth * totalCards;
-let pos = 0;
-let speed = 1.1;
-let paused = false;
-
-// Animate spinning
-function animate() {
-  if (!paused) {
-    pos -= speed;
-    if (Math.abs(pos) >= totalWidth / 2) {
-      pos = 0;
-    }
-    track.style.transform = `translateX(${pos}px)`;
-  }
-  requestAnimationFrame(animate);
-}
-animate();
-
-// Pause on hover
-container.addEventListener('mouseenter', () => paused = true);
-container.addEventListener('mouseleave', () => paused = false);
-
-// Drag to scroll
-let isDragging = false;
-let dragStartX = 0;
-
-container.addEventListener('pointerdown', (e) => {
-  isDragging = true;
-  dragStartX = e.clientX;
-  paused = true;
-  container.style.cursor = 'grabbing';
-});
-
-container.addEventListener('pointermove', (e) => {
-  if (isDragging) {
-    const dx = e.clientX - dragStartX;
-    dragStartX = e.clientX;
-    pos += dx;
-    track.style.transform = `translateX(${pos}px)`;
-  }
-});
-
-container.addEventListener('pointerup', () => {
-  isDragging = false;
-  paused = false;
-  container.style.cursor = 'grab';
-});
-
-container.addEventListener('pointerleave', () => {
-  if (isDragging) {
-    isDragging = false;
-    paused = false;
-    container.style.cursor = 'grab';
-  }
-});
-
-// Recalculate on resize
-window.addEventListener('resize', () => {
-  const newCardWidth = cards[0].offsetWidth + 32;
-  totalWidth = newCardWidth * totalCards;
-});
-
 </script>
 
 
 
 
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 </body>
 <script>
@@ -1402,9 +1623,31 @@ const mainSwiper = new Swiper(".mainSwiper", {
     }
   }
 });
+//  membersghip toggle functionality
+
+  const standardBtn = document.getElementById("standardBtn");
+  const lowIncomeBtn = document.getElementById("lowIncomeBtn");
+
+  const standardForm = document.getElementById("standardForm");
+  const lowIncomeForm = document.getElementById("lowIncomeForm");
+
+  standardBtn.addEventListener("click", () => {
+    standardBtn.classList.add("active");
+    lowIncomeBtn.classList.remove("active");
+    standardForm.classList.remove("hidden");
+    lowIncomeForm.classList.add("hidden");
+  });
+
+  lowIncomeBtn.addEventListener("click", () => {
+    lowIncomeBtn.classList.add("active");
+    standardBtn.classList.remove("active");
+    lowIncomeForm.classList.remove("hidden");
+    standardForm.classList.add("hidden");
+  });
 
 
 </script>
+
 
 
 </html>
