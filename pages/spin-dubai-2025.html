@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membership - SPIN Academics</title>
+    <meta name="description" content="Join SPIN Academics and access exclusive educational resources, networking opportunities, and professional development">
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+
+
+@keyframes scroll-banner {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+.animate-scroll-banner {
+  animation: scroll-banner 25s linear infinite;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+        :root {
+            --primary-color: #0087ff;
+            --secondary-color: #00bfaf;
+        }
+
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .hero-glass {
+            background: rgba(0, 135, 255, 0.1);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(0, 135, 255, 0.2);
+        }
+
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .animate-fade-in {
+            animation: fadeIn 1s ease-out;
+        }
+
+        .animate-slide-in {
+            animation: slideIn 1s ease-out 0.2s both;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .bg-dubai {
+            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><defs><linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:%230087ff;stop-opacity:0.1" /><stop offset="100%" style="stop-color:%2300bfaf;stop-opacity:0.1" /></linearGradient></defs><rect width="1200" height="800" fill="url(%23grad1)"/></svg>');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .dropdown-item {
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .dropdown-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 135, 255, 0.1), transparent);
+            transition: left 0.6s ease;
+        }
+        .dropdown-item:hover::before {
+            left: 100%;
+        }
+        .dropdown-item:hover {
+            background: linear-gradient(135deg, rgba(0, 135, 255, 0.08), rgba(0, 191, 175, 0.08));
+            transform: translateX(8px);
+            border-left: 3px solid;
+            border-image: linear-gradient(135deg, #0087ff, #00bfaf) 1;
+        }
+        .nav-item {
+            position: relative;
+        }
+        .nav-item::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #0087ff, #00bfaf);
+            border-radius: 2px;
+            transition: width 0.3s ease;
+        }
+        .nav-item:hover::after {
+            width: 80%;
+        }
+        .join-btn {
+            background: linear-gradient(135deg, #0087ff 0%, #00bfaf 100%);
+            box-shadow: 0 4px 15px rgba(0, 135, 255, 0.3);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        .join-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 135, 255, 0.4);
+            background: linear-gradient(135deg, #006bcc 0%, #00998c 100%);
+        }
+
+        .pricing-card {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pricing-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 135, 255, 0.1), transparent);
+            transition: left 0.5s;
+        }
+
+        .pricing-card:hover::before {
+            left: 100%;
+        }
+.nav-active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 3px;
+  background: linear-gradient(90deg, #0087ff, #00bfaf);
+  border-radius: 2px;
+}
+
+
+.nav-item {
+  position: relative;
+}
+
+    </style>
+    <script>
+  document.querySelectorAll('.nav-item').forEach(link => {
+    if (window.location.pathname.includes(link.getAttribute('href'))) {
+      link.classList.add('nav-active');
+    }
+  });
+</script>
+
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-gray-200/50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3">
+                    <img src="../images/spin_logo.webp" alt="SPIN Academics Logo" class="h-10 w-10 rounded-full shadow-sm">
+                    <div class="hidden sm:block">
+                        <h1 class="text-xl font-bold gradient-text">SPIN Academics</h1>
+                        <p class="text-xs text-gray-600">Pediatric Neuroradiology Society</p>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden lg:flex items-center space-x-1">
+                    <a href="../index.html" class="px-4 py-2 text-sm font-medium text-gray-700 hover:text-primary-600 rounded-lg nav-item">Home</a>
+                    
+                    <!-- About Dropdown -->
+                    <div class="relative group">
+                        <button class="px-4 py-2 text-sm font-medium text-gray-700 hover:text-primary-600 rounded-lg nav-item flex items-center space-x-1">
+                            <span>About</span>
+                            <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="absolute top-full left-0 mt-1 w-64 bg-white rounded-xl shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform group-hover:translate-y-0 translate-y-2">
+                            <div class="p-2">
+                                <a href="about.html#presidents-welcome" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 rounded-lg">President's Welcome</a>
+                                <a href="about.html#founding-members" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 rounded-lg">Founding Members</a>
+                                <a href="about.html#executive-committee" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 rounded-lg">Executive Committee</a>
+                                <a href="about.html#scientific-committee" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 rounded-lg">Scientific Committee</a>
+                                <a href="about.html#research-admin-team" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 rounded-lg">Research & Admin Team</a>
+                                <a href="about.html#rising-stars" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 rounded-lg">Rising Stars</a>
+                            </div>
+                        </div>
+                    </div>
+
+<a href="membership.html" class="px-4 py-2 text-sm font-medium text-gray-700 hover:text-primary-600 nav-item nav-active">Membership</a>
+                    
+                    <!-- Education Dropdown -->
+                    <div class="relative group">
+                        <button class="px-4 py-2 text-sm font-medium text-gray-700 hover:text-primary-600 rounded-lg nav-item flex items-center space-x-1">
+                            <span>Education</span>
+                            <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="absolute top-full left-0 mt-1 w-64 bg-white rounded-xl shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform group-hover:translate-y-0 translate-y-2">
+                            <div class="p-2">
+                                <a href="society-fellowship-fixed.html" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 rounded-lg">Society Fellowship</a>
+                                <a href="education.html" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 rounded-lg">Education Offerings</a>
+                                <a href="cortex-club.html" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 rounded-lg">Cortex Club</a>
+                                <a href="spin-yarn-newsletter.html" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 rounded-lg">SPIN Yarn Newsletter</a>
+                                <a href="spin-wfpi.html" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 rounded-lg">SPIN-WFPI</a>
+                                <a href="spin-reporting-room.html" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 rounded-lg">SPIN Reporting Room</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Research Dropdown -->
+                    <div class="relative group">
+                        <button class="px-4 py-2 text-sm font-medium text-gray-700 hover:text-primary-600 rounded-lg nav-item flex items-center space-x-1">
+                            <span>Research</span>
+                            <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="absolute top-full left-0 mt-1 w-64 bg-white rounded-xl shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform group-hover:translate-y-0 translate-y-2">
+                            <div class="p-2">
+                                <a href="case-of-the-month.html" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 rounded-lg">Case of the Month</a>
+                                <a href="submit-proposal.html" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 rounded-lg">Submit a Proposal</a>
+                                <a href="green-radiology.html" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 rounded-lg">Green Radiology</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTA Button -->
+                <div class="hidden lg:flex items-center space-x-3">
+                    <a href="login.html" class="text-sm font-medium text-gray-700 hover:text-primary-600">Login</a>
+                    <a href="membership.html" class="join-btn text-white px-6 py-3 rounded-xl text-sm font-semibold transition-all">Join SPIN</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-lg hover:bg-gray-100">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="lg:hidden hidden border-t border-gray-200 bg-white">
+            <div class="px-4 py-3 space-y-2">
+                <a href="../index.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded-lg">Home</a>
+                <a href="about.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded-lg">About</a>
+                <a href="membership.html" class="block px-4 py-2 text-sm font-medium text-primary-600 bg-primary-50 rounded-lg">Membership</a>
+                <a href="education.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded-lg">Education</a>
+                <a href="research.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded-lg">Research</a>
+                <div class="pt-2 border-t border-gray-200">
+                    <a href="login.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded-lg">Login</a>
+                    <a href="membership.html" class="block px-4 py-2 text-sm font-medium text-white join-btn rounded-lg">Join SPIN</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+ <!-- Insert this into <body> of spin-dubai-2025.html, just below nav -->
+<section class="pt-20">
+  <!-- Dubai Banner with Scrolling Text -->
+  <div class="relative w-full h-[60vh] overflow-hidden">
+    <img src="../images/dubai_banner.webp" alt="Dubai Skyline" class="absolute inset-0 w-full h-full object-cover">
+    <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+      <div class="text-white text-4xl sm:text-5xl md:text-6xl font-bold whitespace-nowrap animate-scroll-banner">
+        SPIN In-Person Dubai 2025 * SPIN In-Person Dubai 2025 * SPIN In-Person Dubai 2025
+      </div>
+    </div>
+  </div>
+
+  <!-- Conference Description -->
+  <div class="max-w-4xl mx-auto px-6 py-12">
+    <h2 class="text-3xl sm:text-4xl font-bold gradient-text mb-6 text-center">The Future of Pediatric Neuroimaging</h2>
+    <p class="text-lg text-gray-700 leading-relaxed">
+      Join the Society of Pediatric Neuroimaging (SPIN) for a groundbreaking in-person conference in Dubai, 07–09 November 2025, in partnership with the Radiology Society of Emirates.
+      <br><br>
+      The annual SPIN conference this year in Dubai is designed to train bright minds like you further in the art and skill of Neuroradiology. Our mission is international outreach with world class teachers and our vision is to ensure we do our bit to make the care of patients with complex neurological disorders as standardised as possible across the world. This year, SPIN returns with an enhanced offering, with a nice mix of both pediatric and adult topics, kept practical and attuned to daily practice.
+      <br><br>
+      Forget passive lectures—this is interactive learning at its best! Our expert faculty don’t just teach—they engage, stepping into the room to dissect complex cases with you. Through immersive workshops, you’ll tackle real-world neuroradiology challenges side-by-side with pioneers in the field, turning theory into actionable skills. It isn’t just education—it’s collaboration, debate, and discovery, all designed to sharpen your clinical edge.
+      <br><br>
+      This year we collaborate with the Radiology Society of Emirates, and The Cortex Club to make your learning experience truly comprehensive, and we hope to build a platform for a strongly mentoring social environment.
+    </p>
+  </div>
+
+  <!-- Highlights Cards -->
+  <div class="bg-sky-50 py-12">
+    <h2 class="text-center text-xl sm:text-2xl font-semibold text-gray-800 mb-8">Why SPIN Dubai 2025 Stands Out !</h2>
+    <div class="max-w-6xl mx-auto px-4 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="glass-card p-6 rounded-xl shadow-lg card-hover">
+        <h3 class="text-lg font-semibold text-cyan-600 mb-2">World-Class Mentorship</h3>
+        <p class="text-gray-700">
+          Learn directly from <strong>50+ global experts</strong><br>
+          - no sterile lectures, just interactive, case-based learning.
+        </p>
+      </div>
+      <div class="glass-card p-6 rounded-xl shadow-lg card-hover">
+        <h3 class="text-lg font-semibold text-cyan-600 mb-2">Standardized Care</h3>
+        <p class="text-gray-700">
+          Our mission is to elevate neurological care worldwide through <strong>hands-on workshops</strong> and real-world applications.
+        </p>
+      </div>
+      <div class="glass-card p-6 rounded-xl shadow-lg card-hover">
+        <h3 class="text-lg font-semibold text-cyan-600 mb-2">Cutting-Edge Topics</h3>
+        <p class="text-gray-700">
+          Explore AI in neuroimaging, <strong>advanced fMRI techniques</strong>, radiogenomics, fetal MRI, and post-mortem insights.
+        </p>
+      </div>
+      <div class="glass-card p-6 rounded-xl shadow-lg card-hover">
+        <h3 class="text-lg font-semibold text-cyan-600 mb-2">Collaborative Learning</h3>
+        <p class="text-gray-700">
+          Partnering with <strong>Radiology Society of Emirates &amp; The Cortex Club</strong> for a <strong>mentorship-rich</strong>, socially engaging experience.
+        </p>
+      </div>
+      <div class="glass-card p-6 rounded-xl shadow-lg card-hover">
+        <h3 class="text-lg font-semibold text-cyan-600 mb-2">Multidisciplinary Panels</h3>
+        <p class="text-gray-700">
+          Collaborate with experts in tumor boards, <strong>epilepsy, metabolics</strong>, and stroke interventions.
+        </p>
+      </div>
+      <div class="glass-card p-6 rounded-xl shadow-lg card-hover">
+        <h3 class="text-lg font-semibold text-cyan-600 mb-2">Unique Networking</h3>
+        <p class="text-gray-700">
+          <strong>Sunrise meditations, interactive labs</strong>, and the Fellowship Viva Vocé that challenge traditional conference models.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Who Should Attend -->
+  <div class="py-16 px-6 max-w-5xl mx-auto">
+    <h2 class="text-center text-2xl font-bold text-cyan-600 mb-4">Who Should Attend and Why?</h2>
+    <p class="text-center text-gray-700 text-lg mb-8">
+      Pediatric radiologists, neuroradiologists, clinicians, and researchers seeking to elevate their skills with pragmatic, globally relevant education.
+      SPIN isn’t just a conference—it’s a two-way knowledge exchange where you debate, question, and grow alongside pioneers in the field.
+    </p>
+    <div class="text-center text-lg">
+      <p class="text-cyan-500 font-semibold text-xl mb-2">Don’t miss the meeting of the future!</p>
+      <p>📍 Dubai | 📅 7–9 Nov 2025</p>
+      <p class="mt-2">👥 Limited Seats—Claim Your Spot Today!</p>
+    </div>
+  </div>
+
+  <!-- Registration Link + QR -->
+  <div class="max-w-5xl mx-auto px-6 grid sm:grid-cols-2 gap-6 pb-16">
+    <div class="bg-[#80bcbc] text-white rounded-lg p-6 text-center">
+      <p class="mb-4">Conference Registration Link</p>
+      <a href="#" class="bg-white text-cyan-600 font-semibold text-xl py-2 px-6 rounded hover:underline">Click Here</a>
+    </div>
+    <div class="bg-[#80bcbc] text-white rounded-lg p-6 text-center">
+      <p class="mb-4">Conference Registration QR Code</p>
+      <img src="../images/qr_registration.png" alt="QR Code" class="mx-auto w-40 h-40">
+    </div>
+  </div>
+
+  <!-- Footer Quote -->
+  <div class="text-center px-6 pb-8">
+    <p class="text-gray-700 italic max-w-4xl mx-auto">
+      “Where global expertise meets active learning—for a future of better patient care.”
+    </p>
+    <p class="text-cyan-600 font-bold text-lg mt-4">#SPIN25 – See You in Dubai!</p>
+  </div>
+</section>
+
+<!-- SPIN Feedback Section -->
+<section class="bg-[#34b8c2] py-16 text-white">
+  <div class="max-w-7xl mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center mb-8">SPIN Feedback</h2>
+    <div class="text-center space-y-4 text-lg leading-relaxed">
+      <p>"An excellent course equivalent to an update in all things practical and topical!"</p>
+      <p>"As usual, SPIN delivers only the best in pediatric neuroimaging!"</p>
+      <p>"The best pediatric radiology teaching around!"</p>
+      <p>"SPIN offers something for everyone, from registrar to seasoned attending!"</p>
+      <p>"Phenomenal experience! Will attend again and recommend highly to all I know!"</p>
+      <p>"Exquisite content, comprehensive coverage of all topics, and very high level of education!"</p>
+      <p>"Fantastically well organized. Very informative and mentorship-rich."</p>
+      <p>"Amazingly great meeting. SPIN keeps raising the bar!"</p>
+      <p>"A truly charitable organization with low registration fees for developing countries."</p>
+    </div>
+  </div>
+</section>
+
+
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <img src="../images/spin_logo.webp" alt="SPIN Academics" class="h-10 w-auto">
+                        <span class="text-2xl font-bold gradient-text">SPIN Academics</span>
+                    </div>
+                    <p class="text-gray-300 mb-6 max-w-md">
+                        Advancing spinal pain management through education, research, and professional collaboration.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-blue-700 rounded-full flex items-center justify-center hover:bg-blue-800 transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center hover:bg-red-700 transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-lg mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="../index.html" class="hover:text-white transition-colors">Home</a></li>
+                        <li><a href="about.html" class="hover:text-white transition-colors">About</a></li>
+                        <li><a href="membership.html" class="hover:text-white transition-colors">Membership</a></li>
+                        <li><a href="education.html" class="hover:text-white transition-colors">Education</a></li>
+                        <li><a href="research.html" class="hover:text-white transition-colors">Research</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-lg mb-4">Contact Info</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>Email: membership@spinacademics.org</li>
+                        <li>Phone: +1 (555) 123-4567</li>
+                        <li>Address: 123 Medical Center Dr</li>
+                        <li>Dubai, UAE</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 SPIN Academics. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

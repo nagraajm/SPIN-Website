@@ -8,6 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
     <script>
         tailwind.config = {
             theme: {
@@ -80,106 +82,249 @@
             }
         }
     </script>
-    <style>
-        .gradient-bg {
-            background: linear-gradient(135deg, #0087ff 0%, #00bfaf 100%);
-        }
-        .gradient-text {
-            background: linear-gradient(135deg, #0087ff, #00bfaf);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        .glass-effect {
-            background: rgba(0, 135, 255, 0.1);
-            backdrop-filter: blur(15px);
-            border: 1px solid rgba(0, 135, 255, 0.2);
-        }
-        .hero-glass {
-            background: rgba(0, 135, 255, 0.05);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(0, 135, 255, 0.1);
-        }
-        .hero-pattern {
-            background-image: radial-gradient(circle at 1px 1px, rgba(0, 135, 255, 0.1) 1px, transparent 0);
-            background-size: 30px 30px;
-        }
-        .nav-active {
-            position: relative;
-        }
-        .nav-active::after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: linear-gradient(90deg, #0087ff, #00bfaf);
-            border-radius: 2px;
-        }
-        .nav-item {
-            position: relative;
-        }
-        .nav-item::after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 0;
-            height: 2px;
-            background: linear-gradient(90deg, #0087ff, #00bfaf);
-            border-radius: 2px;
-            transition: width 0.3s ease;
-        }
-        .nav-item:hover::after {
-            width: 80%;
-        }
-        .join-btn {
-            background: linear-gradient(135deg, #0087ff 0%, #00bfaf 100%);
-            box-shadow: 0 4px 15px rgba(0, 135, 255, 0.3);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: all 0.3s ease;
-        }
-        .join-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(0, 135, 255, 0.4);
-            background: linear-gradient(135deg, #006bcc 0%, #00998c 100%);
-        }
-        .dropdown-item {
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-        .dropdown-item::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(0, 135, 255, 0.1), transparent);
-            transition: left 0.6s ease;
-        }
-        .dropdown-item:hover::before {
-            left: 100%;
-        }
-        .dropdown-item:hover {
-            background: linear-gradient(135deg, rgba(0, 135, 255, 0.08), rgba(0, 191, 175, 0.08));
-            transform: translateX(8px);
-            border-left: 3px solid;
-            border-image: linear-gradient(135deg, #0087ff, #00bfaf) 1;
-        }
-        .card-hover {
-            transition: all 0.3s ease;
-        }
-        .card-hover:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-        }
-    </style>
+<style>
+/* Global Styles */
+.gradient-bg {
+  background: linear-gradient(135deg, #0087ff 0%, #00bfaf 100%);
+}
+.gradient-text {
+  background: linear-gradient(135deg, #0087ff, #00bfaf);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.glass-effect {
+  background: rgba(0, 135, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(0, 135, 255, 0.2);
+}
+.hero-glass {
+  background: rgba(0, 135, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(0, 135, 255, 0.1);
+}
+.hero-pattern {
+  background-image: radial-gradient(circle at 1px 1px, rgba(0, 135, 255, 0.1) 1px, transparent 0);
+  background-size: 30px 30px;
+}
+.nav-active {
+  position: relative;
+}
+.nav-active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #0087ff, #00bfaf);
+  border-radius: 2px;
+}
+.nav-item {
+  position: relative;
+}
+.nav-item::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #0087ff, #00bfaf);
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+.nav-item:hover::after {
+  width: 80%;
+}
+.join-btn {
+  background: linear-gradient(135deg, #0087ff 0%, #00bfaf 100%);
+  box-shadow: 0 4px 15px rgba(0, 135, 255, 0.3);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+.join-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 135, 255, 0.4);
+  background: linear-gradient(135deg, #006bcc 0%, #00998c 100%);
+}
+.dropdown-item {
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+.dropdown-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0, 135, 255, 0.1), transparent);
+  transition: left 0.6s ease;
+}
+.dropdown-item:hover::before {
+  left: 100%;
+}
+.dropdown-item:hover {
+  background: linear-gradient(135deg, rgba(0, 135, 255, 0.08), rgba(0, 191, 175, 0.08));
+  transform: translateX(8px);
+  border-left: 3px solid;
+  border-image: linear-gradient(135deg, #0087ff, #00bfaf) 1;
+}
+.card-hover {
+  transition: all 0.3s ease;
+}
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Main Slide Styling */
+.swiper-slide {
+  display: flex;
+  align-items: stretch;
+  height: 100%;
+}
+.card-slide {
+  position: relative;
+  width: 100%;
+  height: 520px;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+.card-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 1.5rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  width: 100%;
+  color: white;
+}
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+.card-text {
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+.card-btn {
+  display: inline-block;
+  background-color: #0087ff;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+.card-btn:hover {
+  background-color: #006bcc;
+}
+.thumbSwiper {
+  padding: 1.5rem 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Hide scrollbars cross-browser */
+.thumbSwiper::-webkit-scrollbar {
+  display: none;
+}
+.thumbSwiper {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+/* Wrapper config */
+.thumbSwiper .swiper-wrapper {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  gap: 24px;
+  padding: 0 24px;
+}
+
+/* Each thumbnail */
+.thumbSwiper .swiper-slide {
+  flex-shrink: 0;
+  width: 160px;
+  height: 110px;
+  position: relative;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  cursor: grab;
+  scroll-snap-align: center;
+}
+
+/* Thumbnail image */
+.thumbSwiper .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.75rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: block;
+}
+
+/* Active highlight */
+.thumbSwiper .swiper-slide-thumb-active {
+  border: 3px solid #00bfff;
+  box-shadow: 0 0 20px rgba(0, 191, 255, 0.8), 0 0 40px rgba(0, 191, 255, 0.5);
+  transform: scale(1.1);
+  z-index: 2;
+}
+
+/* Glow effect */
+.thumbSwiper .swiper-slide-thumb-active::after {
+  content: '';
+  position: absolute;
+  inset: -6px;
+  border-radius: 1rem;
+  background: radial-gradient(circle, rgba(0, 191, 255, 0.2) 0%, transparent 70%);
+  animation: pulseGlow 1.5s ease-in-out infinite;
+  z-index: -1;
+}
+
+@keyframes pulseGlow {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+}
+
+
+
+</style>
+
 </head>
+<!-- Swiper.js JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+
 <body class="font-sans bg-gray-50">
     <!-- Navigation -->
     <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-gray-200/50 shadow-sm">
@@ -347,6 +492,126 @@
             </svg>
         </div>
     </section>
+
+<section class="py-20 bg-white">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="text-center mb-10">
+      <h2 class="text-4xl font-bold text-gray-900">Interactive Highlights</h2>
+      <p class="text-lg text-gray-600">Scroll through featured programs</p>
+    </div>
+
+    <!-- Main Swiper -->
+    <div class="swiper mainSwiper mb-6">
+      <div class="swiper-wrapper">
+
+        <!-- Slide 1 -->
+        <div class="swiper-slide">
+          <div class="card-slide">
+            <img src="images/dubai/dubai_background.webp" alt="Dubai">
+            <div class="card-overlay">
+              <h3 class="card-title">SPIN IN-PERSON DUBAI</h3>
+              <p class="card-text">7–9th November 2025. Conference registrations are open!</p>
+              <a href="pages\spin-dubai-2025.html" class="card-btn">Read More & Register Now</a>
+            </div>
+          </div>
+        </div>
+         
+
+        <!-- Slide 2 -->
+        <div class="swiper-slide">
+          <div class="card-slide">
+            <img src="images/2025+Part+1+Foundations.jpg" alt="Part 1">
+            <div class="card-overlay">
+              <h3 class="card-title">Part 1: Foundation</h3>
+              <p class="card-text">Register now for Part 1: Foundations</p>
+              <a href="#" class="card-btn">Register Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="swiper-slide">
+          <div class="card-slide">
+            <img src="images/2025+Part+2+Levelling+Up.jpg" alt="Part 2">
+            <div class="card-overlay">
+              <h3 class="card-title">Part 2: Levelling Up</h3>
+              <p class="card-text">Register now for Part 2: Levelling Up</p>
+              <a href="#" class="card-btn">Register Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="swiper-slide">
+          <div class="card-slide">
+            <img src="images/DSC_9026.jpeg" alt="Fellowship">
+            <div class="card-overlay">
+              <h3 class="card-title">Fellowship</h3>
+              <p class="card-text">From essentials to workshops, SPIN fosters academic growth.</p>
+              <a href="#" class="card-btn">Learn More</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 5 -->
+        <div class="swiper-slide">
+          <div class="card-slide">
+            <img src="images/Screenshot+2023-02-21+at+10.06.58.png" alt="Research">
+            <div class="card-overlay">
+              <h3 class="card-title">Research</h3>
+              <p class="card-text">Innovative research advancing pediatric neuro care.</p>
+              <a href="#" class="card-btn">Change the Field</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 6 -->
+        <div class="swiper-slide">
+          <div class="card-slide">
+            <img src="images/Attendee+Map.png" alt="Global Outreach">
+            <div class="card-overlay">
+              <h3 class="card-title">Global Outreach</h3>
+              <p class="card-text">Low-cost world-class education for underserved areas.</p>
+              <a href="#" class="card-btn">Join the Movement</a>
+            </div>
+          </div>
+        </div>
+   <!-- Slide 7-->
+        <div class="swiper-slide">
+          <div class="card-slide">
+            <img src="images/2025+Part+1+Foundatiyty.jpg" alt="Part 7">
+            <div class="card-overlay">
+              <h3 class="card-title">Part 1: Ftyndation</h3>
+              <p class="card-text">Register now tyr Part 1: Foundations</p>
+              <a href="#" class="card-btn">Regitytytyty</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Thumbnail Swiper -->
+    <div class="swiper thumbSwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="images/dubai/dubai_background.webp" alt="Dubai"></div>
+        <div class="swiper-slide"><img src="images/2025+Part+1+Foundations.jpg" alt="Part 1"></div>
+        <div class="swiper-slide"><img src="images/2025+Part+2+Levelling+Up.jpg" alt="Part 2"></div>
+        <div class="swiper-slide"><img src="images/DSC_9026.jpeg" alt="Fellowship"></div>
+        <div class="swiper-slide"><img src="images/Screenshot+2023-02-21+at+10.06.58.png" alt="Research"></div>
+        <div class="swiper-slide"><img src="images/Attendee+Map.png" alt="Outreach"></div>
+         <div class="swiper-slide"><img src="images/Attendee+Map.png" alt="Outreach"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
 
     <!-- Stats Section -->
     <section class="py-16 bg-white">
@@ -607,4 +872,43 @@
         });
     </script>
 </body>
+<script>
+const thumbSwiper = new Swiper(".thumbSwiper", {
+  slidesPerView: "auto",
+  spaceBetween: 24,
+  freeMode: true,
+  watchSlidesProgress: true,
+});
+
+const mainSwiper = new Swiper(".mainSwiper", {
+  loop: true,
+  spaceBetween: 10,
+  autoplay: {
+    delay: 4000,
+    disableOnInteraction: false,
+  },
+  thumbs: {
+    swiper: thumbSwiper,
+  },
+  on: {
+    slideChange: function () {
+      const index = this.realIndex;
+      const targetSlide = thumbSwiper.slides[index];
+      if (targetSlide) {
+        const left = targetSlide.offsetLeft;
+        const width = targetSlide.offsetWidth;
+        const containerWidth = thumbSwiper.el.offsetWidth;
+        thumbSwiper.el.scrollTo({
+          left: left - containerWidth / 2 + width / 2,
+          behavior: "smooth",
+        });
+      }
+    }
+  }
+});
+
+
+</script>
+
+
 </html>
