@@ -189,7 +189,23 @@
                 <!-- Desktop Navigation -->
                 <div class="hidden lg:flex items-center space-x-1">
                     <a href="../index.html" class="px-4 py-2 text-sm font-medium text-gray-700 hover:text-primary-600 rounded-lg nav-item">Home</a>
-   <a href="events.html" class="px-4 py-2 text-sm font-medium text-gray-700 hover:text-primary-600 rounded-lg nav-item">Events</a>
+   <!-- Events Dropdown -->
+<div class="relative group">
+  <button class="px-4 py-2 text-sm font-medium text-gray-700 hover:text-primary-600 rounded-lg nav-item flex items-center space-x-1">
+    <span>Events</span>
+    <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+    </svg>
+  </button>
+  <div class="absolute top-full left-0 mt-1 w-56 bg-white rounded-xl shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform group-hover:translate-y-0 translate-y-2 z-50">
+    <div class="p-2">
+      <!-- Notice we go to the home page and jump to section -->
+      <a href="/index.html#upcoming-events" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 rounded-lg">Upcoming Events</a>
+      <a href="/index.html#past-events" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 rounded-lg">Past Events</a>
+    </div>
+  </div>
+</div>
+
                     
                     <!-- About Dropdown -->
                     <div class="relative group">
@@ -303,270 +319,466 @@
                 <h2 class="text-3xl md:text-4xl font-bold gradient-text text-center mb-16">President's Welcome</h2>
                 <div class="grid md:grid-cols-2 gap-12 items-center">
                     <div class="space-y-6 text-gray-700 leading-relaxed">
-                        <h3 class="text-2xl font-semibold text-gray-900">Welcome to SPIN Academics</h3>
-                        <p><strong>Dear Colleagues and Friends,</strong></p>
-                        <p>It is my great pleasure to welcome you to the Society for Pediatric and Investigative Neuroradiology (SPIN). Our organization stands at the forefront of pediatric neuroradiology education, research, and professional development.</p>
-                        <p>SPIN was founded with a vision to create a global community of pediatric neuroradiology professionals dedicated to advancing the field through innovative education, collaborative research, and evidence-based practice.</p>
-                        <p>Whether you are a seasoned professional, a fellow in training, or someone interested in pediatric neuroradiology, SPIN offers valuable resources and connections to support your professional journey.</p>
-                        <p>Together, we can continue to advance pediatric neuroradiology and improve patient care worldwide.</p>
-                        <div class="pt-4">
-                            <p class="font-medium">Warm regards,</p>
-                            <p class="font-bold text-primary-700">Dr. [President Name]</p>
-                            <p class="text-sm text-gray-600">President, SPIN Academics</p>
-                        </div>
-                    </div>
-                    <div class="flex justify-center">
-                        <div class="w-80 h-80 bg-gradient-to-br from-primary-100 to-secondary-100 rounded-2xl flex items-center justify-center card-hover">
-                            <div class="text-center">
-                                <div class="w-32 h-32 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                                    <span class="text-4xl text-white">👨‍⚕️</span>
-                                </div>
-                                <p class="text-gray-600">President Photo</p>
-                            </div>
-                        </div>
-                    </div>
+  <p>It is a privilege to serve as President of the SPIN Neuroradiology Society, a dynamic community dedicated to advancing pediatric neuroradiology. I am honored to build on its strong foundation and collaborative spirit.</p>
+  <p>My sincere gratitude to Dr. Kish Mankad for his leadership in shaping SPIN. The success of SPIN2024 in Goa highlighted our collective commitment to high-quality education and meaningful discussions.</p>
+  <p>Looking ahead, SPIN2025 in Dubai, in collaboration with the Radiological Society of the Emirates, marks an exciting milestone. By bringing the event to the UAE, we aim to expand access and engagement across the region.</p>
+  <p>Education remains central to SPIN. We will continue growing our web-based learning platforms and fellowship programs to shape the next generation of pediatric neuroradiologists.</p>
+  <p>None of this is possible without our dedicated team and members. Thank you for your contributions—I welcome your ideas as we push boundaries and elevate pediatric neuroradiology together.</p>
+  <div class="pt-4">
+    <p class="font-medium">Warm regards,</p>
+    <p class="font-bold text-primary-700">Dr Ozgur Oztekin</p>
+    <p class="text-sm text-gray-600">President, SPIN Academics – December 2024</p>
+  </div>
+</div>
+<div class="flex justify-center">
+  <div class="w-80 h-80 bg-gradient-to-br from-primary-100 to-secondary-100 rounded-2xl flex items-center justify-center card-hover">
+    <div class="text-center">
+      <div class="w-32 h-32 rounded-full overflow-hidden mx-auto mb-4">
+        <img src="../images/about/ozgur-oztekin.jpg" alt="Dr. Ozgur Oztekin" class="w-full h-full object-cover">
+      </div>
+      <p class="text-gray-600">Ozgur Oztekin</p>
+    </div>
+  </div>
+</div>
+
                 </div>
             </div>
         </section>
 
         <!-- Founding Members -->
-        <section class="py-20 bg-white" id="founding-members">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-3xl md:text-4xl font-bold gradient-text text-center mb-16">Founding Members</h2>
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="bg-gray-50 rounded-2xl p-6 text-center card-hover">
-                        <div class="w-24 h-24 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                            <span class="text-2xl text-white">👩‍⚕️</span>
-                        </div>
-                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Dr. Sarah Johnson</h3>
-                        <p class="text-primary-600 font-medium mb-1">Founding President</p>
-                        <p class="text-gray-600 text-sm mb-4">Children's Hospital of Philadelphia</p>
-                        <button class="px-4 py-2 bg-secondary-500 text-white rounded-lg text-sm hover:bg-secondary-600 transition-colors">Read Bio</button>
-                    </div>
-                    <div class="bg-gray-50 rounded-2xl p-6 text-center card-hover">
-                        <div class="w-24 h-24 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                            <span class="text-2xl text-white">👨‍⚕️</span>
-                        </div>
-                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Dr. Michael Chen</h3>
-                        <p class="text-primary-600 font-medium mb-1">Co-Founder</p>
-                        <p class="text-gray-600 text-sm mb-4">Boston Children's Hospital</p>
-                        <button class="px-4 py-2 bg-secondary-500 text-white rounded-lg text-sm hover:bg-secondary-600 transition-colors">Read Bio</button>
-                    </div>
-                    <div class="bg-gray-50 rounded-2xl p-6 text-center card-hover">
-                        <div class="w-24 h-24 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                            <span class="text-2xl text-white">👩‍⚕️</span>
-                        </div>
-                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Dr. Emma Rodriguez</h3>
-                        <p class="text-primary-600 font-medium mb-1">Co-Founder</p>
-                        <p class="text-gray-600 text-sm mb-4">Great Ormond Street Hospital</p>
-                        <button class="px-4 py-2 bg-secondary-500 text-white rounded-lg text-sm hover:bg-secondary-600 transition-colors">Read Bio</button>
-                    </div>
-                    <div class="bg-gray-50 rounded-2xl p-6 text-center card-hover">
-                        <div class="w-24 h-24 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                            <span class="text-2xl text-white">👨‍⚕️</span>
-                        </div>
-                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Dr. James Wilson</h3>
-                        <p class="text-primary-600 font-medium mb-1">Co-Founder</p>
-                        <p class="text-gray-600 text-sm mb-4">Hospital for Sick Children</p>
-                        <button class="px-4 py-2 bg-secondary-500 text-white rounded-lg text-sm hover:bg-secondary-600 transition-colors">Read Bio</button>
-                    </div>
-                    <div class="bg-gray-50 rounded-2xl p-6 text-center card-hover">
-                        <div class="w-24 h-24 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                            <span class="text-2xl text-white">👩‍⚕️</span>
-                        </div>
-                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Dr. Lisa Anderson</h3>
-                        <p class="text-primary-600 font-medium mb-1">Co-Founder</p>
-                        <p class="text-gray-600 text-sm mb-4">Royal Children's Hospital Melbourne</p>
-                        <button class="px-4 py-2 bg-secondary-500 text-white rounded-lg text-sm hover:bg-secondary-600 transition-colors">Read Bio</button>
-                    </div>
-                    <div class="bg-gray-50 rounded-2xl p-6 text-center card-hover">
-                        <div class="w-24 h-24 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                            <span class="text-2xl text-white">👨‍⚕️</span>
-                        </div>
-                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Dr. Robert Kim</h3>
-                        <p class="text-primary-600 font-medium mb-1">Co-Founder</p>
-                        <p class="text-gray-600 text-sm mb-4">Seoul National University Children's Hospital</p>
-                        <button class="px-4 py-2 bg-secondary-500 text-white rounded-lg text-sm hover:bg-secondary-600 transition-colors">Read Bio</button>
-                    </div>
-                </div>
-            </div>
-        </section>
+<section class="py-20 bg-white" id="founding-members">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-3xl md:text-4xl font-bold gradient-text text-center mb-16">Founding Members - The SPIN Board</h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      
+      <!-- Member 1 -->
+      <div class="bg-gray-50 rounded-2xl p-6 text-center card-hover">
+        <div class="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4">
+          <img src="../images/about/ozgur-oztekin.jpg" alt="Ozgur Oztekin" class="w-full h-full object-cover">
+        </div>
+        <h3 class="text-xl font-semibold text-gray-900 mb-2">Ozgur Oztekin</h3>
+        <button class="px-4 py-2 bg-secondary-500 text-white rounded-lg text-sm hover:bg-secondary-600 transition-colors">Read Bio</button>
+      </div>
 
-        <!-- Executive Committee -->
-        <section class="py-20" id="executive-committee">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-3xl md:text-4xl font-bold gradient-text text-center mb-16">Executive Committee</h2>
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="bg-white rounded-2xl p-6 text-center shadow-lg card-hover">
-                        <div class="w-24 h-24 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                            <span class="text-2xl text-white">👩‍⚕️</span>
-                        </div>
-                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Dr. Sarah Johnson</h3>
-                        <p class="text-primary-600 font-medium mb-1">President</p>
-                        <p class="text-gray-600 text-sm">Children's Hospital of Philadelphia</p>
-                    </div>
-                    <div class="bg-white rounded-2xl p-6 text-center shadow-lg card-hover">
-                        <div class="w-24 h-24 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                            <span class="text-2xl text-white">👨‍⚕️</span>
-                        </div>
-                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Dr. Michael Chen</h3>
-                        <p class="text-primary-600 font-medium mb-1">Vice President</p>
-                        <p class="text-gray-600 text-sm">Boston Children's Hospital</p>
-                    </div>
-                    <div class="bg-white rounded-2xl p-6 text-center shadow-lg card-hover">
-                        <div class="w-24 h-24 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                            <span class="text-2xl text-white">👩‍⚕️</span>
-                        </div>
-                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Dr. Emma Rodriguez</h3>
-                        <p class="text-primary-600 font-medium mb-1">Secretary</p>
-                        <p class="text-gray-600 text-sm">Great Ormond Street Hospital</p>
-                    </div>
-                    <div class="bg-white rounded-2xl p-6 text-center shadow-lg card-hover">
-                        <div class="w-24 h-24 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                            <span class="text-2xl text-white">👨‍⚕️</span>
-                        </div>
-                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Dr. James Wilson</h3>
-                        <p class="text-primary-600 font-medium mb-1">Treasurer</p>
-                        <p class="text-gray-600 text-sm">Hospital for Sick Children</p>
-                    </div>
-                    <div class="bg-white rounded-2xl p-6 text-center shadow-lg card-hover">
-                        <div class="w-24 h-24 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                            <span class="text-2xl text-white">👩‍⚕️</span>
-                        </div>
-                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Dr. Lisa Anderson</h3>
-                        <p class="text-primary-600 font-medium mb-1">Education Director</p>
-                        <p class="text-gray-600 text-sm">Royal Children's Hospital Melbourne</p>
-                    </div>
-                    <div class="bg-white rounded-2xl p-6 text-center shadow-lg card-hover">
-                        <div class="w-24 h-24 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                            <span class="text-2xl text-white">👨‍⚕️</span>
-                        </div>
-                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Dr. Robert Kim</h3>
-                        <p class="text-primary-600 font-medium mb-1">Research Director</p>
-                        <p class="text-gray-600 text-sm">Seoul National University Children's Hospital</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+      <!-- Member 2 -->
+      <div class="bg-gray-50 rounded-2xl p-6 text-center card-hover">
+        <div class="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4">
+          <img src="../images/about/robert-goetti.jpg" alt="Robert Goetti" class="w-full h-full object-cover">
+        </div>
+        <h3 class="text-xl font-semibold text-gray-900 mb-2">Robert Goetti</h3>
+        <button class="px-4 py-2 bg-secondary-500 text-white rounded-lg text-sm hover:bg-secondary-600 transition-colors">Read Bio</button>
+      </div>
+
+      <!-- Member 3 -->
+      <div class="bg-gray-50 rounded-2xl p-6 text-center card-hover">
+        <div class="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4">
+          <img src="../images/about/ajay-taranath.jpg" alt="Ajay Taranath" class="w-full h-full object-cover">
+        </div>
+        <h3 class="text-xl font-semibold text-gray-900 mb-2">Ajay Taranath</h3>
+        <button class="px-4 py-2 bg-secondary-500 text-white rounded-lg text-sm hover:bg-secondary-600 transition-colors">Read Bio</button>
+      </div>
+
+      <!-- Member 4 -->
+      <div class="bg-gray-50 rounded-2xl p-6 text-center card-hover">
+        <div class="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4">
+          <img src="../images/about/nihaal-reddy.jpg" alt="Nihaal Reddy" class="w-full h-full object-cover">
+        </div>
+        <h3 class="text-xl font-semibold text-gray-900 mb-2">Nihaal Reddy</h3>
+        <button class="px-4 py-2 bg-secondary-500 text-white rounded-lg text-sm hover:bg-secondary-600 transition-colors">Read Bio</button>
+      </div>
+
+      <!-- Member 5 -->
+      <div class="bg-gray-50 rounded-2xl p-6 text-center card-hover">
+        <div class="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4">
+          <img src="../images/about/prasad-hanagandi.jpg" alt="Prasad Hanagandi" class="w-full h-full object-cover">
+        </div>
+        <h3 class="text-xl font-semibold text-gray-900 mb-2">Prasad Hanagandi</h3>
+        <button class="px-4 py-2 bg-secondary-500 text-white rounded-lg text-sm hover:bg-secondary-600 transition-colors">Read Bio</button>
+      </div>
+
+      <!-- Member 6 -->
+      <div class="bg-gray-50 rounded-2xl p-6 text-center card-hover">
+        <div class="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4">
+          <img src="../images/about/pradeep-krishnan.jpg" alt="Pradeep Krishnan" class="w-full h-full object-cover">
+        </div>
+        <h3 class="text-xl font-semibold text-gray-900 mb-2">Pradeep Krishnan</h3>
+        <button class="px-4 py-2 bg-secondary-500 text-white rounded-lg text-sm hover:bg-secondary-600 transition-colors">Read Bio</button>
+      </div>
+
+      <!-- Member 7 -->
+      <div class="bg-gray-50 rounded-2xl p-6 text-center card-hover">
+        <div class="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4">
+          <img src="../images/about/kish-mankad.jpg" alt="Kish Mankad" class="w-full h-full object-cover">
+        </div>
+        <h3 class="text-xl font-semibold text-gray-900 mb-2">Kish Mankad</h3>
+        <button class="px-4 py-2 bg-secondary-500 text-white rounded-lg text-sm hover:bg-secondary-600 transition-colors">Read Bio</button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- Executive Committee -->
+<section class="py-20" id="executive-committee">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-3xl md:text-4xl font-bold gradient-text text-center mb-16">Executive Committee</h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <!-- Ozgur Oztekin -->
+      <div class="bg-white rounded-2xl p-6 text-center shadow-lg card-hover">
+        <div class="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4">
+          <img src="../images/about/ozgur-oztekin.jpg" alt="Ozgur Oztekin" class="w-full h-full object-cover">
+        </div>
+        <h3 class="text-xl font-semibold text-gray-900 mb-2">Ozgur Oztekin</h3>
+        <p class="text-primary-600 font-medium mb-1">President</p>
+      </div>
+
+      <!-- Robert Goetti -->
+      <div class="bg-white rounded-2xl p-6 text-center shadow-lg card-hover">
+        <div class="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4">
+          <img src="../images/about/robert-goetti.jpg" alt="Robert Goetti" class="w-full h-full object-cover">
+        </div>
+        <h3 class="text-xl font-semibold text-gray-900 mb-2">Robert Goetti</h3>
+        <p class="text-primary-600 font-medium mb-1">President Elect</p>
+      </div>
+
+      <!-- Ajay Taranath -->
+      <div class="bg-white rounded-2xl p-6 text-center shadow-lg card-hover">
+        <div class="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4">
+          <img src="../images/about/ajay-taranath.jpg" alt="Ajay Taranath" class="w-full h-full object-cover">
+        </div>
+        <h3 class="text-xl font-semibold text-gray-900 mb-2">Ajay Taranath</h3>
+        <p class="text-primary-600 font-medium mb-1">General Secretary</p>
+      </div>
+
+      <!-- Nihaal Reddy -->
+      <div class="bg-white rounded-2xl p-6 text-center shadow-lg card-hover">
+        <div class="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4">
+          <img src="../images/about/nihaal-reddy.jpg" alt="Nihaal Reddy" class="w-full h-full object-cover">
+        </div>
+        <h3 class="text-xl font-semibold text-gray-900 mb-2">Nihaal Reddy</h3>
+        <p class="text-primary-600 font-medium mb-1">Treasurer</p>
+      </div>
+
+      <!-- Sniya Sudhakar -->
+      <div class="bg-white rounded-2xl p-6 text-center shadow-lg card-hover">
+        <div class="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4">
+          <img src="../images/about/sniya-sudhakar.jpg" alt="Sniya Sudhakar" class="w-full h-full object-cover">
+        </div>
+        <h3 class="text-xl font-semibold text-gray-900 mb-2">Sniya Sudhakar</h3>
+        <p class="text-primary-600 font-medium mb-1">Innovation Lead</p>
+      </div>
+
+      <!-- Pradeep Krishnan -->
+      <div class="bg-white rounded-2xl p-6 text-center shadow-lg card-hover">
+        <div class="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4">
+          <img src="../images/about/pradeep-krishnan.jpg" alt="Pradeep Krishnan" class="w-full h-full object-cover">
+        </div>
+        <h3 class="text-xl font-semibold text-gray-900 mb-2">Pradeep Krishnan</h3>
+        <p class="text-primary-600 font-medium mb-1">Scientific Chair, Research</p>
+      </div>
+
+      <!-- Suraj Serai -->
+      <div class="bg-white rounded-2xl p-6 text-center shadow-lg card-hover">
+        <div class="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4">
+          <img src="../images/about/suraj-serai.jpg" alt="Suraj Serai" class="w-full h-full object-cover">
+        </div>
+        <h3 class="text-xl font-semibold text-gray-900 mb-2">Suraj Serai</h3>
+        <p class="text-primary-600 font-medium mb-1">Executive Member</p>
+      </div>
+
+      <!-- Amal Saleh -->
+      <div class="bg-white rounded-2xl p-6 text-center shadow-lg card-hover">
+        <div class="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4">
+          <img src="../images/about/amal-saleh.jpg" alt="Amal Saleh" class="w-full h-full object-cover">
+        </div>
+        <h3 class="text-xl font-semibold text-gray-900 mb-2">Amal Saleh</h3>
+        <p class="text-primary-600 font-medium mb-1">Executive Member</p>
+      </div>
+
+      <!-- Ajay Dsouza -->
+      <div class="bg-white rounded-2xl p-6 text-center shadow-lg card-hover">
+        <div class="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4">
+          <img src="../images/about/ajay-dsouza.jpg" alt="Ajay Dsouza" class="w-full h-full object-cover">
+        </div>
+        <h3 class="text-xl font-semibold text-gray-900 mb-2">Ajay Dsouza</h3>
+        <p class="text-primary-600 font-medium mb-1">Executive Member</p>
+      </div>
+
+      <!-- Kiran Hilal -->
+      <div class="bg-white rounded-2xl p-6 text-center shadow-lg card-hover">
+        <div class="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4">
+          <img src="../images/about/kiran-hilal.jpg" alt="Kiran Hilal" class="w-full h-full object-cover">
+        </div>
+        <h3 class="text-xl font-semibold text-gray-900 mb-2">Kiran Hilal</h3>
+        <p class="text-primary-600 font-medium mb-1">Executive Member</p>
+      </div>
+
+      <!-- Jordi Roldan -->
+      <div class="bg-white rounded-2xl p-6 text-center shadow-lg card-hover">
+        <div class="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4">
+          <img src="../images/about/jordi-roldan.jpg" alt="Jordi Roldan" class="w-full h-full object-cover">
+        </div>
+        <h3 class="text-xl font-semibold text-gray-900 mb-2">Jordi Roldan</h3>
+        <p class="text-primary-600 font-medium mb-1">Executive Member</p>
+      </div>
+
+    </div>
+  </div>
+</section>
 
         <!-- Scientific Committee -->
-        <section class="py-20 bg-white" id="scientific-committee">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-3xl md:text-4xl font-bold gradient-text text-center mb-16">Scientific Committee</h2>
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div class="bg-gray-50 rounded-xl p-6 card-hover">
-                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Dr. Maria Gonzalez</h3>
-                        <p class="text-gray-600">University of Barcelona Children's Hospital</p>
-                    </div>
-                    <div class="bg-gray-50 rounded-xl p-6 card-hover">
-                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Dr. Alessandro Rossi</h3>
-                        <p class="text-gray-600">Istituto Giannina Gaslini, Genoa</p>
-                    </div>
-                    <div class="bg-gray-50 rounded-xl p-6 card-hover">
-                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Dr. Johan van der Berg</h3>
-                        <p class="text-gray-600">Erasmus MC-Sophia Children's Hospital</p>
-                    </div>
-                    <div class="bg-gray-50 rounded-xl p-6 card-hover">
-                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Dr. Pradeep Kumar</h3>
-                        <p class="text-gray-600">All India Institute of Medical Sciences</p>
-                    </div>
-                    <div class="bg-gray-50 rounded-xl p-6 card-hover">
-                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Dr. Catherine Dubois</h3>
-                        <p class="text-gray-600">Hôpital Necker-Enfants Malades</p>
-                    </div>
-                    <div class="bg-gray-50 rounded-xl p-6 card-hover">
-                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Dr. Takeshi Yamamoto</h3>
-                        <p class="text-gray-600">Tokyo Children's Medical Center</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+<section class="py-20 bg-white" id="scientific-committee">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-3xl md:text-4xl font-bold gradient-text text-center mb-16">Scientific Committee</h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <!-- Row 1 -->
+      <div class="bg-gray-50 rounded-xl p-6 card-hover text-center">
+        <img src="../images/about/manohar-shroff.jpg" alt="Manohar Shroff" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+        <h3 class="text-lg font-semibold text-gray-900 mb-1">Manohar Shroff</h3>
+        <p class="text-gray-600 text-sm">The Hospital for Sick Children, Toronto</p>
+      </div>
+      <div class="bg-gray-50 rounded-xl p-6 card-hover text-center">
+        <img src="../images/about/suely-fazio.jpg" alt="Suely Fazio Ferraciolli" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+        <h3 class="text-lg font-semibold text-gray-900 mb-1">Suely Fazio Ferraciolli</h3>
+        <p class="text-gray-600 text-sm">University of São Paulo</p>
+      </div>
+      <div class="bg-gray-50 rounded-xl p-6 card-hover text-center">
+        <img src="../images/about/cesar-alves.jpg" alt="Cesar Alves" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+        <h3 class="text-lg font-semibold text-gray-900 mb-1">Cesar Alves</h3>
+        <p class="text-gray-600 text-sm">Children’s Hospital of Philadelphia</p>
+      </div>
+
+      <!-- Row 2 -->
+      <div class="bg-gray-50 rounded-xl p-6 card-hover text-center">
+        <img src="../images/about/karuna-shekdar.jpg" alt="Karuna Shekdar" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+        <h3 class="text-lg font-semibold text-gray-900 mb-1">Karuna Shekdar</h3>
+        <p class="text-gray-600 text-sm">Children’s Hospital of Philadelphia</p>
+      </div>
+      <div class="bg-gray-50 rounded-xl p-6 card-hover text-center">
+        <img src="../images/about/suvasini-sharma.jpg" alt="Suvasini Sharma" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+        <h3 class="text-lg font-semibold text-gray-900 mb-1">Suvasini Sharma</h3>
+        <p class="text-gray-600 text-sm">Lady Hardinge Medical College</p>
+      </div>
+      <div class="bg-gray-50 rounded-xl p-6 card-hover text-center">
+        <img src="../images/about/ali-yikilmaz.jpg" alt="Ali Yikilmaz" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+        <h3 class="text-lg font-semibold text-gray-900 mb-1">Ali Yikilmaz</h3>
+        <p class="text-gray-600 text-sm">McMaster University</p>
+      </div>
+
+      <!-- Row 3 -->
+      <div class="bg-gray-50 rounded-xl p-6 card-hover text-center">
+        <img src="../images/about/carolina-guimaraes.jpg" alt="Carolina Guimaraes" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+        <h3 class="text-lg font-semibold text-gray-900 mb-1">Carolina Guimaraes</h3>
+        <p class="text-gray-600 text-sm">University of North Carolina</p>
+      </div>
+      <div class="bg-gray-50 rounded-xl p-6 card-hover text-center">
+        <img src="../images/about/tushar-chandra.jpg" alt="Tushar Chandra" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+        <h3 class="text-lg font-semibold text-gray-900 mb-1">Tushar Chandra</h3>
+        <p class="text-gray-600 text-sm">Nemours Children’s Health</p>
+      </div>
+      <div class="bg-gray-50 rounded-xl p-6 card-hover text-center">
+        <img src="../images/about/ronnie-baticulon.jpg" alt="Ronnie Baticulon" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+        <h3 class="text-lg font-semibold text-gray-900 mb-1">Ronnie Baticulon</h3>
+        <p class="text-gray-600 text-sm">Philippine General Hospital</p>
+      </div>
+
+      <!-- Additional Rows -->
+      <div class="bg-gray-50 rounded-xl p-6 card-hover text-center">
+        <img src="../images/about/gaurav-saigal.jpg" alt="Gaurav Saigal" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+        <h3 class="text-lg font-semibold text-gray-900 mb-1">Gaurav Saigal</h3>
+        <p class="text-gray-600 text-sm">University of Miami</p>
+      </div>
+      <div class="bg-gray-50 rounded-xl p-6 card-hover text-center">
+        <img src="../images/about/mika-shapira-rootman.jpg" alt="Mika Shapira-Rootman" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+        <h3 class="text-lg font-semibold text-gray-900 mb-1">Mika Shapira-Rootman</h3>
+        <p class="text-gray-600 text-sm">Rambam Health Care</p>
+      </div>
+      <div class="bg-gray-50 rounded-xl p-6 card-hover text-center">
+        <img src="../images/about/camilo-jaimes.jpg" alt="Camilo Jaimes" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+        <h3 class="text-lg font-semibold text-gray-900 mb-1">Camilo Jaimes</h3>
+        <p class="text-gray-600 text-sm">Boston Children’s Hospital</p>
+      </div>
+
+      <div class="bg-gray-50 rounded-xl p-6 card-hover text-center">
+        <img src="../images/about/anindita-datta.jpg" alt="Anindita Datta" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+        <h3 class="text-lg font-semibold text-gray-900 mb-1">Anindita Datta</h3>
+        <p class="text-gray-600 text-sm">Bangabandhu Sheikh Mujib University</p>
+      </div>
+      <div class="bg-gray-50 rounded-xl p-6 card-hover text-center">
+        <img src="../images/about/mesha-martinez.jpg" alt="Mesha Martinez" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+        <h3 class="text-lg font-semibold text-gray-900 mb-1">Mesha Martinez</h3>
+        <p class="text-gray-600 text-sm">Indiana University School of Medicine</p>
+      </div>
+      <div class="bg-gray-50 rounded-xl p-6 card-hover text-center">
+        <img src="../images/about/shekeeb-mohammad.jpg" alt="Shekeeb Mohammad" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+        <h3 class="text-lg font-semibold text-gray-900 mb-1">Shekeeb Mohammad</h3>
+        <p class="text-gray-600 text-sm">University of Sydney</p>
+      </div>
+
+      <div class="bg-gray-50 rounded-xl p-6 card-hover text-center">
+        <img src="../images/about/matthew-whitehead.jpg" alt="Matthew Whitehead" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+        <h3 class="text-lg font-semibold text-gray-900 mb-1">Matthew Whitehead</h3>
+        <p class="text-gray-600 text-sm">Children's Hospital of Philadelphia</p>
+      </div>
+      <div class="bg-gray-50 rounded-xl p-6 card-hover text-center">
+        <img src="../images/about/jordi-muchart.jpg" alt="Jordi Muchart" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+        <h3 class="text-lg font-semibold text-gray-900 mb-1">Jordi Muchart</h3>
+        <p class="text-gray-600 text-sm">University of Barcelona</p>
+      </div>
+      <div class="bg-gray-50 rounded-xl p-6 card-hover text-center">
+        <img src="../images/about/ana-filipa.jpg" alt="Ana Filipa" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+        <h3 class="text-lg font-semibold text-gray-900 mb-1">Ana Filipa</h3>
+        <p class="text-gray-600 text-sm">Centro Hospitalar Vila Nova de Gaia</p>
+      </div>
+
+      <div class="bg-gray-50 rounded-xl p-6 card-hover text-center">
+        <img src="../images/about/gabrielle-colleran.jpg" alt="Gabrielle Colleran" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+        <h3 class="text-lg font-semibold text-gray-900 mb-1">Gabrielle Colleran</h3>
+        <p class="text-gray-600 text-sm">Trinity College Dublin</p>
+      </div>
+      <div class="bg-gray-50 rounded-xl p-6 card-hover text-center">
+        <img src="../images/about/matthew-barkovich.jpg" alt="Matthew Barkovich" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+        <h3 class="text-lg font-semibold text-gray-900 mb-1">Matthew Barkovich</h3>
+        <p class="text-gray-600 text-sm">UCSF Medical Center</p>
+      </div>
+      <div class="bg-gray-50 rounded-xl p-6 card-hover text-center">
+        <img src="../images/about/kader-oguz.jpg" alt="Kader Oğuz" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+        <h3 class="text-lg font-semibold text-gray-900 mb-1">Kader Oğuz</h3>
+        <p class="text-gray-600 text-sm">UC Davis</p>
+      </div>
+
+      <div class="bg-gray-50 rounded-xl p-6 card-hover text-center">
+        <img src="../images/about/godwin-ogbole.jpg" alt="Godwin Ogbole" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+        <h3 class="text-lg font-semibold text-gray-900 mb-1">Godwin Ogbole</h3>
+        <p class="text-gray-600 text-sm">University of Ibadan</p>
+      </div>
+      <div class="bg-gray-50 rounded-xl p-6 card-hover text-center">
+        <img src="../images/about/eleonora-piccirilli.jpg" alt="Eleonora Piccirilli" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+        <h3 class="text-lg font-semibold text-gray-900 mb-1">Eleonora Piccirilli</h3>
+        <p class="text-gray-600 text-sm">Bambino Gesù Children’s Hospital</p>
+      </div>
+      <div class="bg-gray-50 rounded-xl p-6 card-hover text-center">
+        <img src="../images/about/bejoy-thomas.jpg" alt="Bejoy Thomas" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+        <h3 class="text-lg font-semibold text-gray-900 mb-1">Bejoy Thomas</h3>
+        <p class="text-gray-600 text-sm">SCTIMST</p>
+      </div>
+
+      <div class="bg-gray-50 rounded-xl p-6 card-hover text-center">
+        <img src="../images/about/ivana-pogledic.jpg" alt="Ivana Pogledic" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+        <h3 class="text-lg font-semibold text-gray-900 mb-1">Ivana Pogledic</h3>
+        <p class="text-gray-600 text-sm">Medical University of Vienna</p>
+      </div>
+      <div class="bg-gray-50 rounded-xl p-6 card-hover text-center">
+        <img src="../images/about/elaine-kan.jpg" alt="Elaine KAN" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+        <h3 class="text-lg font-semibold text-gray-900 mb-1">Elaine KAN</h3>
+        <p class="text-gray-600 text-sm">Hong Kong Children’s Hospital</p>
+      </div>
+      <div class="bg-gray-50 rounded-xl p-6 card-hover text-center">
+        <img src="../images/about/kevin-fung.jpg" alt="Kevin Fung" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+        <h3 class="text-lg font-semibold text-gray-900 mb-1">Kevin Fung</h3>
+        <p class="text-gray-600 text-sm">Hong Kong Children’s Hospital</p>
+      </div>
+
+    </div>
+  </div>
+</section>
 
         <!-- Research & Admin Team -->
-        <section class="py-20" id="research-admin-team">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-3xl md:text-4xl font-bold gradient-text text-center mb-16">Research & Admin Team</h2>
-                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <div class="bg-white rounded-2xl p-6 text-center shadow-lg card-hover">
-                        <div class="w-20 h-20 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                            <span class="text-xl text-white">👩‍⚕️</span>
-                        </div>
-                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Dr. Amanda Foster</h3>
-                        <p class="text-primary-600 font-medium mb-1">Research Director</p>
-                        <p class="text-gray-600 text-sm">Cincinnati Children's Hospital</p>
-                    </div>
-                    <div class="bg-white rounded-2xl p-6 text-center shadow-lg card-hover">
-                        <div class="w-20 h-20 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                            <span class="text-xl text-white">👨‍⚕️</span>
-                        </div>
-                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Dr. Kevin Park</h3>
-                        <p class="text-primary-600 font-medium mb-1">Data Manager</p>
-                        <p class="text-gray-600 text-sm">Stanford University</p>
-                    </div>
-                    <div class="bg-white rounded-2xl p-6 text-center shadow-lg card-hover">
-                        <div class="w-20 h-20 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                            <span class="text-xl text-white">👩‍💼</span>
-                        </div>
-                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Ms. Jennifer Clark</h3>
-                        <p class="text-primary-600 font-medium mb-1">Administrative Coordinator</p>
-                        <p class="text-gray-600 text-sm">SPIN Headquarters</p>
-                    </div>
-                    <div class="bg-white rounded-2xl p-6 text-center shadow-lg card-hover">
-                        <div class="w-20 h-20 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                            <span class="text-xl text-white">👨‍💻</span>
-                        </div>
-                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Mr. David Lee</h3>
-                        <p class="text-primary-600 font-medium mb-1">Technology Director</p>
-                        <p class="text-gray-600 text-sm">SPIN IT Services</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+<section class="py-20" id="research-admin-team">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-3xl md:text-4xl font-bold gradient-text text-center mb-16">Research & Admin Team</h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+      <!-- Member 1 -->
+      <div class="bg-white rounded-2xl p-6 text-center shadow-lg card-hover">
+        <img src="../images/about/prina-khanna.jpg" alt="Prina Khanna" class="w-20 h-20 rounded-full mx-auto mb-4 object-cover">
+        <h3 class="text-lg font-semibold text-gray-900 mb-2">Prina Khanna</h3>
+        <p class="text-primary-600 font-medium mb-1">Administrative Lead</p>
+      </div>
+
+      <!-- Member 2 -->
+      <div class="bg-white rounded-2xl p-6 text-center shadow-lg card-hover">
+        <img src="../images/about/ibrahem-albalkhi.jpg" alt="Ibrahem Albalkhi" class="w-20 h-20 rounded-full mx-auto mb-4 object-cover">
+        <h3 class="text-lg font-semibold text-gray-900 mb-2">Ibrahem Albalkhi</h3>
+        <p class="text-primary-600 font-medium mb-1">Research Lead</p>
+      </div>
+
+      <!-- Member 3 -->
+      <div class="bg-white rounded-2xl p-6 text-center shadow-lg card-hover">
+        <img src="../images/about/harun-yildiz.jpg" alt="Harun Yildiz" class="w-20 h-20 rounded-full mx-auto mb-4 object-cover">
+        <h3 class="text-lg font-semibold text-gray-900 mb-2">Harun Yildiz</h3>
+        <p class="text-primary-600 font-medium mb-1">Radiological Illustrator</p>
+      </div>
+
+      <!-- Member 4 -->
+      <div class="bg-white rounded-2xl p-6 text-center shadow-lg card-hover">
+        <img src="../images/about/mohammad-al-balkhi.jpg" alt="Mohammad Al Balkhi" class="w-20 h-20 rounded-full mx-auto mb-4 object-cover">
+        <h3 class="text-lg font-semibold text-gray-900 mb-2">Mohammad Al Balkhi</h3>
+        <p class="text-primary-600 font-medium mb-1">Website Administrator</p>
+      </div>
+
+      <!-- Member 5 -->
+      <div class="bg-white rounded-2xl p-6 text-center shadow-lg card-hover col-span-full md:col-span-2 lg:col-span-1 lg:col-start-2">
+        <img src="../images/about/hassan-shah.jpg" alt="Hassan Shah" class="w-20 h-20 rounded-full mx-auto mb-4 object-cover">
+        <h3 class="text-lg font-semibold text-gray-900 mb-2">Hassan Shah</h3>
+        <p class="text-primary-600 font-medium mb-1">Social Media Manager</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
 
         <!-- Rising Stars -->
-        <section class="py-20 bg-white" id="rising-stars">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-3xl md:text-4xl font-bold gradient-text text-center mb-16">Rising Stars</h2>
-                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                    <div class="bg-gradient-to-br from-primary-50 to-secondary-50 rounded-lg p-4 text-center card-hover">
-                        <p class="font-medium text-gray-800">Dr. Alex Thompson</p>
-                    </div>
-                    <div class="bg-gradient-to-br from-primary-50 to-secondary-50 rounded-lg p-4 text-center card-hover">
-                        <p class="font-medium text-gray-800">Dr. Sophia Martinez</p>
-                    </div>
-                    <div class="bg-gradient-to-br from-primary-50 to-secondary-50 rounded-lg p-4 text-center card-hover">
-                        <p class="font-medium text-gray-800">Dr. Ryan O'Connor</p>
-                    </div>
-                    <div class="bg-gradient-to-br from-primary-50 to-secondary-50 rounded-lg p-4 text-center card-hover">
-                        <p class="font-medium text-gray-800">Dr. Mei Zhang</p>
-                    </div>
-                    <div class="bg-gradient-to-br from-primary-50 to-secondary-50 rounded-lg p-4 text-center card-hover">
-                        <p class="font-medium text-gray-800">Dr. Hassan Ali</p>
-                    </div>
-                    <div class="bg-gradient-to-br from-primary-50 to-secondary-50 rounded-lg p-4 text-center card-hover">
-                        <p class="font-medium text-gray-800">Dr. Isabella Romano</p>
-                    </div>
-                    <div class="bg-gradient-to-br from-primary-50 to-secondary-50 rounded-lg p-4 text-center card-hover">
-                        <p class="font-medium text-gray-800">Dr. Lucas Silva</p>
-                    </div>
-                    <div class="bg-gradient-to-br from-primary-50 to-secondary-50 rounded-lg p-4 text-center card-hover">
-                        <p class="font-medium text-gray-800">Dr. Aisha Patel</p>
-                    </div>
-                    <div class="bg-gradient-to-br from-primary-50 to-secondary-50 rounded-lg p-4 text-center card-hover">
-                        <p class="font-medium text-gray-800">Dr. Nikolai Petrov</p>
-                    </div>
-                    <div class="bg-gradient-to-br from-primary-50 to-secondary-50 rounded-lg p-4 text-center card-hover">
-                        <p class="font-medium text-gray-800">Dr. Camila Restrepo</p>
-                    </div>
-                    <div class="bg-gradient-to-br from-primary-50 to-secondary-50 rounded-lg p-4 text-center card-hover">
-                        <p class="font-medium text-gray-800">Dr. Benjamin Taylor</p>
-                    </div>
-                    <div class="bg-gradient-to-br from-primary-50 to-secondary-50 rounded-lg p-4 text-center card-hover">
-                        <p class="font-medium text-gray-800">Dr. Yuki Tanaka</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+<section class="py-20 bg-white" id="rising-stars">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-3xl md:text-4xl font-bold gradient-text text-center mb-16">Rising Stars</h2>
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+
+      <!-- Member 1 -->
+      <div class="bg-white rounded-xl shadow-md text-center p-4 card-hover">
+        <img src="../images/about/facundo-saravia.jpg" alt="Facundo Saravia" class="w-20 h-20 rounded-full mx-auto mb-3 object-cover">
+        <p class="font-semibold text-gray-900">Facundo Saravia</p>
+      </div>
+
+      <!-- Member 2 -->
+      <div class="bg-white rounded-xl shadow-md text-center p-4 card-hover">
+        <img src="../images/about/kim-mendoza.jpg" alt="Kim Mendoza" class="w-20 h-20 rounded-full mx-auto mb-3 object-cover">
+        <p class="font-semibold text-gray-900">Kim Mendoza</p>
+      </div>
+
+      <!-- Member 3 -->
+      <div class="bg-white rounded-xl shadow-md text-center p-4 card-hover">
+        <img src="../images/about/amena-nayyer.jpg" alt="Amena Nayyer" class="w-20 h-20 rounded-full mx-auto mb-3 object-cover">
+        <p class="font-semibold text-gray-900">Amena Nayyer</p>
+      </div>
+
+      <!-- Member 4 -->
+      <div class="bg-white rounded-xl shadow-md text-center p-4 card-hover">
+        <img src="../images/about/sabha-ahmed.jpg" alt="Sabha Ahmed" class="w-20 h-20 rounded-full mx-auto mb-3 object-cover">
+        <p class="font-semibold text-gray-900">Sabha Ahmed</p>
+      </div>
+
+      <!-- Member 5 -->
+      <div class="bg-white rounded-xl shadow-md text-center p-4 card-hover">
+        <img src="../images/about/gokalp-cikman.jpg" alt="Gökalp Cikman" class="w-20 h-20 rounded-full mx-auto mb-3 object-cover">
+        <p class="font-semibold text-gray-900">Gökalp Cikman</p>
+      </div>
+
+      <!-- Member 6 -->
+      <div class="bg-white rounded-xl shadow-md text-center p-4 card-hover">
+        <img src="../images/about/matheus-soldatelli.jpg" alt="Matheus Soldatelli" class="w-20 h-20 rounded-full mx-auto mb-3 object-cover">
+        <p class="font-semibold text-gray-900">Matheus Soldatelli</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 
         <!-- Member Testimonials -->
         <section class="py-20">

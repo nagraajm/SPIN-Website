@@ -185,7 +185,23 @@
                 <!-- Desktop Navigation -->
                 <div class="hidden lg:flex items-center space-x-1">
                     <a href="../index.html" class="px-4 py-2 text-sm font-medium text-gray-700 hover:text-primary-600 rounded-lg nav-item">Home</a>
-   <a href="events.html" class="px-4 py-2 text-sm font-medium text-gray-700 hover:text-primary-600 rounded-lg nav-item">Events</a>
+   <!-- Events Dropdown -->
+<div class="relative group">
+  <button class="px-4 py-2 text-sm font-medium text-gray-700 hover:text-primary-600 rounded-lg nav-item flex items-center space-x-1">
+    <span>Events</span>
+    <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+    </svg>
+  </button>
+  <div class="absolute top-full left-0 mt-1 w-56 bg-white rounded-xl shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform group-hover:translate-y-0 translate-y-2 z-50">
+    <div class="p-2">
+      <!-- Notice we go to the home page and jump to section -->
+      <a href="/index.html#upcoming-events" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 rounded-lg">Upcoming Events</a>
+      <a href="/index.html#past-events" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 rounded-lg">Past Events</a>
+    </div>
+  </div>
+</div>
+
                     
                     <!-- About Dropdown -->
                     <div class="relative group">
@@ -279,99 +295,173 @@
         </div>
     </nav>
 
-    <!-- Main Content -->
-    <main class="pt-20">
-        <!-- Hero Section -->
-        <section class="relative bg-gradient-to-br from-primary-600 via-primary-700 to-secondary-600 py-20 overflow-hidden">
-            <div class="absolute inset-0 bg-black/20"></div>
-            <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 animate-fade-in">
-                    Society Fellowship
-                </h1>
-                <p class="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto animate-slide-in">
-                    Comprehensive fellowship program for advancing pediatric neuroradiology expertise
-                </p>
-            </div>
-        </section>
+<!-- Main Content -->
+<section class="pt-24 bg-cover bg-center" style="background-image: url('../images/card1&2/Screenshot 2025-06-19 143041.png');">
+  <div class="max-w-5xl mx-auto px-4 text-center py-16">
+    <h2 class="text-4xl font-bold text-white">Spin ReportingRoom</h2>
+  </div>
+</section>
+<!-- Inside <body>, after <!-- Main Content --> 
+<section class="relative pt-32 pb-16 px-6 md:px-12 lg:px-32 bg-white text-center">
+  <div class="max-w-6xl mx-auto">
+ <!-- Hero Section with Background -->
 
-        <!-- Content Section -->
-        <section class="py-20">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="glass-card rounded-2xl shadow-lg p-8 mb-12">
-                    <div class="text-center">
-                        <div class="w-24 h-24 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-full mx-auto mb-6 flex items-center justify-center">
-                            <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9.5a2.5 2.5 0 00-2.5-2.5H15"></path>
-                            </svg>
-                        </div>
-                        <h2 class="text-3xl font-bold gradient-text mb-6">Program Coming Soon</h2>
-                        <p class="text-gray-600 text-lg mb-8 max-w-2xl mx-auto">
-                            We're developing a comprehensive fellowship program that will provide advanced training in pediatric neuroradiology. Stay tuned for updates on application procedures and program details.
-                        </p>
-                        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                            <a href="../index.html" class="px-8 py-3 bg-gradient-to-r from-primary-500 to-secondary-500 text-white rounded-full font-medium hover:from-primary-600 hover:to-secondary-600 transition-all duration-200 shadow-lg hover:shadow-xl">
-                                Back to Home
-                            </a>
-                            <a href="membership.html" class="px-8 py-3 border-2 border-primary-500 text-primary-600 rounded-full font-medium hover:bg-primary-50 transition-all duration-200">
-                                Join SPIN
-                            </a>
-                        </div>
-                    </div>
-                </div>
 
-                <!-- Features Grid -->
-                <div class="grid md:grid-cols-3 gap-8">
-                    <div class="glass-card rounded-xl p-6 shadow-lg card-hover">
-                        <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
-                            <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
-                            </svg>
-                        </div>
-                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Educational Excellence</h3>
-                        <p class="text-gray-600">Access to world-class educational resources and specialized training programs.</p>
-                    </div>
 
-                    <div class="glass-card rounded-xl p-6 shadow-lg card-hover">
-                        <div class="w-12 h-12 bg-secondary-100 rounded-lg flex items-center justify-center mb-4">
-                            <svg class="w-6 h-6 text-secondary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
-                            </svg>
-                        </div>
-                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Expert Mentorship</h3>
-                        <p class="text-gray-600">Direct guidance from leading experts in pediatric neuroradiology.</p>
-                    </div>
+    <!-- About Section -->
+    <div class="text-left space-y-6 max-w-4xl mx-auto">
+      <h2 class="text-2xl font-semibold gradient-text">About</h2>
+      <p>Fellowship of the Society of Pediatric Neuroimaging is awarded after completion of a structured course run in three parts.</p>
+      <p>The first two parts are comprehensive virtual courses offered once every year: “Foundations” and “Levelling up”, didactically covering all aspects of pediatric neuroimaging.</p>
+      <p>Candidates have the choice of attending the in-person program either in the Far East, India, Middle East, Europe, or the Americas. The virtual and in-person courses can be attended independently but both components must be completed over 2 years to complete the fellowship cycle for consideration of the Fellowship award.</p>
+      <h3 class="text-xl font-semibold mt-6 gradient-text">Eligibility</h3>
+      <p>Please note that only Practicing Radiologists are eligible for full Fellowship.</p>
+      <p>All other participants, including those from complementary specialities, are eligible for the Society of Pediatric Neuroimaging’s Certificate of Attendance.</p>
 
-                    <div class="glass-card rounded-xl p-6 shadow-lg card-hover">
-                        <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
-                            <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
-                            </svg>
-                        </div>
-                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Certification</h3>
-                        <p class="text-gray-600">Receive recognized certification upon successful completion of the program.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
+      <h3 class="text-xl font-semibold mt-6 gradient-text">Learning Objectives</h3>
+      <ul class="list-disc pl-6 space-y-2">
+        <li>To develop a strong foundational training in all aspects of pediatric neuroradiology as relevant to clinical practice.</li>
+        <li>To understand common adult pathologies and how they may help to better understand pediatric pathologies.</li>
+        <li>To provide standardized and accurate diagnostic reports.</li>
+        <li>To understand the role of research and uncertainty in pediatric neuroradiology.</li>
+      </ul>
+
+      <h3 class="text-xl font-semibold mt-6 gradient-text">Programs</h3>
+      <ul class="list-disc pl-6 space-y-2">
+        <li><a href="#" class="text-primary-600 underline hover:text-primary-800">Download Part 1 Program</a></li>
+        <li><a href="#" class="text-primary-600 underline hover:text-primary-800">Download Part 2 Program</a></li>
+        <li><a href="#" class="text-primary-600 underline hover:text-primary-800">Download Part 3 Program</a></li>
+      </ul>
+
+      <h3 class="text-xl font-semibold mt-6 gradient-text">Timeline & Registration</h3>
+      <p>For discounted rates become a SPIN member , please <a href="login.html" class="text-primary-600 underline hover:text-primary-800">log-in</a>.</p>
+    </div>
+
+    <!-- Fellowship Cards -->
+    <div class="mt-20 grid md:grid-cols-1 space-y-12 max-w-6xl mx-auto">
+      <div class="flex flex-col md:flex-row items-start gap-6">
+        <div class="flex-1 space-y-2">
+          <h4 class="text-primary-600 text-xl font-semibold">Part 1: ‘Foundations’</h4>
+          <p class="text-sm text-gray-500">Virtual</p>
+          <a href="#" class="inline-block mt-2 bg-secondary-500 text-white px-6 py-2 rounded-full text-sm font-semibold hover:bg-secondary-600 transition">Register Now</a>
+        </div>
+        <div class="flex-[2] text-left">
+          <p>Comprehensively covering the foundations of pediatric neuroimaging, from image acquisition and normal development to brain tumor anatomy and the acutely seizing child.</p>
+          <p class="mt-2">Delivered on our interactive virtual platform by a dynamic faculty of internationally-renowned experts from the world’s leading children’s hospitals.</p>
+        </div>
+        <img src="../images/fellowish/Screenshot 2025-06-19 143726.png" alt="Foundations Slide" class="w-40 h-auto rounded-xl shadow">
+      </div>
+
+      <div class="flex flex-col md:flex-row items-start gap-6">
+        <div class="flex-1 space-y-2">
+          <h4 class="text-primary-600 text-xl font-semibold">Part 2: ‘Levelling Up’</h4>
+          <p class="text-sm text-gray-500">Virtual</p>
+          <a href="#" class="inline-block mt-2 bg-secondary-500 text-white px-6 py-2 rounded-full text-sm font-semibold hover:bg-secondary-600 transition">Register Now</a>
+        </div>
+        <div class="flex-[2] text-left">
+          <p>Take your knowledge to the next level with as we dive deep into complex topics, such as the medicolegal challenges of abusive head trauma, and introduce the future of pediatric neuroimaging via radiomics and automated detection of FCD.</p>
+          <p class="mt-2">Delivered on our interactive virtual platform by a dynamic faculty of internationally-renowned experts from the world’s leading children’s hospitals.</p>
+        </div>
+        <img src="../images/card1&2/Screenshot 2025-06-19 143237.png" alt="Levelling Up Slide" class="w-40 h-auto rounded-xl shadow">
+      </div>
+
+      <div class="flex flex-col md:flex-row items-start gap-6">
+        <div class="flex-1 space-y-2">
+          <h4 class="text-primary-600 text-xl font-semibold">Part 3: ‘The Finale’</h4>
+          <p class="text-sm text-gray-500">7-9th November, 2025<br>In-Person - Dubai</p>
+          <a href="#" class="inline-block mt-2 bg-secondary-500 text-white px-6 py-2 rounded-full text-sm font-semibold hover:bg-secondary-600 transition">Register Now</a>
+        </div>
+        <div class="flex-[2] text-left">
+          <p>Hone your diagnostic skills in an environment reflective of real clinical practice, culminating in SPIN certification. Working directly under the mentorship of SPIN faculty, discuss all that you have learnt thus far to consolidate and stretch your knowledge.</p>
+          <p class="mt-2">Delivered in-person via interactive workshops by a dynamic faculty of internationally-renowned experts from the world’s leading children’s hospitals.</p>
+        </div>
+        <img src="../images/fellowish/Screenshot 2025-06-19 143656.png" alt="Dubai Finale Slide" class="w-40 h-auto rounded-xl shadow">
+      </div>
+    </div>
+
+    <!-- Additional Screenshots -->
+    <div class="mt-20 grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <img src="../images/fellowish/Screenshot 2025-06-19 143948.png" class="rounded-xl shadow-md" alt="Fellowship Slide 1">
+      <img src="../images/fellowish/Screenshot 2025-06-19 144001.png" class="rounded-xl shadow-md" alt="Fellowship Slide 2">
+      <img src="../images/fellowish/Screenshot 2025-06-19 144007.png" class="rounded-xl shadow-md" alt="Fellowship Slide 3">
+      <img src="../images/fellowish/Screenshot 2025-06-19 144014.png" class="rounded-xl shadow-md" alt="Fellowship Slide 4">
+      <img src="../images/fellowish/Screenshot 2025-06-19 143955.png" class="rounded-xl shadow-md" alt="Fellowship Slide 5">
+      <img src="../images/fellowish/Screenshot 2025-06-19 144020.png" class="rounded-xl shadow-md" alt="Fellowship Slide 6">
+      <img src="../images/fellowish/Screenshot 2025-06-19 144045.png" class="rounded-xl shadow-md" alt="Fellowship Slide 7">
+    </div>
+
+    <!-- Disclaimer -->
+    <div class="mt-20 bg-yellow-50 border-l-4 border-yellow-400 p-6 rounded-lg max-w-4xl mx-auto">
+      <h4 class="text-lg font-semibold text-yellow-800 mb-2">Disclaimer</h4>
+      <p class="text-yellow-900">The Fellowship of the Society of Pediatric Neuroimaging is aimed at enhancing specific skillsets in radiology subspecialty practice. It does not fulfil the accreditation criteria of regional and/or national healthcare licensing bodies and/or organizations. The Society of Pediatric Neuroimaging is not liable for any medicolegal issues arising from your practice.</p>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
 
     <!-- Footer -->
     <footer class="bg-gray-900 text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div class="flex items-center justify-center space-x-3 mb-6">
-                <img src="../images/spin_logo.webp" alt="SPIN Academics" class="h-10 w-10 rounded-full">
-                <h3 class="text-xl font-bold gradient-text">SPIN Academics</h3>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <img src="../images/spin_logo.webp" alt="SPIN Academics" class="h-10 w-auto">
+                        <span class="text-2xl font-bold gradient-text">SPIN Academics</span>
+                    </div>
+                    <p class="text-gray-300 mb-6 max-w-md">
+                        Advancing spinal pain management through education, research, and professional collaboration.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-blue-700 rounded-full flex items-center justify-center hover:bg-blue-800 transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center hover:bg-red-700 transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-lg mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="../index.html" class="hover:text-white transition-colors">Home</a></li>
+                        <li><a href="about.html" class="hover:text-white transition-colors">About</a></li>
+                        <li><a href="membership.html" class="hover:text-white transition-colors">Membership</a></li>
+                        <li><a href="education.html" class="hover:text-white transition-colors">Education</a></li>
+                        <li><a href="research.html" class="hover:text-white transition-colors">Research</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-lg mb-4">Contact Info</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>Email: membership@spinacademics.org</li>
+                        <li>Phone: +1 (555) 123-4567</li>
+                        <li>Address: 123 Medical Center Dr</li>
+                        <li>Dubai, UAE</li>
+                    </ul>
+                </div>
             </div>
-            <p class="text-gray-400 mb-4">Advancing Pediatric Neuroradiology Through Education and Research</p>
-            <p class="text-gray-500 text-sm">&copy; 2024 SPIN Academics. All rights reserved.</p>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 SPIN Academics. All rights reserved.</p>
+            </div>
         </div>
     </footer>
-
-    <script>
-        // Mobile menu toggle
-        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
-            document.getElementById('mobile-menu').classList.toggle('hidden');
-        });
-    </script>
 </body>
+
 </html>

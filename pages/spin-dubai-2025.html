@@ -209,7 +209,23 @@
                 <!-- Desktop Navigation -->
                 <div class="hidden lg:flex items-center space-x-1">
                     <a href="../index.html" class="px-4 py-2 text-sm font-medium text-gray-700 hover:text-primary-600 rounded-lg nav-item">Home</a>
-                    
+                    <!-- Events Dropdown -->
+<div class="relative group">
+  <button class="px-4 py-2 text-sm font-medium text-gray-700 hover:text-primary-600 rounded-lg nav-item flex items-center space-x-1">
+    <span>Events</span>
+    <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+    </svg>
+  </button>
+  <div class="absolute top-full left-0 mt-1 w-56 bg-white rounded-xl shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform group-hover:translate-y-0 translate-y-2 z-50">
+    <div class="p-2">
+      <!-- Notice we go to the home page and jump to section -->
+      <a href="/index.html#upcoming-events" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 rounded-lg">Upcoming Events</a>
+      <a href="/index.html#past-events" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 rounded-lg">Past Events</a>
+    </div>
+  </div>
+</div>
+
                     <!-- About Dropdown -->
                     <div class="relative group">
                         <button class="px-4 py-2 text-sm font-medium text-gray-700 hover:text-primary-600 rounded-lg nav-item flex items-center space-x-1">
@@ -218,6 +234,7 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                             </svg>
                         </button>
+                        
                         <div class="absolute top-full left-0 mt-1 w-64 bg-white rounded-xl shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform group-hover:translate-y-0 translate-y-2">
                             <div class="p-2">
                                 <a href="about.html#presidents-welcome" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 rounded-lg">President's Welcome</a>
@@ -306,7 +323,7 @@
 <section class="pt-20">
   <!-- Dubai Banner with Scrolling Text -->
   <div class="relative w-full h-[60vh] overflow-hidden">
-    <img src="../images/dubai_banner.webp" alt="Dubai Skyline" class="absolute inset-0 w-full h-full object-cover">
+    <img src="../images/274955-1920x1200-desktop-hd-dubai-background.jpg" alt="Dubai Skyline" class="absolute inset-0 w-full h-full object-cover">
     <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
       <div class="text-white text-4xl sm:text-5xl md:text-6xl font-bold whitespace-nowrap animate-scroll-banner">
         SPIN In-Person Dubai 2025 * SPIN In-Person Dubai 2025 * SPIN In-Person Dubai 2025
@@ -388,15 +405,45 @@
 
   <!-- Registration Link + QR -->
   <div class="max-w-5xl mx-auto px-6 grid sm:grid-cols-2 gap-6 pb-16">
-    <div class="bg-[#80bcbc] text-white rounded-lg p-6 text-center">
-      <p class="mb-4">Conference Registration Link</p>
-      <a href="#" class="bg-white text-cyan-600 font-semibold text-xl py-2 px-6 rounded hover:underline">Click Here</a>
-    </div>
+<div class="bg-[#80bcbc] text-white rounded-lg p-6 text-center flex flex-col items-center justify-center">
+  <p class="mb-4 ">Conference Registration Link</p>
+  <a href="https://leqaauae.com/spin2025/" class="bg-white text-cyan-600 font-semibold text-xl py-2 px-6 rounded hover:underline mt-2">
+    Click Here
+  </a>
+</div>
+
     <div class="bg-[#80bcbc] text-white rounded-lg p-6 text-center">
       <p class="mb-4">Conference Registration QR Code</p>
-      <img src="../images/qr_registration.png" alt="QR Code" class="mx-auto w-40 h-40">
+      <img src="../images/qrcode.png" alt="QR Code" class="mx-auto w-40 h-40">
     </div>
   </div>
+<!-- SPIN Contact Info (Centered Version) -->
+<div class="max-w-4xl mx-auto px-4 pt-10 pb-16 text-center text-gray-800 space-y-5">
+  
+  <!-- Email -->
+  <div class="flex items-center justify-center gap-2 text-base sm:text-lg">
+    <span class="text-2xl">📩</span>
+    <p>
+      Questions? Email us:
+      <a href="mailto:faculty@spinacademics.org" class="text-cyan-600 underline hover:text-cyan-800">
+        faculty@spinacademics.org
+      </a>
+    </p>
+  </div>
+
+  <!-- Social -->
+  <div class="flex items-center justify-center gap-2 text-base sm:text-lg">
+    <span class="text-2xl">🌐</span>
+    <p>
+      Follow us: <span class="text-gray-700">@spinacademics</span> |
+      <a href="../index.html" class="text-cyan-600 underline hover:text-cyan-800">
+        www.spinacademics.org
+      </a>
+    </p>
+  </div>
+
+</div>
+
 
   <!-- Footer Quote -->
   <div class="text-center px-6 pb-8">
@@ -407,23 +454,103 @@
   </div>
 </section>
 
-<!-- SPIN Feedback Section -->
-<section class="bg-[#34b8c2] py-16 text-white">
+<!-- SPIN Moments Section -->
+<section class="bg-white py-16">
   <div class="max-w-7xl mx-auto px-4">
-    <h2 class="text-3xl font-bold text-center mb-8">SPIN Feedback</h2>
-    <div class="text-center space-y-4 text-lg leading-relaxed">
-      <p>"An excellent course equivalent to an update in all things practical and topical!"</p>
-      <p>"As usual, SPIN delivers only the best in pediatric neuroimaging!"</p>
-      <p>"The best pediatric radiology teaching around!"</p>
-      <p>"SPIN offers something for everyone, from registrar to seasoned attending!"</p>
-      <p>"Phenomenal experience! Will attend again and recommend highly to all I know!"</p>
-      <p>"Exquisite content, comprehensive coverage of all topics, and very high level of education!"</p>
-      <p>"Fantastically well organized. Very informative and mentorship-rich."</p>
-      <p>"Amazingly great meeting. SPIN keeps raising the bar!"</p>
-      <p>"A truly charitable organization with low registration fees for developing countries."</p>
+    <h2 class="text-4xl sm:text-5xl font-bold text-cyan-400 mb-10">SPIN MOMENTS</h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <!-- Repeat for each image -->
+      <div class="overflow-hidden rounded-xl shadow-lg group">
+        <img src="..\images\spin_moments\Screenshot 2025-06-19 141046.png" alt="SPIN Moment 1" class="w-full h-full object-cover transform transition duration-500 group-hover:scale-105 group-hover:opacity-90">
+      </div>
+      <div class="overflow-hidden rounded-xl shadow-lg group">
+        <img src="..\images/spin_moments/Screenshot 2025-06-19 141116.png" alt="SPIN Moment 2" class="w-full h-full object-cover transform transition duration-500 group-hover:scale-105 group-hover:opacity-90">
+      </div>
+      <div class="overflow-hidden rounded-xl shadow-lg group">
+        <img src="..\images/spin_moments/Screenshot 2025-06-19 141123.png" alt="SPIN Moment 3" class="w-full h-full object-cover transform transition duration-500 group-hover:scale-105 group-hover:opacity-90">
+      </div>
+      <div class="overflow-hidden rounded-xl shadow-lg group">
+        <img src="..\images/spin_moments/Screenshot 2025-06-19 141134.png" alt="SPIN Moment 4" class="w-full h-full object-cover transform transition duration-500 group-hover:scale-105 group-hover:opacity-90">
+      </div>
+      <div class="overflow-hidden rounded-xl shadow-lg group">
+        <img src="..\images/spin_moments/Screenshot 2025-06-19 141140.png" alt="SPIN Moment 5" class="w-full h-full object-cover transform transition duration-500 group-hover:scale-105 group-hover:opacity-90">
+      </div>
+      <div class="overflow-hidden rounded-xl shadow-lg group">
+        <img src="..\images/spin_moments/Screenshot 2025-06-19 141147.png" alt="SPIN Moment 6" class="w-full h-full object-cover transform transition duration-500 group-hover:scale-105 group-hover:opacity-90">
+      </div>
+      <div class="overflow-hidden rounded-xl shadow-lg group">
+        <img src="..\images/spin_moments/Screenshot 2025-06-19 141152.png" alt="SPIN Moment 7" class="w-full h-full object-cover transform transition duration-500 group-hover:scale-105 group-hover:opacity-90">
+      </div>
+      <div class="overflow-hidden rounded-xl shadow-lg group">
+        <img src="..\images/spin_moments/Screenshot 2025-06-19 141159.png" alt="SPIN Moment 8" class="w-full h-full object-cover transform transition duration-500 group-hover:scale-105 group-hover:opacity-90">
+      </div>
+      <div class="overflow-hidden rounded-xl shadow-lg group">
+        <img src="..\images/spin_moments/Screenshot 2025-06-19 141206.png" alt="SPIN Moment 9" class="w-full h-full object-cover transform transition duration-500 group-hover:scale-105 group-hover:opacity-90">
+      </div>
     </div>
   </div>
 </section>
+
+
+
+
+
+
+
+
+<!-- SPIN Feedback Section with Animated Fade-In -->
+<section class="bg-[#34b8c2] py-16 text-white overflow-hidden">
+  <div class="max-w-7xl mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center mb-12">SPIN Feedback</h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <p class="feedback-card animate-card delay-[100ms]">"An excellent course equivalent to an update in all things practical and topical!"</p>
+      <p class="feedback-card animate-card delay-[200ms]">"As usual, SPIN delivers only the best in pediatric neuroimaging!"</p>
+      <p class="feedback-card animate-card delay-[300ms]">"The best pediatric radiology teaching around!"</p>
+      <p class="feedback-card animate-card delay-[400ms]">"SPIN offers something for everyone, from registrar to seasoned attending!"</p>
+      <p class="feedback-card animate-card delay-[500ms]">"Phenomenal experience! Will attend again and recommend highly to all I know!"</p>
+      <p class="feedback-card animate-card delay-[600ms]">"Exquisite content, comprehensive coverage of all topics, and very high level of education!"</p>
+      <p class="feedback-card animate-card delay-[700ms]">"Fantastically well organized. Very informative and mentorship-rich."</p>
+      <p class="feedback-card animate-card delay-[800ms]">"Amazingly great meeting. SPIN keeps raising the bar!"</p>
+      <p class="feedback-card animate-card delay-[900ms]">"A truly charitable organization with low registration fees for developing countries."</p>
+    </div>
+  </div>
+</section>
+
+<!-- Add this inside a <style> tag OR your custom CSS file -->
+<style>
+  .feedback-card {
+    background-color: rgba(255, 255, 255, 0.08);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+
+  .feedback-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+
+<!-- Add this JavaScript before </body> -->
+<script>
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, {
+    threshold: 0.2
+  });
+
+  document.querySelectorAll('.feedback-card').forEach(card => {
+    observer.observe(card);
+  });
+</script>
+
 
 
 

@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SPIN Reporting Room - SPIN Academics</title>
-    <meta name="description" content="Advanced reporting platform and case discussion room">
+    <title>Society Fellowship - SPIN Academics</title>
+    <meta name="description" content="Comprehensive fellowship program from SPIN Academics">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,31 +16,52 @@
                     colors: {
                         primary: {
                             50: '#e6f3ff',
-                            100: '#b3d9ff',
-                            200: '#80bfff',
-                            300: '#4da6ff',
-                            400: '#1a8cff',
+                            100: '#cce7ff',
+                            200: '#99cfff',
+                            300: '#66b7ff',
+                            400: '#339fff',
                             500: '#0087ff',
-                            600: '#0070d9',
-                            700: '#0059b3',
-                            800: '#00428c',
-                            900: '#002b66'
+                            600: '#006bcc',
+                            700: '#004f99',
+                            800: '#003366',
+                            900: '#001733',
+                            950: '#000d1a'
                         },
                         secondary: {
-                            50: '#e6fffe',
-                            100: '#b3fffc',
-                            200: '#80fff9',
-                            300: '#4dfff7',
-                            400: '#1afff4',
+                            50: '#e6f9f7',
+                            100: '#ccf2ef',
+                            200: '#99e6df',
+                            300: '#66d9cf',
+                            400: '#33ccbf',
                             500: '#00bfaf',
-                            600: '#00a699',
-                            700: '#008c82',
-                            800: '#00736c',
-                            900: '#005955'
+                            600: '#00998c',
+                            700: '#007369',
+                            800: '#004d46',
+                            900: '#002623',
+                            950: '#001311'
                         }
                     },
                     fontFamily: {
-                        'sans': ['Poppins', 'ui-sans-serif', 'system-ui']
+                        'sans': ['Poppins', 'system-ui', 'sans-serif'],
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.5s ease-in-out',
+                        'slide-in': 'slideIn 0.6s ease-out',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0', transform: 'translateY(10px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        slideIn: {
+                            '0%': { opacity: '0', transform: 'translateX(-10px)' },
+                            '100%': { opacity: '1', transform: 'translateX(0)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
                     }
                 }
             }
@@ -83,7 +104,10 @@
             background: linear-gradient(90deg, #0087ff, #00bfaf);
             border-radius: 2px;
         }
-        .nav-active {
+        .nav-item {
+            position: relative;
+        }
+.nav-active {
     position: relative;
     color: #0087ff;
 }
@@ -98,7 +122,8 @@
     background: linear-gradient(90deg, #0087ff, #00bfaf);
     border-radius: 2px;
 }
-       .join-btn {
+
+        .join-btn {
             background: linear-gradient(135deg, #0087ff 0%, #00bfaf 100%);
             box-shadow: 0 4px 15px rgba(0, 135, 255, 0.3);
             backdrop-filter: blur(10px);
@@ -142,9 +167,8 @@
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
     </style>
-
 </head>
-<body class="font-sans">
+<body class="bg-gradient-to-br from-primary-50 via-white to-secondary-50 font-sans">
  <!-- Navigation -->
     <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-gray-200/50 shadow-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -161,10 +185,28 @@
                 <!-- Desktop Navigation -->
                 <div class="hidden lg:flex items-center space-x-1">
                     <a href="../index.html" class="px-4 py-2 text-sm font-medium text-gray-700 hover:text-primary-600 rounded-lg nav-item">Home</a>
+   <!-- Events Dropdown -->
+<div class="relative group">
+  <button class="px-4 py-2 text-sm font-medium text-gray-700 hover:text-primary-600 rounded-lg nav-item flex items-center space-x-1">
+    <span>Events</span>
+    <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+    </svg>
+  </button>
+  <div class="absolute top-full left-0 mt-1 w-56 bg-white rounded-xl shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform group-hover:translate-y-0 translate-y-2 z-50">
+    <div class="p-2">
+      <!-- Notice we go to the home page and jump to section -->
+      <a href="/index.html#upcoming-events" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 rounded-lg">Upcoming Events</a>
+      <a href="/index.html#past-events" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 rounded-lg">Past Events</a>
+    </div>
+  </div>
+</div>
+
                     
                     <!-- About Dropdown -->
                     <div class="relative group">
-<button class="px-4 py-2 text-sm font-medium text-gray-700 hover:text-primary-600 rounded-lg nav-item flex items-center space-x-1">
+                        <button class="px-4 py-2 text-sm font-medium text-gray-700 hover:text-primary-600 rounded-lg nav-item flex items-center space-x-1">
+
                             <span>About</span>
                             <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
@@ -186,8 +228,8 @@
                     
                     <!-- Education Dropdown -->
                     <div class="relative group">
-                        <button class="px-4 py-2 nav-active  text-sm font-medium text-gray-700 hover:text-primary-600 rounded-lg nav-item flex items-center space-x-1">
-                            <span>Education</span>
+                        <button class="px-4 py-2 text-sm font-medium text-primary-700 nav-active rounded-lg nav-item flex items-center space-x-1">
+  <span>Education</span>
                             <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                             </svg>
@@ -253,37 +295,113 @@
         </div>
     </nav>
 
-    <!-- Main Content -->
-    <main class="pt-20 bg-gray-50">
-        <section class="relative bg-gradient-to-br from-primary-600 via-primary-700 to-secondary-600 py-20">
-            <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">SPIN Reporting Room</h1>
-                <p class="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">Advanced reporting platform and case discussion room</p>
-            </div>
-        </section>
+<!-- Main Content -->
 
-        <section class="py-20">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="bg-white rounded-2xl shadow-lg p-8 text-center">
-                    <h2 class="text-3xl font-bold bg-gradient-to-r from-primary-500 to-secondary-500 bg-clip-text text-transparent mb-6">Coming Soon</h2>
-                    <p class="text-gray-600 text-lg mb-8">We're working hard to bring you the best content for this section. Please check back soon for updates.</p>
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                        <a href="../index.html" class="px-8 py-3 bg-gradient-to-r from-primary-500 to-secondary-500 text-white rounded-full font-medium hover:from-primary-600 hover:to-secondary-600 transition-all duration-200">Back to Home</a>
-                        <a href="membership.html" class="px-8 py-3 border-2 border-primary-500 text-primary-600 rounded-full font-medium hover:bg-primary-50 transition-all duration-200">Join SPIN</a>
+<!-- Hero Section with Background -->
+<section class="pt-24 bg-cover bg-center" style="background-image: url('../images/card1&2/Screenshot 2025-06-19 143041.png');">
+  <div class="max-w-5xl mx-auto px-4 text-center py-16">
+    <h2 class="text-4xl font-bold text-white">Spin ReportingRoom</h2>
+  </div>
+</section>
+
+<!-- Main Content -->
+
+<section class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
+  <h2 class="text-4xl font-bold text-primary-700 mb-6">About the Reporting Room</h2>
+  <div class="mx-auto w-24 h-1 bg-gradient-to-r from-primary-500 to-secondary-500 mb-8"></div>
+
+  <p class="text-gray-700 text-lg max-w-3xl mx-auto mb-10">
+    Access a curated library of 100+ pediatric neuroimaging cases designed to enhance your diagnostic and reporting skills.
+    These cases are a core part of the SPIN Fellowship program, but access is
+    <strong class="font-semibold text-gray-800">also open to those not undertaking the fellowship</strong>
+    who wish to independently explore and report the cases.
+  </p>
+
+  <div class="grid md:grid-cols-2 gap-10 items-center justify-center mt-10">
+    <!-- Pricing and CTA -->
+    <div class="text-center">
+      <h3 class="text-xl font-semibold text-gray-800 mb-2">SPIN Reporting Room</h3>
+      <p class="text-3xl font-bold text-primary-600">US$100.00</p>
+      <p class="text-sm text-gray-500 mb-4">One time</p>
+      <a href="#" class="inline-block bg-secondary-500 text-white font-semibold px-8 py-3 rounded-full hover:bg-secondary-600 transition-all duration-300 shadow-md">
+        Register
+      </a>
+    </div>
+
+    <!-- Image -->
+    <div class="flex justify-center">
+      <img src="../images/reportingroom.png" alt="Reporting Room Cases" class="rounded-xl shadow-lg w-full max-w-md">
+    </div>
+  </div>
+
+  <div class="mt-12 border-t border-primary-200"></div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <img src="../images/spin_logo.webp" alt="SPIN Academics" class="h-10 w-auto">
+                        <span class="text-2xl font-bold gradient-text">SPIN Academics</span>
+                    </div>
+                    <p class="text-gray-300 mb-6 max-w-md">
+                        Advancing spinal pain management through education, research, and professional collaboration.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-blue-700 rounded-full flex items-center justify-center hover:bg-blue-800 transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center hover:bg-red-700 transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                            </svg>
+                        </a>
                     </div>
                 </div>
+                <div>
+                    <h3 class="font-semibold text-lg mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="../index.html" class="hover:text-white transition-colors">Home</a></li>
+                        <li><a href="about.html" class="hover:text-white transition-colors">About</a></li>
+                        <li><a href="membership.html" class="hover:text-white transition-colors">Membership</a></li>
+                        <li><a href="education.html" class="hover:text-white transition-colors">Education</a></li>
+                        <li><a href="research.html" class="hover:text-white transition-colors">Research</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-lg mb-4">Contact Info</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>Email: membership@spinacademics.org</li>
+                        <li>Phone: +1 (555) 123-4567</li>
+                        <li>Address: 123 Medical Center Dr</li>
+                        <li>Dubai, UAE</li>
+                    </ul>
+                </div>
             </div>
-        </section>
-    </main>
-
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p class="text-gray-400">&copy; 2024 SPIN Academics. All rights reserved.</p>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 SPIN Academics. All rights reserved.</p>
+            </div>
         </div>
     </footer>
-
-    <script>
-        // Mobile menu functionality would go here
-    </script>
 </body>
+
 </html>
