@@ -133,113 +133,207 @@
             background-size: 200% 200%;
             animation: gradientShift 6s ease infinite;
         }
+        .nav-active {
+            position: relative;
+        }
+        .nav-active::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #0087ff, #00bfaf);
+            border-radius: 2px;
+        }
+        .nav-item {
+            position: relative;
+        }
+        .nav-item::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #0087ff, #00bfaf);
+            border-radius: 2px;
+            transition: width 0.3s ease;
+        }
+        .nav-item:hover::after {
+            width: 80%;
+        }
+        .join-btn {
+            background: linear-gradient(135deg, #0087ff 0%, #00bfaf 100%);
+            box-shadow: 0 4px 15px rgba(0, 135, 255, 0.3);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        .join-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 135, 255, 0.4);
+            background: linear-gradient(135deg, #006bcc 0%, #00998c 100%);
+        }
+        .dropdown-item {
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .dropdown-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 135, 255, 0.1), transparent);
+            transition: left 0.6s ease;
+        }
+        .dropdown-item:hover::before {
+            left: 100%;
+        }
+        .dropdown-item:hover {
+            background: linear-gradient(135deg, rgba(0, 135, 255, 0.08), rgba(0, 191, 175, 0.08));
+            transform: translateX(8px);
+            border-left: 3px solid;
+            border-image: linear-gradient(135deg, #0087ff, #00bfaf) 1;
+        }
         @keyframes gradientShift {
             0% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
             100% { background-position: 0% 50%; }
         }
+        .border-3 {
+            border-width: 3px;
+        }
+        .shadow-3xl {
+            box-shadow: 0 35px 60px -12px rgba(0, 0, 0, 0.25);
+        }
     </style>
 </head>
 <body class="font-sans bg-gray-50">
     <!-- Navigation -->
-    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200/50">
+    <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-gray-200/50 shadow-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <!-- Logo -->
-                <div class="flex items-center">
-                    <a href="../index.html" class="flex items-center space-x-3">
-                        <img src="../images/spin_logo.webp" alt="SPIN Logo" class="h-10 w-auto">
-                        <span class="text-xl font-bold gradient-text">SPIN Academics</span>
-                    </a>
+                <div class="flex items-center space-x-3">
+                    <img src="../images/spin_logo.webp" alt="SPIN Academics Logo" class="h-10 w-10 rounded-full shadow-sm">
+                    <div class="hidden sm:block">
+                        <h1 class="text-xl font-bold gradient-text">SPIN Academics</h1>
+                        <p class="text-xs text-gray-600">Pediatric Neuroradiology Society</p>
+                    </div>
                 </div>
 
                 <!-- Desktop Navigation -->
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="../index.html" class="text-gray-700 hover:text-primary-600 font-medium transition-colors">Home</a>
+                <div class="hidden lg:flex items-center space-x-1">
+                    <a href="../index.html" class="px-4 py-2 text-sm font-medium text-gray-700 hover:text-primary-600 rounded-lg nav-item">Home</a>
+                    
+                    <!-- Events Dropdown -->
+                    <div class="relative group">
+                        <button class="px-4 py-2 text-sm font-medium text-gray-700 hover:text-primary-600 rounded-lg nav-item flex items-center space-x-1">
+                            <span>Events</span>
+                            <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div class="absolute top-full left-0 mt-1 w-56 bg-white rounded-xl shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform group-hover:translate-y-0 translate-y-2 z-50">
+                            <div class="p-2">
+                                <a href="../index.html#upcoming-events" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 rounded-lg">Upcoming Events</a>
+                                <a href="../index.html#past-events" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 rounded-lg">Past Events</a>
+                            </div>
+                        </div>
+                    </div>
                     
                     <!-- About Dropdown -->
                     <div class="relative group">
-                        <button class="text-gray-700 hover:text-primary-600 font-medium transition-colors flex items-center">
-                            About
-                            <svg class="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <button class="px-4 py-2 text-sm font-medium text-gray-700 hover:text-primary-600 rounded-lg nav-item flex items-center space-x-1">
+                            <span>About</span>
+                            <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                             </svg>
                         </button>
-                        <div class="absolute left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                            <div class="py-2">
-                                <a href="about.html#presidents-welcome" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">President's Welcome</a>
-                                <a href="about.html#founding-members" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Founding Members</a>
-                                <a href="about.html#executive-committee" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Executive Committee</a>
-                                <a href="about.html#scientific-committee" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Scientific Committee</a>
-                                <a href="about.html#research-admin" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Research & Admin Team</a>
-                                <a href="about.html#rising-stars" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Rising Stars</a>
+                        <div class="absolute top-full left-0 mt-1 w-64 bg-white rounded-xl shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform group-hover:translate-y-0 translate-y-2">
+                            <div class="p-2">
+                                <a href="about.html#presidents-welcome" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 rounded-lg">President's Welcome</a>
+                                <a href="about.html#founding-members" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 rounded-lg">Founding Members</a>
+                                <a href="about.html#executive-committee" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 rounded-lg">Executive Committee</a>
+                                <a href="about.html#scientific-committee" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 rounded-lg">Scientific Committee</a>
+                                <a href="about.html#research-admin-team" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 rounded-lg">Research & Admin Team</a>
+                                <a href="about.html#rising-stars" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 rounded-lg">Rising Stars</a>
                             </div>
                         </div>
                     </div>
 
-                    <a href="membership.html" class="text-gray-700 hover:text-primary-600 font-medium transition-colors">Membership</a>
+                    <a href="membership.html" class="px-4 py-2 text-sm font-medium text-gray-700 hover:text-primary-600 rounded-lg nav-item">Membership</a>
                     
                     <!-- Education Dropdown -->
                     <div class="relative group">
-                        <button class="text-gray-700 hover:text-primary-600 font-medium transition-colors flex items-center">
-                            Education
-                            <svg class="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <button class="px-4 py-2 text-sm font-medium text-gray-700 hover:text-primary-600 rounded-lg nav-item flex items-center space-x-1">
+                            <span>Education</span>
+                            <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                             </svg>
                         </button>
-                        <div class="absolute left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                            <div class="py-2">
-                                <a href="society-fellowship.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Society Fellowship</a>
-                                <a href="education.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Education Offerings</a>
-                                <a href="cortex-club.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Cortex Club</a>
-                                <a href="spin-yarn-newsletter.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">SPIN Yarn Newsletter</a>
-                                <a href="spin-wfpi.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">SPIN-WFPI</a>
-                                <a href="spin-reporting-room.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">SPIN Reporting Room</a>
+                        <div class="absolute top-full left-0 mt-1 w-64 bg-white rounded-xl shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform group-hover:translate-y-0 translate-y-2">
+                            <div class="p-2">
+                                <a href="society-fellowship-fixed.html" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 rounded-lg">Society Fellowship</a>
+                                <a href="education.html" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 rounded-lg">Education Offerings</a>
+                                <a href="cortex-club.html" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 rounded-lg">Cortex Club</a>
+                                <a href="spin-yarn-newsletter.html" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 rounded-lg">SPIN Yarn Newsletter</a>
+                                <a href="spin-wfpi.html" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 rounded-lg">SPIN-WFPI</a>
+                                <a href="spin-reporting-room.html" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 rounded-lg">SPIN Reporting Room</a>
                             </div>
                         </div>
                     </div>
                     
                     <!-- Research Dropdown -->
                     <div class="relative group">
-                        <button class="text-primary-600 font-semibold transition-colors flex items-center">
-                            Research
-                            <svg class="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <button class="px-4 py-2 text-sm font-medium text-primary-700 nav-active rounded-lg flex items-center space-x-1">
+                            <span>Research</span>
+                            <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                             </svg>
                         </button>
-                        <div class="absolute left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                            <div class="py-2">
-                                <a href="#case-of-month" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Case of the Month</a>
-                                <a href="#submit-proposal" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Submit a Proposal</a>
-                                <a href="#green-radiology" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Green Radiology</a>
+                        <div class="absolute top-full left-0 mt-1 w-64 bg-white rounded-xl shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform group-hover:translate-y-0 translate-y-2">
+                            <div class="p-2">
+                                <a href="research.html#case-of-month" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 rounded-lg">Case of the Month</a>
+                                <a href="research.html#submit-proposal" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 rounded-lg">Submit a Proposal</a>
+                                <a href="research.html#green-radiology" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 rounded-lg">Green Radiology</a>
                             </div>
                         </div>
                     </div>
-
-                    <a href="login.html" class="bg-gradient-to-r from-primary-500 to-secondary-500 text-white px-4 py-2 rounded-full font-medium hover:from-primary-600 hover:to-secondary-600 transition-all duration-200">
-                        Login
-                    </a>
                 </div>
 
-                <!-- Mobile menu button -->
-                <div class="md:hidden">
-                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-primary-600 focus:outline-none">
-                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                        </svg>
-                    </button>
+                <!-- CTA Button -->
+                <div class="hidden lg:flex items-center space-x-3">
+                    <a href="login.html" class="text-sm font-medium text-gray-700 hover:text-primary-600">Login</a>
+                    <a href="membership.html" class="join-btn text-white px-6 py-3 rounded-xl text-sm font-semibold transition-all">Join SPIN</a>
                 </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-lg hover:bg-gray-100">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
             </div>
+        </div>
 
-            <!-- Mobile Navigation -->
-            <div id="mobile-menu" class="md:hidden hidden bg-white border-t border-gray-200">
-                <div class="px-2 pt-2 pb-3 space-y-1">
-                    <a href="../index.html" class="block px-3 py-2 text-gray-700 hover:text-primary-600 font-medium">Home</a>
-                    <a href="about.html" class="block px-3 py-2 text-gray-700 hover:text-primary-600 font-medium">About</a>
-                    <a href="membership.html" class="block px-3 py-2 text-gray-700 hover:text-primary-600 font-medium">Membership</a>
-                    <a href="education.html" class="block px-3 py-2 text-gray-700 hover:text-primary-600 font-medium">Education</a>
-                    <a href="research.html" class="block px-3 py-2 text-primary-600 font-semibold">Research</a>
-                    <a href="login.html" class="block px-3 py-2 bg-gradient-to-r from-primary-500 to-secondary-500 text-white rounded-full font-medium text-center mt-2">Login</a>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="lg:hidden hidden border-t border-gray-200 bg-white">
+            <div class="px-4 py-3 space-y-2">
+                <a href="../index.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded-lg">Home</a>
+                <a href="events.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded-lg">Events</a>
+                <a href="about.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded-lg">About</a>
+                <a href="membership.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded-lg">Membership</a>
+                <a href="education.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded-lg">Education</a>
+                <a href="research.html" class="block px-4 py-2 text-sm font-medium text-primary-700 bg-primary-50 rounded-lg">Research</a>
+                <div class="pt-2 border-t border-gray-200">
+                    <a href="login.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded-lg">Login</a>
+                    <a href="membership.html" class="block px-4 py-2 text-sm font-medium text-white join-btn rounded-lg">Join SPIN</a>
                 </div>
             </div>
         </div>
@@ -263,6 +357,9 @@
                     </a>
                     <a href="#submit-proposal" class="px-8 py-3 border-2 border-white text-white rounded-full font-semibold hover:bg-white hover:text-primary-600 transition-all duration-200">
                         Submit Proposal
+                    </a>
+                    <a href="#green-radiology" class="px-8 py-3 bg-gradient-to-r from-green-500 to-emerald-500 text-white rounded-full font-semibold hover:from-green-600 hover:to-emerald-600 transition-all duration-200 shadow-lg">
+                        Go Green
                     </a>
                 </div>
             </div>
@@ -330,6 +427,163 @@
                             </svg>
                         </a>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Case Studies Section -->
+        <section class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-full mb-6">
+                        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+                        </svg>
+                    </div>
+                    <h2 class="text-4xl font-bold gradient-text mb-6">Featured Case Studies</h2>
+                </div>
+
+                <!-- Case Studies Grid -->
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 mb-12">
+                    <!-- Case Study 1 -->
+                    <div class="card-hover bg-white rounded-2xl overflow-hidden gradient-shadow border border-gray-100">
+                        <div class="relative">
+                            <img src="../images/research/research-casestudy-1.jpg" alt="Pediatric Brain Tumor Case" class="w-full h-48 object-cover">
+                            <div class="absolute top-4 left-4">
+                                <span class="bg-primary-500 text-white px-3 py-1 rounded-full text-sm font-medium">Featured</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold text-gray-900 mb-2">Complex Brain Tumor</h3>
+                        </div>
+                    </div>
+
+                    <!-- Case Study 2 -->
+                    <div class="card-hover bg-white rounded-2xl overflow-hidden gradient-shadow border border-gray-100">
+                        <div class="relative">
+                            <img src="../images/research/research-casestudy-2.jpg" alt="Spinal Malformation Case" class="w-full h-48 object-cover">
+                            <div class="absolute top-4 left-4">
+                                <span class="bg-secondary-500 text-white px-3 py-1 rounded-full text-sm font-medium">Recent</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold text-gray-900 mb-2">Spinal Malformation</h3>
+                        </div>
+                    </div>
+
+                    <!-- Case Study 3 -->
+                    <div class="card-hover bg-white rounded-2xl overflow-hidden gradient-shadow border border-gray-100">
+                        <div class="relative">
+                            <img src="../images/research/research-casestudy-3.jpg" alt="Epilepsy Case Study" class="w-full h-48 object-cover">
+                            <div class="absolute top-4 left-4">
+                                <span class="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-medium">Research</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold text-gray-900 mb-2">Pediatric Epilepsy</h3>
+                        </div>
+                    </div>
+
+                    <!-- Case Study 4 -->
+                    <div class="card-hover bg-white rounded-2xl overflow-hidden gradient-shadow border border-gray-100">
+                        <div class="relative">
+                            <img src="../images/research/research-casestudy-4.jpg" alt="Vascular Malformation" class="w-full h-48 object-cover">
+                            <div class="absolute top-4 left-4">
+                                <span class="bg-accent-500 text-white px-3 py-1 rounded-full text-sm font-medium">Complex</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold text-gray-900 mb-2">Vascular Malformation</h3>
+                        </div>
+                    </div>
+
+                    <!-- Case Study 5 -->
+                    <div class="card-hover bg-white rounded-2xl overflow-hidden gradient-shadow border border-gray-100">
+                        <div class="relative">
+                            <img src="../images/research/research-casestudy-5.jpg" alt="Metabolic Disorder" class="w-full h-48 object-cover">
+                            <div class="absolute top-4 left-4">
+                                <span class="bg-purple-500 text-white px-3 py-1 rounded-full text-sm font-medium">Rare</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold text-gray-900 mb-2">Metabolic Disorder</h3>
+                        </div>
+                    </div>
+
+                    <!-- Case Study 6 -->
+                    <div class="card-hover bg-white rounded-2xl overflow-hidden gradient-shadow border border-gray-100">
+                        <div class="relative">
+                            <img src="../images/research/research-casestudy-6.jpg" alt="Trauma Case" class="w-full h-48 object-cover">
+                            <div class="absolute top-4 left-4">
+                                <span class="bg-red-500 text-white px-3 py-1 rounded-full text-sm font-medium">Trauma</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold text-gray-900 mb-2">Pediatric Trauma</h3>
+                        </div>
+                    </div>
+
+                    <!-- Case Study 7 -->
+                    <div class="card-hover bg-white rounded-2xl overflow-hidden gradient-shadow border border-gray-100">
+                        <div class="relative">
+                            <img src="../images/research/research-casestudy-7.jpg" alt="Developmental Anomaly" class="w-full h-48 object-cover">
+                            <div class="absolute top-4 left-4">
+                                <span class="bg-indigo-500 text-white px-3 py-1 rounded-full text-sm font-medium">Development</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold text-gray-900 mb-2">Developmental Anomaly</h3>
+                        </div>
+                    </div>
+
+                    <!-- Case Study 8 -->
+                    <div class="card-hover bg-white rounded-2xl overflow-hidden gradient-shadow border border-gray-100">
+                        <div class="relative">
+                            <img src="../images/research/research-casestudy-8.jpg" alt="Infection Case" class="w-full h-48 object-cover">
+                            <div class="absolute top-4 left-4">
+                                <span class="bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-medium">Infection</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold text-gray-900 mb-2">CNS Infection</h3>
+                        </div>
+                    </div>
+
+                    <!-- Case Study 9 -->
+                    <div class="card-hover bg-white rounded-2xl overflow-hidden gradient-shadow border border-gray-100">
+                        <div class="relative">
+                            <img src="../images/research/research-casestudy-9.jpg" alt="Genetic Disorder Case" class="w-full h-48 object-cover">
+                            <div class="absolute top-4 left-4">
+                                <span class="bg-pink-500 text-white px-3 py-1 rounded-full text-sm font-medium">Genetic</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold text-gray-900 mb-2">Genetic Disorder</h3>
+                        </div>
+                    </div>
+
+                    <!-- Case Study 10 -->
+                    <div class="card-hover bg-white rounded-2xl overflow-hidden gradient-shadow border border-gray-100">
+                        <div class="relative">
+                            <img src="../images/research/research-casestudy-10.jpg" alt="Neurodevelopmental Case" class="w-full h-48 object-cover">
+                            <div class="absolute top-4 left-4">
+                                <span class="bg-teal-500 text-white px-3 py-1 rounded-full text-sm font-medium">Development</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold text-gray-900 mb-2">Neurodevelopmental</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- View More Button -->
+                <div class="text-center">
+                    <a href="#case-of-month" class="inline-flex items-center px-8 py-4 bg-gradient-to-r from-primary-500 to-secondary-500 text-white rounded-full font-semibold hover:from-primary-600 hover:to-secondary-600 transition-all duration-200 shadow-lg hover:shadow-xl">
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                        </svg>
+                        Submit Your Case Study
+                    </a>
                 </div>
             </div>
         </section>
@@ -420,33 +674,22 @@
                         </div>
 
                         <!-- Case Gallery -->
-                        <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8">
-                            <div class="card-hover rounded-xl overflow-hidden gradient-shadow">
-                                <img src="../images/about/image12.png" alt="Case Study" class="w-full h-24 object-cover">
+                        <div class="bg-white rounded-2xl p-8 gradient-shadow mb-8">
+                            <h3 class="text-2xl font-bold gradient-text mb-6">Featured Case Studies</h3>
+                            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                                <div class="card-hover rounded-xl overflow-hidden gradient-shadow">
+                                    <img src="../images/research/research-casestudy-1.jpg" alt="Case Study 1" class="w-full h-32 object-cover">
+                                </div>
+                                <div class="card-hover rounded-xl overflow-hidden gradient-shadow">
+                                    <img src="../images/research/research-casestudy-2.jpg" alt="Case Study 2" class="w-full h-32 object-cover">
+                                </div>
+                                <div class="card-hover rounded-xl overflow-hidden gradient-shadow">
+                                    <img src="../images/research/research-casestudy-3.jpg" alt="Case Study 3" class="w-full h-32 object-cover">
+                                </div>
+                                <div class="card-hover rounded-xl overflow-hidden gradient-shadow">
+                                    <img src="../images/research/research-casestudy-4.jpg" alt="Case Study 4" class="w-full h-32 object-cover">
+                                </div>
                             </div>
-                            <div class="card-hover rounded-xl overflow-hidden gradient-shadow">
-                                <img src="../images/about/image12.png" alt="Case Study" class="w-full h-24 object-cover">
-                            </div>
-                            <div class="card-hover rounded-xl overflow-hidden gradient-shadow">
-                                <img src="../images/about/image12.png" alt="Case Study" class="w-full h-24 object-cover">
-                            </div>
-                            <div class="card-hover rounded-xl overflow-hidden gradient-shadow">
-                                <img src="../images/about/image12.png" alt="Case Study" class="w-full h-24 object-cover">
-                            </div>
-                            <div class="card-hover rounded-xl overflow-hidden gradient-shadow">
-                                <img src="../images/about/image12.png" alt="Case Study" class="w-full h-24 object-cover">
-                            </div>
-                            <div class="card-hover rounded-xl overflow-hidden gradient-shadow">
-                                <img src="../images/about/image12.png" alt="Case Study" class="w-full h-24 object-cover">
-                            </div>
-                        </div>
-
-                        <!-- Conference CTA -->
-                        <div class="bg-gradient-to-r from-primary-500 to-secondary-500 rounded-2xl p-8 text-white text-center">
-                            <h3 class="text-2xl font-bold mb-4">Register for the SPIN Conference</h3>
-                            <a href="#" class="inline-flex items-center bg-white text-primary-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-all duration-200">
-                                Learn More!
-                            </a>
                         </div>
                     </div>
                 </div>
@@ -566,10 +809,10 @@
                     </a>
                 </div>
 
-                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="grid lg:grid-cols-2 gap-12 items-stretch">
                     <!-- Green Radiology Content -->
-                    <div class="space-y-8">
-                        <div class="bg-white rounded-2xl p-8 gradient-shadow border border-green-100">
+                    <div class="space-y-8 flex flex-col">
+                        <div class="bg-white rounded-2xl p-8 gradient-shadow border border-green-100 flex-grow">
                             <h3 class="text-2xl font-bold text-gray-900 mb-6">Climate Action Initiative</h3>
                             <p class="text-gray-600 leading-relaxed mb-6">
                                 Climate change is currently being experienced by the world, and human activities are the primary driver of long-term shifts in temperatures and weather patterns. Several sectors, including radiology departments of each hospital in the world emit greenhouse gases like carbon dioxide. About 4.4% of the global net CO2 emissions come from the healthcare sector, and radiology departments that use high-energy-consuming medical imaging equipment are vital players.
@@ -580,7 +823,7 @@
                             <p class="text-gray-600 leading-relaxed mb-6">
                                 By voluntarily participating in this short survey, you grant permission for the data generated from this survey to be used for possible project or publication about the topic.
                             </p>
-                            <div class="text-right">
+                            <div class="text-right mt-auto">
                                 <p class="font-semibold text-gray-800">Society of Pediatric Neuroimaging (SPIN)</p>
                             </div>
                         </div>
@@ -599,8 +842,8 @@
                     </div>
 
                     <!-- Call to Action -->
-                    <div class="space-y-8">
-                        <div class="card-hover bg-gradient-to-br from-green-500 to-emerald-500 rounded-2xl p-8 text-white text-center relative overflow-hidden">
+                    <div class="space-y-8 flex flex-col">
+                        <div class="card-hover bg-gradient-to-br from-green-500 to-emerald-500 rounded-2xl p-8 text-white text-center relative overflow-hidden flex-grow flex flex-col justify-center">
                             <div class="absolute inset-0 bg-gradient-to-br from-green-400/20 to-emerald-400/20"></div>
                             <div class="relative">
                                 <div class="w-24 h-24 bg-white/20 rounded-full mx-auto mb-6 flex items-center justify-center backdrop-blur-sm">
@@ -657,6 +900,78 @@
                 </div>
             </div>
         </section>
+
+        <!-- SPIN Conference Registration Section -->
+        <section class="py-24 bg-gradient-to-br from-primary-600 via-primary-700 to-secondary-600 relative overflow-hidden">
+            <!-- Animated Background Elements -->
+            <div class="absolute inset-0">
+                <div class="absolute top-10 left-10 w-20 h-20 bg-white/10 rounded-full animate-float"></div>
+                <div class="absolute top-32 right-20 w-16 h-16 bg-white/5 rounded-full animate-pulse-slow"></div>
+                <div class="absolute bottom-20 left-1/4 w-12 h-12 bg-white/10 rounded-full animate-bounce-slow"></div>
+                <div class="absolute bottom-32 right-1/3 w-24 h-24 bg-white/5 rounded-full animate-float"></div>
+            </div>
+            
+            <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <!-- Main Content -->
+                <div class="max-w-4xl mx-auto">
+                    <div class="inline-flex items-center justify-center w-24 h-24 bg-white/20 rounded-full mb-8 backdrop-blur-sm animate-pulse-slow">
+                        <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                        </svg>
+                    </div>
+                    
+                    <h2 class="text-5xl md:text-6xl font-bold text-white mb-6 animate-fade-in">
+                        Join SPIN Conference 2025
+                    </h2>
+                    
+                    <p class="text-xl md:text-2xl text-white/90 mb-4 animate-slide-in">
+                        Dubai, UAE - The Future of Pediatric Neuroradiology
+                    </p>
+                    
+                    <p class="text-lg text-white/80 max-w-2xl mx-auto mb-12 animate-slide-in">
+                        Connect with global experts, discover cutting-edge research, and advance your career at the premier pediatric neuroradiology conference. Experience innovation, collaboration, and excellence in the heart of Dubai.
+                    </p>
+                    
+                    <!-- Action Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16 animate-scale-in">
+                        <a href="#" class="group inline-flex items-center px-10 py-4 bg-white text-primary-600 rounded-full font-bold text-lg hover:bg-gray-50 transition-all duration-300 shadow-2xl hover:shadow-3xl transform hover:-translate-y-1">
+                            <svg class="w-6 h-6 mr-3 transition-transform group-hover:rotate-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 110 4v3a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 110-4V7a2 2 0 00-2-2H5z"></path>
+                            </svg>
+                            Register Now
+                        </a>
+                        
+                        <a href="#" class="group inline-flex items-center px-10 py-4 border-3 border-white text-white rounded-full font-bold text-lg hover:bg-white hover:text-primary-600 transition-all duration-300 transform hover:-translate-y-1">
+                            <svg class="w-6 h-6 mr-3 transition-transform group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            Learn More
+                        </a>
+                    </div>
+                    
+                    <!-- Conference Stats -->
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-3xl mx-auto animate-fade-in">
+                        <div class="text-center">
+                            <div class="text-3xl md:text-4xl font-bold text-white mb-2">100+</div>
+                            <div class="text-white/80 text-sm">Global Speakers</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl md:text-4xl font-bold text-white mb-2">500+</div>
+                            <div class="text-white/80 text-sm">Participants</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl md:text-4xl font-bold text-white mb-2">3</div>
+                            <div class="text-white/80 text-sm">Days of Learning</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl md:text-4xl font-bold text-white mb-2">50+</div>
+                            <div class="text-white/80 text-sm">Countries</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <!-- Footer -->
