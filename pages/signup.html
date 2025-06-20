@@ -1,13 +1,122 @@
-\n\n    <!-- Main Content -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - SPIN Academics</title>
+    <meta name="description" content="Create your SPIN Academics account and join the global pediatric neuroradiology community">
+    <link rel="icon" type="image/webp" href="../images/spin_logo.webp">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#e6f3ff',
+                            100: '#cce7ff',
+                            200: '#99cfff',
+                            300: '#66b7ff',
+                            400: '#339fff',
+                            500: '#0087ff',
+                            600: '#006bcc',
+                            700: '#004f99',
+                            800: '#003366',
+                            900: '#001733'
+                        },
+                        secondary: {
+                            50: '#e6f9f7',
+                            100: '#ccf2ef',
+                            200: '#99e6df',
+                            300: '#66d9cf',
+                            400: '#33ccbf',
+                            500: '#00bfaf',
+                            600: '#00998c',
+                            700: '#007369',
+                            800: '#004d46',
+                            900: '#002623'
+                        },
+                        accent: {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            200: '#e2e8f0',
+                            300: '#cbd5e1',
+                            400: '#94a3b8',
+                            500: '#64748b',
+                            600: '#475569',
+                            700: '#334155',
+                            800: '#1e293b',
+                            900: '#0f172a'
+                        }
+                    },
+                    fontFamily: {
+                        'sans': ['Poppins', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-text {
+            background: linear-gradient(135deg, #0087ff, #00bfaf);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-gray-200/50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <a href="../index.html" class="flex items-center space-x-3 hover:opacity-80 transition-opacity duration-200">
+                    <img src="../images/spin_logo.webp" alt="SPIN Academics Logo" class="h-10 w-10 rounded-full shadow-sm">
+                    <div class="hidden sm:block">
+                        <h1 class="text-xl font-bold gradient-text">SPIN Academics</h1>
+                        <p class="text-xs text-gray-600">Pediatric Neuroradiology Society</p>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden lg:flex items-center space-x-1">
+                    <a href="../index.html" class="px-4 py-2 text-sm font-medium text-gray-700 hover:text-primary-600 rounded-lg">Home</a>
+                    <a href="about.html" class="px-4 py-2 text-sm font-medium text-gray-700 hover:text-primary-600 rounded-lg">About</a>
+                    <a href="membership.html" class="px-4 py-2 text-sm font-medium text-gray-700 hover:text-primary-600 rounded-lg">Membership</a>
+                    <a href="education.html" class="px-4 py-2 text-sm font-medium text-gray-700 hover:text-primary-600 rounded-lg">Education</a>
+                    <a href="research.html" class="px-4 py-2 text-sm font-medium text-gray-700 hover:text-primary-600 rounded-lg">Research</a>
+                </div>
+
+                <!-- CTA Button -->
+                <div class="hidden lg:flex items-center space-x-3">
+                    <a href="login.html" class="text-sm font-medium text-gray-700 hover:text-primary-600">Login</a>
+                    <a href="membership.html" class="bg-gradient-to-r from-primary-500 to-secondary-500 text-white px-6 py-3 rounded-xl text-sm font-semibold transition-all">Join SPIN</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
     <main class="pt-20 bg-gray-50">
         <!-- Hero Section -->
         <section class="relative bg-gradient-to-br from-primary-600 via-primary-700 to-secondary-600 py-20 overflow-hidden">
             <div class="absolute inset-0 bg-black/20"></div>
             <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 animate-fade-in">
+                <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">
                     Sign Up
                 </h1>
-                <p class="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto animate-slide-in">
+                <p class="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">
                     Create your SPIN Academics account
                 </p>
             </div>
@@ -70,4 +179,68 @@
                 </div>
             </div>
         </section>
-    </main>\n\n
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-3">
+                        <img src="../images/spin_logo.webp" alt="SPIN Academics" class="h-10 w-10 rounded-full">
+                        <div>
+                            <h3 class="text-xl font-bold">SPIN Academics</h3>
+                            <p class="text-sm text-gray-400">Pediatric Neuroradiology Society</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300">Society for Pediatric and Investigative Neuroradiology</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-300 hover:text-white transition-colors">About</a></li>
+                        <li><a href="membership.html" class="text-gray-300 hover:text-white transition-colors">Membership</a></li>
+                        <li><a href="education.html" class="text-gray-300 hover:text-white transition-colors">Education</a></li>
+                        <li><a href="research.html" class="text-gray-300 hover:text-white transition-colors">Research</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Education</h4>
+                    <ul class="space-y-2">
+                        <li><a href="society-fellowship-fixed.html" class="text-gray-300 hover:text-white transition-colors">Fellowship Program</a></li>
+                        <li><a href="cortex-club.html" class="text-gray-300 hover:text-white transition-colors">Cortex Club</a></li>
+                        <li><a href="spin-yarn-newsletter.html" class="text-gray-300 hover:text-white transition-colors">SPIN A Yarn</a></li>
+                        <li><a href="spin-wfpi.html" class="text-gray-300 hover:text-white transition-colors">SPIN WFPI</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                            <span class="sr-only">Email</span>
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                            <span class="sr-only">Twitter</span>
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                            <span class="sr-only">YouTube</span>
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8">
+                <p class="text-center text-gray-400">&copy; 2025 SPIN Academics. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
