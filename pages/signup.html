@@ -73,6 +73,205 @@
             transform: translateY(-5px);
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
+         :root {
+            --primary-color: #0087ff;
+            --secondary-color: #00bfaf;
+        }
+
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .hero-glass {
+            background: rgba(0, 135, 255, 0.1);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(0, 135, 255, 0.2);
+        }
+
+        .card-hover {
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-hover::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(0, 135, 255, 0.1), rgba(0, 191, 175, 0.1));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            border-radius: inherit;
+            z-index: -1;
+        }
+
+        .card-hover:hover::before {
+            opacity: 1;
+        }
+
+        .animate-fade-in {
+            animation: fadeIn 1s ease-out;
+        }
+
+        .animate-slide-in {
+            animation: slideIn 1s ease-out 0.2s both;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .bg-dubai {
+            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><defs><linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:%230087ff;stop-opacity:0.1" /><stop offset="100%" style="stop-color:%2300bfaf;stop-opacity:0.1" /></linearGradient></defs><rect width="1200" height="800" fill="url(%23grad1)"/></svg>');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .dropdown-item {
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .dropdown-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 135, 255, 0.1), transparent);
+            transition: left 0.6s ease;
+        }
+        .dropdown-item:hover::before {
+            left: 100%;
+        }
+        .dropdown-item:hover {
+            background: linear-gradient(135deg, rgba(0, 135, 255, 0.08), rgba(0, 191, 175, 0.08));
+            transform: translateX(8px);
+            border-left: 3px solid;
+            border-image: linear-gradient(135deg, #0087ff, #00bfaf) 1;
+        }
+        .nav-item {
+            position: relative;
+        }
+        .nav-item::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #0087ff, #00bfaf);
+            border-radius: 2px;
+            transition: width 0.3s ease;
+        }
+        .nav-item:hover::after {
+            width: 80%;
+        }
+        .join-btn {
+            background: linear-gradient(135deg, #0087ff 0%, #00bfaf 100%);
+            box-shadow: 0 4px 15px rgba(0, 135, 255, 0.3);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        .join-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 135, 255, 0.4);
+            background: linear-gradient(135deg, #006bcc 0%, #00998c 100%);
+        }
+
+        .pricing-card {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pricing-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 135, 255, 0.1), transparent);
+            transition: left 0.5s;
+        }
+
+        .pricing-card:hover::before {
+            left: 100%;
+        }
+        
+        .membership-plan {
+            transition: all 0.3s ease;
+        }
+        
+        .membership-plan.active {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 135, 255, 0.15);
+        }
+        
+        .membership-plan.active.standard {
+            border-color: #0087ff;
+        }
+        
+        .membership-plan.active.income-based {
+            border-color: #00bfaf;
+        }
+
+.nav-active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 3px;
+  background: linear-gradient(90deg, #0087ff, #00bfaf);
+  border-radius: 2px;
+}
+
+
+.nav-item {
+  position: relative;
+}
+
     </style>
 </head>
 <body class="font-sans bg-gray-50">
@@ -91,17 +290,127 @@
 
                 <!-- Desktop Navigation -->
                 <div class="hidden lg:flex items-center space-x-1">
-                    <a href="../index.html" class="px-4 py-2 text-sm font-medium text-gray-700 hover:text-primary-600 rounded-lg">Home</a>
-                    <a href="about.html" class="px-4 py-2 text-sm font-medium text-gray-700 hover:text-primary-600 rounded-lg">About</a>
-                    <a href="membership.html" class="px-4 py-2 text-sm font-medium text-gray-700 hover:text-primary-600 rounded-lg">Membership</a>
-                    <a href="education.html" class="px-4 py-2 text-sm font-medium text-gray-700 hover:text-primary-600 rounded-lg">Education</a>
-                    <a href="research.html" class="px-4 py-2 text-sm font-medium text-gray-700 hover:text-primary-600 rounded-lg">Research</a>
+                    <a href="../index.html" class="px-4 py-2 text-sm font-medium text-gray-700 hover:text-primary-600 rounded-lg nav-item">Home</a>
+<!-- Events Dropdown -->
+<div class="relative group">
+  <button class="px-4 py-2 text-sm font-medium text-gray-700 hover:text-primary-600 rounded-lg nav-item flex items-center space-x-1">
+    <span>Events</span>
+    <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+    </svg>
+  </button>
+  <div class="absolute top-full left-0 mt-1 w-56 bg-white rounded-xl shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform group-hover:translate-y-0 translate-y-2 z-50">
+    <div class="p-2">
+      <!-- Notice we go to the home page and jump to section -->
+      <a href="../index.html#upcoming-events" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 rounded-lg">Upcoming Events</a>
+      <a href="../index.html#past-events" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 rounded-lg">Past Events</a>
+    </div>
+  </div>
+</div>
+                    <!-- About Dropdown -->
+                    <div class="relative group">
+                        <button class="px-4 py-2 text-sm font-medium text-gray-700 hover:text-primary-600 rounded-lg nav-item flex items-center space-x-1">
+                            <span>About</span>
+                            <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="absolute top-full left-0 mt-1 w-64 bg-white rounded-xl shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform group-hover:translate-y-0 translate-y-2">
+                            <div class="p-2">
+                                <a href="about.html#presidents-welcome" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 rounded-lg">President's Welcome</a>
+                                <a href="about.html#founding-members" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 rounded-lg">Founding Members</a>
+                                <a href="about.html#executive-committee" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 rounded-lg">Executive Committee</a>
+                                <a href="about.html#scientific-committee" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 rounded-lg">Scientific Committee</a>
+                                <a href="about.html#research-admin-team" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 rounded-lg">Research & Admin Team</a>
+                                <a href="about.html#rising-stars" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 rounded-lg">Rising Stars</a>
+                            </div>
+                        </div>
+                    </div>
+
+<a href="membership.html" class="px-4 py-2 text-sm font-medium text-gray-700 hover:text-primary-600 nav-item nav-active">Membership</a>
+                    
+                    <!-- Education Dropdown -->
+                    <div class="relative group">
+                        <button class="px-4 py-2 text-sm font-medium text-gray-700 hover:text-primary-600 rounded-lg nav-item flex items-center space-x-1">
+                            <span>Education</span>
+                            <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="absolute top-full left-0 mt-1 w-64 bg-white rounded-xl shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform group-hover:translate-y-0 translate-y-2">
+                            <div class="p-2">
+                                <a href="society-fellowship-fixed.html" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 rounded-lg">Society Fellowship</a>
+                                <a href="education.html" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 rounded-lg">Education Offerings</a>
+                                <a href="cortex-club.html" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 rounded-lg">Cortex Club</a>
+                                <a href="spin-yarn-newsletter.html" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 rounded-lg">SPIN Yarn Newsletter</a>
+                                <a href="spin-wfpi.html" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 rounded-lg">SPIN-WFPI</a>
+                                <a href="spin-reporting-room.html" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 rounded-lg">SPIN Reporting Room</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Research Dropdown -->
+                    <div class="relative group">
+                        <button class="px-4 py-2 text-sm font-medium text-gray-700 hover:text-primary-600 rounded-lg nav-item flex items-center space-x-1">
+                            <span>Research</span>
+                            <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="absolute top-full left-0 mt-1 w-64 bg-white rounded-xl shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform group-hover:translate-y-0 translate-y-2">
+                            <div class="p-2">
+                                <a href="research.html#case-of-month" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 rounded-lg">Case of the Month</a>
+                                <a href="research.html#submit-proposal" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 rounded-lg">Submit a Proposal</a>
+                                <a href="research.html#green-radiology" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 rounded-lg">Green Radiology</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- CTA Button -->
                 <div class="hidden lg:flex items-center space-x-3">
                     <a href="login.html" class="text-sm font-medium text-gray-700 hover:text-primary-600">Login</a>
-                    <a href="membership.html" class="bg-gradient-to-r from-primary-500 to-secondary-500 text-white px-6 py-3 rounded-xl text-sm font-semibold transition-all">Join SPIN</a>
+                    <a href="membership.html" class="join-btn text-white px-6 py-3 rounded-xl text-sm font-semibold transition-all">Join SPIN</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-lg hover:bg-gray-100">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="lg:hidden hidden border-t border-gray-200 bg-white">
+            <div class="px-4 py-3 space-y-2">
+                <a href="../index.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded-lg">Home</a>
+                <a href="about.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded-lg">About</a>
+                   <!-- Events Dropdown -->
+<div class="relative group">
+  <button class="px-4 py-2 text-sm font-medium text-gray-700 hover:text-primary-600 rounded-lg nav-item flex items-center space-x-1">
+    <span>Events</span>
+    <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+    </svg>
+  </button>
+  <div class="absolute top-full left-0 mt-1 w-56 bg-white rounded-xl shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform group-hover:translate-y-0 translate-y-2 z-50">
+    <div class="p-2">
+      <!-- Notice we go to the home page and jump to section -->
+      <a href="../index.html#upcoming-events" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 rounded-lg">Upcoming Events</a>
+      <a href="../index.html#past-events" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 rounded-lg">Past Events</a>
+    </div>
+  </div>
+</div>
+
+
+                <a href="membership.html" class="block px-4 py-2 text-sm font-medium text-primary-600 bg-primary-50 rounded-lg">Membership</a>
+                <a href="education.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded-lg">Education</a>
+                <a href="research.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded-lg">Research</a>
+                <div class="pt-2 border-t border-gray-200">
+                    <a href="login.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded-lg">Login</a>
+                    <a href="membership.html" class="block px-4 py-2 text-sm font-medium text-white join-btn rounded-lg">Join SPIN</a>
                 </div>
             </div>
         </div>
@@ -123,122 +432,131 @@
         </section>
 
         <!-- Content Section -->
-        <section class="py-20">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="bg-white rounded-2xl shadow-lg p-8 mb-12">
-                    <div class="text-center">
-                        <div class="w-24 h-24 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-full mx-auto mb-6 flex items-center justify-center">
-                            <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9.5a2.5 2.5 0 00-2.5-2.5H15"></path>
-                            </svg>
-                        </div>
-                        <h2 class="text-3xl font-bold gradient-text mb-6">Coming Soon</h2>
-                        <p class="text-gray-600 text-lg mb-8 max-w-2xl mx-auto">
-                            We're working hard to bring you the best content for this section. Please check back soon for updates.
-                        </p>
-                        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                            <a href="../index.html" class="px-8 py-3 bg-gradient-to-r from-primary-500 to-secondary-500 text-white rounded-full font-medium hover:from-primary-600 hover:to-secondary-600 transition-all duration-200 shadow-lg hover:shadow-xl">
-                                Back to Home
-                            </a>
-                            <a href="membership.html" class="px-8 py-3 border-2 border-primary-500 text-primary-600 rounded-full font-medium hover:bg-primary-50 transition-all duration-200">
-                                Join SPIN
-                            </a>
-                        </div>
-                    </div>
-                </div>
+<section class="py-20">
+  <div class="max-w-md mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden">
+      <!-- Header -->
+      <div class="px-8 pt-8 pb-6 text-center bg-gradient-to-br from-primary-500 to-secondary-500">
+        <div class="w-20 h-20 bg-white rounded-full mx-auto mb-4 flex items-center justify-center">
+          <img src="../images/spin_logo.webp" alt="SPIN Logo" class="w-12 h-12 rounded-full">
+        </div>
+        <h1 class="text-2xl font-bold text-white mb-2">Create Account</h1>
+        <p class="text-blue-100">Join SPIN Academics today</p>
+      </div>
 
-                <!-- Features Grid -->
-                <div class="grid md:grid-cols-3 gap-8">
-                    <div class="bg-white rounded-xl p-6 shadow-lg card-hover">
-                        <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
-                            <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
-                            </svg>
-                        </div>
-                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Educational Excellence</h3>
-                        <p class="text-gray-600">Access to world-class educational resources and programs.</p>
-                    </div>
-                    <div class="bg-white rounded-xl p-6 shadow-lg card-hover">
-                        <div class="w-12 h-12 bg-secondary-100 rounded-lg flex items-center justify-center mb-4">
-                            <svg class="w-6 h-6 text-secondary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
-                            </svg>
-                        </div>
-                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Global Community</h3>
-                        <p class="text-gray-600">Connect with professionals worldwide in pediatric neuroradiology.</p>
-                    </div>
-                    <div class="bg-white rounded-xl p-6 shadow-lg card-hover">
-                        <div class="w-12 h-12 bg-accent-100 rounded-lg flex items-center justify-center mb-4">
-                            <svg class="w-6 h-6 text-accent-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
-                            </svg>
-                        </div>
-                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Professional Development</h3>
-                        <p class="text-gray-600">Advance your career with our fellowship and certification programs.</p>
-                    </div>
-                </div>
+      <!-- Form -->
+      <div class="px-8 py-8">
+        <form id="signup-form" class="space-y-6" novalidate>
+          <div class="flex gap-4">
+            <div class="w-1/2">
+              <label for="firstName" class="block text-sm font-medium text-gray-700 mb-2">First Name</label>
+              <input type="text" id="firstName" name="firstName" required placeholder="First Name"
+                class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors duration-200 bg-gray-50 focus:bg-white">
             </div>
-        </section>
+            <div class="w-1/2">
+              <label for="lastName" class="block text-sm font-medium text-gray-700 mb-2">Last Name</label>
+              <input type="text" id="lastName" name="lastName" required placeholder="Last Name"
+                class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors duration-200 bg-gray-50 focus:bg-white">
+            </div>
+          </div>
+
+          <div>
+            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+            <input type="email" id="email" name="email" required placeholder="Enter your email address"
+              class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors duration-200 bg-gray-50 focus:bg-white">
+          </div>
+
+          <div>
+            <label for="password" class="block text-sm font-medium text-gray-700 mb-2">Password</label>
+            <input type="password" id="password" name="password" required placeholder="Create Password"
+              class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors duration-200 bg-gray-50 focus:bg-white">
+          </div>
+
+          <div>
+            <label for="confirmPassword" class="block text-sm font-medium text-gray-700 mb-2">Re-type Password</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required placeholder="Re-type Password"
+              class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors duration-200 bg-gray-50 focus:bg-white">
+          </div>
+
+          <button type="submit"
+            class="w-full bg-gradient-to-r from-primary-500 to-secondary-500 text-white py-3 px-4 rounded-xl font-medium hover:from-primary-600 hover:to-secondary-600 focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 transition-all duration-200 shadow-lg hover:shadow-xl">
+            Create account
+          </button>
+        </form>
+
+        <!-- Sign in link -->
+        <div class="mt-6 text-center">
+          <p class="text-sm text-gray-600">
+            Already have an account?
+            <a href="login.html" class="text-primary-600 hover:text-primary-700 font-medium">Sign in</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-16">
+   <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-4 gap-8">
-                <div class="space-y-4">
-                    <div class="flex items-center space-x-3">
-                        <img src="../images/spin_logo.webp" alt="SPIN Academics" class="h-10 w-10 rounded-full">
-                        <div>
-                            <h3 class="text-xl font-bold">SPIN Academics</h3>
-                            <p class="text-sm text-gray-400">Pediatric Neuroradiology Society</p>
-                        </div>
+                <div class="md:col-span-2">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <img src="../images/spin_logo.webp" alt="SPIN Academics" class="h-10 w-auto">
+                        <span class="text-2xl font-bold gradient-text">SPIN Academics</span>
                     </div>
-                    <p class="text-gray-300">Society for Pediatric and Investigative Neuroradiology</p>
+                    <p class="text-gray-300 mb-6 max-w-md">
+                        Advancing spinal pain management through education, research, and professional collaboration.
+                    </p>
+<div class="flex space-x-4">
+  <!-- Twitter -->
+  <a href="https://x.com/spinacademics" target="_blank" class="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors">
+    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M24 4.557a9.93 9.93 0 01-2.828.775 4.932 4.932 0 002.165-2.724 9.865 9.865 0 01-3.127 1.195 4.92 4.92 0 00-8.384 4.482A13.978 13.978 0 011.671 3.149a4.902 4.902 0 001.523 6.574 4.903 4.903 0 01-2.229-.616c-.054 2.281 1.581 4.415 3.949 4.89a4.935 4.935 0 01-2.224.084 4.924 4.924 0 004.6 3.419 9.868 9.868 0 01-6.102 2.105c-.396 0-.787-.023-1.175-.069a13.945 13.945 0 007.548 2.212c9.142 0 14.307-7.721 13.995-14.646A10.004 10.004 0 0024 4.557z"/>
+    </svg>
+  </a>
+
+  <!-- Instagram -->
+  <a href="https://www.instagram.com/spinacademics/" target="_blank" class="w-10 h-10 bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 rounded-full flex items-center justify-center hover:opacity-80 transition">
+    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M12 2.163c3.204 0 3.584.012 4.849.07 1.366.062 2.633.36 3.608 1.336.975.975 1.274 2.242 1.336 3.608.058 1.265.07 1.645.07 4.849s-.012 3.584-.07 4.849c-.062 1.366-.36 2.633-1.336 3.608-.975.975-2.242 1.274-3.608 1.336-1.265.058-1.645.07-4.849.07s-3.584-.012-4.849-.07c-1.366-.062-2.633-.36-3.608-1.336-.975-.975-1.274-2.242-1.336-3.608C2.175 15.584 2.163 15.204 2.163 12s.012-3.584.07-4.849c.062-1.366.36-2.633 1.336-3.608.975-.975 2.242-1.274 3.608-1.336C8.416 2.175 8.796 2.163 12 2.163m0-2.163C8.741 0 8.332.014 7.052.072 5.773.13 4.674.425 3.738 1.362 2.8 2.298 2.505 3.397 2.448 4.676.014 5.957 0 6.367 0 12c0 5.633.014 6.043.072 7.323.057 1.279.352 2.378 1.288 3.314.937.937 2.036 1.231 3.315 1.288C8.332 23.986 8.741 24 12 24s3.668-.014 4.948-.072c1.279-.057 2.378-.351 3.315-1.288.936-.936 1.231-2.035 1.288-3.314.058-1.28.072-1.69.072-7.323s-.014-6.043-.072-7.323c-.057-1.279-.352-2.378-1.288-3.314C19.326.425 18.227.13 16.948.072 15.668.014 15.259 0 12 0z"/>
+      <path d="M12 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zm0 10.162a3.999 3.999 0 110-7.998 3.999 3.999 0 010 7.998zM18.406 4.594a1.44 1.44 0 11-2.881 0 1.44 1.44 0 012.881 0z"/>
+    </svg>
+  </a>
+
+  <!-- Email -->
+  <a href="mailto:faculty@spinacademics.org" class="w-10 h-10 bg-gray-600 rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors">
+    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18a2 2 0 002 2h16a2 2 0 002-2V6c0-1.1-.9-2-2-2zm0 2l-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z"/>
+    </svg>
+  </a>
+</div>
+
                 </div>
                 <div>
-                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
-                    <ul class="space-y-2">
-                        <li><a href="about.html" class="text-gray-300 hover:text-white transition-colors">About</a></li>
-                        <li><a href="membership.html" class="text-gray-300 hover:text-white transition-colors">Membership</a></li>
-                        <li><a href="education.html" class="text-gray-300 hover:text-white transition-colors">Education</a></li>
-                        <li><a href="research.html" class="text-gray-300 hover:text-white transition-colors">Research</a></li>
+                    <h3 class="font-semibold text-lg mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="../index.html" class="hover:text-white transition-colors">Home</a></li>
+                        <li><a href="about.html" class="hover:text-white transition-colors">About</a></li>
+                        <li><a href="membership.html" class="hover:text-white transition-colors">Membership</a></li>
+                        <li><a href="education.html" class="hover:text-white transition-colors">Education</a></li>
+                        <li><a href="research.html" class="hover:text-white transition-colors">Research</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="text-lg font-semibold mb-4">Education</h4>
-                    <ul class="space-y-2">
-                        <li><a href="society-fellowship-fixed.html" class="text-gray-300 hover:text-white transition-colors">Fellowship Program</a></li>
-                        <li><a href="cortex-club.html" class="text-gray-300 hover:text-white transition-colors">Cortex Club</a></li>
-                        <li><a href="spin-yarn-newsletter.html" class="text-gray-300 hover:text-white transition-colors">SPIN A Yarn</a></li>
-                        <li><a href="spin-wfpi.html" class="text-gray-300 hover:text-white transition-colors">SPIN WFPI</a></li>
+                    <h3 class="font-semibold text-lg mb-4">Contact Info</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>Email: membership@spinacademics.org</li>
+                        <li>Phone: +1 (555) 123-4567</li>
+                        <li>Address: 123 Medical Center Dr</li>
+                        <li>Dubai, UAE</li>
                     </ul>
-                </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Connect</h4>
-                    <div class="flex space-x-4">
-                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
-                            <span class="sr-only">Email</span>
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                            </svg>
-                        </a>
-                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
-                            <span class="sr-only">Twitter</span>
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/>
-                            </svg>
-                        </a>
-                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
-                            <span class="sr-only">YouTube</span>
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-                            </svg>
-                        </a>
-                    </div>
                 </div>
             </div>
-            <div class="border-t border-gray-800 mt-12 pt-8">
-                <p class="text-center text-gray-400">&copy; 2025 SPIN Academics. All rights reserved.</p>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 SPIN Academics. All rights reserved.</p>
             </div>
         </div>
     </footer>
