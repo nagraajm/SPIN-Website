@@ -195,48 +195,111 @@
   width: 100%;
   height: 520px;
   overflow: hidden;
-  border-radius: 0.75rem;
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  transition: all 0.4s cubic-bezier(0.4, 0.0, 0.2, 1);
+  border: 3px solid transparent;
+  background: linear-gradient(white, white) padding-box, 
+              linear-gradient(135deg, #0087ff, #00bfaf) border-box;
 }
+
+.card-slide:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 32px 64px -12px rgba(0, 135, 255, 0.3), 0 25px 50px -12px rgba(0, 191, 175, 0.2);
+  border: 3px solid transparent;
+  background: linear-gradient(white, white) padding-box, 
+              linear-gradient(135deg, #0087ff, #00bfaf, #0087ff) border-box;
+}
+
 .card-slide img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
+  transition: transform 0.4s ease;
 }
+
+.card-slide:hover img {
+  transform: scale(1.05);
+}
+
 .card-overlay {
   position: absolute;
   bottom: 0;
   left: 0;
-  padding: 1.5rem;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  padding: 2rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.6) 40%, transparent 100%);
   width: 100%;
   color: white;
+  transition: all 0.3s ease;
 }
+
+.card-slide:hover .card-overlay {
+  background: linear-gradient(to top, rgba(0, 135, 255, 0.9) 0%, rgba(0, 191, 175, 0.7) 40%, transparent 100%);
+}
+
 .card-title {
-  font-size: 1.25rem;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
 }
+
+.card-slide:hover .card-title {
+  transform: translateY(-4px);
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
 .card-text {
-  font-size: 0.875rem;
-  margin-bottom: 1rem;
+  font-size: 1rem;
+  margin-bottom: 1.25rem;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
 }
+
+.card-slide:hover .card-text {
+  transform: translateY(-2px);
+}
+
 .card-btn {
   display: inline-block;
-  background-color: #0087ff;
-  padding: 0.5rem 1rem;
-  border-radius: 0.375rem;
+  background: linear-gradient(135deg, #0087ff, #00bfaf);
+  padding: 0.75rem 1.5rem;
+  border-radius: 2rem;
   font-weight: 600;
   font-size: 0.875rem;
   color: white;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 135, 255, 0.3);
+  border: 2px solid transparent;
+  position: relative;
+  overflow: hidden;
 }
+
+.card-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s ease;
+}
+
+.card-btn:hover::before {
+  left: 100%;
+}
+
 .card-btn:hover {
-  background-color: #006bcc;
+  background: linear-gradient(135deg, #006bcc, #00998c);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 135, 255, 0.4);
 }
+
 .thumbSwiper {
-  padding: 1.5rem 0;
+  padding: 2rem 0;
   overflow-x: auto;
   overflow-y: hidden;
   scroll-behavior: smooth;
@@ -268,9 +331,28 @@
   position: relative;
   border-radius: 0.75rem;
   overflow: hidden;
-  transition: transform 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
   cursor: grab;
   scroll-snap-align: center;
+  border: 2px solid transparent;
+  background: linear-gradient(white, white) padding-box, 
+              linear-gradient(135deg, rgba(0, 135, 255, 0.3), rgba(0, 191, 175, 0.3)) border-box;
+}
+
+.thumbSwiper .swiper-slide:hover {
+  transform: translateY(-4px);
+  border: 2px solid transparent;
+  background: linear-gradient(white, white) padding-box, 
+              linear-gradient(135deg, #0087ff, #00bfaf) border-box;
+  box-shadow: 0 8px 25px rgba(0, 135, 255, 0.2);
+}
+
+.thumbSwiper .swiper-slide-thumb-active {
+  border: 2px solid transparent;
+  background: linear-gradient(white, white) padding-box, 
+              linear-gradient(135deg, #0087ff, #00bfaf) border-box;
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(0, 135, 255, 0.3);
 }
 
 /* Thumbnail image */
@@ -695,7 +777,7 @@
 /* past events */
 .past-events-section {
   padding: 5rem 2rem;
-  background: #f8fdff;
+  background: linear-gradient(135deg, #f8fdff 0%, #e6f7ff 100%);
   text-align: center;
   font-family: 'Poppins', sans-serif;
 }
@@ -721,25 +803,57 @@
 }
 
 .event-card {
-  background: #ffffff;
+  background: linear-gradient(145deg, #ffffff 0%, #f8fdff 100%);
   border-radius: 1.5rem;
-  box-shadow: 0 6px 18px rgba(0, 135, 255, 0.1);
+  box-shadow: 0 8px 25px rgba(0, 135, 255, 0.12), 
+              0 3px 10px rgba(0, 191, 175, 0.08);
   overflow: hidden;
   width: 340px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.4, 0.0, 0.2, 1);
   display: flex;
   flex-direction: column;
+  position: relative;
+  border: 1px solid rgba(0, 135, 255, 0.1);
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.event-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  padding: 2px;
+  background: linear-gradient(135deg, rgba(0, 135, 255, 0.3), rgba(0, 191, 175, 0.3));
+  border-radius: 1.5rem;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: xor;
+  -webkit-mask-composite: xor;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.event-card:hover::before {
+  opacity: 1;
 }
 
 .event-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 24px rgba(0, 135, 255, 0.2);
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 135, 255, 0.2), 
+              0 8px 25px rgba(0, 191, 175, 0.15),
+              0 0 0 1px rgba(0, 135, 255, 0.1);
 }
 
 .event-image {
   width: 100%;
   height: 200px;
   object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.event-card:hover .event-image {
+  transform: scale(1.05);
 }
 
 .event-info {
@@ -747,13 +861,26 @@
   display: flex;
   flex-direction: column;
   flex: 1;
+  position: relative;
 }
 
 .event-title {
   font-size: 1.4rem;
   font-weight: 700;
-  color: #1d3557;
+  background: linear-gradient(135deg, #1d3557, #0087ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
   margin-bottom: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.event-card:hover .event-title {
+  background: linear-gradient(135deg, #0087ff, #00bfaf);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform: translateY(-2px);
 }
 
 .event-description {
@@ -761,23 +888,88 @@
   color: #475569;
   margin-bottom: 1.2rem;
   flex: 1;
+  transition: color 0.3s ease;
 }
 
-.event-btn {
+.event-card:hover .event-description {
+  color: #334155;
+}
+
+.learn-btn {
   display: inline-block;
   padding: 0.75rem 1.8rem;
-  background: linear-gradient(to right, #0087ff, #00bfaf);
+  background: linear-gradient(135deg, #0087ff, #00bfaf);
   color: white;
   font-weight: 600;
   text-decoration: none;
   border-radius: 999px;
   box-shadow: 0 4px 16px rgba(0, 135, 255, 0.3);
-  transition: background 0.3s ease, transform 0.2s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
 }
 
-.event-btn:hover {
-  background: linear-gradient(to right, #00bfaf, #0087ff);
-  transform: scale(1.05);
+.learn-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s ease;
+}
+
+.learn-btn:hover::before {
+  left: 100%;
+}
+
+.learn-btn:hover {
+  background: linear-gradient(135deg, #006bcc, #00998c);
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(0, 135, 255, 0.4);
+}
+
+/* Animation for sliding content */
+.sliding-content-left {
+  animation: slideInLeft 0.8s ease-out;
+}
+
+.sliding-content-right {
+  animation: slideInRight 0.8s ease-out 0.2s both;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 
@@ -1086,7 +1278,7 @@
 
 
 <!-- spin fellowship -->
-<section class="py-20 bg-white">
+<section class="py-12 bg-white">
       <div class="text-center mb-16">
       <h2 class="text-4xl font-bold text-gray-900 mb-4">SPIN Fellowship</h2>
       <p class="text-xl text-gray-600">
@@ -1181,20 +1373,63 @@
         </div>
     </section>
 
-<section class="mission-section">  <div class="mission-container">
-    <!-- LEFT: Mission Text -->
-    <div class="mission-left">
-      <p class="mission-text">
-        The Society of Pediatric Neuroimaging aims to unite our community through world-class educational outreach, strong mentorship, and collaborative research
-      </p>
-      <a href="pages/membership.html" class="mission-button">Join SPIN</a>
-    </div>
+<!-- Mission Section with Sliding Animation -->
+<section class="py-16 bg-gradient-to-br from-blue-50 to-teal-50 overflow-hidden">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+      
+      <!-- Animated Text Content -->
+      <div class="sliding-content-left">
+        <div class="space-y-6">
+          <div class="inline-flex items-center px-4 py-2 bg-gradient-to-r from-primary-100 to-secondary-100 rounded-full">
+            <span class="text-sm font-semibold text-primary-700">Our Mission</span>
+          </div>
+          
+          <h2 class="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
+            Uniting Through
+            <span class="block bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent">
+              Excellence & Innovation
+            </span>
+          </h2>
+          
+          <p class="text-xl text-gray-600 leading-relaxed">
+            The Society of Pediatric Neuroimaging brings together global experts through world-class educational outreach, strong mentorship programs, and groundbreaking collaborative research initiatives.
+          </p>
+          
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="pages/membership.html" class="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-primary-600 to-secondary-600 text-white font-semibold rounded-xl hover:from-primary-700 hover:to-secondary-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+              <span>Join Our Community</span>
+              <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+              </svg>
+            </a>
+            <a href="pages/about.html" class="inline-flex items-center justify-center px-8 py-4 border-2 border-primary-600 text-primary-600 font-semibold rounded-xl hover:bg-primary-50 transition-all duration-300">
+              Learn More
+            </a>
+          </div>
+        </div>
+      </div>
 
-    <!-- RIGHT: Twitter Feed -->
-    <div class="mission-right">
-      <a class="twitter-timeline" data-height="280" href="https://twitter.com/spinacademics?ref_src=twsrc%5Etfw">
-        Tweets by spinacademics
-      </a>
+      <!-- Twitter Feed Container -->
+      <div class="sliding-content-right">
+        <div class="bg-white rounded-2xl p-6 shadow-xl border border-gray-100">
+          <div class="flex items-center space-x-3 mb-4">
+            <div class="w-10 h-10 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center">
+              <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-semibold text-gray-900">Latest Updates</h3>
+              <p class="text-sm text-gray-500">@spinacademics</p>
+            </div>
+          </div>
+          <a class="twitter-timeline" data-height="300" data-theme="light" data-chrome="noheader nofooter noborders transparent" href="https://twitter.com/spinacademics?ref_src=twsrc%5Etfw">
+            Tweets by spinacademics
+          </a>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -1212,7 +1447,7 @@
   <div class="event-cards-wrapper">
     
     <!-- SPIN Sydney -->
-    <div class="event-card">
+    <div class="event-card" style="animation-delay: 0.1s;">
       <img src="images/sydney-thumbnail.webp" alt="SPIN Sydney" class="event-image">
       <div class="event-info">
         <h3 class="event-title">SPIN Sydney</h3>
@@ -1222,7 +1457,7 @@
     </div>
 
     <!-- SPIN Goa -->
-    <div class="event-card">
+    <div class="event-card" style="animation-delay: 0.3s;">
       <img src="images/spin_goa.png" alt="SPIN Goa" class="event-image">
       <div class="event-info">
         <h3 class="event-title">SPIN Goa</h3>

@@ -96,9 +96,150 @@
             backdrop-filter: blur(15px);
             border: 1px solid rgba(0, 135, 255, 0.2);
         }
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(5px);
+        }
+        
+        .modal-content {
+            background-color: #fff;
+            margin: 2% auto;
+            padding: 0;
+            border-radius: 20px;
+            width: 90%;
+            max-width: 800px;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            transform: scale(0.7);
+            transition: transform 0.3s ease;
+        }
+        
+        .modal.show .modal-content {
+            transform: scale(1);
+        }
+        
+        .modal-header {
+            background: linear-gradient(135deg, #0087ff 0%, #00bfaf 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 20px 20px 0 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .close {
+            color: white;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+        
+        .close:hover {
+            transform: scale(1.1);
+        }
+        
+        .modal-body {
+            padding: 30px;
+        }
+        
+        .text-truncate {
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        
+        .read-more-btn {
+            color: #0087ff;
+            cursor: pointer;
+            font-weight: 500;
+            text-decoration: underline;
+            transition: color 0.2s ease;
+        }
+        
+        .read-more-btn:hover {
+            color: #00bfaf;
+        }
+        
+        /* Enhanced President Card */
+        .president-card {
+            background: linear-gradient(145deg, #ffffff 0%, #f8fdff 100%);
+            border-radius: 2rem;
+            padding: 3rem;
+            box-shadow: 0 10px 30px rgba(0, 135, 255, 0.15);
+            border: 1px solid rgba(0, 135, 255, 0.1);
+            transition: all 0.4s cubic-bezier(0.4, 0.0, 0.2, 1);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .president-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 135, 255, 0.2);
+        }
+        
+        .president-image {
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 2rem;
+            border: 4px solid transparent;
+            background: linear-gradient(white, white) padding-box, 
+                        linear-gradient(135deg, #0087ff, #00bfaf) border-box;
+            transition: all 0.4s ease;
+            animation: subtle-pulse 3s ease-in-out infinite;
+        }
+        
+        .president-image:hover {
+            transform: scale(1.05);
+            border-width: 6px;
+        }
+        
+        @keyframes subtle-pulse {
+            0%, 100% {
+                box-shadow: 0 0 0 0 rgba(0, 135, 255, 0.4);
+            }
+            50% {
+                box-shadow: 0 0 0 20px rgba(0, 135, 255, 0);
+            }
+        }
+        
+        .share-btn {
+            background: linear-gradient(135deg, #0087ff, #00bfaf);
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            margin-left: 10px;
+        }
+        
+        .share-btn:hover {
+            background: linear-gradient(135deg, #006bcc, #00998c);
+            transform: translateY(-2px);
+        }
+        
         .nav-active {
             position: relative;
         }
+        
         .nav-active::after {
             content: '';
             position: absolute;
@@ -200,8 +341,8 @@
   <div class="absolute top-full left-0 mt-1 w-56 bg-white rounded-xl shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform group-hover:translate-y-0 translate-y-2 z-50">
     <div class="p-2">
       <!-- Notice we go to the home page and jump to section -->
-      <a href="/index.html#upcoming-events" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 rounded-lg">Upcoming Events</a>
-      <a href="/index.html#past-events" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 rounded-lg">Past Events</a>
+      <a href="../index.html#upcoming-events" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 rounded-lg">Upcoming Events</a>
+      <a href="../index.html#past-events" class="dropdown-item block px-4 py-3 text-sm text-gray-700 hover:text-primary-600 rounded-lg">Past Events</a>
     </div>
   </div>
 </div>
@@ -319,28 +460,39 @@
                 <h2 class="text-3xl md:text-4xl font-bold gradient-text text-center mb-16">President's Welcome</h2>
                 <div class="grid md:grid-cols-2 gap-12 items-center">
                     <div class="space-y-6 text-gray-700 leading-relaxed">
-  <p>It is a privilege to serve as President of the SPIN Neuroradiology Society, a dynamic community dedicated to advancing pediatric neuroradiology. I am honored to build on its strong foundation and collaborative spirit.</p>
-  <p>My sincere gratitude to Dr. Kish Mankad for his leadership in shaping SPIN. The success of SPIN2024 in Goa highlighted our collective commitment to high-quality education and meaningful discussions.</p>
-  <p>Looking ahead, SPIN2025 in Dubai, in collaboration with the Radiological Society of the Emirates, marks an exciting milestone. By bringing the event to the UAE, we aim to expand access and engagement across the region.</p>
-  <p>Education remains central to SPIN. We will continue growing our web-based learning platforms and fellowship programs to shape the next generation of pediatric neuroradiologists.</p>
-  <p>None of this is possible without our dedicated team and members. Thank you for your contributions—I welcome your ideas as we push boundaries and elevate pediatric neuroradiology together.</p>
-  <div class="pt-4">
-    <p class="font-medium">Warm regards,</p>
-    <p class="font-bold text-primary-700">Dr Ozgur Oztekin</p>
-    <p class="text-sm text-gray-600">President, SPIN Academics – December 2024</p>
-  </div>
-</div>
-<div class="flex justify-center">
-  <div class="w-80 h-80 bg-gradient-to-br from-primary-100 to-secondary-100 rounded-2xl flex items-center justify-center card-hover">
-    <div class="text-center">
-      <div class="w-32 h-32 rounded-full overflow-hidden mx-auto mb-4">
-        <img src="../images/about/ozgur-oztekin.jpg" alt="Dr. Ozgur Oztekin" class="w-full h-full object-cover">
-      </div>
-      <p class="text-gray-600">Ozgur Oztekin</p>
-    </div>
-  </div>
-</div>
-
+                        <div class="prose max-w-none">
+                            <p class="text-lg mb-6">It is a privilege to serve as President of the SPIN Neuroradiology Society, a dynamic community dedicated to advancing pediatric neuroradiology. I am honored to build on its strong foundation and collaborative spirit.</p>
+                            
+                            <p class="mb-6">My sincere gratitude to Dr. Kish Mankad for his leadership in shaping SPIN. The success of SPIN2024 in Goa highlighted our collective commitment to high-quality education and meaningful discussions.</p>
+                            
+                            <p class="mb-6">Looking ahead, SPIN2025 in Dubai, in collaboration with the Radiological Society of the Emirates, marks an exciting milestone. By bringing the event to the UAE, we aim to expand access and engagement across the region.</p>
+                            
+                            <p class="mb-6">Education remains central to SPIN. We will continue growing our web-based learning platforms and fellowship programs to shape the next generation of pediatric neuroradiologists.</p>
+                            
+                            <p class="mb-8">None of this is possible without our dedicated team and members. Thank you for your contributions—I welcome your ideas as we push boundaries and elevate pediatric neuroradiology together.</p>
+                            
+                            <div class="pt-4 border-t border-gray-200">
+                                <p class="font-medium text-gray-900">Warm regards,</p>
+                                <p class="font-bold text-primary-700 text-xl">Dr Ozgur Oztekin</p>
+                                <p class="text-sm text-gray-600">President, SPIN Academics – December 2024</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex justify-center">
+                        <div class="president-card text-center">
+                            <div class="president-image">
+                                <img src="../images/about/ozgur-oztekin.jpg" alt="Dr. Ozgur Oztekin" class="w-full h-full object-cover">
+                            </div>
+                            <h3 class="text-3xl font-bold text-gray-900 mb-3">Dr Ozgur Oztekin</h3>
+                            <p class="text-xl text-primary-600 font-semibold mb-2">PRESIDENT</p>
+                            <p class="text-gray-600 mb-4">MD</p>
+                            <div class="flex flex-wrap justify-center gap-2">
+                                <span class="px-4 py-2 bg-primary-100 text-primary-700 rounded-full text-sm font-medium">Izmir Bakircay University</span>
+                                <span class="px-4 py-2 bg-secondary-100 text-secondary-700 rounded-full text-sm font-medium">Turkey</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -351,67 +503,116 @@
     <h2 class="text-3xl md:text-4xl font-bold gradient-text text-center mb-16">Founding Members - The SPIN Board</h2>
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
       
-      <!-- Member 1 -->
-      <div class="bg-gray-50 rounded-2xl p-6 text-center card-hover">
-        <div class="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4">
-          <img src="../images/about/ozgur-oztekin.jpg" alt="Ozgur Oztekin" class="w-full h-full object-cover">
+      <!-- Vice President - Robert Goetti -->
+      <div class="bg-gradient-to-br from-white to-blue-50 rounded-2xl p-6 text-center card-hover border border-blue-100">
+        <div class="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4 border-2 border-blue-200">
+          <img src="../images/about/robert-goetti.jpg" alt="Dr Robert Goetti" class="w-full h-full object-cover">
         </div>
-        <h3 class="text-xl font-semibold text-gray-900 mb-2">Ozgur Oztekin</h3>
-        <button class="px-4 py-2 bg-secondary-500 text-white rounded-lg text-sm hover:bg-secondary-600 transition-colors">Read Bio</button>
+        <h3 class="text-xl font-semibold text-gray-900 mb-1">Dr Robert Goetti</h3>
+        <p class="text-sm font-medium text-blue-600 mb-2">VICE PRESIDENT</p>
+        <div class="text-sm text-gray-600 text-truncate mb-4" id="goetti-bio-short">
+          <p>Robert obtained his medical degree from the University of Zurich Medical School in Switzerland and completed his specialist training in radiology, including an MRI fellowship in adult and pediatric neuroradiology...</p>
+        </div>
+        <button class="px-4 py-2 bg-blue-500 text-white rounded-lg text-sm hover:bg-blue-600 transition-colors read-more-btn" onclick="openModal('goetti')">Read Bio</button>
+        <button class="share-btn" onclick="shareProfile('goetti', 'Dr Robert Goetti', '../images/about/robert-goetti.jpg')">
+          <i class="fas fa-share-alt"></i>
+        </button>
       </div>
 
-      <!-- Member 2 -->
-      <div class="bg-gray-50 rounded-2xl p-6 text-center card-hover">
-        <div class="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4">
-          <img src="../images/about/robert-goetti.jpg" alt="Robert Goetti" class="w-full h-full object-cover">
+      <!-- Treasurer - Ajay Taranath -->
+      <div class="bg-gradient-to-br from-white to-green-50 rounded-2xl p-6 text-center card-hover border border-green-100">
+        <div class="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4 border-2 border-green-200">
+          <img src="../images/about/ajay-taranath.jpg" alt="Dr Ajay Taranath" class="w-full h-full object-cover">
         </div>
-        <h3 class="text-xl font-semibold text-gray-900 mb-2">Robert Goetti</h3>
-        <button class="px-4 py-2 bg-secondary-500 text-white rounded-lg text-sm hover:bg-secondary-600 transition-colors">Read Bio</button>
+        <h3 class="text-xl font-semibold text-gray-900 mb-1">Dr Ajay Taranath</h3>
+        <p class="text-sm font-medium text-green-600 mb-2">TREASURER</p>
+        <div class="text-sm text-gray-600 text-truncate mb-4" id="taranath-bio-short">
+          <p>Ajay is a Senior Consultant Pediatric Radiologist and Associate Professor at the University of Adelaide and the Women's and Children's Hospital Adelaide. He has been in post since 2006...</p>
+        </div>
+        <button class="px-4 py-2 bg-green-500 text-white rounded-lg text-sm hover:bg-green-600 transition-colors read-more-btn" onclick="openModal('taranath')">Read Bio</button>
+        <button class="share-btn" onclick="shareProfile('taranath', 'Dr Ajay Taranath', '../images/about/ajay-taranath.jpg')">
+          <i class="fas fa-share-alt"></i>
+        </button>
       </div>
 
-      <!-- Member 3 -->
-      <div class="bg-gray-50 rounded-2xl p-6 text-center card-hover">
-        <div class="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4">
-          <img src="../images/about/ajay-taranath.jpg" alt="Ajay Taranath" class="w-full h-full object-cover">
+      <!-- Secretary General - Ozgur Oztekin -->
+      <div class="bg-gradient-to-br from-white to-purple-50 rounded-2xl p-6 text-center card-hover border border-purple-100">
+        <div class="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4 border-2 border-purple-200">
+          <img src="../images/about/ozgur-oztekin.jpg" alt="Dr Ozgur Oztekin" class="w-full h-full object-cover">
         </div>
-        <h3 class="text-xl font-semibold text-gray-900 mb-2">Ajay Taranath</h3>
-        <button class="px-4 py-2 bg-secondary-500 text-white rounded-lg text-sm hover:bg-secondary-600 transition-colors">Read Bio</button>
+        <h3 class="text-xl font-semibold text-gray-900 mb-1">Dr Ozgur Oztekin</h3>
+        <p class="text-sm font-medium text-purple-600 mb-2">SECRETARY GENERAL</p>
+        <div class="text-sm text-gray-600 text-truncate mb-4" id="oztekin-bio-short">
+          <p>Ozgur is a Consultant Neuroradiologist at Izmir Bakircay University, Turkey. He graduated from Hacettepe University Faculty of Medicine and trained in general radiology at Tepecik Education and Research Hospital...</p>
+        </div>
+        <button class="px-4 py-2 bg-purple-500 text-white rounded-lg text-sm hover:bg-purple-600 transition-colors read-more-btn" onclick="openModal('oztekin')">Read Bio</button>
+        <button class="share-btn" onclick="shareProfile('oztekin', 'Dr Ozgur Oztekin', '../images/about/ozgur-oztekin.jpg')">
+          <i class="fas fa-share-alt"></i>
+        </button>
       </div>
 
-      <!-- Member 4 -->
-      <div class="bg-gray-50 rounded-2xl p-6 text-center card-hover">
-        <div class="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4">
-          <img src="../images/about/nihaal-reddy.jpg" alt="Nihaal Reddy" class="w-full h-full object-cover">
+      <!-- Secretary General - Nihaal Reddy -->
+      <div class="bg-gradient-to-br from-white to-orange-50 rounded-2xl p-6 text-center card-hover border border-orange-100">
+        <div class="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4 border-2 border-orange-200">
+          <img src="../images/about/nihaal-reddy.jpg" alt="Dr K. Nihaal Reddy" class="w-full h-full object-cover">
         </div>
-        <h3 class="text-xl font-semibold text-gray-900 mb-2">Nihaal Reddy</h3>
-        <button class="px-4 py-2 bg-secondary-500 text-white rounded-lg text-sm hover:bg-secondary-600 transition-colors">Read Bio</button>
+        <h3 class="text-xl font-semibold text-gray-900 mb-1">Dr K. Nihaal Reddy</h3>
+        <p class="text-sm font-medium text-orange-600 mb-2">SECRETARY GENERAL</p>
+        <div class="text-sm text-gray-600 text-truncate mb-4" id="reddy-bio-short">
+          <p>Nihaal obtained his medical degree from NTR University of Health Sciences and completed his postgraduate residency training in Radiodiagnosis from JNMC, KLE University, Belgaum...</p>
+        </div>
+        <button class="px-4 py-2 bg-orange-500 text-white rounded-lg text-sm hover:bg-orange-600 transition-colors read-more-btn" onclick="openModal('reddy')">Read Bio</button>
+        <button class="share-btn" onclick="shareProfile('reddy', 'Dr K. Nihaal Reddy', '../images/about/nihaal-reddy.jpg')">
+          <i class="fas fa-share-alt"></i>
+        </button>
       </div>
 
-      <!-- Member 5 -->
-      <div class="bg-gray-50 rounded-2xl p-6 text-center card-hover">
-        <div class="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4">
-          <img src="../images/about/prasad-hanagandi.jpg" alt="Prasad Hanagandi" class="w-full h-full object-cover">
+      <!-- Scientific Director Education - Prasad Hanagandi -->
+      <div class="bg-gradient-to-br from-white to-teal-50 rounded-2xl p-6 text-center card-hover border border-teal-100">
+        <div class="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4 border-2 border-teal-200">
+          <img src="../images/about/Prasad-Hanagandi.jpg" alt="Dr Prasad Hanagandi" class="w-full h-full object-cover">
         </div>
-        <h3 class="text-xl font-semibold text-gray-900 mb-2">Prasad Hanagandi</h3>
-        <button class="px-4 py-2 bg-secondary-500 text-white rounded-lg text-sm hover:bg-secondary-600 transition-colors">Read Bio</button>
+        <h3 class="text-xl font-semibold text-gray-900 mb-1">Dr Prasad Hanagandi</h3>
+        <p class="text-sm font-medium text-teal-600 mb-2">SCIENTIFIC DIRECTOR, EDUCATION</p>
+        <div class="text-sm text-gray-600 text-truncate mb-4" id="hanagandi-bio-short">
+          <p>Prasad is a Consultant Neuroradiologist at King Abdulaziz Medical City, Riyadh, Ministry of National Guard Health Affairs, Saudi Arabia. He completed 6 years of clinical fellowship training...</p>
+        </div>
+        <button class="px-4 py-2 bg-teal-500 text-white rounded-lg text-sm hover:bg-teal-600 transition-colors read-more-btn" onclick="openModal('hanagandi')">Read Bio</button>
+        <button class="share-btn" onclick="shareProfile('hanagandi', 'Dr Prasad Hanagandi', '../images/about/Prasad-Hanagandi.jpg')">
+          <i class="fas fa-share-alt"></i>
+        </button>
       </div>
 
-      <!-- Member 6 -->
-      <div class="bg-gray-50 rounded-2xl p-6 text-center card-hover">
-        <div class="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4">
-          <img src="../images/about/pradeep-krishnan.jpg" alt="Pradeep Krishnan" class="w-full h-full object-cover">
+      <!-- Executive Member - Ajay DSouza -->
+      <div class="bg-gradient-to-br from-white to-pink-50 rounded-2xl p-6 text-center card-hover border border-pink-100">
+        <div class="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4 border-2 border-pink-200">
+          <img src="../images/about/ajay-dsouza.jpg" alt="Dr Ajay DSouza" class="w-full h-full object-cover">
         </div>
-        <h3 class="text-xl font-semibold text-gray-900 mb-2">Pradeep Krishnan</h3>
-        <button class="px-4 py-2 bg-secondary-500 text-white rounded-lg text-sm hover:bg-secondary-600 transition-colors">Read Bio</button>
+        <h3 class="text-xl font-semibold text-gray-900 mb-1">Dr Ajay DSouza</h3>
+        <p class="text-sm font-medium text-pink-600 mb-2">EXECUTIVE MEMBER</p>
+        <div class="text-sm text-gray-600 text-truncate mb-4" id="dsouza-bio-short">
+          <p>Dr. Ajay Prashanth D'Souza is a Consultant Pediatric Radiologist with 18 years of experience in the field. He currently practices at Al Jalila Children's Specialty Hospital in Dubai Healthcare City...</p>
+        </div>
+        <button class="px-4 py-2 bg-pink-500 text-white rounded-lg text-sm hover:bg-pink-600 transition-colors read-more-btn" onclick="openModal('dsouza')">Read Bio</button>
+        <button class="share-btn" onclick="shareProfile('dsouza', 'Dr Ajay DSouza', '../images/about/ajay-dsouza.jpg')">
+          <i class="fas fa-share-alt"></i>
+        </button>
       </div>
 
-      <!-- Member 7 -->
-      <div class="bg-gray-50 rounded-2xl p-6 text-center card-hover">
-        <div class="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4">
-          <img src="../images/about/kish-mankad.jpg" alt="Kish Mankad" class="w-full h-full object-cover">
+      <!-- Founding Member - Kish Mankad -->
+      <div class="bg-gradient-to-br from-white to-gray-50 rounded-2xl p-6 text-center card-hover border border-gray-200">
+        <div class="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4 border-2 border-gray-300">
+          <img src="../images/about/kish-mankad.jpg" alt="Dr Kish Mankad" class="w-full h-full object-cover">
         </div>
-        <h3 class="text-xl font-semibold text-gray-900 mb-2">Kish Mankad</h3>
-        <button class="px-4 py-2 bg-secondary-500 text-white rounded-lg text-sm hover:bg-secondary-600 transition-colors">Read Bio</button>
+        <h3 class="text-xl font-semibold text-gray-900 mb-1">Dr Kish Mankad</h3>
+        <p class="text-sm font-medium text-gray-600 mb-2">FOUNDING MEMBER</p>
+        <div class="text-sm text-gray-600 text-truncate mb-4" id="mankad-bio-short">
+          <p>Dr Kish Mankad, Consultant Pediatric Neuroradiologist and the Clinical Lead for Pediatric Neuroradiology at Great Ormond Street Hospital (GOSH), has been in post since 2011...</p>
+        </div>
+        <button class="px-4 py-2 bg-gray-500 text-white rounded-lg text-sm hover:bg-gray-600 transition-colors read-more-btn" onclick="openModal('mankad')">Read Bio</button>
+        <button class="share-btn" onclick="shareProfile('mankad', 'Dr Kish Mankad', '../images/about/kish-mankad.jpg')">
+          <i class="fas fa-share-alt"></i>
+        </button>
       </div>
 
     </div>
@@ -420,108 +621,107 @@
 
 
 <!-- Executive Committee -->
-<section class="py-20" id="executive-committee">
+<section class="py-20 bg-gray-50" id="executive-committee">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <h2 class="text-3xl md:text-4xl font-bold gradient-text text-center mb-16">Executive Committee</h2>
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-      <!-- Ozgur Oztekin -->
-      <div class="bg-white rounded-2xl p-6 text-center shadow-lg card-hover">
-        <div class="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4">
-          <img src="../images/about/ozgur-oztekin.jpg" alt="Ozgur Oztekin" class="w-full h-full object-cover">
+      <!-- Scientific Director Research - Pradeep Krishnan -->
+      <div class="bg-gradient-to-br from-white to-indigo-50 rounded-2xl p-6 text-center card-hover border border-indigo-100">
+        <div class="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4 border-2 border-indigo-200">
+          <img src="../images/about/pradeep-krishnan.jpg" alt="Dr Pradeep Krishnan" class="w-full h-full object-cover">
         </div>
-        <h3 class="text-xl font-semibold text-gray-900 mb-2">Ozgur Oztekin</h3>
-        <p class="text-primary-600 font-medium mb-1">President</p>
+        <h3 class="text-xl font-semibold text-gray-900 mb-1">Dr Pradeep Krishnan</h3>
+        <p class="text-sm font-medium text-indigo-600 mb-2">SCIENTIFIC DIRECTOR, RESEARCH</p>
+        <div class="text-sm text-gray-600 text-truncate mb-4">
+          <p>Pradeep is a fellowship-trained staff Pediatric Neuroradiologist at The Hospital for Sick Children and an Assistant Professor at the University of Toronto...</p>
+        </div>
+        <button class="px-4 py-2 bg-indigo-500 text-white rounded-lg text-sm hover:bg-indigo-600 transition-colors" onclick="openModal('krishnan')">Read Bio</button>
+        <button class="share-btn" onclick="shareProfile('krishnan', 'Dr Pradeep Krishnan', '../images/about/pradeep-krishnan.jpg')">
+          <i class="fas fa-share-alt"></i>
+        </button>
       </div>
 
-      <!-- Robert Goetti -->
-      <div class="bg-white rounded-2xl p-6 text-center shadow-lg card-hover">
-        <div class="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4">
-          <img src="../images/about/robert-goetti.jpg" alt="Robert Goetti" class="w-full h-full object-cover">
+      <!-- Executive Member - Jordi Roldan -->
+      <div class="bg-gradient-to-br from-white to-red-50 rounded-2xl p-6 text-center card-hover border border-red-100">
+        <div class="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4 border-2 border-red-200">
+          <img src="../images/about/jordi-roldan.jpg" alt="Dr Jordi Roldan" class="w-full h-full object-cover">
         </div>
-        <h3 class="text-xl font-semibold text-gray-900 mb-2">Robert Goetti</h3>
-        <p class="text-primary-600 font-medium mb-1">President Elect</p>
+        <h3 class="text-xl font-semibold text-gray-900 mb-1">Dr Jordi Roldan</h3>
+        <p class="text-sm font-medium text-red-600 mb-2">EXECUTIVE MEMBER</p>
+        <div class="text-sm text-gray-600 text-truncate mb-4">
+          <p>Dr. Jordi Roldan is a Pediatric Neuroradiologist at Hospital Universitari Son Espases in Palma, Spain. He holds European Diplomas in Neuroradiology and Pediatric Neuroradiology...</p>
+        </div>
+        <button class="px-4 py-2 bg-red-500 text-white rounded-lg text-sm hover:bg-red-600 transition-colors" onclick="openModal('roldan')">Read Bio</button>
+        <button class="share-btn" onclick="shareProfile('roldan', 'Dr Jordi Roldan', '../images/about/jordi-roldan.jpg')">
+          <i class="fas fa-share-alt"></i>
+        </button>
       </div>
 
-      <!-- Ajay Taranath -->
-      <div class="bg-white rounded-2xl p-6 text-center shadow-lg card-hover">
-        <div class="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4">
-          <img src="../images/about/ajay-taranath.jpg" alt="Ajay Taranath" class="w-full h-full object-cover">
+      <!-- Academic Coordinator - Jai Sidpra -->
+      <div class="bg-gradient-to-br from-white to-yellow-50 rounded-2xl p-6 text-center card-hover border border-yellow-100">
+        <div class="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4 border-2 border-yellow-200">
+          <div class="w-full h-full bg-gradient-to-br from-blue-100 to-blue-200 rounded-full flex items-center justify-center">
+            <span class="text-2xl font-bold text-blue-600">JS</span>
+          </div>
         </div>
-        <h3 class="text-xl font-semibold text-gray-900 mb-2">Ajay Taranath</h3>
-        <p class="text-primary-600 font-medium mb-1">General Secretary</p>
+        <h3 class="text-xl font-semibold text-gray-900 mb-1">Mr Jai Sidpra</h3>
+        <p class="text-sm font-medium text-yellow-600 mb-2">ACADEMIC CO-ORDINATOR</p>
+        <div class="text-sm text-gray-600 text-truncate mb-4">
+          <p>Jai is an MD PhD student at the UCL Great Ormond Street Institute of Child Health supervised by Professor Darren Hargrave. His PhD project takes a machine-learning driven approach...</p>
+        </div>
+        <button class="px-4 py-2 bg-yellow-500 text-white rounded-lg text-sm hover:bg-yellow-600 transition-colors" onclick="openModal('sidpra')">Read Bio</button>
+        <button class="share-btn" onclick="shareProfile('sidpra', 'Mr Jai Sidpra', 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzMzODVmZiIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmb250LXNpemU9IjE4IiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkpTPC90ZXh0Pjwvc3ZnPg==')">
+          <i class="fas fa-share-alt"></i>
+        </button>
       </div>
 
-      <!-- Nihaal Reddy -->
-      <div class="bg-white rounded-2xl p-6 text-center shadow-lg card-hover">
-        <div class="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4">
-          <img src="../images/about/nihaal-reddy.jpg" alt="Nihaal Reddy" class="w-full h-full object-cover">
+      <!-- Research Lead - Ibrahem Albalkhi -->
+      <div class="bg-gradient-to-br from-white to-cyan-50 rounded-2xl p-6 text-center card-hover border border-cyan-100">
+        <div class="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4 border-2 border-cyan-200">
+          <img src="../images/about/ibrahem-albalkhi.jpg" alt="Ibrahem Albalkhi" class="w-full h-full object-cover">
         </div>
-        <h3 class="text-xl font-semibold text-gray-900 mb-2">Nihaal Reddy</h3>
-        <p class="text-primary-600 font-medium mb-1">Treasurer</p>
+        <h3 class="text-xl font-semibold text-gray-900 mb-1">Ibrahem Albalkhi</h3>
+        <p class="text-sm font-medium text-cyan-600 mb-2">RESEARCH LEAD</p>
+        <div class="text-sm text-gray-600 text-truncate mb-4">
+          <p>Ibrahem Albalkhi is currently pursuing a medical degree at Alfaisal University, Saudi Arabia. He has an active research interest in machine learning and its interface with Neurosurgery...</p>
+        </div>
+        <button class="px-4 py-2 bg-cyan-500 text-white rounded-lg text-sm hover:bg-cyan-600 transition-colors" onclick="openModal('albalkhi')">Read Bio</button>
+        <button class="share-btn" onclick="shareProfile('albalkhi', 'Ibrahem Albalkhi', '../images/about/ibrahem-albalkhi.jpg')">
+          <i class="fas fa-share-alt"></i>
+        </button>
       </div>
 
-      <!-- Sniya Sudhakar -->
-      <div class="bg-white rounded-2xl p-6 text-center shadow-lg card-hover">
-        <div class="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4">
-          <img src="../images/about/sniya-sudhakar.jpg" alt="Sniya Sudhakar" class="w-full h-full object-cover">
+      <!-- Executive Member - Kiran Hilal -->
+      <div class="bg-gradient-to-br from-white to-emerald-50 rounded-2xl p-6 text-center card-hover border border-emerald-100">
+        <div class="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4 border-2 border-emerald-200">
+          <img src="../images/about/kiran-hilal.jpg" alt="Dr Kiran Hilal" class="w-full h-full object-cover">
         </div>
-        <h3 class="text-xl font-semibold text-gray-900 mb-2">Sniya Sudhakar</h3>
-        <p class="text-primary-600 font-medium mb-1">Innovation Lead</p>
+        <h3 class="text-xl font-semibold text-gray-900 mb-1">Dr Kiran Hilal</h3>
+        <p class="text-sm font-medium text-emerald-600 mb-2">EXECUTIVE MEMBER</p>
+        <div class="text-sm text-gray-600 text-truncate mb-4">
+          <p>Dr. Kiran Hilal is an Associate Professor and Vice Chair of Clinical Services in the Department of Radiology at Aga Khan University. She also serves as a Faculty Radiologist...</p>
+        </div>
+        <button class="px-4 py-2 bg-emerald-500 text-white rounded-lg text-sm hover:bg-emerald-600 transition-colors" onclick="openModal('hilal')">Read Bio</button>
+        <button class="share-btn" onclick="shareProfile('hilal', 'Dr Kiran Hilal', '../images/about/kiran-hilal.jpg')">
+          <i class="fas fa-share-alt"></i>
+        </button>
       </div>
 
-      <!-- Pradeep Krishnan -->
-      <div class="bg-white rounded-2xl p-6 text-center shadow-lg card-hover">
-        <div class="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4">
-          <img src="../images/about/pradeep-krishnan.jpg" alt="Pradeep Krishnan" class="w-full h-full object-cover">
+      <!-- Executive Member - Suraj Serai -->
+      <div class="bg-gradient-to-br from-white to-violet-50 rounded-2xl p-6 text-center card-hover border border-violet-100">
+        <div class="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4 border-2 border-violet-200">
+          <img src="../images/about/suraj-serai.jpg" alt="Dr Suraj Serai" class="w-full h-full object-cover">
         </div>
-        <h3 class="text-xl font-semibold text-gray-900 mb-2">Pradeep Krishnan</h3>
-        <p class="text-primary-600 font-medium mb-1">Scientific Chair, Research</p>
-      </div>
-
-      <!-- Suraj Serai -->
-      <div class="bg-white rounded-2xl p-6 text-center shadow-lg card-hover">
-        <div class="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4">
-          <img src="../images/about/suraj-serai.jpg" alt="Suraj Serai" class="w-full h-full object-cover">
+        <h3 class="text-xl font-semibold text-gray-900 mb-1">Dr Suraj Serai</h3>
+        <p class="text-sm font-medium text-violet-600 mb-2">EXECUTIVE MEMBER</p>
+        <div class="text-sm text-gray-600 text-truncate mb-4">
+          <p>Dr. Serai is an MR Scientist and Magnetic Resonance Safety Expert at CHOP and an Assistant Professor of Radiology at the University of Pennsylvania...</p>
         </div>
-        <h3 class="text-xl font-semibold text-gray-900 mb-2">Suraj Serai</h3>
-        <p class="text-primary-600 font-medium mb-1">Executive Member</p>
-      </div>
-
-      <!-- Amal Saleh -->
-      <div class="bg-white rounded-2xl p-6 text-center shadow-lg card-hover">
-        <div class="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4">
-          <img src="../images/about/amal-saleh.jpg" alt="Amal Saleh" class="w-full h-full object-cover">
-        </div>
-        <h3 class="text-xl font-semibold text-gray-900 mb-2">Amal Saleh</h3>
-        <p class="text-primary-600 font-medium mb-1">Executive Member</p>
-      </div>
-
-      <!-- Ajay Dsouza -->
-      <div class="bg-white rounded-2xl p-6 text-center shadow-lg card-hover">
-        <div class="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4">
-          <img src="../images/about/ajay-dsouza.jpg" alt="Ajay Dsouza" class="w-full h-full object-cover">
-        </div>
-        <h3 class="text-xl font-semibold text-gray-900 mb-2">Ajay Dsouza</h3>
-        <p class="text-primary-600 font-medium mb-1">Executive Member</p>
-      </div>
-
-      <!-- Kiran Hilal -->
-      <div class="bg-white rounded-2xl p-6 text-center shadow-lg card-hover">
-        <div class="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4">
-          <img src="../images/about/kiran-hilal.jpg" alt="Kiran Hilal" class="w-full h-full object-cover">
-        </div>
-        <h3 class="text-xl font-semibold text-gray-900 mb-2">Kiran Hilal</h3>
-        <p class="text-primary-600 font-medium mb-1">Executive Member</p>
-      </div>
-
-      <!-- Jordi Roldan -->
-      <div class="bg-white rounded-2xl p-6 text-center shadow-lg card-hover">
-        <div class="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4">
-          <img src="../images/about/jordi-roldan.jpg" alt="Jordi Roldan" class="w-full h-full object-cover">
-        </div>
-        <h3 class="text-xl font-semibold text-gray-900 mb-2">Jordi Roldan</h3>
-        <p class="text-primary-600 font-medium mb-1">Executive Member</p>
+        <button class="px-4 py-2 bg-violet-500 text-white rounded-lg text-sm hover:bg-violet-600 transition-colors" onclick="openModal('serai')">Read Bio</button>
+        <button class="share-btn" onclick="shareProfile('serai', 'Dr Suraj Serai', '../images/about/suraj-serai.jpg')">
+          <i class="fas fa-share-alt"></i>
+        </button>
       </div>
 
     </div>
@@ -885,11 +1085,357 @@
         </div>
     </footer>
 
+    <!-- Bio Modal -->
+    <div id="bioModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="flex items-center space-x-4">
+                    <img id="modalImage" src="" alt="" class="w-16 h-16 rounded-full object-cover border-2 border-white">
+                    <div>
+                        <h2 id="modalName" class="text-2xl font-bold"></h2>
+                        <p id="modalTitle" class="text-lg opacity-90"></p>
+                    </div>
+                </div>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div id="modalBio" class="prose max-w-none"></div>
+                <div class="mt-6 pt-6 border-t border-gray-200">
+                    <div class="flex justify-center space-x-4">
+                        <button onclick="shareProfile()" class="share-btn">
+                            <i class="fas fa-share-alt mr-2"></i>Share Profile
+                        </button>
+                        <button onclick="copyToClipboard()" class="share-btn">
+                            <i class="fas fa-copy mr-2"></i>Copy Bio
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
     <!-- Mobile Menu Script -->
     <script>
         document.getElementById('mobile-menu-btn').addEventListener('click', function() {
             const mobileMenu = document.getElementById('mobile-menu');
             mobileMenu.classList.toggle('hidden');
+        });
+
+        // Team member bio data
+        const teamMembers = {
+            president: {
+                name: "Dr Ozgur Oztekin",
+                title: "PRESIDENT - MD",
+                image: "../images/about/ozgur-oztekin.jpg",
+                bio: `<p class="text-lg mb-4"><strong>Dr Ozgur Oztekin MD</strong></p>
+                <p class="mb-6">It is a privilege to serve as President of the SPIN Neuroradiology Society, a dynamic community dedicated to advancing pediatric neuroradiology. I am honored to build on its strong foundation and collaborative spirit.</p>
+                <p class="mb-6">My sincere gratitude to Dr. Kish Mankad for his leadership in shaping SPIN. The success of SPIN2024 in Goa highlighted our collective commitment to high-quality education and meaningful discussions.</p>
+                <p class="mb-6">Looking ahead, SPIN2025 in Dubai, in collaboration with the Radiological Society of the Emirates, marks an exciting milestone. By bringing the event to the UAE, we aim to expand access and engagement across the region.</p>
+                <p class="mb-6">Education remains central to SPIN. We will continue growing our web-based learning platforms and fellowship programs to shape the next generation of pediatric neuroradiologists.</p>
+                <p class="mb-6">None of this is possible without our dedicated team and members. Thank you for your contributions—I welcome your ideas as we push boundaries and elevate pediatric neuroradiology together.</p>
+                <div class="pt-4 border-t border-gray-200">
+                    <p class="font-medium">Warm regards,</p>
+                    <p class="font-bold text-primary-700">Dr Ozgur Oztekin</p>
+                    <p class="text-sm text-gray-600">President, SPIN Academics – December 2024</p>
+                </div>
+                <blockquote class="italic text-purple-700 border-l-4 border-purple-200 pl-4 mt-6">
+                    "Our true mentor in life is science." — Mustafa Kemal Ataturk
+                </blockquote>`
+            },
+            mankad: {
+                name: "Dr Kish Mankad",
+                title: "FOUNDING MEMBER - FRCR",
+                image: "../images/about/kish-mankad.jpg",
+                bio: `<p class="text-lg mb-4"><strong>Dr Kish Mankad FRCR</strong></p>
+                <p class="mb-4">Dr Kish Mankad, Consultant Pediatric Neuroradiologist and the Clinical Lead for Pediatric Neuroradiology at Great Ormond Street Hospital (GOSH), has been in post since 2011. He also holds an Associate Professorship with UCL Great Ormond Street Institute of Child Health.</p>
+                <p class="mb-4">Dr Mankad's General Radiology training was in Leeds, leading to the FRCR, and in Internal Medicine in Sheffield, leading to the MRCP. He is a core member of the Brain Tumour Imaging group of SIOPe, member of the ASPNR, RSNA, ESNR, and BSNR, and founding member of ISPIN and the BPNG.</p>
+                <p class="mb-4">He has an extensive education and training portfolio, having directed and delivered comprehensive teaching programmes across the world. He also directs the Pediatric Neuroradiology Masterclass at GOSH and has set up a PG Certification in Pediatric Neuroradiology. He has been a Visiting Professor to SickKids, Toronto, the University of Messina, and has also been awarded as the Outreach Professor of Neuroradiology to Ghana by the World Federation of Neuroradiological Societies.</p>
+                <p class="mb-4">His clinical academic interests are diverse including neuro-oncology, infective and inflammatory diseases, brain malformations, white matter disorders, movement disorders and epilepsy. He has authored 5 text-books, 125 peer reviewed publications, and several book chapters. His international collaborations include Stanford University, Seattle Children's, Neuro-MIG COST Europe, Christian Medical College, Vellore, and Gaslini Children's Hospital, Genoa.</p>
+                <p class="mb-4">Kish is also a trained Lean Six Sigma Master Black Belt and has completed the MBA essentials programme with the London School of Economics. As such, he is passionate about quality and safety improvement, with a strong focus on healthcare economics and organizational behaviour.</p>
+                <blockquote class="italic text-primary-700 border-l-4 border-primary-200 pl-4 mt-6">
+                    "To lead is to serve with love." — Anonymous
+                </blockquote>`
+            },
+            goetti: {
+                name: "Dr Robert Goetti",
+                title: "VICE PRESIDENT - FRANZCR",
+                image: "../images/about/robert-goetti.jpg",
+                bio: `<p class="text-lg mb-4"><strong>Dr Robert Goetti FRANZCR</strong></p>
+                <p class="mb-4">Robert obtained his medical degree from the University of Zurich Medical School in Switzerland and completed his specialist training in radiology, including an MRI fellowship in adult and pediatric neuroradiology, at the University Hospital and University Children's Hospital of Zurich.</p>
+                <p class="mb-4">He moved to Sydney with his Australian wife and two Children in 2014 and completed an additional fellowship in pediatric radiology at the Children's Hospital at Westmead Sydney, where he now works as a Senior Staff Specialist and Departmental Director of Training.</p>
+                <p class="mb-4">Robert has co-authored more than 50 peer-reviewed research articles. In his spare time, he enjoys surfing, snowboarding, CrossFit, and spending time with his family.</p>
+                <blockquote class="italic text-blue-700 border-l-4 border-blue-200 pl-4 mt-6">
+                    "Knowing is not enough, we must apply. Willing is not enough, we must do." — Johann Wolfgang van Goethe
+                </blockquote>`
+            },
+            taranath: {
+                name: "Dr Ajay Taranath",
+                title: "TREASURER - FRANZCR",
+                image: "../images/about/ajay-taranath.jpg",
+                bio: `<p class="text-lg mb-4"><strong>Dr Ajay Taranath FRANZCR</strong></p>
+                <p class="mb-4">Ajay is a Senior Consultant Pediatric Radiologist and Associate Professor at the University of Adelaide and the Women's and Children's Hospital Adelaide. He has been in post since 2006.</p>
+                <p class="mb-4">Having graduated medical school in India, he pursued a fellowship in Pediatric Radiology at the Children's Hospital at Westmead, Sydney, followed by a second fellowship in Pediatric Interventional Radiology and Pediatric Neuroradiology at the Hospital for Sick Children, Toronto, Canada.</p>
+                <p class="mb-4">He serves as Chairman of the SA chapter of the Royal Australian and New Zealand College of Radiologists as well as the Chief of MRI at the Women's and Children's Hospital Adelaide. Aside from general Pediatric Radiology, his areas of interest include Fetal and Pediatric Neuroimaging in addition to post-mortem imaging. He has a particular interest in malformations of cortical development, craniosynostosis, and tubulinopathies. He also has a keen interest in cranial, eye, and gut ultrasound.</p>
+                <p class="mb-4">Ajay has authored more than 40 publications in peer-reviewed journals. In addition to teaching trainees and medical students, he enjoys singing and travelling.</p>
+                <blockquote class="italic text-green-700 border-l-4 border-green-200 pl-4 mt-6">
+                    "Live as if you were to die tomorrow. Learn as if you were to live forever." — Mahatma Gandhi
+                </blockquote>`
+            },
+            oztekin: {
+                name: "Dr Ozgur Oztekin",
+                title: "SECRETARY GENERAL - MD",
+                image: "../images/about/ozgur-oztekin.jpg",
+                bio: `<p class="text-lg mb-4"><strong>Dr Ozgur Oztekin MD</strong></p>
+                <p class="mb-4">Ozgur is a Consultant Neuroradiologist at Izmir Bakircay University, Turkey. He graduated from Hacettepe University Faculty of Medicine and trained in general radiology at Tepecik Education and Research Hospital. He was appointed to his current position in February 2014.</p>
+                <p class="mb-4">A clinically active Pediatric Neuroradiologist, Ozgur has a special interest in fetal imaging and brain tumours. As a member of European Network on Brain Malformations, his main areas of research are posterior fossa malformations. He is the author of over 100 original peer-reviewed publications.</p>
+                <p class="mb-4">Ozgur has a strong interest in education and is currently involved in the International Network for Evidence-based Research in Clinical Health Research in European Cooperation in Science and Technology Action. He has also been awarded the "Teach the Teachers" certificate by The ESMRMB.</p>
+                <blockquote class="italic text-purple-700 border-l-4 border-purple-200 pl-4 mt-6">
+                    "Our true mentor in life is science." — Mustafa Kemal Ataturk
+                </blockquote>`
+            },
+            reddy: {
+                name: "Dr K. Nihaal Reddy",
+                title: "SECRETARY GENERAL - MD",
+                image: "../images/about/nihaal-reddy.jpg",
+                bio: `<p class="text-lg mb-4"><strong>Dr K. Nihaal Reddy MD</strong></p>
+                <p class="mb-4">Nihaal obtained his medical degree from NTR University of Health Sciences and completed his postgraduate residency training in Radiodiagnosis from JNMC, KLE University, Belgaum. He went for an observership in Pediatric Neuroradiology under Dr Sanjay Prabhu at Boston Childrens Hospital, Harvard.</p>
+                <p class="mb-4">He then pursued a postdoctoral fellowship in pediatric neuroradiology at Johns Hopkins Hospital, Baltimore under Dr Andrea Poretti and went on to pursue a second fellowship in pediatric radiology & neuroradiology at the Royal Children's Hospital, Melbourne. He is currently a Consultant Pediatric Neuroradiologist with the Rainbow Children's Hospital Network and Tenet Diagnostics, Hyderabad, India.</p>
+                <p class="mb-4">Nihaal has an extensive educational portfolio, conducting the Pan-India Pediatric Neuroscience Grand Rounds every fortnight, and co-ordinating the International Pediatric Neuroradiology Teaching Network, conducted by the ASPNR in 2022. His main areas of interest are posterior fossa imaging, malformations, and inherited neurometabolic disorders.</p>
+                <p class="mb-4">In his spare time, Nihaal enjoys watching football and is an ardent supporter of Liverpool FC, having captained his school and college teams in football and cricket. He also enjoys poetry, watching movies, bodybuilding, and visiting the national parks of India in search of Tigers.</p>
+                <blockquote class="italic text-orange-700 border-l-4 border-orange-200 pl-4 mt-6">
+                    "True greatness is in giving, sharing, and being humble." — Pandit Narayan Reddy
+                </blockquote>`
+            },
+            hanagandi: {
+                name: "Dr Prasad Hanagandi",
+                title: "SCIENTIFIC DIRECTOR, EDUCATION - MD",
+                image: "../images/about/Prasad-Hanagandi.jpg",
+                bio: `<p class="text-lg mb-4"><strong>Dr Prasad Hanagandi MD</strong></p>
+                <p class="mb-4">Prasad is a Consultant Neuroradiologist at King Abdulaziz Medical City, Riyadh, Ministry of National Guard Health Affairs, Saudi Arabia. He completed 6 years of clinical fellowship training at McGill University, The University of Ottawa, and The Hospital for Sick Children, Toronto.</p>
+                <p class="mb-4">In addition to his Canadian fellowships, he has been awarded European Diploma certifications in both Pediatric and Adult Neuroradiology. During his fellowship training at McGill University, Dr. Hanagandi was consecutively awarded the "Best Fellow Teacher of The Year" for his contributions to the radiology residency programme.</p>
+                <p class="mb-4">He has also worked as a visiting guest researcher at Karolinska University Hospital, Stockholm, Sweden and pursues a keen research interest in malformations, toxic-metabolic disorders, brain tumors, and infectious diseases.</p>
+                <blockquote class="italic text-teal-700 border-l-4 border-teal-200 pl-4 mt-6">
+                    "Whatever it is, the way you tell your story online can make all the difference." — Quote Source
+                </blockquote>`
+            },
+            dsouza: {
+                name: "Dr Ajay DSouza",
+                title: "EXECUTIVE MEMBER",
+                image: "../images/about/ajay-dsouza.jpg",
+                bio: `<p class="text-lg mb-4"><strong>Dr. Ajay Prashanth D'Souza</strong></p>
+                <p class="mb-4">Dr. Ajay Prashanth D'Souza is a Consultant Pediatric Radiologist with 18 years of experience in the field. He currently practices at Al Jalila Children's Specialty Hospital in Dubai Healthcare City.</p>
+                <p class="mb-4">In addition to his clinical role, he serves as a Clinical Assistant Professor at Mohammed Bin Rashid University of Medicine and Health Sciences (MBRU) and an Adjunct Professor at Father Muller Medical College in Mangalore, India.</p>
+                <p class="mb-4">Dr. D'Souza completed his Professional Degree Certificate from AIMS, Mysore University in 2001. With extensive experience in pediatric radiology, he is dedicated to providing high-quality diagnostic care and contributing to medical education. His expertise and commitment to advancing radiology make him a valuable asset to both his patients and the academic community.</p>`
+            },
+            krishnan: {
+                name: "Dr Pradeep Krishnan",
+                title: "SCIENTIFIC DIRECTOR, RESEARCH - MD",
+                image: "../images/about/pradeep-krishnan.jpg",
+                bio: `<p class="text-lg mb-4"><strong>Dr Pradeep Krishnan MD</strong></p>
+                <p class="mb-4">Pradeep is a fellowship-trained staff Pediatric Neuroradiologist at The Hospital for Sick Children and an Assistant Professor at the University of Toronto. His areas of interests include pediatric stroke, fetal imaging, epilepsy, and hydrocephalus in children.</p>
+                <blockquote class="italic text-indigo-700 border-l-4 border-indigo-200 pl-4 mt-6">
+                    "Whatever it is, the way you tell your story online can make all the difference." — Quote Source
+                </blockquote>`
+            },
+            roldan: {
+                name: "Dr Jordi Roldan",
+                title: "EXECUTIVE MEMBER",
+                image: "../images/about/jordi-roldan.jpg",
+                bio: `<p class="text-lg mb-4"><strong>Dr. Jordi Roldan</strong></p>
+                <p class="mb-4">Dr. Jordi Roldan is a Pediatric Neuroradiologist at Hospital Universitari Son Espases in Palma, Spain. He holds European Diplomas in Neuroradiology (EDiNR) and Pediatric Neuroradiology (EDiPNR), reflecting his specialized expertise in these fields.</p>
+                <p class="mb-4">In addition to his clinical role, Dr. Roldán serves as a Collaborative Professor of Pediatrics at the University of the Balearic Islands (Universitat de les Illes Balears). Dr. Roldán is an active contributor to the medical community, sharing his knowledge and cases on platforms such as Radiopaedia.org</p>`
+            },
+            sidpra: {
+                name: "Mr Jai Sidpra",
+                title: "ACADEMIC CO-ORDINATOR & TRAINEE REPRESENTATIVE",
+                image: "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzMzODVmZiIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmb250LXNpemU9IjE4IiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkpTPC90ZXh0Pjwvc3ZnPg==",
+                bio: `<p class="text-lg mb-4"><strong>Mr Jai Sidpra</strong></p>
+                <p class="mb-4">Jai is an MD PhD student at the UCL Great Ormond Street Institute of Child Health supervised by Professor Darren Hargrave. His PhD project, supported by Cancer Research UK and University College London, takes a machine-learning driven approach to correlate the WHO CNS 2021 classification with patient outcome, digital pathology, and neuroimaging with the aim of predicting prognosis and stratifying treatment modalities.</p>
+                <p class="mb-4">His research interests also include developmental hindbrain malformations, in particular, the Dandy-Walker phenotype, and abusive head trauma.</p>
+                <p class="mb-4">Prior to joining the MD PhD programme, Jai undertook part of his medical training at University College London and completed an intercalated BSc with honours in Mathematics, Computers, and Medicine. He has taken a leading role in several global teaching programmes including The International Pediatric Neuroradiology Teaching Network and GOSH Pediatric Neuroimaging Tutorials.</p>
+                <blockquote class="italic text-yellow-700 border-l-4 border-yellow-200 pl-4 mt-6">
+                    "We shall not cease from exploration, And the end of all our exploring, Will be to arrive where we started, And know the place for the first time." — T.S. Eliot
+                </blockquote>`
+            },
+            albalkhi: {
+                name: "Ibrahem Albalkhi",
+                title: "RESEARCH LEAD",
+                image: "../images/about/ibrahem-albalkhi.jpg",
+                bio: `<p class="text-lg mb-4"><strong>Ibrahem Albalkhi</strong></p>
+                <p class="mb-4">Ibrahem Albalkhi is currently pursuing a medical degree at Alfaisal University, Saudi Arabia. He has an active research interest in machine learning and its interface with Neurosurgery. He also founded AIMOCS to help surgeons and doctors implement AI in their practice. In his spare time, Ibrahem enjoys developing apps and is always up for a game of table tennis.</p>
+                
+                <div class="mb-4">
+                    <h4 class="font-semibold text-lg mb-2">Recent Publications (Selected):</h4>
+                    <ul class="text-sm space-y-1 text-gray-600">
+                        <li>• Current state of radiomics in pediatric neuro-oncology practice: a systematic review. Pediatr Radiol. 2023</li>
+                        <li>• Fluorescence-guided resection of intradural spinal tumors: a systematic review and meta-analysis. Neurosurg Rev. 2023</li>
+                        <li>• Imaging of Abusive Head Trauma in Children. Neuroimaging Clin N Am. 2023</li>
+                        <li>• Long-term functional outcomes of microsurgical resection of brainstem cavernous malformations. Neurosurg Rev. 2023</li>
+                    </ul>
+                </div>
+                
+                <div class="mb-4">
+                    <h4 class="font-semibold text-lg mb-2">Awards & Honors:</h4>
+                    <ul class="text-sm space-y-1 text-gray-600">
+                        <li>• Alfaisal Annual Research Award, 2022</li>
+                        <li>• Alfaisal Annual Research Award, 2021</li>
+                        <li>• Dean's List Award, 2020</li>
+                        <li>• Merit-based Award, 2019</li>
+                    </ul>
+                </div>
+                
+                <blockquote class="italic text-cyan-700 border-l-4 border-cyan-200 pl-4 mt-6">
+                    "Talent wins games, but teamwork and intelligence win championships." — Michael Jordan
+                </blockquote>`
+            },
+            hilal: {
+                name: "Dr Kiran Hilal",
+                title: "EXECUTIVE MEMBER",
+                image: "../images/about/kiran-hilal.jpg",
+                bio: `<p class="text-lg mb-4"><strong>Dr. Kiran Hilal</strong></p>
+                <p class="mb-4">Dr. Kiran Hilal is an Associate Professor and Vice Chair of Clinical Services in the Department of Radiology at Aga Khan University. She also serves as a Faculty Radiologist and Consultant Radiologist at the university hospital.</p>
+                <p class="mb-4">Dr. Hilal completed her MBBS from Sindh Medical College in 2003 and earned her FCPS from the College of Physicians and Surgeons, Karachi, in 2011. She has a strong background in medical education, having served as an Instructor and later a Senior Instructor in the Department of Radiology at Aga Khan University Hospital.</p>
+                <p class="mb-4">With a specialized interest in pediatric radiology, Dr. Hilal is actively involved in research and professional organizations. She is a fellow of the College of Physicians and Surgeons Pakistan and a member of various prestigious radiology societies, including the Radiological Society of Pakistan, the European Society of Neuroradiology, the European Society of Pediatric Radiology, and the Asian Oceania Society of Pediatric Radiology. Her expertise and contributions to pediatric imaging continue to enhance patient care and medical education.</p>`
+            },
+            serai: {
+                name: "Dr Suraj Serai",
+                title: "EXECUTIVE MEMBER",
+                image: "../images/about/suraj-serai.jpg",
+                bio: `<p class="text-lg mb-4"><strong>Dr. Suraj Serai</strong></p>
+                <p class="mb-4">Dr. Serai is an MR Scientist and Magnetic Resonance Safety Expert at CHOP and an Assistant Professor of Radiology at the University of Pennsylvania. He earned his Bachelor's in Engineering from the University of Mumbai, India, and his Master's and Ph.D. from the University of Illinois, Chicago.</p>
+                <p class="mb-4">He is a member of several professional organizations, including ISMRM, RSNA, AAPM, ACR, QIBA, and SPR, and serves as a peer reviewer for multiple leading radiology journals.</p>
+                <p class="mb-4">Dr. Serai works closely with radiologists to develop imaging protocols, measure quantitative MRI values, and create visual maps that enhance clinical applications. His research focuses on MR-based techniques for iron and fat quantification, liver fibrosis elastography, and T1/T2 mapping, tailored for pediatric patients. He also assists in designing, interpreting, and analyzing quantitative MR research projects with direct clinical relevance in pediatric radiology.</p>`
+            },
+            khanna: {
+                name: "Dr Prina Khanna",
+                title: "ADMINISTRATIVE LEAD",
+                image: "../images/about/prina-khanna.jpg",
+                bio: `<p class="text-lg mb-4"><strong>Dr Prina Khanna</strong></p>
+                <p class="mb-4">Prina has completed her Bachelor of Dental Science degree from SDM College of Dental Sciences and Hospital, Dharwad, India. She is a certified Oral Cancer Screening Consultant, having obtained her certification from the Asian Head Neck Cancer Foundation, Ahmedabad, India. She currently practices as a General Dentist at Apollo Dental Hospital in addition to her private practice in Bangalore.</p>
+                <p class="mb-4">Prina also works as a Leadership Trainer for Positive Impact. In her spare time, she likes to paint a world as it should be from her imagination. She is also a keen reader and music enthusiast.</p>
+                <blockquote class="italic text-pink-700 border-l-4 border-pink-200 pl-4 mt-6">
+                    "Whatever it is, the way you tell your story online can make all the difference." — Quote Source
+                </blockquote>`
+            },
+            yildiz: {
+                name: "Dr Harun Yildiz",
+                title: "RADIOLOGICAL ILLUSTRATOR - MD",
+                image: "../images/about/harun-yildiz.jpg",
+                bio: `<p class="text-lg mb-4"><strong>Dr Harun Yildiz MD</strong></p>
+                <p class="mb-4">Harun is a Consultant Radiologist at the Department of Radiology, Dortcelik Children's Hospital, Turkey. He is a pioneer of radiological illustrations and has a particular interest in their application to medical education.</p>
+                <blockquote class="italic text-blue-700 border-l-4 border-blue-200 pl-4 mt-6">
+                    "Radiological illustrations are more than medical images. They teach." — Harun Yildiz
+                </blockquote>`
+            },
+            sudhakar: {
+                name: "Dr Sniya Sudhakar",
+                title: "INNOVATION LEAD",
+                image: "../images/about/sniya-sudhakar.jpg",
+                bio: `<p class="text-lg mb-4"><strong>Dr. Sniya Sudhakar</strong></p>
+                <p class="mb-4">Dr. Sniya Sudhakar is a Consultant Paediatric Neuroradiologist at Great Ormond Street Hospital (GOSH) in London. She specializes in pediatric neuroradiology, with a particular focus on neuro-oncology, neuroinflammatory disorders, and fetal imaging.</p>
+                <p class="mb-4">Throughout her career, Dr. Sudhakar has contributed to the field through research and publications. She co-authored the article "White Matter Anatomy: What the Radiologist Needs to Know," published in Neuroimaging Clinics in May 2013. She has also been involved in educational initiatives, including presenting on cortical malformations in a webinar for the British Society of Neuroradiologists.</p>`
+            },
+            saleh: {
+                name: "Dr Amal Saleh",
+                title: "EXECUTIVE MEMBER",
+                image: "../images/about/amal-saleh.jpg",
+                bio: `<p class="text-lg mb-4"><strong>Dr. Amal Saleh Dean</strong></p>
+                <p class="mb-4">Dr. Amal Saleh Dean is a highly accomplished radiologist and educator with over 15 years of experience. She currently serves as the Dean of the School of Medicine at Addis Ababa University, Ethiopia's premier medical school, and is an Assistant Professor of Radiology and Neuroradiologist at the university's College of Health Sciences.</p>
+                <p class="mb-4">Dr. Amal has extensive experience in both clinical and academic settings, having worked as a radiologist and Head of the Department of Radiology at Pioneer Diagnostic Center Pvt. Ltd. Co. and Addis Ababa University. She has also been teaching medical students and residents at Addis Ababa University for over eight years and has authored several publications in peer-reviewed journals.</p>
+                <p class="mb-4">Beyond her clinical and academic roles, Dr. Amal is actively involved in professional organizations. She serves as the Vice President of the Ethiopian Medical Association and has previously been the President of the Radiological Society of Ethiopia. Committed to improving healthcare in Ethiopia, she is a strong advocate for medical education, research, and patient care.</p>`
+            }
+        };
+
+        // Modal functionality
+        function openModal(memberKey) {
+            const member = teamMembers[memberKey];
+            if (!member) return;
+
+            document.getElementById('modalName').textContent = member.name;
+            document.getElementById('modalTitle').textContent = member.title;
+            document.getElementById('modalImage').src = member.image;
+            document.getElementById('modalImage').alt = member.name;
+            document.getElementById('modalBio').innerHTML = member.bio;
+
+            const modal = document.getElementById('bioModal');
+            modal.style.display = 'block';
+            setTimeout(() => modal.classList.add('show'), 10);
+            
+            // Store current member for sharing
+            window.currentMember = member;
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('bioModal');
+            modal.classList.remove('show');
+            setTimeout(() => modal.style.display = 'none', 300);
+        }
+
+        // Event listeners for modal
+        document.querySelector('.close').addEventListener('click', closeModal);
+        document.getElementById('bioModal').addEventListener('click', function(e) {
+            if (e.target === this) closeModal();
+        });
+
+        // Bio toggle functionality
+        function toggleBio(memberKey) {
+            const shortBio = document.getElementById(memberKey + '-bio-short');
+            const fullBio = document.getElementById(memberKey + '-bio-full');
+            const button = event.target;
+
+            if (fullBio.classList.contains('hidden')) {
+                shortBio.classList.add('hidden');
+                fullBio.classList.remove('hidden');
+                button.textContent = 'Read less';
+            } else {
+                shortBio.classList.remove('hidden');
+                fullBio.classList.add('hidden');
+                button.textContent = 'Read more';
+            }
+        }
+
+        // Share functionality
+        function shareProfile(memberKey, name, image) {
+            const member = memberKey ? teamMembers[memberKey] : window.currentMember;
+            if (!member) return;
+
+            if (navigator.share) {
+                navigator.share({
+                    title: member.name + ' - SPIN Academics',
+                    text: 'Learn about ' + member.name + ', ' + member.title + ' at SPIN Academics',
+                    url: window.location.href
+                });
+            } else {
+                // Fallback - copy to clipboard
+                const shareText = member.name + ' - ' + member.title + '\\n\\n' + 
+                                member.bio.replace(/<[^>]*>/g, '') + '\\n\\n' +
+                                'Learn more at: ' + window.location.href;
+                navigator.clipboard.writeText(shareText).then(() => {
+                    alert('Profile information copied to clipboard!');
+                });
+            }
+        }
+
+        function copyToClipboard() {
+            if (!window.currentMember) return;
+            
+            const member = window.currentMember;
+            const bioText = member.bio.replace(/<[^>]*>/g, '');
+            const shareText = member.name + ' - ' + member.title + '\\n\\n' + bioText;
+            
+            navigator.clipboard.writeText(shareText).then(() => {
+                alert('Bio copied to clipboard!');
+            });
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeModal();
+            }
         });
     </script>
 </body>
